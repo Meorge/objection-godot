@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://1iruudku7hww"]
+
+[ext_resource type="Texture2D" uid="uid://qbmnt477w8a0" path="res://objection_assets/bg/bg_counsel.png" id="1_tw7bp"]
+[ext_resource type="SpriteFrames" path="res://judge-new/judge.tres" id="2_xb6lo"]
+[ext_resource type="Script" path="res://camera_position.gd" id="3_n5j5i"]
+
+[node name="CounselView" type="Node2D"]
+position = Vector2(0, 384)
+
+[node name="CounselViewBackground" type="Sprite2D" parent="."]
+texture = ExtResource("1_tw7bp")
+metadata/_edit_lock_ = true
+
+[node name="Counsel" type="AnimatedSprite2D" parent="."]
+sprite_frames = ExtResource("2_xb6lo")
+animation = &"nodding"
+metadata/_edit_lock_ = true
+
+[node name="CameraPoint" type="Node2D" parent="."]
+script = ExtResource("3_n5j5i")
+camera_id = "counsel"

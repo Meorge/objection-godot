@@ -1,0 +1,36 @@
+[gd_scene load_steps=7 format=3 uid="uid://dmdrdriv4rjlv"]
+
+[ext_resource type="Texture2D" uid="uid://3s3i112aph57" path="res://objection_assets/gavel_slam/gavel_slam_bg.png" id="1_te6jw"]
+[ext_resource type="Texture2D" uid="uid://cjaovmpk06q0v" path="res://objection_assets/gavel_slam/gavel_slam_block.png" id="2_ye8ve"]
+[ext_resource type="Texture2D" uid="uid://cgug3qxv1am31" path="res://objection_assets/gavel_slam/gavel_slam_gavel_1.png" id="3_i208c"]
+[ext_resource type="Texture2D" uid="uid://cl17ehvn2l6vw" path="res://objection_assets/gavel_slam/gavel_slam_gavel_2.png" id="4_j75wo"]
+[ext_resource type="Texture2D" uid="uid://ca5vobni5qjai" path="res://objection_assets/gavel_slam/gavel_slam_gavel_3.png" id="5_f8xpv"]
+[ext_resource type="Script" path="res://camera_position.gd" id="6_ep5cf"]
+
+[node name="GavelSlamView" type="Node2D"]
+position = Vector2(0, 960)
+
+[node name="Background" type="Sprite2D" parent="."]
+clip_children = 2
+texture = ExtResource("1_te6jw")
+metadata/_edit_lock_ = true
+
+[node name="Block" type="Sprite2D" parent="."]
+texture = ExtResource("2_ye8ve")
+metadata/_edit_lock_ = true
+
+[node name="Gavel1" type="Sprite2D" parent="."]
+texture = ExtResource("3_i208c")
+metadata/_edit_lock_ = true
+
+[node name="Gavel2" type="Sprite2D" parent="."]
+texture = ExtResource("4_j75wo")
+metadata/_edit_lock_ = true
+
+[node name="Gavel3" type="Sprite2D" parent="."]
+texture = ExtResource("5_f8xpv")
+metadata/_edit_lock_ = true
+
+[node name="CameraPoint" type="Node2D" parent="."]
+script = ExtResource("6_ep5cf")
+camera_id = "gavel"

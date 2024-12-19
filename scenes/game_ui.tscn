@@ -1,0 +1,184 @@
+[gd_scene load_steps=14 format=3 uid="uid://cavxmwjgdsolv"]
+
+[ext_resource type="Script" path="res://scenes/game_ui.gd" id="1_i61tc"]
+[ext_resource type="Texture2D" uid="uid://b3x4aoo200rhg" path="res://objection_assets/textbox/nametag_left.png" id="1_uinmu"]
+[ext_resource type="Texture2D" uid="uid://bhfi8n8dlx1nf" path="res://ref-witnesstestimony.png" id="2_k304s"]
+[ext_resource type="Texture2D" uid="uid://ckysnuyauklhy" path="res://objection_assets/textbox/nametag_center.png" id="2_xtvfo"]
+[ext_resource type="Texture2D" uid="uid://biw5x0gyerjj0" path="res://objection_assets/textbox/nametag_right.png" id="3_vdgvt"]
+[ext_resource type="FontFile" uid="uid://faumch8kfu2c" path="res://objection_assets/textbox/font/ace-name/ace-name.ttf" id="4_b14rb"]
+[ext_resource type="Texture2D" uid="uid://2xbilq1bbwrb" path="res://objection_assets/textbox/mainbox.png" id="5_r7fiw"]
+[ext_resource type="FontFile" uid="uid://c0v5yww5rglpk" path="res://objection_assets/textbox/font/igiari-cyrillic/igiari-cyrillic.ttf" id="6_ggym5"]
+[ext_resource type="FontFile" uid="uid://c3q46b4hop76" path="res://objection_assets/testimony_indicator/DINCondensed-Bold.ttf" id="7_xic5y"]
+[ext_resource type="FontFile" uid="uid://cgnqjv63f3x13" path="res://witness_testimony_font/DFHeiA_0.ttc" id="9_evp38"]
+[ext_resource type="Script" path="res://scenes/witness_testimony_intro.gd" id="10_blrub"]
+[ext_resource type="AudioStream" uid="uid://46tei0rmwxo3" path="res://objection_assets/sound/sfx-testimony2.wav" id="12_ops38"]
+
+[sub_resource type="FontVariation" id="FontVariation_7jt8r"]
+base_font = ExtResource("9_evp38")
+variation_face_index = 1
+variation_transform = Transform2D(0.9, 0.25, 0, 1, 0, 0)
+spacing_glyph = -2
+
+[node name="GameUI" type="CanvasLayer"]
+script = ExtResource("1_i61tc")
+
+[node name="Ref-witnesstestimony" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("2_k304s")
+centered = false
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = -2
+alignment = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(0, 14)
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/HBoxContainer/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="NameTagLeft" type="TextureRect" parent="VBoxContainer/HBoxContainer/MarginContainer/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("1_uinmu")
+
+[node name="NameTagCenter" type="TextureRect" parent="VBoxContainer/HBoxContainer/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+texture = ExtResource("2_xtvfo")
+
+[node name="NameTagRight" type="TextureRect" parent="VBoxContainer/HBoxContainer/MarginContainer/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("3_vdgvt")
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/HBoxContainer/MarginContainer"]
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_constants/margin_left = 3
+theme_override_constants/margin_right = 3
+
+[node name="NametagLabel" type="Label" parent="VBoxContainer/HBoxContainer/MarginContainer/MarginContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_b14rb")
+theme_override_font_sizes/font_size = 8
+text = "Gumshoe"
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("5_r7fiw")
+
+[node name="MarginContainer2" type="MarginContainer" parent="VBoxContainer/TextureRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="DialogueLabel" type="RichTextLabel" parent="VBoxContainer/TextureRect/MarginContainer2"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_fonts/normal_font = ExtResource("6_ggym5")
+theme_override_font_sizes/normal_font_size = 16
+bbcode_enabled = true
+text = "Now, the victim entered
+Studio One at approximately
+[color=#f17038]1:00 PM.[/color]"
+shortcut_keys_enabled = false
+visible_characters_behavior = 1
+
+[node name="Label" type="Label" parent="."]
+offset_left = 2.0
+offset_top = 3.0
+offset_right = 101.0
+offset_bottom = 36.0
+scale = Vector2(0.65, 1)
+theme_override_colors/font_outline_color = Color(0, 0.752941, 0.219608, 1)
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = ExtResource("7_xic5y")
+theme_override_font_sizes/font_size = 32
+text = "Yapping"
+
+[node name="WitnessTestimonyIntro" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("10_blrub")
+
+[node name="TopLabel" type="Label" parent="WitnessTestimonyIntro"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -81.0
+offset_top = -64.0
+offset_right = 77.0
+offset_bottom = -19.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.184314, 0.0117647, 0.964706, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 14
+theme_override_fonts/font = SubResource("FontVariation_7jt8r")
+theme_override_font_sizes/font_size = 44
+text = "Plate"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="BottomLabel" type="Label" parent="WitnessTestimonyIntro"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -108.5
+offset_top = -64.0
+offset_right = 104.5
+offset_bottom = 60.15
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.184314, 0.0117647, 0.964706, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 14
+theme_override_fonts/font = SubResource("FontVariation_7jt8r")
+theme_override_font_sizes/font_size = 44
+text = "Application"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="FlashOverlay" type="ColorRect" parent="WitnessTestimonyIntro"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(1, 1, 1, 0)
+
+[node name="WitnessTestimonyIntroSound" type="AudioStreamPlayer" parent="WitnessTestimonyIntro"]
+unique_name_in_owner = true
+stream = ExtResource("12_ops38")

@@ -1,0 +1,14 @@
+<nametag text="Larry Butz" />
+<bigtext top="Bro Is" bottom="Yapping" color="aa-witintro-red" dir="lr" />
+<sprite pos="center" res="res://larry-new/larry.tres" anim="thumbsup-talk" />
+<blip type="male"/>
+<speed val="10"/>
+Hello, my name is <cut to="left" />Phoenix Wright<speed val="default" /> and I am <cut to="right" />a <color value="aa-text-red">defense attorney</color>.<sprite pos="center" anim="thumbsup-idle" /><blip type="none"/>
+<wait secs="2.0" />
+<play />
+
+<blip type="male" />
+Here is some more <color value="aa-text-red">text</color> starting from <color value="aa-text-blue">the beginning</color>
+<blip type="none" />
+<wait secs="2.0" />
+<play />

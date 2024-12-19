@@ -1,0 +1,57 @@
+[gd_scene load_steps=14 format=3 uid="uid://dtsmh3r0kycrw"]
+
+[ext_resource type="Texture2D" uid="uid://pr803jfut16q" path="res://16441499-phoenix-wright-ace-attorney-nintendo-ds-getting-some-details-fro.png" id="1_85epc"]
+[ext_resource type="AudioStream" uid="uid://brp8iv61fonns" path="res://objection_assets/sound/sfx-blipmale.wav" id="8_ance2"]
+[ext_resource type="Script" path="res://voice_blip_player.gd" id="9_tg6eo"]
+[ext_resource type="AudioStream" uid="uid://d3as2h3rt3wtp" path="res://objection_assets/sound/sfx-blipfemale.wav" id="10_fdiee"]
+[ext_resource type="PackedScene" uid="uid://bc3d7k6q7nxe3" path="res://scenes/behind_court_view.tscn" id="10_hg0yk"]
+[ext_resource type="AudioStream" uid="uid://c78qahoasi6ar" path="res://objection_assets/sound/sfx-typwriter.wav" id="11_cis7q"]
+[ext_resource type="PackedScene" uid="uid://b2fk3m2tmi0xu" path="res://scenes/action_lines_view.tscn" id="11_l7imp"]
+[ext_resource type="PackedScene" uid="uid://dmdrdriv4rjlv" path="res://scenes/gavel_slam_view.tscn" id="12_2j504"]
+[ext_resource type="Script" path="res://script_manager.gd" id="13_dml7f"]
+[ext_resource type="PackedScene" uid="uid://cavxmwjgdsolv" path="res://scenes/game_ui.tscn" id="16_48a6l"]
+[ext_resource type="PackedScene" uid="uid://bf1hsaiiken00" path="res://scenes/main_court_view.tscn" id="17_43555"]
+[ext_resource type="PackedScene" uid="uid://1iruudku7hww" path="res://scenes/counsel_view.tscn" id="17_apcaq"]
+[ext_resource type="PackedScene" uid="uid://dd2xc26iwfwel" path="res://scenes/judge_view.tscn" id="18_btfy3"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Reference" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("1_85epc")
+centered = false
+
+[node name="VoiceBlipPlayer" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("8_ance2")
+script = ExtResource("9_tg6eo")
+male_blip = ExtResource("8_ance2")
+female_blip = ExtResource("10_fdiee")
+typewriter_blip = ExtResource("11_cis7q")
+
+[node name="Camera" type="Camera2D" parent="."]
+unique_name_in_owner = true
+
+[node name="GameUI" parent="." instance=ExtResource("16_48a6l")]
+
+[node name="MainCourtView" parent="." instance=ExtResource("17_43555")]
+unique_name_in_owner = true
+
+[node name="JudgeView" parent="." instance=ExtResource("18_btfy3")]
+unique_name_in_owner = true
+
+[node name="CounselView" parent="." instance=ExtResource("17_apcaq")]
+unique_name_in_owner = true
+
+[node name="BehindCourtView" parent="." instance=ExtResource("10_hg0yk")]
+unique_name_in_owner = true
+
+[node name="ActionLinesView" parent="." instance=ExtResource("11_l7imp")]
+unique_name_in_owner = true
+
+[node name="GavelSlamView" parent="." instance=ExtResource("12_2j504")]
+unique_name_in_owner = true
+
+[node name="ScriptManager" type="Node" parent="."]
+unique_name_in_owner = true
+script = ExtResource("13_dml7f")
