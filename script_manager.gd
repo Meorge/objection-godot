@@ -144,7 +144,7 @@ func _handle_blip(args: Dictionary):
 		"none":
 			VoiceBlipPlayer.instance.stop_blips()
 		_:
-			print_rich("[color=red]Error: invalid blip type \"%s\" provided" % args["type"])
+			print_rich("[color=red]ERROR: Invalid blip type \"%s\" provided" % args["type"])
 
 
 func _handle_sprite(args: Dictionary):
