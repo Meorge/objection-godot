@@ -6,6 +6,12 @@ static var instance: SoundPlayer
 func _enter_tree():
 	instance = self
 
+func _ready():
+	ScriptManager.register_handler("sound", _handle_sound)
+
+func _handle_sound(args: Dictionary):
+	play_sound(args["res"])
+
 func play_sound(path: String):
 	var new_player = AudioStreamPlayer.new()
 	new_player.stream = load(path)

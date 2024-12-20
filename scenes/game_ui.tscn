@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://cavxmwjgdsolv"]
+[gd_scene load_steps=22 format=3 uid="uid://cavxmwjgdsolv"]
 
 [ext_resource type="Script" path="res://scenes/game_ui.gd" id="1_i61tc"]
 [ext_resource type="Texture2D" uid="uid://b3x4aoo200rhg" path="res://objection_assets/textbox/nametag_left.png" id="1_uinmu"]
@@ -12,8 +12,14 @@
 [ext_resource type="FontFile" uid="uid://cgnqjv63f3x13" path="res://witness_testimony_font/DFHeiA_0.ttc" id="9_evp38"]
 [ext_resource type="Script" path="res://scenes/witness_testimony_intro.gd" id="10_blrub"]
 [ext_resource type="AudioStream" uid="uid://46tei0rmwxo3" path="res://objection_assets/sound/sfx-testimony2.wav" id="12_ops38"]
+[ext_resource type="Script" path="res://scenes/evidence_handler.gd" id="13_atwk1"]
 [ext_resource type="SpriteFrames" path="res://exclamations/exclamations.tres" id="13_sgajj"]
 [ext_resource type="Script" path="res://scenes/exclamation_bubble.gd" id="14_jg1s6"]
+[ext_resource type="SpriteFrames" path="res://evidence-right/evidence-right.tres" id="15_eocud"]
+[ext_resource type="Texture2D" uid="uid://beaqrjyvyadas" path="res://icon.svg" id="16_2yr5j"]
+[ext_resource type="Script" path="res://scenes/evidence_box.gd" id="16_v147p"]
+[ext_resource type="SpriteFrames" path="res://evidence-left/evidence-left.tres" id="17_nsfoq"]
+[ext_resource type="AudioStream" uid="uid://d23tyxxvjexw5" path="res://objection_assets/sound/sfx-evidenceshoop.wav" id="18_khjmp"]
 
 [sub_resource type="FontVariation" id="FontVariation_7jt8r"]
 base_font = ExtResource("9_evp38")
@@ -184,6 +190,46 @@ color = Color(1, 1, 1, 0)
 [node name="WitnessTestimonyIntroSound" type="AudioStreamPlayer" parent="WitnessTestimonyIntro"]
 unique_name_in_owner = true
 stream = ExtResource("12_ops38")
+
+[node name="EvidenceHandler" type="Node2D" parent="."]
+script = ExtResource("13_atwk1")
+
+[node name="EvidenceLeft" type="AnimatedSprite2D" parent="EvidenceHandler"]
+sprite_frames = ExtResource("17_nsfoq")
+animation = &"in"
+frame = 3
+centered = false
+script = ExtResource("16_v147p")
+
+[node name="EvidenceHolder" type="TextureRect" parent="EvidenceHandler/EvidenceLeft"]
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 80.0
+offset_bottom = 80.0
+texture = ExtResource("16_2yr5j")
+expand_mode = 2
+
+[node name="InSound" type="AudioStreamPlayer" parent="EvidenceHandler/EvidenceLeft"]
+stream = ExtResource("18_khjmp")
+
+[node name="EvidenceRight" type="AnimatedSprite2D" parent="EvidenceHandler"]
+sprite_frames = ExtResource("15_eocud")
+animation = &"in"
+frame = 3
+frame_progress = 1.0
+centered = false
+script = ExtResource("16_v147p")
+
+[node name="EvidenceHolder" type="TextureRect" parent="EvidenceHandler/EvidenceRight"]
+offset_left = 176.0
+offset_top = 16.0
+offset_right = 240.0
+offset_bottom = 80.0
+texture = ExtResource("16_2yr5j")
+expand_mode = 2
+
+[node name="InSound" type="AudioStreamPlayer" parent="EvidenceHandler/EvidenceRight"]
+stream = ExtResource("18_khjmp")
 
 [node name="ExclamationBubble" type="AnimatedSprite2D" parent="."]
 sprite_frames = ExtResource("13_sgajj")

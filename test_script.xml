@@ -1,9 +1,13 @@
-<nametag text="Larry Butz" />
-<wait secs="1"/>
+<nametag text="Butz" />
+<wait secs="1.0"/>
 <bigtext top="Bro Is" bottom="Yapping" color="aa-witintro-red" dir="lr" />
+<wait secs="4.0"/>
+
 <sprite pos="center" res="res://larry-new/larry.tres" anim="thumbsup-talk" />
 <blip type="male"/>
-Hello, my name is Phoenix Wright and I am <cut to="right" />a <color value="aa-text-red">defense attorney</color>.<sprite pos="center" anim="thumbsup-idle" /><blip type="none"/>
+Hey, dude!<wait secs="0.5"/> Check out this <color value="aa-text-red">cool thing</color><evidence res="res://ref-witnesstestimony.png"/> I found!<wait secs="0.75"/> What do you think?
+<sprite pos="center" anim="thumbsup-idle" />
+<blip type="none"/>
 <wait secs="2.0" />
 <bubble type="objection" />
 <sound res="res://exclamation_sounds/objection-phoenix.mp3"/>
@@ -11,7 +15,7 @@ Hello, my name is Phoenix Wright and I am <cut to="right" />a <color value="aa-t
 <play />
 
 <blip type="male" />
-Here is some more <color value="aa-text-red">text</color> starting from <color value="aa-text-blue">the beginning</color>
+I'm going to put that away.<evidence side="right" action="hide"/> Here is some more <color value="aa-text-red">text</color> starting from <color value="aa-text-blue">the beginning</color>
 <blip type="none" />
 <wait secs="2.0" />
 <play />

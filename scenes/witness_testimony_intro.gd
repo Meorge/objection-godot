@@ -31,6 +31,27 @@ func _ready():
 	top_label.visible = false
 	bottom_label.visible = false
 
+	ScriptManager.register_handler("bigtext", _handle_big_text)
+
+func _handle_big_text(args: Dictionary):
+	var color: Color
+	if ScriptManager.colors.has(args.get("color", "aa-witintro-blue")):
+		color = ScriptManager.colors[args["color"]]
+	else:
+		color = Color.from_string(args["color"], ScriptManager.colors["aa-witintro-blue"])
+
+	var dir = {
+		"lr": WitnessTestimonyIntro.AnimateDirection.ANIMATE_LR,
+		"ud": WitnessTestimonyIntro.AnimateDirection.ANIMATE_UD
+	}.get(args["dir"], "lr")
+
+	WitnessTestimonyIntro.instance.set_text(
+		args["top"],
+		args["bottom"],
+		color,
+		dir
+	)
+
 func set_text(top: String, bottom: String, color: Color, animate_direction: AnimateDirection):
 	flash_overlay.color.a = 0.0
 	top_label.text = top

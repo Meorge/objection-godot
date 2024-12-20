@@ -3,17 +3,12 @@ extends Node
 
 # Actions
 
-# Sprites
-# - sprite <pos> <src>
-
 # User interface
 # - showarrow
 # - hidearrow
 # - showbox
 # - hidebox
-# - nametag <text>
 # - evidence <side> <path>
-# - bubble <type> <character>
 
 # Screen effects
 # - shake <magnitude> <duration>
@@ -21,13 +16,9 @@ extends Node
 
 # Sounds
 # - music <path>
-# - sound <path>
-# - blip <type>
 
 # Camera control
-# - cut <pos>
 # - pan <pos>
-# - wait <duration>
 
 # Verdict
 # - verdict <text> <color>
@@ -37,7 +28,7 @@ extends Node
 # Gavel slam
 # - gavel <frame>
 
-var colors := {
+static var colors := {
 	"aa-text-red": Color8(240, 112, 56),
 	"aa-text-blue": Color8(104, 192, 240),
 	"aa-text-green": Color8(0, 240, 0),
@@ -48,15 +39,14 @@ var colors := {
 
 var handlers := {
 	"blip": _handle_blip,
-	"bigtext": _handle_big_text,
 	"sprite": _handle_sprite,
 	"nametag": _handle_nametag,
 	"wait": _handle_wait,
 	"cut": _handle_cut,
 	"speed": _handle_speed,
-	"bubble": _handle_bubble,
-	"sound": _handle_sound
 }
+
+static var instance: ScriptManager
 
 @onready var dialogue_label: RichTextLabel = GameUI.instance.dialogue_label
 @onready var nametag_label: Label = GameUI.instance.nametag_label
@@ -64,6 +54,15 @@ var handlers := {
 
 const TEXT_SPEED_DEFAULT = 30.0
 var text_speed: float = TEXT_SPEED_DEFAULT
+
+static func register_handler(tag_name: String, handler: Callable):
+	if tag_name in instance.handlers.keys():
+		print_rich("[color=red]ERROR: Handler for \"%s\" already exists" % tag_name)
+		return
+	instance.handlers[tag_name] = handler
+
+func _enter_tree():
+	instance = self
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -162,33 +161,11 @@ func _handle_sprite(args: Dictionary):
 	sprite_to_change.play()
 
 
-func _handle_big_text(args: Dictionary):
-	var color: Color
-	if colors.has(args.get("color", "aa-witintro-blue")):
-		color = colors[args["color"]]
-	else:
-		color = Color.from_string(args["color"], colors["aa-witintro-blue"])
-
-	var dir = {
-		"lr": WitnessTestimonyIntro.AnimateDirection.ANIMATE_LR,
-		"ud": WitnessTestimonyIntro.AnimateDirection.ANIMATE_UD
-	}.get(args["dir"], "lr")
-
-	WitnessTestimonyIntro.instance.set_text(
-		args["top"],
-		args["bottom"],
-		color,
-		dir
-	)
-
-
 func _handle_nametag(args: Dictionary):
 	nametag_label.text = args["text"]
 
-
 func _handle_wait(args: Dictionary):
 	await get_tree().create_timer(float(args["secs"])).timeout
-
 
 func _handle_cut(args: Dictionary):
 	camera.global_position = CameraPosition.positions[args["to"]].global_position
@@ -199,12 +176,7 @@ func _handle_speed(args: Dictionary):
 		new_val = float(args.get("val", TEXT_SPEED_DEFAULT))
 	text_speed = new_val
 
-func _handle_bubble(args: Dictionary):
-	ExclamationBubble.instance.play_exclamation(args["type"])
 
-func _handle_sound(args: Dictionary):
-	SoundPlayer.instance.play_sound(args["res"])
-	
 static func parse_xml_str(xml_str: String) -> Array[Dictionary]:
 	var p := XMLParser.new()
 	var e := p.open_buffer(xml_str.to_utf8_buffer())
