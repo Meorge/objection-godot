@@ -3,12 +3,15 @@
 <bigtext top="Bro Is" bottom="Yapping" color="aa-witintro-red" dir="lr" />
 <wait secs="4.0"/>
 
+<music res="res://objection_assets/music/pwr/cross-moderato.mp3"/>
 <sprite pos="center" res="res://larry-new/larry.tres" anim="thumbsup-talk" />
 <blip type="male"/>
 Hey, dude!<wait secs="0.5"/> Check out this <color value="aa-text-red">cool thing</color><evidence res="res://ref-witnesstestimony.png"/> I found!<wait secs="0.75"/> What do you think?
 <sprite pos="center" anim="thumbsup-idle" />
 <blip type="none"/>
 <wait secs="2.0" />
+
+<music action="stop"/>
 <bubble type="objection" />
 <sound res="res://exclamation_sounds/objection-phoenix.mp3"/>
 <wait secs="1.0"/>
