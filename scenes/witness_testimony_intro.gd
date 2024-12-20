@@ -27,10 +27,17 @@ enum AnimateDirection {
 func _enter_tree():
 	instance = self
 	
+func _ready():
+	top_label.visible = false
+	bottom_label.visible = false
+
 func set_text(top: String, bottom: String, color: Color, animate_direction: AnimateDirection):
 	flash_overlay.color.a = 0.0
 	top_label.text = top
 	bottom_label.text = bottom
+
+	top_label.visible = false
+	bottom_label.visible = false
 
 	top_label.add_theme_color_override("font_color", color)
 	bottom_label.add_theme_color_override("font_color", color)
@@ -38,6 +45,9 @@ func set_text(top: String, bottom: String, color: Color, animate_direction: Anim
 	await get_tree().process_frame
 	var top_label_width = top_label.size.x
 	var bottom_label_width = bottom_label.size.x
+
+	top_label.visible = true
+	bottom_label.visible = true
 
 	var top_label_dest_x = 256 / 2 - top_label_width / 2
 	var bottom_label_dest_x = 256 / 2 - bottom_label_width / 2
