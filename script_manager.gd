@@ -53,7 +53,9 @@ var handlers := {
 	"nametag": _handle_nametag,
 	"wait": _handle_wait,
 	"cut": _handle_cut,
-	"speed": _handle_speed
+	"speed": _handle_speed,
+	"bubble": _handle_bubble,
+	"sound": _handle_sound
 }
 
 @onready var dialogue_label: RichTextLabel = GameUI.instance.dialogue_label
@@ -197,6 +199,12 @@ func _handle_speed(args: Dictionary):
 		new_val = float(args.get("val", TEXT_SPEED_DEFAULT))
 	text_speed = new_val
 
+func _handle_bubble(args: Dictionary):
+	ExclamationBubble.instance.play_exclamation(args["type"])
+
+func _handle_sound(args: Dictionary):
+	SoundPlayer.instance.play_sound(args["res"])
+	
 static func parse_xml_str(xml_str: String) -> Array[Dictionary]:
 	var p := XMLParser.new()
 	var e := p.open_buffer(xml_str.to_utf8_buffer())

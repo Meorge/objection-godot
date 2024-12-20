@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://dtsmh3r0kycrw"]
+[gd_scene load_steps=15 format=3 uid="uid://dtsmh3r0kycrw"]
 
 [ext_resource type="Texture2D" uid="uid://pr803jfut16q" path="res://16441499-phoenix-wright-ace-attorney-nintendo-ds-getting-some-details-fro.png" id="1_85epc"]
 [ext_resource type="AudioStream" uid="uid://brp8iv61fonns" path="res://objection_assets/sound/sfx-blipmale.wav" id="8_ance2"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://b2fk3m2tmi0xu" path="res://scenes/action_lines_view.tscn" id="11_l7imp"]
 [ext_resource type="PackedScene" uid="uid://dmdrdriv4rjlv" path="res://scenes/gavel_slam_view.tscn" id="12_2j504"]
 [ext_resource type="Script" path="res://script_manager.gd" id="13_dml7f"]
+[ext_resource type="Script" path="res://sound_player.gd" id="14_2tbeq"]
 [ext_resource type="PackedScene" uid="uid://cavxmwjgdsolv" path="res://scenes/game_ui.tscn" id="16_48a6l"]
 [ext_resource type="PackedScene" uid="uid://bf1hsaiiken00" path="res://scenes/main_court_view.tscn" id="17_43555"]
 [ext_resource type="PackedScene" uid="uid://1iruudku7hww" path="res://scenes/counsel_view.tscn" id="17_apcaq"]
@@ -55,3 +56,6 @@ unique_name_in_owner = true
 [node name="ScriptManager" type="Node" parent="."]
 unique_name_in_owner = true
 script = ExtResource("13_dml7f")
+
+[node name="SoundPlayer" type="Node" parent="."]
+script = ExtResource("14_2tbeq")

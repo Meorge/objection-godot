@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://cavxmwjgdsolv"]
+[gd_scene load_steps=16 format=3 uid="uid://cavxmwjgdsolv"]
 
 [ext_resource type="Script" path="res://scenes/game_ui.gd" id="1_i61tc"]
 [ext_resource type="Texture2D" uid="uid://b3x4aoo200rhg" path="res://objection_assets/textbox/nametag_left.png" id="1_uinmu"]
@@ -12,6 +12,8 @@
 [ext_resource type="FontFile" uid="uid://cgnqjv63f3x13" path="res://witness_testimony_font/DFHeiA_0.ttc" id="9_evp38"]
 [ext_resource type="Script" path="res://scenes/witness_testimony_intro.gd" id="10_blrub"]
 [ext_resource type="AudioStream" uid="uid://46tei0rmwxo3" path="res://objection_assets/sound/sfx-testimony2.wav" id="12_ops38"]
+[ext_resource type="SpriteFrames" path="res://exclamations/exclamations.tres" id="13_sgajj"]
+[ext_resource type="Script" path="res://scenes/exclamation_bubble.gd" id="14_jg1s6"]
 
 [sub_resource type="FontVariation" id="FontVariation_7jt8r"]
 base_font = ExtResource("9_evp38")
@@ -182,3 +184,9 @@ color = Color(1, 1, 1, 0)
 [node name="WitnessTestimonyIntroSound" type="AudioStreamPlayer" parent="WitnessTestimonyIntro"]
 unique_name_in_owner = true
 stream = ExtResource("12_ops38")
+
+[node name="ExclamationBubble" type="AnimatedSprite2D" parent="."]
+sprite_frames = ExtResource("13_sgajj")
+animation = &"holdit"
+centered = false
+script = ExtResource("14_jg1s6")
