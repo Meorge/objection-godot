@@ -6,16 +6,6 @@ extends Node
 # User interface
 # - showarrow
 # - hidearrow
-# - showbox
-# - hidebox
-# - evidence <side> <path>
-
-# Screen effects
-# - shake <magnitude> <duration>
-# - flash <duration>
-
-# Sounds
-# - music <path>
 
 # Camera control
 # - pan <pos>
@@ -40,7 +30,6 @@ static var colors := {
 var handlers := {
 	"blip": _handle_blip,
 	"sprite": _handle_sprite,
-	"nametag": _handle_nametag,
 	"wait": _handle_wait,
 	"cut": _handle_cut,
 	"speed": _handle_speed,
@@ -159,10 +148,6 @@ func _handle_sprite(args: Dictionary):
 	sprite_to_change.animation = args["anim"]
 	sprite_to_change.frame = 0
 	sprite_to_change.play()
-
-
-func _handle_nametag(args: Dictionary):
-	nametag_label.text = args["text"]
 
 func _handle_wait(args: Dictionary):
 	await get_tree().create_timer(float(args["secs"])).timeout

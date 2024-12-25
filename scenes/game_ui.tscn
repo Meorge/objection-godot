@@ -1,9 +1,13 @@
-[gd_scene load_steps=22 format=3 uid="uid://cavxmwjgdsolv"]
+[gd_scene load_steps=27 format=3 uid="uid://cavxmwjgdsolv"]
 
 [ext_resource type="Script" path="res://scenes/game_ui.gd" id="1_i61tc"]
 [ext_resource type="Texture2D" uid="uid://b3x4aoo200rhg" path="res://objection_assets/textbox/nametag_left.png" id="1_uinmu"]
 [ext_resource type="Texture2D" uid="uid://bhfi8n8dlx1nf" path="res://ref-witnesstestimony.png" id="2_k304s"]
 [ext_resource type="Texture2D" uid="uid://ckysnuyauklhy" path="res://objection_assets/textbox/nametag_center.png" id="2_xtvfo"]
+[ext_resource type="Texture2D" uid="uid://pr803jfut16q" path="res://16441499-phoenix-wright-ace-attorney-nintendo-ds-getting-some-details-fro.png" id="3_74y1g"]
+[ext_resource type="Script" path="res://scenes/box_container.gd" id="3_ffcpm"]
+[ext_resource type="Script" path="res://scenes/nametag_container.gd" id="3_ogb22"]
+[ext_resource type="Script" path="res://shaker/control_shaker.gd" id="3_op4cl"]
 [ext_resource type="Texture2D" uid="uid://biw5x0gyerjj0" path="res://objection_assets/textbox/nametag_right.png" id="3_vdgvt"]
 [ext_resource type="FontFile" uid="uid://faumch8kfu2c" path="res://objection_assets/textbox/font/ace-name/ace-name.ttf" id="4_b14rb"]
 [ext_resource type="Texture2D" uid="uid://2xbilq1bbwrb" path="res://objection_assets/textbox/mainbox.png" id="5_r7fiw"]
@@ -20,6 +24,7 @@
 [ext_resource type="Script" path="res://scenes/evidence_box.gd" id="16_v147p"]
 [ext_resource type="SpriteFrames" path="res://evidence-left/evidence-left.tres" id="17_nsfoq"]
 [ext_resource type="AudioStream" uid="uid://d23tyxxvjexw5" path="res://objection_assets/sound/sfx-evidenceshoop.wav" id="18_khjmp"]
+[ext_resource type="Script" path="res://scenes/overlay_flash.gd" id="25_j8y13"]
 
 [sub_resource type="FontVariation" id="FontVariation_7jt8r"]
 base_font = ExtResource("9_evp38")
@@ -35,71 +40,82 @@ visible = false
 texture = ExtResource("2_k304s")
 centered = false
 
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
+[node name="16441499-phoenix-wright-ace-attorney-nintendo-ds-getting-some-details-fro" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("3_74y1g")
+centered = false
+
+[node name="BoxShaker" type="Control" parent="."]
+unique_name_in_owner = true
+layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/separation = -2
-alignment = 2
+script = ExtResource("3_op4cl")
 
-[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
-layout_mode = 2
+[node name="InnerContainer" type="Control" parent="BoxShaker"]
+anchors_preset = 0
 
-[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/HBoxContainer"]
+[node name="Control" type="Control" parent="BoxShaker/InnerContainer"]
+anchors_preset = 0
+script = ExtResource("3_ffcpm")
+
+[node name="NewBoxBackground" type="TextureRect" parent="BoxShaker/InnerContainer/Control"]
+layout_mode = 0
+offset_top = 128.0
+offset_right = 256.0
+offset_bottom = 192.0
+texture = ExtResource("5_r7fiw")
+
+[node name="Nametag" type="HBoxContainer" parent="BoxShaker/InnerContainer/Control"]
+layout_mode = 0
+offset_top = 115.0
+offset_right = 49.0
+offset_bottom = 129.0
+
+[node name="NametagContainer" type="MarginContainer" parent="BoxShaker/InnerContainer/Control/Nametag"]
 custom_minimum_size = Vector2(0, 14)
 layout_mode = 2
+script = ExtResource("3_ogb22")
 
-[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/HBoxContainer/MarginContainer"]
+[node name="NametagBackground" type="HBoxContainer" parent="BoxShaker/InnerContainer/Control/Nametag/NametagContainer"]
 layout_mode = 2
 theme_override_constants/separation = 0
 
-[node name="NameTagLeft" type="TextureRect" parent="VBoxContainer/HBoxContainer/MarginContainer/HBoxContainer"]
+[node name="NameTagLeft" type="TextureRect" parent="BoxShaker/InnerContainer/Control/Nametag/NametagContainer/NametagBackground"]
 layout_mode = 2
 texture = ExtResource("1_uinmu")
 
-[node name="NameTagCenter" type="TextureRect" parent="VBoxContainer/HBoxContainer/MarginContainer/HBoxContainer"]
+[node name="NameTagCenter" type="TextureRect" parent="BoxShaker/InnerContainer/Control/Nametag/NametagContainer/NametagBackground"]
 layout_mode = 2
 size_flags_horizontal = 3
 texture = ExtResource("2_xtvfo")
 
-[node name="NameTagRight" type="TextureRect" parent="VBoxContainer/HBoxContainer/MarginContainer/HBoxContainer"]
+[node name="NameTagRight" type="TextureRect" parent="BoxShaker/InnerContainer/Control/Nametag/NametagContainer/NametagBackground"]
 layout_mode = 2
 texture = ExtResource("3_vdgvt")
 
-[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/HBoxContainer/MarginContainer"]
+[node name="NametagLabelContainer" type="MarginContainer" parent="BoxShaker/InnerContainer/Control/Nametag/NametagContainer"]
 layout_mode = 2
 size_flags_vertical = 4
 theme_override_constants/margin_left = 3
 theme_override_constants/margin_right = 3
 
-[node name="NametagLabel" type="Label" parent="VBoxContainer/HBoxContainer/MarginContainer/MarginContainer"]
+[node name="NametagLabel" type="Label" parent="BoxShaker/InnerContainer/Control/Nametag/NametagContainer/NametagLabelContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 theme_override_fonts/font = ExtResource("4_b14rb")
 theme_override_font_sizes/font_size = 8
 text = "Gumshoe"
 
-[node name="TextureRect" type="TextureRect" parent="VBoxContainer"]
-layout_mode = 2
-texture = ExtResource("5_r7fiw")
-
-[node name="MarginContainer2" type="MarginContainer" parent="VBoxContainer/TextureRect"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_constants/margin_left = 10
-theme_override_constants/margin_top = 4
-theme_override_constants/margin_right = 5
-theme_override_constants/margin_bottom = 5
-
-[node name="DialogueLabel" type="RichTextLabel" parent="VBoxContainer/TextureRect/MarginContainer2"]
+[node name="DialogueLabel" type="RichTextLabel" parent="."]
 unique_name_in_owner = true
-layout_mode = 2
+offset_left = 10.0
+offset_top = 132.0
+offset_right = 251.0
+offset_bottom = 187.0
 theme_override_fonts/normal_font = ExtResource("6_ggym5")
 theme_override_font_sizes/normal_font_size = 16
 bbcode_enabled = true
@@ -236,3 +252,11 @@ sprite_frames = ExtResource("13_sgajj")
 animation = &"holdit"
 centered = false
 script = ExtResource("14_jg1s6")
+
+[node name="OverlayFlash" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("25_j8y13")

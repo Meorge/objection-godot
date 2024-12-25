@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://dtsmh3r0kycrw"]
+[gd_scene load_steps=18 format=3 uid="uid://dtsmh3r0kycrw"]
 
 [ext_resource type="Texture2D" uid="uid://pr803jfut16q" path="res://16441499-phoenix-wright-ace-attorney-nintendo-ds-getting-some-details-fro.png" id="1_85epc"]
 [ext_resource type="AudioStream" uid="uid://brp8iv61fonns" path="res://objection_assets/sound/sfx-blipmale.wav" id="8_ance2"]
@@ -12,8 +12,10 @@
 [ext_resource type="Script" path="res://sound_player.gd" id="14_2tbeq"]
 [ext_resource type="Script" path="res://music_player.gd" id="15_n5jm8"]
 [ext_resource type="PackedScene" uid="uid://cavxmwjgdsolv" path="res://scenes/game_ui.tscn" id="16_48a6l"]
+[ext_resource type="Script" path="res://shaker/node2d_shaker.gd" id="16_mecxv"]
 [ext_resource type="PackedScene" uid="uid://bf1hsaiiken00" path="res://scenes/main_court_view.tscn" id="17_43555"]
 [ext_resource type="PackedScene" uid="uid://1iruudku7hww" path="res://scenes/counsel_view.tscn" id="17_apcaq"]
+[ext_resource type="Script" path="res://shaker/shaker_manager.gd" id="17_jypuo"]
 [ext_resource type="PackedScene" uid="uid://dd2xc26iwfwel" path="res://scenes/judge_view.tscn" id="18_btfy3"]
 
 [node name="Node2D" type="Node2D"]
@@ -30,9 +32,6 @@ script = ExtResource("9_tg6eo")
 male_blip = ExtResource("8_ance2")
 female_blip = ExtResource("10_fdiee")
 typewriter_blip = ExtResource("11_cis7q")
-
-[node name="Camera" type="Camera2D" parent="."]
-unique_name_in_owner = true
 
 [node name="GameUI" parent="." instance=ExtResource("16_48a6l")]
 
@@ -63,3 +62,15 @@ script = ExtResource("14_2tbeq")
 
 [node name="MusicPlayer" type="AudioStreamPlayer" parent="."]
 script = ExtResource("15_n5jm8")
+
+[node name="CameraShaker" type="Node2D" parent="."]
+unique_name_in_owner = true
+script = ExtResource("16_mecxv")
+
+[node name="InnerContainer" type="Node2D" parent="CameraShaker"]
+
+[node name="Camera" type="Camera2D" parent="CameraShaker/InnerContainer"]
+unique_name_in_owner = true
+
+[node name="ShakerManager" type="Node" parent="."]
+script = ExtResource("17_jypuo")
