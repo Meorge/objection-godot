@@ -1,0 +1,152 @@
+[gd_resource type="SpriteFrames" load_steps=33 format=3]
+
+[ext_resource type="Texture2D" path="./objection-0.png" id="objection-0"]
+[ext_resource type="Texture2D" path="./objection-1.png" id="objection-1"]
+[ext_resource type="Texture2D" path="./objection-2.png" id="objection-2"]
+[ext_resource type="Texture2D" path="./objection-3.png" id="objection-3"]
+[ext_resource type="Texture2D" path="./objection-4.png" id="objection-4"]
+[ext_resource type="Texture2D" path="./objection-5.png" id="objection-5"]
+[ext_resource type="Texture2D" path="./objection-6.png" id="objection-6"]
+[ext_resource type="Texture2D" path="./objection-7.png" id="objection-7"]
+[ext_resource type="Texture2D" path="./objection-8.png" id="objection-8"]
+[ext_resource type="Texture2D" path="./objection-9.png" id="objection-9"]
+[ext_resource type="Texture2D" path="./objection-10.png" id="objection-10"]
+[ext_resource type="Texture2D" path="./holdit-0.png" id="holdit-0"]
+[ext_resource type="Texture2D" path="./holdit-1.png" id="holdit-1"]
+[ext_resource type="Texture2D" path="./holdit-2.png" id="holdit-2"]
+[ext_resource type="Texture2D" path="./holdit-3.png" id="holdit-3"]
+[ext_resource type="Texture2D" path="./holdit-4.png" id="holdit-4"]
+[ext_resource type="Texture2D" path="./holdit-5.png" id="holdit-5"]
+[ext_resource type="Texture2D" path="./holdit-6.png" id="holdit-6"]
+[ext_resource type="Texture2D" path="./holdit-7.png" id="holdit-7"]
+[ext_resource type="Texture2D" path="./holdit-8.png" id="holdit-8"]
+[ext_resource type="Texture2D" path="./holdit-9.png" id="holdit-9"]
+[ext_resource type="Texture2D" path="./holdit-10.png" id="holdit-10"]
+[ext_resource type="Texture2D" path="./takethat-0.png" id="takethat-0"]
+[ext_resource type="Texture2D" path="./takethat-1.png" id="takethat-1"]
+[ext_resource type="Texture2D" path="./takethat-2.png" id="takethat-2"]
+[ext_resource type="Texture2D" path="./takethat-3.png" id="takethat-3"]
+[ext_resource type="Texture2D" path="./takethat-4.png" id="takethat-4"]
+[ext_resource type="Texture2D" path="./takethat-5.png" id="takethat-5"]
+[ext_resource type="Texture2D" path="./takethat-6.png" id="takethat-6"]
+[ext_resource type="Texture2D" path="./takethat-7.png" id="takethat-7"]
+[ext_resource type="Texture2D" path="./takethat-8.png" id="takethat-8"]
+[ext_resource type="Texture2D" path="./takethat-9.png" id="takethat-9"]
+[ext_resource type="Texture2D" path="./takethat-10.png" id="takethat-10"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 0.04,
+"texture": ExtResource("objection-0")
+}, {
+"duration": 0.02,
+"texture": ExtResource("objection-1")
+}, {
+"duration": 0.02,
+"texture": ExtResource("objection-2")
+}, {
+"duration": 0.02,
+"texture": ExtResource("objection-3")
+}, {
+"duration": 0.02,
+"texture": ExtResource("objection-4")
+}, {
+"duration": 0.02,
+"texture": ExtResource("objection-5")
+}, {
+"duration": 0.02,
+"texture": ExtResource("objection-6")
+}, {
+"duration": 0.02,
+"texture": ExtResource("objection-7")
+}, {
+"duration": 0.02,
+"texture": ExtResource("objection-8")
+}, {
+"duration": 0.5,
+"texture": ExtResource("objection-9")
+}, {
+"duration": 0.02,
+"texture": ExtResource("objection-10")
+}],
+"loop": false,
+"name": &"objection",
+"speed": 1.0
+}, {
+"frames": [{
+"duration": 0.04,
+"texture": ExtResource("holdit-0")
+}, {
+"duration": 0.02,
+"texture": ExtResource("holdit-1")
+}, {
+"duration": 0.02,
+"texture": ExtResource("holdit-2")
+}, {
+"duration": 0.02,
+"texture": ExtResource("holdit-3")
+}, {
+"duration": 0.02,
+"texture": ExtResource("holdit-4")
+}, {
+"duration": 0.02,
+"texture": ExtResource("holdit-5")
+}, {
+"duration": 0.02,
+"texture": ExtResource("holdit-6")
+}, {
+"duration": 0.02,
+"texture": ExtResource("holdit-7")
+}, {
+"duration": 0.02,
+"texture": ExtResource("holdit-8")
+}, {
+"duration": 0.5,
+"texture": ExtResource("holdit-9")
+}, {
+"duration": 0.02,
+"texture": ExtResource("holdit-10")
+}],
+"loop": false,
+"name": &"holdit",
+"speed": 1.0
+}, {
+"frames": [{
+"duration": 0.04,
+"texture": ExtResource("takethat-0")
+}, {
+"duration": 0.02,
+"texture": ExtResource("takethat-1")
+}, {
+"duration": 0.02,
+"texture": ExtResource("takethat-2")
+}, {
+"duration": 0.02,
+"texture": ExtResource("takethat-3")
+}, {
+"duration": 0.02,
+"texture": ExtResource("takethat-4")
+}, {
+"duration": 0.02,
+"texture": ExtResource("takethat-5")
+}, {
+"duration": 0.02,
+"texture": ExtResource("takethat-6")
+}, {
+"duration": 0.02,
+"texture": ExtResource("takethat-7")
+}, {
+"duration": 0.02,
+"texture": ExtResource("takethat-8")
+}, {
+"duration": 0.6,
+"texture": ExtResource("takethat-9")
+}, {
+"duration": 0.04,
+"texture": ExtResource("takethat-10")
+}],
+"loop": false,
+"name": &"takethat",
+"speed": 1.0
+}]

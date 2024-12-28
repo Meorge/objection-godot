@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://by0li3ap2t7el"
+path="res://.godot/imported/sfx-dog bark.wav-2a484fd6e50555cd5d34886e1b92c85d.sample"
+
+[deps]
+
+source_file="res://audio/sound/sfx-dog bark.wav"
+dest_files=["res://.godot/imported/sfx-dog bark.wav-2a484fd6e50555cd5d34886e1b92c85d.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

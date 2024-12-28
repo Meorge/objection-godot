@@ -1,0 +1,47 @@
+[gd_resource type="SpriteFrames" load_steps=8 format=3]
+
+[ext_resource type="Texture2D" path="./evidence-in-right-0.png" id="evidence-in-right-0"]
+[ext_resource type="Texture2D" path="./evidence-in-right-1.png" id="evidence-in-right-1"]
+[ext_resource type="Texture2D" path="./evidence-in-right-2.png" id="evidence-in-right-2"]
+[ext_resource type="Texture2D" path="./evidence-in-right-3.png" id="evidence-in-right-3"]
+[ext_resource type="Texture2D" path="./evidence-out-right-0.png" id="evidence-out-right-0"]
+[ext_resource type="Texture2D" path="./evidence-out-right-1.png" id="evidence-out-right-1"]
+[ext_resource type="Texture2D" path="./evidence-out-right-2.png" id="evidence-out-right-2"]
+[ext_resource type="Texture2D" path="./evidence-out-right-3.png" id="evidence-out-right-3"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 0.03,
+"texture": ExtResource("evidence-in-right-0")
+}, {
+"duration": 0.1,
+"texture": ExtResource("evidence-in-right-1")
+}, {
+"duration": 0.1,
+"texture": ExtResource("evidence-in-right-2")
+}, {
+"duration": 0.1,
+"texture": ExtResource("evidence-in-right-3")
+}],
+"loop": false,
+"name": &"in",
+"speed": 1.0
+}, {
+"frames": [{
+"duration": 0.03,
+"texture": ExtResource("evidence-out-right-0")
+}, {
+"duration": 0.1,
+"texture": ExtResource("evidence-out-right-1")
+}, {
+"duration": 0.1,
+"texture": ExtResource("evidence-out-right-2")
+}, {
+"duration": 0.1,
+"texture": ExtResource("evidence-out-right-3")
+}],
+"loop": false,
+"name": &"out",
+"speed": 1.0
+}]

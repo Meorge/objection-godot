@@ -2,7 +2,7 @@
 <box set="in"/>
 <nametag text="Phoenix"/>
 <blip type="male"/>
-<sprite pos="left" res="res://phoenix-new/phoenix.tres" anim="normal-talk"/>
+<sprite pos="left" res="res://character_sprites/phoenix/phoenix.tres" anim="normal-talk"/>
 Hey, I'm Phoenix, a defense attorney.
 <sprite pos="left" anim="normal-idle" />
 <arrow />
@@ -11,10 +11,10 @@ Hey, I'm Phoenix, a defense attorney.
 <arrow action="hide"/>
 <play/>
 
-<sprite pos="center" res="res://larry-new/larry.tres" anim="normal-idle"/>
+<sprite pos="center" res="res://character_sprites/larry/larry.tres" anim="normal-idle"/>
 <pan to="center"/>
 <wait secs="0.5"/>
-<sprite pos="center" res="res://larry-new/larry.tres" anim="normal-talk"/>
+<sprite pos="center" anim="normal-talk"/>
 <box set="in"/>
 <nametag text="Butz"/>
 <blip type="male"/>
@@ -26,7 +26,7 @@ I'm Larry Butz, just some guy.
 <arrow action="hide"/>
 <play/>
 
-<sprite pos="right" res="res://edgeworth-new/edgeworth.tres" anim="normal-idle"/>
+<sprite pos="right" res="res://character_sprites/edgeworth/edgeworth.tres" anim="normal-idle"/>
 <pan to="right"/>
 <wait secs="0.5"/>
 <sprite pos="right" anim="normal-talk"/>
@@ -41,7 +41,7 @@ And I'm Edgeworth, the prosecutor.
 <play/>
 
 <nametag text="Judge"/>
-<sprite pos="judge" res="res://judge-new/judge.tres" anim="normal-idle"/>
+<sprite pos="judge" res="res://character_sprites/judge/judge.tres" anim="normal-idle"/>
 <cut to="judge"/>
 <wait secs="0.5"/>
 <sprite pos="judge" anim="normal-talk"/>

@@ -1,0 +1,65 @@
+[gd_scene load_steps=7 format=3 uid="uid://bf1hsaiiken00"]
+
+[ext_resource type="Texture2D" uid="uid://7hf18s3ktxh5" path="res://scenes/main/bg_main.png" id="1_k8f7i"]
+[ext_resource type="Script" path="res://scenes/main/foreground_parallax_effect.gd" id="3_g0edo"]
+[ext_resource type="Texture2D" uid="uid://3tv08jnwudpw" path="res://scenes/main/pr_bench.png" id="3_x5fvn"]
+[ext_resource type="Script" path="res://camera/camera_position.gd" id="4_ikhnx"]
+[ext_resource type="Script" path="res://characters/character_sprite.gd" id="5_d7q3c"]
+[ext_resource type="Texture2D" uid="uid://c3kfwsomlhq40" path="res://scenes/main/witness_stand.png" id="6_g0uw8"]
+
+[node name="MainCourtView" type="Node2D"]
+
+[node name="CourtBackground" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+texture = ExtResource("1_k8f7i")
+
+[node name="LeftCamera" type="Node2D" parent="."]
+position = Vector2(-520, 0)
+script = ExtResource("4_ikhnx")
+camera_id = "left"
+
+[node name="RightCamera" type="Node2D" parent="."]
+position = Vector2(520, 0)
+script = ExtResource("4_ikhnx")
+camera_id = "right"
+
+[node name="CenterCamera" type="Node2D" parent="."]
+script = ExtResource("4_ikhnx")
+camera_id = "center"
+
+[node name="Foreground" type="Node2D" parent="."]
+position = Vector2(-109, 0)
+script = ExtResource("3_g0edo")
+
+[node name="LeftCharacter" type="AnimatedSprite2D" parent="Foreground"]
+unique_name_in_owner = true
+position = Vector2(-411, 0)
+animation = &""
+script = ExtResource("5_d7q3c")
+container_id = "left"
+
+[node name="LeftBench" type="Sprite2D" parent="Foreground/LeftCharacter"]
+unique_name_in_owner = true
+texture = ExtResource("3_x5fvn")
+
+[node name="RightCharacter" type="AnimatedSprite2D" parent="Foreground"]
+unique_name_in_owner = true
+position = Vector2(411, 0)
+animation = &""
+script = ExtResource("5_d7q3c")
+container_id = "right"
+
+[node name="RightBench" type="Sprite2D" parent="Foreground/RightCharacter"]
+unique_name_in_owner = true
+texture = ExtResource("3_x5fvn")
+flip_h = true
+
+[node name="CenterCharacter" type="AnimatedSprite2D" parent="Foreground"]
+unique_name_in_owner = true
+animation = &""
+script = ExtResource("5_d7q3c")
+container_id = "center"
+
+[node name="WitnessStand" type="Sprite2D" parent="Foreground/CenterCharacter"]
+unique_name_in_owner = true
+texture = ExtResource("6_g0uw8")

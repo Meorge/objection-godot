@@ -1,0 +1,39 @@
+[remap]
+
+importer="font_data_dynamic"
+type="FontFile"
+uid="uid://c0v5yww5rglpk"
+path="res://.godot/imported/igiari-cyrillic.ttf-b24a3d2b9961905b64e9b3ad653fef0d.fontdata"
+
+[deps]
+
+source_file="res://ui/text_box/font/igiari-cyrillic/igiari-cyrillic.ttf"
+dest_files=["res://.godot/imported/igiari-cyrillic.ttf-b24a3d2b9961905b64e9b3ad653fef0d.fontdata"]
+
+[params]
+
+Rendering=null
+antialiasing=0
+generate_mipmaps=false
+disable_embedded_bitmaps=true
+multichannel_signed_distance_field=false
+msdf_pixel_range=8
+msdf_size=48
+allow_system_fallback=true
+force_autohinter=false
+hinting=2
+subpixel_positioning=0
+oversampling=0.0
+Fallbacks=null
+fallbacks=[]
+Compress=null
+compress=true
+preload=[{
+"chars": [],
+"glyphs": [],
+"name": "New Configuration",
+"size": Vector2i(16, 0)
+}]
+language_support={}
+script_support={}
+opentype_features={}

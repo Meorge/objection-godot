@@ -1,0 +1,324 @@
+[gd_scene load_steps=32 format=3 uid="uid://cavxmwjgdsolv"]
+
+[ext_resource type="Script" path="res://ui/game_ui.gd" id="1_i61tc"]
+[ext_resource type="Texture2D" uid="uid://b3x4aoo200rhg" path="res://ui/text_box/nametag_left.png" id="1_uinmu"]
+[ext_resource type="Texture2D" uid="uid://bhfi8n8dlx1nf" path="res://ref-witnesstestimony.png" id="2_k304s"]
+[ext_resource type="Texture2D" uid="uid://ckysnuyauklhy" path="res://ui/text_box/nametag_center.png" id="2_xtvfo"]
+[ext_resource type="Texture2D" uid="uid://pr803jfut16q" path="res://16441499-phoenix-wright-ace-attorney-nintendo-ds-getting-some-details-fro.png" id="3_74y1g"]
+[ext_resource type="Script" path="res://effects/shaker/control_shaker.gd" id="3_op4cl"]
+[ext_resource type="Texture2D" uid="uid://biw5x0gyerjj0" path="res://ui/text_box/nametag_right.png" id="3_vdgvt"]
+[ext_resource type="FontFile" uid="uid://faumch8kfu2c" path="res://ui/text_box/font/ace-name/ace-name.ttf" id="4_b14rb"]
+[ext_resource type="Script" path="res://ui/text_box/box_container.gd" id="5_6gk4r"]
+[ext_resource type="Texture2D" uid="uid://2xbilq1bbwrb" path="res://ui/text_box/mainbox.png" id="5_r7fiw"]
+[ext_resource type="FontFile" uid="uid://c0v5yww5rglpk" path="res://ui/text_box/font/igiari-cyrillic/igiari-cyrillic.ttf" id="6_ggym5"]
+[ext_resource type="Script" path="res://ui/text_box/nametag_container.gd" id="7_3rn5j"]
+[ext_resource type="FontFile" uid="uid://c3q46b4hop76" path="res://ui/flashing_corner_label/DINCondensed-Bold.ttf" id="7_xic5y"]
+[ext_resource type="FontFile" uid="uid://cgnqjv63f3x13" path="res://ui/witness_testimony/DFHeiA_0.ttc" id="9_evp38"]
+[ext_resource type="Script" path="res://ui/witness_testimony/witness_testimony_intro.gd" id="10_blrub"]
+[ext_resource type="AudioStream" uid="uid://46tei0rmwxo3" path="res://audio/sound/sfx-testimony2.wav" id="12_ops38"]
+[ext_resource type="Script" path="res://ui/evidence/evidence_handler.gd" id="13_atwk1"]
+[ext_resource type="SpriteFrames" path="res://ui/exclamations/exclamation_animations/exclamations.tres" id="13_sgajj"]
+[ext_resource type="Script" path="res://ui/exclamations/exclamation_bubble.gd" id="14_jg1s6"]
+[ext_resource type="SpriteFrames" path="res://ui/evidence/evidence-right/evidence-right.tres" id="15_eocud"]
+[ext_resource type="Texture2D" uid="uid://beaqrjyvyadas" path="res://icon.svg" id="16_2yr5j"]
+[ext_resource type="Script" path="res://ui/evidence/evidence_box.gd" id="16_v147p"]
+[ext_resource type="SpriteFrames" path="res://ui/evidence/evidence-left/evidence-left.tres" id="17_nsfoq"]
+[ext_resource type="AudioStream" uid="uid://d23tyxxvjexw5" path="res://audio/sound/sfx-evidenceshoop.wav" id="18_khjmp"]
+[ext_resource type="Script" path="res://effects/overlay_flash.gd" id="25_j8y13"]
+[ext_resource type="Script" path="res://ui/next_arrow/arrow.gd" id="26_mjk5q"]
+[ext_resource type="Texture2D" uid="uid://cqslgdnxhwf3m" path="res://ui/next_arrow/next_arrow.png" id="26_tejqb"]
+
+[sub_resource type="FontVariation" id="FontVariation_7jt8r"]
+base_font = ExtResource("9_evp38")
+variation_face_index = 1
+variation_transform = Transform2D(0.9, 0.25, 0, 1, 0, 0)
+spacing_glyph = -2
+
+[sub_resource type="Animation" id="Animation_j8fsi"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ArrowTexture:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_248la"]
+resource_name = "arrow"
+length = 0.3333
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ArrowTexture:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.166667, 0.333333),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(5, 0), Vector2(0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_eecjn"]
+_data = {
+"RESET": SubResource("Animation_j8fsi"),
+"arrow": SubResource("Animation_248la")
+}
+
+[node name="GameUI" type="CanvasLayer"]
+script = ExtResource("1_i61tc")
+
+[node name="Ref-witnesstestimony" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("2_k304s")
+centered = false
+
+[node name="16441499-phoenix-wright-ace-attorney-nintendo-ds-getting-some-details-fro" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("3_74y1g")
+centered = false
+
+[node name="BoxShaker" type="Control" parent="."]
+unique_name_in_owner = true
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("3_op4cl")
+
+[node name="InnerContainer" type="Control" parent="BoxShaker"]
+anchors_preset = 0
+
+[node name="Control" type="Control" parent="BoxShaker/InnerContainer"]
+anchors_preset = 0
+script = ExtResource("5_6gk4r")
+
+[node name="NewBoxBackground" type="TextureRect" parent="BoxShaker/InnerContainer/Control"]
+layout_mode = 0
+offset_top = 128.0
+offset_right = 256.0
+offset_bottom = 192.0
+texture = ExtResource("5_r7fiw")
+
+[node name="Nametag" type="HBoxContainer" parent="BoxShaker/InnerContainer/Control"]
+layout_mode = 0
+offset_top = 115.0
+offset_right = 49.0
+offset_bottom = 129.0
+
+[node name="NametagContainer" type="MarginContainer" parent="BoxShaker/InnerContainer/Control/Nametag"]
+custom_minimum_size = Vector2(0, 14)
+layout_mode = 2
+script = ExtResource("7_3rn5j")
+
+[node name="NametagBackground" type="HBoxContainer" parent="BoxShaker/InnerContainer/Control/Nametag/NametagContainer"]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="NameTagLeft" type="TextureRect" parent="BoxShaker/InnerContainer/Control/Nametag/NametagContainer/NametagBackground"]
+layout_mode = 2
+texture = ExtResource("1_uinmu")
+
+[node name="NameTagCenter" type="TextureRect" parent="BoxShaker/InnerContainer/Control/Nametag/NametagContainer/NametagBackground"]
+layout_mode = 2
+size_flags_horizontal = 3
+texture = ExtResource("2_xtvfo")
+
+[node name="NameTagRight" type="TextureRect" parent="BoxShaker/InnerContainer/Control/Nametag/NametagContainer/NametagBackground"]
+layout_mode = 2
+texture = ExtResource("3_vdgvt")
+
+[node name="NametagLabelContainer" type="MarginContainer" parent="BoxShaker/InnerContainer/Control/Nametag/NametagContainer"]
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_constants/margin_left = 3
+theme_override_constants/margin_right = 3
+
+[node name="NametagLabel" type="Label" parent="BoxShaker/InnerContainer/Control/Nametag/NametagContainer/NametagLabelContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_b14rb")
+theme_override_font_sizes/font_size = 8
+text = "Gumshoe"
+
+[node name="DialogueLabel" type="RichTextLabel" parent="."]
+unique_name_in_owner = true
+offset_left = 10.0
+offset_top = 132.0
+offset_right = 251.0
+offset_bottom = 187.0
+theme_override_fonts/normal_font = ExtResource("6_ggym5")
+theme_override_font_sizes/normal_font_size = 16
+bbcode_enabled = true
+text = "Now, the victim entered
+Studio One at approximately
+[color=#f17038]1:00 PM.[/color]"
+shortcut_keys_enabled = false
+visible_characters_behavior = 1
+
+[node name="Label" type="Label" parent="."]
+offset_left = 2.0
+offset_top = 3.0
+offset_right = 101.0
+offset_bottom = 36.0
+scale = Vector2(0.65, 1)
+theme_override_colors/font_outline_color = Color(0, 0.752941, 0.219608, 1)
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = ExtResource("7_xic5y")
+theme_override_font_sizes/font_size = 32
+text = "Yapping"
+
+[node name="WitnessTestimonyIntro" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("10_blrub")
+
+[node name="TopLabel" type="Label" parent="WitnessTestimonyIntro"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -81.0
+offset_top = -64.0
+offset_right = 77.0
+offset_bottom = -19.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.184314, 0.0117647, 0.964706, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 14
+theme_override_fonts/font = SubResource("FontVariation_7jt8r")
+theme_override_font_sizes/font_size = 44
+text = "Plate"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="BottomLabel" type="Label" parent="WitnessTestimonyIntro"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -108.5
+offset_top = -64.0
+offset_right = 104.5
+offset_bottom = 60.15
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.184314, 0.0117647, 0.964706, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 14
+theme_override_fonts/font = SubResource("FontVariation_7jt8r")
+theme_override_font_sizes/font_size = 44
+text = "Application"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="FlashOverlay" type="ColorRect" parent="WitnessTestimonyIntro"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(1, 1, 1, 0)
+
+[node name="WitnessTestimonyIntroSound" type="AudioStreamPlayer" parent="WitnessTestimonyIntro"]
+unique_name_in_owner = true
+stream = ExtResource("12_ops38")
+
+[node name="EvidenceHandler" type="Node2D" parent="."]
+script = ExtResource("13_atwk1")
+
+[node name="EvidenceLeft" type="AnimatedSprite2D" parent="EvidenceHandler"]
+sprite_frames = ExtResource("17_nsfoq")
+animation = &"in"
+frame = 3
+centered = false
+script = ExtResource("16_v147p")
+
+[node name="EvidenceHolder" type="TextureRect" parent="EvidenceHandler/EvidenceLeft"]
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 80.0
+offset_bottom = 80.0
+texture = ExtResource("16_2yr5j")
+expand_mode = 2
+
+[node name="InSound" type="AudioStreamPlayer" parent="EvidenceHandler/EvidenceLeft"]
+stream = ExtResource("18_khjmp")
+
+[node name="EvidenceRight" type="AnimatedSprite2D" parent="EvidenceHandler"]
+sprite_frames = ExtResource("15_eocud")
+animation = &"in"
+frame = 3
+frame_progress = 1.0
+centered = false
+script = ExtResource("16_v147p")
+
+[node name="EvidenceHolder" type="TextureRect" parent="EvidenceHandler/EvidenceRight"]
+offset_left = 176.0
+offset_top = 16.0
+offset_right = 240.0
+offset_bottom = 80.0
+texture = ExtResource("16_2yr5j")
+expand_mode = 2
+
+[node name="InSound" type="AudioStreamPlayer" parent="EvidenceHandler/EvidenceRight"]
+stream = ExtResource("18_khjmp")
+
+[node name="ExclamationBubble" type="AnimatedSprite2D" parent="."]
+sprite_frames = ExtResource("13_sgajj")
+animation = &"holdit"
+centered = false
+script = ExtResource("14_jg1s6")
+
+[node name="OverlayFlash" type="ColorRect" parent="."]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("25_j8y13")
+
+[node name="Arrow" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 236.0
+offset_top = 172.0
+offset_right = 236.0
+offset_bottom = 172.0
+script = ExtResource("26_mjk5q")
+
+[node name="ArrowTexture" type="TextureRect" parent="Arrow"]
+layout_mode = 0
+offset_right = 10.0
+offset_bottom = 11.0
+texture = ExtResource("26_tejqb")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Arrow"]
+libraries = {
+"": SubResource("AnimationLibrary_eecjn")
+}
+autoplay = "arrow"
