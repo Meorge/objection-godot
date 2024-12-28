@@ -46,6 +46,16 @@ Makes the text box instantaneously appear if `set="in"`, or disappear if `set="o
 
 Slides the text box onto the screen if `anim="in"`, or off-screen if `anim="out"`.
 
+```xml
+<arrow action="show|hide" />
+```
+
+Shows or hides the "next dialogue" arrow at the bottom-right corner of the text box.
+If no `action` is provided, it defaults to showing the arrow.
+
+Note that the arrow is not a child of the text box.
+That means that if the text box is hidden, such as with `<box set="out" />`, and the arrow is shown with `<arrow action="show" />`, the arrow will appear above the scene.
+
 ### Text color
 
 ```xml
