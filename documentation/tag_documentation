@@ -1,0 +1,191 @@
+# Tag Documentation
+
+## Tags
+
+### General control
+
+```xml
+<play />
+```
+
+Starts the current queued text and commands.
+
+Once this tag is reached, the text will clear, so it's best to put a `<wait>` tag immediately before it so the viewer has time to read the text.
+
+```xml
+<wait secs="float" />
+```
+
+Pauses movement through the script for a given number of `secs`.
+
+```xml
+<speed val="default|float" />
+```
+
+Sets the speed for the text display to `val`.
+
+To reset it to the default speed, pass `val="default"`.
+
+### Name tag and text box
+
+```xml
+<nametag text="string" />
+```
+
+Sets the nametag to display the given string `text`. If `text` is an empty string, then the nametag will be hidden.
+
+```xml
+<box set="in|out" />
+```
+
+Makes the text box instantaneously appear if `set="in"`, or disappear if `set="out"`.
+
+```xml
+<box anim="in|out" />
+```
+
+Slides the text box onto the screen if `anim="in"`, or off-screen if `anim="out"`.
+
+### Text color
+
+```xml
+<color value="string"></color>
+```
+
+Sets the color of the enclosed text to `value`.
+
+### Visual effects
+
+```xml
+<flash duration="float:0.15" />
+```
+
+Turns the screen white for `duration` seconds.
+
+```xml
+<shake magnitude="float:5.0" duration="float:0.3" />
+```
+
+Shakes the screen with a given `magnitude` for `duration` seconds.
+
+### Sprites
+
+```xml
+<sprite pos="string" res="path" anim="string" />
+```
+
+Changes the animated sprite for the given `pos`, to use the animation named `anim` within the `SpriteFrames` asset at the path `res`.
+
+The current built-in locations are:
+
+- `left` - The left side of the courtroom, where the defense attorney stands.
+- `center` - The witness stand.
+- `right` - The right side of the courtroom, where the prosecutor stands.
+
+### Music and sound effects
+
+```xml
+<music action="play|stop" res="path" />
+```
+
+Performs a music-related `action`.
+
+- If `action="play"`, then the music file at the path given by `res` will start playing.
+
+- If `action="stop"`, then the currently playing music will be stopped.
+
+```xml
+<sound res="path" />
+```
+
+Plays the sound effect at the path given by `res` once.
+
+```xml
+<blip type="male|female|typewriter|none" />
+```
+
+Sets the speaking blip sound effect to `type`.
+
+- `type="male"` and `type="female"` are used for male and female characters, respectively.
+
+- `type="typewriter"` is used for scene introductions, such as at the start of a trial or investigation segment.
+
+- `type="none"` disables the sounds completely.
+
+### Camera
+
+```xml
+<cut to="location" />
+```
+
+Immediately snaps the camera to the location given by `to`.
+
+```xml
+<pan to="location" />
+```
+
+Moves the camera to the location given by `to` over a short period of time.
+
+This is intended to be used when the initial and final positions of the camera are within the courtroom "wide shot" (that is, they are both `left`, `center`, or `right`).
+
+### "Witness Testimony" title text
+
+```xml
+<bigtext top="string" bottom="string" color="string" dir="lr|ud" />
+```
+
+Displays a "Witness Testimony" animation in large block letters.
+The text is always made of two lines.
+The string for `top` is displayed as the top line, and the string for `bottom` is displayed as the bottom line.
+The fill color of the text is defined by `color`.
+
+The `dir` argument dictates how the two lines of text should animate out.
+
+- If `dir="lr"`, the top line will move right, and the bottom line will move left.
+
+- If `dir="ud"`, the top line will move up, and the bottom line will move down.
+
+### Evidence
+
+```xml
+<evidence side="left|right" action="show|hide|hide_immediate" res="location" />
+```
+
+Updates the evidence/object boxes on the left or right side of the screen.
+
+The `side` argument must be either `"left"` or `"right"`, and indicates which evidence box should receive the command.
+
+The `action` argument states what action the evidence box should perform.
+
+- If `action="show"`, then the `res` argument must be a path to the image to display in the box.
+The box will animate on-screen, and display the image.
+
+- If `action="hide"`, then the box will animate off-screen.
+
+- If `action="hide_immediate"`, then the box will immediately disappear, without any animation.
+
+### Exclamation bubbles
+
+```xml
+<bubble type="objection|holdit|takethat" />
+```
+
+Animates an exclamation bubble given by `type`.
+
+Note that no sound is played automatically.
+To play a character's voice clip along with the bubble, use a `<sound>` tag at the same time.
+
+## Data types
+
+### `color`
+
+Colors can be an HTML color code (like `#385A8B`) or a case-insensitive named color.
+(Internally, [the Godot `Color.from_string` method](https://docs.godotengine.org/en/stable/classes/class_color.html#class-color-method-from-string) is used, so check that for more information.)
+
+In addition, there are a few case-*sensitive* colors provided to match the *Ace Attorney* games:
+
+- `aa-text-red` is the text color used to highlight important words and phrases.
+- `aa-text-blue` is the text color used for characters' inner thoughts.
+- `aa-text-green` is the text color used for phone calls and other "indirect" communications.
+- `aa-witintro-red` is the text color used for the "Cross Examination" title that appears before cross-examining a witness.
+- `aa-witintro-blue` is the text color used for the "Witness Testimony" title that appears before hearing testimony.
