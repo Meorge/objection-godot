@@ -1,0 +1,53 @@
+<cut to="left"/>
+<box set="in"/>
+<nametag text="Phoenix"/>
+<blip type="male"/>
+<sprite pos="left" res="res://phoenix-new/phoenix.tres" anim="normal-talk"/>
+Hey, I'm Phoenix, a defense attorney.
+<sprite pos="left" anim="normal-idle" />
+<arrow />
+<wait secs="2.0"/>
+<box set="out"/>
+<arrow action="hide"/>
+<play/>
+
+<sprite pos="center" res="res://larry-new/larry.tres" anim="normal-idle"/>
+<pan to="center"/>
+<wait secs="0.5"/>
+<sprite pos="center" res="res://larry-new/larry.tres" anim="normal-talk"/>
+<box set="in"/>
+<nametag text="Butz"/>
+<blip type="male"/>
+I'm Larry Butz, just some guy.
+<sprite pos="center" anim="normal-idle"/>
+<arrow/>
+<wait secs="2.0"/>
+<box set="out"/>
+<arrow action="hide"/>
+<play/>
+
+<sprite pos="right" res="res://edgeworth-new/edgeworth.tres" anim="normal-idle"/>
+<pan to="right"/>
+<wait secs="0.5"/>
+<sprite pos="right" anim="normal-talk"/>
+<box set="in"/>
+<nametag text="Edgeworth"/>
+<blip type="male"/>
+And I'm Edgeworth, the prosecutor.
+<sprite pos="right" anim="normal-idle"/>
+<arrow/>
+<wait secs="2.0"/>
+<arrow action="hide"/>
+<play/>
+
+<nametag text="Judge"/>
+<sprite pos="judge" res="res://judge-new/judge.tres" anim="normal-idle"/>
+<cut to="judge"/>
+<wait secs="0.5"/>
+<sprite pos="judge" anim="normal-talk"/>
+<blip type="male"/>
+Don't forget about me, the Judge!
+<sprite pos="judge" anim="normal-idle"/>
+<arrow/>
+<wait secs="2.0"/>
+<play/>

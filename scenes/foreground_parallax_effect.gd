@@ -31,4 +31,6 @@ func _on_pan_will_be_performed(old_position: String, new_position: String):
 	tw.tween_property(self, "global_position:x", new_pos, 0.5).set_trans(Tween.TRANS_SINE)
 
 func _on_cut_performed(new_position: String):
+	if new_position not in POSITIONS_TO_OFFSETS.keys():
+		return
 	global_position.x = POSITIONS_TO_OFFSETS[new_position]

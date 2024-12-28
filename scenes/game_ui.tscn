@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://cavxmwjgdsolv"]
+[gd_scene load_steps=32 format=3 uid="uid://cavxmwjgdsolv"]
 
 [ext_resource type="Script" path="res://scenes/game_ui.gd" id="1_i61tc"]
 [ext_resource type="Texture2D" uid="uid://b3x4aoo200rhg" path="res://objection_assets/textbox/nametag_left.png" id="1_uinmu"]
@@ -25,12 +25,52 @@
 [ext_resource type="SpriteFrames" path="res://evidence-left/evidence-left.tres" id="17_nsfoq"]
 [ext_resource type="AudioStream" uid="uid://d23tyxxvjexw5" path="res://objection_assets/sound/sfx-evidenceshoop.wav" id="18_khjmp"]
 [ext_resource type="Script" path="res://scenes/overlay_flash.gd" id="25_j8y13"]
+[ext_resource type="Script" path="res://next_arrow/arrow.gd" id="26_mjk5q"]
+[ext_resource type="Texture2D" uid="uid://cqslgdnxhwf3m" path="res://next_arrow/next_arrow.png" id="26_tejqb"]
 
 [sub_resource type="FontVariation" id="FontVariation_7jt8r"]
 base_font = ExtResource("9_evp38")
 variation_face_index = 1
 variation_transform = Transform2D(0.9, 0.25, 0, 1, 0, 0)
 spacing_glyph = -2
+
+[sub_resource type="Animation" id="Animation_248la"]
+resource_name = "arrow"
+length = 0.3333
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ArrowTexture:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.166667, 0.333333),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(5, 0), Vector2(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_j8fsi"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ArrowTexture:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_eecjn"]
+_data = {
+"RESET": SubResource("Animation_j8fsi"),
+"arrow": SubResource("Animation_248la")
+}
 
 [node name="GameUI" type="CanvasLayer"]
 script = ExtResource("1_i61tc")
@@ -254,9 +294,31 @@ centered = false
 script = ExtResource("14_jg1s6")
 
 [node name="OverlayFlash" type="ColorRect" parent="."]
+visible = false
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("25_j8y13")
+
+[node name="Arrow" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 236.0
+offset_top = 172.0
+offset_right = 236.0
+offset_bottom = 172.0
+script = ExtResource("26_mjk5q")
+
+[node name="ArrowTexture" type="TextureRect" parent="Arrow"]
+layout_mode = 0
+offset_right = 10.0
+offset_bottom = 11.0
+texture = ExtResource("26_tejqb")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Arrow"]
+libraries = {
+"": SubResource("AnimationLibrary_eecjn")
+}
+autoplay = "arrow"

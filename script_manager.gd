@@ -3,12 +3,7 @@ extends Node
 
 # Actions
 
-# User interface
-# - showarrow
-# - hidearrow
-
-# Camera control
-# - pan <pos>
+# More sprite locations
 
 # Verdict
 # - verdict <text> <color>
@@ -54,10 +49,11 @@ func _enter_tree():
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	await get_tree().process_frame
 	_display_text()
 
 func _display_text():
-	var f := FileAccess.open("res://test_script.xml", FileAccess.READ)
+	var f := FileAccess.open("res://test_positions.xml", FileAccess.READ)
 	var text_bits := parse_xml_str(f.get_as_text().replace("\n", ""))
 
 	# Start with a blank text box.
@@ -136,11 +132,7 @@ func _handle_blip(args: Dictionary):
 
 
 func _handle_sprite(args: Dictionary):
-	var sprite_to_change := {
-		"left": %MainCourtView.get_node("%LeftCharacter"),
-		"center": %MainCourtView.get_node("%CenterCharacter"),
-		"right": %MainCourtView.get_node("%RightCharacter")
-	}[args["pos"]] as AnimatedSprite2D
+	var sprite_to_change: CharacterSpriteContainer = CharacterSpriteContainer.sprite_containers[args["pos"]]
 
 	if args.has("res"):
 		sprite_to_change.sprite_frames = load(args["res"])

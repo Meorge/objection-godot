@@ -1,6 +1,6 @@
 <nametag text="" />
 <box set="out" />
-<wait secs="1.0"/>
+<!-- <wait secs="1.0"/> -->
 <bigtext top="Bro Is" bottom="Yapping" color="aa-witintro-red" dir="lr" />
 <wait secs="4.0"/>
 <box anim="in" />
@@ -9,14 +9,17 @@
 <nametag text="Butz" />
 <sprite pos="center" res="res://larry-new/larry.tres" anim="thumbsup-talk" />
 <blip type="male"/>
-Hey, dude!<flash/><shake/><wait secs="0.5"/> Check out this <color value="aa-text-red">cool thing</color><evidence res="res://ref-witnesstestimony.png"/> I found!<flash/><shake/><wait secs="0.75"/> What do you think?
+Hey, dude! <flash/><shake/><wait secs="0.5"/>
+<pan to="left"/>Check out this <color value="aa-text-red">cool thing</color><evidence res="res://ref-witnesstestimony.png"/> I found!<flash/><shake/><wait secs="0.75"/> What do you think?
 <sprite pos="center" anim="thumbsup-idle" />
 <blip type="none"/>
+<arrow />
 <wait secs="2.0" />
 
 <music action="stop"/>
 <bubble type="objection" />
 <box set="out"/>
+<arrow action="hide" />
 <sound res="res://exclamation_sounds/objection-phoenix.mp3"/>
 <wait secs="1.0"/>
 <play />
@@ -25,5 +28,6 @@ Hey, dude!<flash/><shake/><wait secs="0.5"/> Check out this <color value="aa-tex
 <box set="in"/>
 I'm going to put that away.<evidence side="right" action="hide"/> Here is some more <color value="aa-text-red">text</color> starting from <color value="aa-text-blue">the beginning</color>
 <blip type="none" />
+<arrow />
 <wait secs="2.0" />
 <play />
