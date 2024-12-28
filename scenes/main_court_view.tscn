@@ -1,7 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://bf1hsaiiken00"]
+[gd_scene load_steps=9 format=3 uid="uid://bf1hsaiiken00"]
 
 [ext_resource type="Texture2D" uid="uid://7hf18s3ktxh5" path="res://objection_assets/bg/bg_main.png" id="1_k8f7i"]
 [ext_resource type="SpriteFrames" path="res://phoenix-new/phoenix.tres" id="2_541ob"]
+[ext_resource type="Script" path="res://scenes/foreground_parallax_effect.gd" id="3_g0edo"]
 [ext_resource type="Texture2D" uid="uid://3tv08jnwudpw" path="res://objection_assets/fg/pr_bench.png" id="3_x5fvn"]
 [ext_resource type="SpriteFrames" path="res://edgeworth-new/edgeworth.tres" id="4_6cewv"]
 [ext_resource type="Script" path="res://camera_position.gd" id="4_ikhnx"]
@@ -14,53 +15,60 @@
 unique_name_in_owner = true
 texture = ExtResource("1_k8f7i")
 
-[node name="Left" type="Node2D" parent="."]
+[node name="LeftCamera" type="Node2D" parent="."]
 position = Vector2(-520, 0)
+script = ExtResource("4_ikhnx")
+camera_id = "left"
 
-[node name="LeftCharacter" type="AnimatedSprite2D" parent="Left"]
+[node name="RightCamera" type="Node2D" parent="."]
+position = Vector2(520, 0)
+script = ExtResource("4_ikhnx")
+camera_id = "right"
+
+[node name="CenterCamera" type="Node2D" parent="."]
+script = ExtResource("4_ikhnx")
+camera_id = "center"
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = 128.0
+offset_top = -94.0
+offset_right = 283.0
+offset_bottom = -54.0
+color = Color(0.982165, 0.138175, 1, 1)
+
+[node name="Foreground" type="Node2D" parent="."]
+position = Vector2(-109, 0)
+script = ExtResource("3_g0edo")
+
+[node name="LeftCharacter" type="AnimatedSprite2D" parent="Foreground"]
 unique_name_in_owner = true
+position = Vector2(-411, 0)
 sprite_frames = ExtResource("2_541ob")
 animation = &"sweating-talk"
 frame_progress = 0.409139
 
-[node name="LeftBench" type="Sprite2D" parent="Left"]
+[node name="LeftBench" type="Sprite2D" parent="Foreground/LeftCharacter"]
 unique_name_in_owner = true
 texture = ExtResource("3_x5fvn")
 
-[node name="LeftCamera" type="Node2D" parent="Left"]
-script = ExtResource("4_ikhnx")
-camera_id = "left"
-
-[node name="Right" type="Node2D" parent="."]
-position = Vector2(520, 0)
-
-[node name="RightCharacter" type="AnimatedSprite2D" parent="Right"]
+[node name="RightCharacter" type="AnimatedSprite2D" parent="Foreground"]
 unique_name_in_owner = true
+position = Vector2(411, 0)
 sprite_frames = ExtResource("4_6cewv")
 animation = &"pointing-talk"
 frame_progress = 0.991927
 
-[node name="RightBench" type="Sprite2D" parent="Right"]
+[node name="RightBench" type="Sprite2D" parent="Foreground/RightCharacter"]
 unique_name_in_owner = true
 texture = ExtResource("3_x5fvn")
 flip_h = true
 
-[node name="RightCamera" type="Node2D" parent="Right"]
-script = ExtResource("4_ikhnx")
-camera_id = "right"
-
-[node name="Center" type="Node2D" parent="."]
-
-[node name="CenterCharacter" type="AnimatedSprite2D" parent="Center"]
+[node name="CenterCharacter" type="AnimatedSprite2D" parent="Foreground"]
 unique_name_in_owner = true
 sprite_frames = ExtResource("5_ndxb1")
 animation = &"thumbsup-idle"
 frame_progress = 0.198705
 
-[node name="WitnessStand" type="Sprite2D" parent="Center"]
+[node name="WitnessStand" type="Sprite2D" parent="Foreground/CenterCharacter"]
 unique_name_in_owner = true
 texture = ExtResource("6_g0uw8")
-
-[node name="CenterCamera" type="Node2D" parent="Center"]
-script = ExtResource("4_ikhnx")
-camera_id = "center"

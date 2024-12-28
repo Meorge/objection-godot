@@ -31,7 +31,6 @@ var handlers := {
 	"blip": _handle_blip,
 	"sprite": _handle_sprite,
 	"wait": _handle_wait,
-	"cut": _handle_cut,
 	"speed": _handle_speed,
 }
 
@@ -152,8 +151,6 @@ func _handle_sprite(args: Dictionary):
 func _handle_wait(args: Dictionary):
 	await get_tree().create_timer(float(args["secs"])).timeout
 
-func _handle_cut(args: Dictionary):
-	camera.global_position = CameraPosition.positions[args["to"]].global_position
 
 func _handle_speed(args: Dictionary):
 	var new_val: float = TEXT_SPEED_DEFAULT
