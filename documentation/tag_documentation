@@ -185,6 +185,19 @@ Animates an exclamation bubble given by `type`.
 Note that no sound is played automatically.
 To play a character's voice clip along with the bubble, use a `<sound>` tag at the same time.
 
+### Gavel slam
+
+```xml
+<gavel num="int:3" between="float:0.17" after="float:0.766" />
+```
+
+Animates the Judge's gavel slam `num` times in a row.
+
+The argument `between` gives the delay between slams, if more than one slam is performed.
+
+The argument `after` gives the delay after the last slam before script execution continues.
+
+
 ## Data types
 
 ### `color`

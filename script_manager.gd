@@ -39,6 +39,9 @@ const TEXT_SPEED_DEFAULT = 30.0
 var text_speed: float = TEXT_SPEED_DEFAULT
 
 static func register_handler(tag_name: String, handler: Callable):
+	if instance == null:
+		print_rich("[color=red]ERROR: ScriptManager doesn't exist")
+		return
 	if tag_name in instance.handlers.keys():
 		print_rich("[color=red]ERROR: Handler for \"%s\" already exists" % tag_name)
 		return
@@ -53,7 +56,7 @@ func _ready():
 	_display_text()
 
 func _display_text():
-	var f := FileAccess.open("res://test_positions.xml", FileAccess.READ)
+	var f := FileAccess.open("res://test_gavel.xml", FileAccess.READ)
 	var text_bits := parse_xml_str(f.get_as_text().replace("\n", ""))
 
 	# Start with a blank text box.
