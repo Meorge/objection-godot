@@ -20,12 +20,14 @@ This project is a continuation of the [Objection! rendering engine](https://gith
 
 Many of the assets (including character animations and UI elements) were ripped by contributors to the [Court Records website](https://www.court-records.net).
 
-TODO: Get proper citations for
+### Fonts
 
-- Name tag
-- Text box body
-- Witness Testimony
-- Testimony (top left corner)
+- Name tag font is [Ace Name by user guiguiba on FontStruct](https://fontstruct.com/fontstructions/show/1799842/ace-name)
+- Text box body font is [Igiari Cyrillic by user trtrtrtr on FontStruct](https://fontstruct.com/fontstructions/show/1791074/igiari-4), forked from [Igiari by user caveras](https://fontstruct.com/fontstructions/show/1029846/igiari)
+- Several fonts are from [RapBattleEditor0510's "Phoenix Wright: Ace Attorney Font Pack 2" on DeviantArt](https://www.deviantart.com/rapbattleeditor0510/art/Fonts-Phoenix-Wright-Ace-Attorney-Font-Pack-2-873499678):
+  - Verdict label uses DFMincho StdN W12
+  - "Witness Testimony" label uses DFP Gothic EB
+- Flashing top-left "Testimony" label uses DIN Condensed (Bold)
 
 ## License
 
