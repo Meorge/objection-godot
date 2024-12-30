@@ -1,0 +1,32 @@
+<cut to="left"/>
+<box set="in"/>
+<nametag text="Phoenix"/>
+<blip type="male"/>
+<sprite pos="left" res="res://characters/phoenix/phoenix.tres" anim="thinking-talk"/>
+I like to eat pineapple on my pizza.
+<sprite pos="left" anim="thinking-idle" />
+<arrow />
+<wait secs="4.0"/>
+<arrow action="hide"/>
+<play/>
+
+<box set="out"/>
+<cut to="judge"/>
+<nametag text="Judge"/>
+<sprite pos="judge" res="res://characters/judge/judge.tres" anim="normal-idle"/>
+<box set="in"/>
+<sprite pos="judge" anim="normal-talk"/>
+<blip type="male"/>
+I hereby declare you...
+<sprite pos="judge" anim="normal-idle"/>
+<arrow/>
+<wait secs="2.0"/>
+<box set="out"/>
+<arrow action="hide"/>
+<verdict text="Very Cringe" group_by="word" font_color="red" font_outline_color="blue"/>
+<wait secs="3.0"/>
+<verdict text=""/>
+<wait secs="2.0"/>
+<verdict text="Just Kidding" group_by="letter"/>
+<wait secs="5.0"/>
+<play/>

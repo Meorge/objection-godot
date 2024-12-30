@@ -197,6 +197,18 @@ The argument `between` gives the delay between slams, if more than one slam is p
 
 The argument `after` gives the delay after the last slam before script execution continues.
 
+### Verdict
+
+```xml
+<verdict text="string" group_by="word|letter:letter" font_color="color:white" font_outline_color="color:black" />
+```
+
+Displays the provided `text` on-screen as if it were the Judge's verdict, with a dramatic animation and sound effects.
+
+If `group_by="word"`, then each word in the `text` (i.e., groups of non-space characters) will animate together.
+If `group_by="letter"`, each letter/character in the `text` will animate in sequence.
+
+The `font_color` and `font_outline_color` arguments set the color of the text and its outline, respectively.
 
 ## Data types
 

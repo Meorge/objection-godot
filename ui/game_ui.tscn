@@ -2,9 +2,7 @@
 
 [ext_resource type="Script" path="res://ui/game_ui.gd" id="1_i61tc"]
 [ext_resource type="Texture2D" uid="uid://b3x4aoo200rhg" path="res://ui/text_box/nametag_left.png" id="1_uinmu"]
-[ext_resource type="Texture2D" uid="uid://bhfi8n8dlx1nf" path="res://ref-witnesstestimony.png" id="2_k304s"]
 [ext_resource type="Texture2D" uid="uid://ckysnuyauklhy" path="res://ui/text_box/nametag_center.png" id="2_xtvfo"]
-[ext_resource type="Texture2D" uid="uid://pr803jfut16q" path="res://16441499-phoenix-wright-ace-attorney-nintendo-ds-getting-some-details-fro.png" id="3_74y1g"]
 [ext_resource type="Script" path="res://effects/shaker/control_shaker.gd" id="3_op4cl"]
 [ext_resource type="Texture2D" uid="uid://biw5x0gyerjj0" path="res://ui/text_box/nametag_right.png" id="3_vdgvt"]
 [ext_resource type="FontFile" uid="uid://faumch8kfu2c" path="res://ui/text_box/font/ace-name/ace-name.ttf" id="4_b14rb"]
@@ -27,6 +25,8 @@
 [ext_resource type="Script" path="res://effects/overlay_flash.gd" id="25_j8y13"]
 [ext_resource type="Script" path="res://ui/next_arrow/arrow.gd" id="26_mjk5q"]
 [ext_resource type="Texture2D" uid="uid://cqslgdnxhwf3m" path="res://ui/next_arrow/next_arrow.png" id="26_tejqb"]
+[ext_resource type="Script" path="res://ui/verdict/verdict.gd" id="28_32ipn"]
+[ext_resource type="PackedScene" uid="uid://dpskq5d2xahc7" path="res://ui/verdict/verdict_single_letter_label.tscn" id="29_xl8j8"]
 
 [sub_resource type="FontVariation" id="FontVariation_7jt8r"]
 base_font = ExtResource("9_evp38")
@@ -74,16 +74,6 @@ _data = {
 
 [node name="GameUI" type="CanvasLayer"]
 script = ExtResource("1_i61tc")
-
-[node name="Ref-witnesstestimony" type="Sprite2D" parent="."]
-visible = false
-texture = ExtResource("2_k304s")
-centered = false
-
-[node name="16441499-phoenix-wright-ace-attorney-nintendo-ds-getting-some-details-fro" type="Sprite2D" parent="."]
-visible = false
-texture = ExtResource("3_74y1g")
-centered = false
 
 [node name="BoxShaker" type="Control" parent="."]
 unique_name_in_owner = true
@@ -165,7 +155,7 @@ Studio One at approximately
 shortcut_keys_enabled = false
 visible_characters_behavior = 1
 
-[node name="Label" type="Label" parent="."]
+[node name="TopLeftLabel" type="Label" parent="."]
 offset_left = 2.0
 offset_top = 3.0
 offset_right = 101.0
@@ -322,3 +312,16 @@ libraries = {
 "": SubResource("AnimationLibrary_eecjn")
 }
 autoplay = "arrow"
+
+[node name="Verdict" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 64.0
+offset_right = -256.0
+offset_bottom = -128.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("28_32ipn")
+single_letter_label = ExtResource("29_xl8j8")
