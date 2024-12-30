@@ -56,7 +56,21 @@ func _ready():
 	_display_text()
 
 func _display_text():
-	var f := FileAccess.open("res://test_gavel.xml", FileAccess.READ)
+	var path: String = "res://script.xml"
+	for arg in OS.get_cmdline_user_args():
+		if arg.begins_with("--render-script="):
+			path = arg.get_slice("=", 1)
+			if (path[0] == "\"" and path[-1] == "\"") or (path[0] == "'" and path[-1] == "'"):
+				path = path.substr(1, path.length() - 2)
+
+	if not FileAccess.file_exists(path):
+		print_rich("[color=red][b]ERROR:[/b] File at \"%s\" cannot be found." % path)
+		get_tree().quit(0)
+		return
+
+	print_rich("Running script at \"%s\"..." % path)
+	
+	var f := FileAccess.open(path, FileAccess.READ)
 	var text_bits := parse_xml_str(f.get_as_text().replace("\n", ""))
 
 	# Start with a blank text box.

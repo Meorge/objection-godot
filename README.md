@@ -8,6 +8,18 @@ For script examples, see the `test_*.xml` files.
 
 This project currently uses Godot 4.3.
 
+## Usage
+
+By default, the program will read from `script.xml` in the root of the project folder.
+
+To make it read another script file, pass it as a command-line argument with the `--render-script` flag, like so:
+
+```
+-- --render-script="path/to/my/script.xml"
+```
+
+Note that the double hyphens (`--`) must be placed before the argument.
+
 ## Roadmap
 
 See the [issues page](https://github.com/Meorge/objection-godot/issues) for planned features and fixes.
