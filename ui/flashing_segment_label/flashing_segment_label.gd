@@ -12,6 +12,7 @@ var _time_out: float = 0.5
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	text = ""
 	ScriptManager.register_handler("segment_title", _handle_segment_title)
 
 func _handle_segment_title(args: Dictionary):
