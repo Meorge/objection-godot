@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=3 uid="uid://cavxmwjgdsolv"]
+[gd_scene load_steps=29 format=3 uid="uid://cavxmwjgdsolv"]
 
 [ext_resource type="Script" path="res://ui/game_ui.gd" id="1_i61tc"]
 [ext_resource type="Texture2D" uid="uid://b3x4aoo200rhg" path="res://ui/text_box/nametag_left.png" id="1_uinmu"]
@@ -10,10 +10,8 @@
 [ext_resource type="Texture2D" uid="uid://2xbilq1bbwrb" path="res://ui/text_box/mainbox.png" id="5_r7fiw"]
 [ext_resource type="FontFile" uid="uid://c0v5yww5rglpk" path="res://ui/text_box/font/igiari-cyrillic/igiari-cyrillic.ttf" id="6_ggym5"]
 [ext_resource type="Script" path="res://ui/text_box/nametag_container.gd" id="7_3rn5j"]
-[ext_resource type="FontFile" uid="uid://cgnqjv63f3x13" path="res://ui/witness_testimony/DFHeiA_0.ttc" id="9_evp38"]
-[ext_resource type="Script" path="res://ui/witness_testimony/witness_testimony_intro.gd" id="10_blrub"]
 [ext_resource type="PackedScene" uid="uid://c3hlwg4rh13f1" path="res://ui/flashing_segment_label/flashing_segment_label.tscn" id="11_2501h"]
-[ext_resource type="AudioStream" uid="uid://46tei0rmwxo3" path="res://audio/sound/sfx-testimony2.wav" id="12_ops38"]
+[ext_resource type="PackedScene" uid="uid://dcitg4aymosj" path="res://ui/witness_testimony/witness_testimony_intro.tscn" id="12_0ob4r"]
 [ext_resource type="Script" path="res://ui/evidence/evidence_handler.gd" id="13_atwk1"]
 [ext_resource type="SpriteFrames" path="res://ui/exclamations/exclamation_animations/exclamations.tres" id="13_sgajj"]
 [ext_resource type="Script" path="res://ui/exclamations/exclamation_bubble.gd" id="14_jg1s6"]
@@ -27,12 +25,6 @@
 [ext_resource type="Texture2D" uid="uid://cqslgdnxhwf3m" path="res://ui/next_arrow/next_arrow.png" id="26_tejqb"]
 [ext_resource type="Script" path="res://ui/verdict/verdict.gd" id="28_32ipn"]
 [ext_resource type="PackedScene" uid="uid://dpskq5d2xahc7" path="res://ui/verdict/verdict_single_letter_label.tscn" id="29_xl8j8"]
-
-[sub_resource type="FontVariation" id="FontVariation_7jt8r"]
-base_font = ExtResource("9_evp38")
-variation_face_index = 1
-variation_transform = Transform2D(0.9, 0.25, 0, 1, 0, 0)
-spacing_glyph = -2
 
 [sub_resource type="Animation" id="Animation_j8fsi"]
 length = 0.001
@@ -157,75 +149,7 @@ visible_characters_behavior = 1
 
 [node name="FlashingSegmentLabel" parent="." instance=ExtResource("11_2501h")]
 
-[node name="WitnessTestimonyIntro" type="Control" parent="."]
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-script = ExtResource("10_blrub")
-
-[node name="TopLabel" type="Label" parent="WitnessTestimonyIntro"]
-unique_name_in_owner = true
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -81.0
-offset_top = -64.0
-offset_right = 77.0
-offset_bottom = -19.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_colors/font_color = Color(0.184314, 0.0117647, 0.964706, 1)
-theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
-theme_override_constants/outline_size = 14
-theme_override_fonts/font = SubResource("FontVariation_7jt8r")
-theme_override_font_sizes/font_size = 44
-text = "Plate"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="BottomLabel" type="Label" parent="WitnessTestimonyIntro"]
-unique_name_in_owner = true
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -108.5
-offset_top = -64.0
-offset_right = 104.5
-offset_bottom = 60.15
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_colors/font_color = Color(0.184314, 0.0117647, 0.964706, 1)
-theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
-theme_override_constants/outline_size = 14
-theme_override_fonts/font = SubResource("FontVariation_7jt8r")
-theme_override_font_sizes/font_size = 44
-text = "Application"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="FlashOverlay" type="ColorRect" parent="WitnessTestimonyIntro"]
-unique_name_in_owner = true
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-mouse_filter = 2
-color = Color(1, 1, 1, 0)
-
-[node name="WitnessTestimonyIntroSound" type="AudioStreamPlayer" parent="WitnessTestimonyIntro"]
-unique_name_in_owner = true
-stream = ExtResource("12_ops38")
+[node name="WitnessTestimonyIntro" parent="." instance=ExtResource("12_0ob4r")]
 
 [node name="EvidenceHandler" type="Node2D" parent="."]
 script = ExtResource("13_atwk1")

@@ -1,6 +1,6 @@
 <nametag text="" />
 <box set="out" />
-<!-- <wait secs="1.0"/> -->
+<wait secs="1.0"/>
 <bigtext top="Bro Is" bottom="Yapping" color="aa-witintro-red" dir="lr" />
 <wait secs="4.0"/>
 <box anim="in" />

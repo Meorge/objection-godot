@@ -30,6 +30,7 @@ func _enter_tree():
 func _ready():
 	top_label.visible = false
 	bottom_label.visible = false
+	set_shine_offset(10.0)
 
 	ScriptManager.register_handler("bigtext", _handle_big_text)
 
@@ -55,6 +56,7 @@ func set_text(top: String, bottom: String, color: Color, animate_direction: Anim
 
 	top_label.visible = false
 	bottom_label.visible = false
+	set_shine_offset(10.0)
 
 	top_label.add_theme_color_override("font_color", color)
 	bottom_label.add_theme_color_override("font_color", color)
@@ -77,12 +79,28 @@ func set_text(top: String, bottom: String, color: Color, animate_direction: Anim
 	# so that once we tween them in, they move at the intended speed.
 	var tw := create_tween()
 	tw.tween_callback(sound.play)
+	tw.tween_interval(10.0 / 60.0)
 	tw.tween_property(top_label, "position:x", top_label_dest_x, 14.0 / 60.0)
 	tw.parallel().tween_property(bottom_label, "position:x", bottom_label_dest_x, 14.0 / 60.0)
 	tw.tween_callback(func(): flash_overlay.color.a = 1.0)
 	tw.tween_interval(2.0 / 60.0)
 	tw.tween_property(flash_overlay, "color:a", 0.0, 8.0 / 60.0)
-	tw.tween_interval(1.5)
+
+	# Gloss shine (stripe that moves across)
+	tw.tween_method(set_shine_offset, 1.0, -1.0, 35.0 / 60.0)
+
+	# Shine in to near-white.
+	tw.tween_method(set_font_color, color, Color.WHITE, 9.0 / 60.0)
+
+	# Hold on lit-up color.
+	tw.tween_interval(4.0 / 60.0)
+
+	# Return to original color.
+	tw.tween_method(set_font_color, Color.WHITE, color, 9.0 / 60.0)
+
+	# I counted 64 frames from the end of the shine to the beginning of the
+	# shift out, but it doesn't line up with the sound effect.
+	tw.tween_interval(25.0 / 60.0)
 
 	match animate_direction:
 		AnimateDirection.ANIMATE_LR:
@@ -103,3 +121,14 @@ func set_text(top: String, bottom: String, color: Color, animate_direction: Anim
 			tw.parallel().tween_property(bottom_label, "position:y", bottom_label_out_y, 20.0 / 60.0) \
 				.set_ease(Tween.EASE_IN) \
 				.set_trans(Tween.TRANS_SINE)
+
+func set_font_color(color: Color):
+	top_label.add_theme_color_override("font_color", color)
+	bottom_label.add_theme_color_override("font_color", color)
+
+func set_shine_offset(offset: float):
+	var m: ShaderMaterial = top_label.material
+	m.set_shader_parameter("x_offset", offset)
+
+	m = bottom_label.material
+	m.set_shader_parameter("x_offset", offset)

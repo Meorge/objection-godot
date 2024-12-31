@@ -1,0 +1,7 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://c582bcoxkfs27"]
+
+[ext_resource type="Shader" uid="uid://b5yu1yd058snr" path="res://ui/witness_testimony/witness_testimony_intro_shine.tres" id="1_27d4w"]
+
+[resource]
+shader = ExtResource("1_27d4w")
+shader_parameter/x_offset = 1.0
