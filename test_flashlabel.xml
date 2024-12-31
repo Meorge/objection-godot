@@ -1,0 +1,58 @@
+<cut to="left"/>
+<box set="in"/>
+<segment_title text="Introduction"/>
+<nametag text="Phoenix"/>
+<blip type="male"/>
+<sprite pos="left" res="res://characters/phoenix/phoenix.tres" anim="normal-talk"/>
+Hey, I'm Phoenix, a defense attorney.
+<sprite pos="left" anim="normal-idle" />
+<arrow />
+<wait secs="2.0"/>
+<segment_title/>
+<box set="out"/>
+<arrow action="hide"/>
+<play/>
+
+<sprite pos="center" res="res://characters/larry/larry.tres" anim="normal-idle"/>
+<pan to="center"/>
+<wait secs="0.5"/>
+<sprite pos="center" anim="normal-talk"/>
+<box set="in"/>
+<segment_title text="Idiot" font_outline_color="red" time_in="0.1" time_out="0.1"/>
+<nametag text="Butz"/>
+<blip type="male"/>
+I'm Larry Butz, just some guy.
+<sprite pos="center" anim="normal-idle"/>
+<arrow/>
+<wait secs="2.0"/>
+<segment_title/>
+<box set="out"/>
+<arrow action="hide"/>
+<play/>
+
+<sprite pos="right" res="res://characters/edgeworth/edgeworth.tres" anim="normal-idle"/>
+<pan to="right"/>
+<wait secs="0.5"/>
+<sprite pos="right" anim="normal-talk"/>
+<box set="in"/>
+<segment_title text="That's Edgeworth!!" font_color="lightblue" font_outline_color="black"/>
+<nametag text="Edgeworth"/>
+<blip type="male"/>
+And I'm Edgeworth, the prosecutor.
+<sprite pos="right" anim="normal-idle"/>
+<arrow/>
+<wait secs="2.0"/>
+<arrow action="hide"/>
+<play/>
+
+<nametag text="Judge"/>
+<sprite pos="judge" res="res://characters/judge/judge.tres" anim="normal-idle"/>
+<cut to="judge"/>
+<wait secs="0.5"/>
+<sprite pos="judge" anim="normal-talk"/>
+<blip type="male"/>
+Don't forget about me, the Judge!
+<sprite pos="judge" anim="normal-idle"/>
+<arrow/>
+<wait secs="2.0"/>
+<play/>

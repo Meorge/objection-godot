@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://c3q46b4hop76"
-path="res://.godot/imported/DINCondensed-Bold.ttf-f68491b9b1f0ce209bc13ec57aa5425e.fontdata"
+path="res://.godot/imported/DINCondensed-Bold.ttf-fbe4e6bac6ffbea1537a9231ea7cb6de.fontdata"
 
 [deps]
 
-source_file="res://ui/flashing_corner_label/DINCondensed-Bold.ttf"
-dest_files=["res://.godot/imported/DINCondensed-Bold.ttf-f68491b9b1f0ce209bc13ec57aa5425e.fontdata"]
+source_file="res://ui/flashing_segment_label/DINCondensed-Bold.ttf"
+dest_files=["res://.godot/imported/DINCondensed-Bold.ttf-fbe4e6bac6ffbea1537a9231ea7cb6de.fontdata"]
 
 [params]
 

@@ -10,9 +10,9 @@
 [ext_resource type="Texture2D" uid="uid://2xbilq1bbwrb" path="res://ui/text_box/mainbox.png" id="5_r7fiw"]
 [ext_resource type="FontFile" uid="uid://c0v5yww5rglpk" path="res://ui/text_box/font/igiari-cyrillic/igiari-cyrillic.ttf" id="6_ggym5"]
 [ext_resource type="Script" path="res://ui/text_box/nametag_container.gd" id="7_3rn5j"]
-[ext_resource type="FontFile" uid="uid://c3q46b4hop76" path="res://ui/flashing_corner_label/DINCondensed-Bold.ttf" id="7_xic5y"]
 [ext_resource type="FontFile" uid="uid://cgnqjv63f3x13" path="res://ui/witness_testimony/DFHeiA_0.ttc" id="9_evp38"]
 [ext_resource type="Script" path="res://ui/witness_testimony/witness_testimony_intro.gd" id="10_blrub"]
+[ext_resource type="PackedScene" uid="uid://c3hlwg4rh13f1" path="res://ui/flashing_segment_label/flashing_segment_label.tscn" id="11_2501h"]
 [ext_resource type="AudioStream" uid="uid://46tei0rmwxo3" path="res://audio/sound/sfx-testimony2.wav" id="12_ops38"]
 [ext_resource type="Script" path="res://ui/evidence/evidence_handler.gd" id="13_atwk1"]
 [ext_resource type="SpriteFrames" path="res://ui/exclamations/exclamation_animations/exclamations.tres" id="13_sgajj"]
@@ -155,17 +155,7 @@ Studio One at approximately
 shortcut_keys_enabled = false
 visible_characters_behavior = 1
 
-[node name="TopLeftLabel" type="Label" parent="."]
-offset_left = 2.0
-offset_top = 3.0
-offset_right = 101.0
-offset_bottom = 36.0
-scale = Vector2(0.65, 1)
-theme_override_colors/font_outline_color = Color(0, 0.752941, 0.219608, 1)
-theme_override_constants/outline_size = 8
-theme_override_fonts/font = ExtResource("7_xic5y")
-theme_override_font_sizes/font_size = 32
-text = "Yapping"
+[node name="FlashingSegmentLabel" parent="." instance=ExtResource("11_2501h")]
 
 [node name="WitnessTestimonyIntro" type="Control" parent="."]
 layout_mode = 3

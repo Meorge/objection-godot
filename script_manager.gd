@@ -20,6 +20,8 @@ static var colors := {
 
 	"aa-witintro-red": Color8(230, 51, 35),
 	"aa-witintro-blue": Color8(43, 24, 245),
+
+	"aa-flashtestimony": Color8(0, 192, 56),
 }
 
 var handlers := {

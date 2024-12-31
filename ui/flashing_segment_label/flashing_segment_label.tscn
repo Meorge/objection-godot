@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://c3hlwg4rh13f1"]
+
+[ext_resource type="FontFile" uid="uid://c3q46b4hop76" path="res://ui/flashing_segment_label/DINCondensed-Bold.ttf" id="1_6l2g1"]
+[ext_resource type="Script" path="res://ui/flashing_segment_label/flashing_segment_label.gd" id="2_vn8sj"]
+
+[node name="FlashingSegmentLabel" type="Label"]
+offset_left = 2.0
+offset_top = 3.0
+offset_right = 101.0
+offset_bottom = 36.0
+scale = Vector2(0.65, 1)
+theme_override_colors/font_outline_color = Color(0, 0.752941, 0.219608, 1)
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = ExtResource("1_6l2g1")
+theme_override_font_sizes/font_size = 32
+text = "Yapping"
+script = ExtResource("2_vn8sj")
