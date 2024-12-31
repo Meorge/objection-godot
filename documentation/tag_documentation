@@ -210,6 +210,20 @@ If `group_by="letter"`, each letter/character in the `text` will animate in sequ
 
 The `font_color` and `font_outline_color` arguments set the color of the text and its outline, respectively.
 
+### Flashing segment label
+
+```xml
+<segment_title text="string:" font_color="color:white" font_outline_color="color:aa-flashtestimony" time_in="float:1.433" time_out="float:0.34" />
+```
+
+Displays a flashing label in the top-left corner of the screen with the provided `text`.
+The label's font has the body color given by `font_color` and the outline color given by `font_outline_color`.
+It will appear for `time_in` seconds, and then disappear for `time_out` seconds.
+
+If no `text` is provided (or `text` is an empty string) then the title will be invisible.
+
+Defaults for the other arguments replicate the look and timing of the "Testimony" flashing label in the *Ace Attorney* DS games.
+
 ## Data types
 
 ### `color`
