@@ -28,19 +28,8 @@ func _handle_verdict(args: Dictionary):
 		return
 	var group_by: int = GROUP_BY_DICT[group_by_str]
 
-	var font_color: Color = Color.WHITE
-	var font_color_str = args.get("font_color", "white")
-	if ScriptManager.colors.has(font_color_str):
-		font_color = ScriptManager.colors[font_color_str]
-	else:
-		font_color = Color.from_string(font_color_str, Color.WHITE)
-
-	var font_outline_color: Color = Color.BLACK
-	var font_outline_color_str = args.get("font_outline_color", "black")
-	if ScriptManager.colors.has(font_outline_color_str):
-		font_outline_color = ScriptManager.colors[font_outline_color_str]
-	else:
-		font_outline_color = Color.from_string(font_outline_color_str, Color.BLACK)
+	var font_color := Utils.get_color_from_string(args.get("font_color", "white"), Color.WHITE)
+	var font_outline_color: Color = Utils.get_color_from_string(args.get("font_outline_color", "black"), Color.BLACK)
 
 	await generate_labels(
 		text,

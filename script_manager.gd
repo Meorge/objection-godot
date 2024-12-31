@@ -13,17 +13,6 @@ extends Node
 # Gavel slam
 # - gavel <frame>
 
-static var colors := {
-	"aa-text-red": Color8(240, 112, 56),
-	"aa-text-blue": Color8(104, 192, 240),
-	"aa-text-green": Color8(0, 240, 0),
-
-	"aa-witintro-red": Color8(230, 51, 35),
-	"aa-witintro-blue": Color8(43, 24, 245),
-
-	"aa-flashtestimony": Color8(0, 192, 56),
-}
-
 var handlers := {
 	"blip": _handle_blip,
 	"sprite": _handle_sprite,
@@ -105,11 +94,7 @@ func _display_text():
 
 func _handle_color(args: Dictionary, is_end: bool):
 	if not is_end:
-		var new_col: String = args["value"]
-		if colors.has(new_col):
-			dialogue_label.push_color(colors[new_col])
-		else:
-			dialogue_label.push_color(Color.from_string(new_col, Color.WHITE))
+		dialogue_label.push_color(Utils.get_color_from_string(args.get("value", "white"), Color.WHITE))
 	else:
 		dialogue_label.pop()
 

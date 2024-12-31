@@ -34,11 +34,7 @@ func _ready():
 	ScriptManager.register_handler("bigtext", _handle_big_text)
 
 func _handle_big_text(args: Dictionary):
-	var color: Color
-	if ScriptManager.colors.has(args.get("color", "aa-witintro-blue")):
-		color = ScriptManager.colors[args["color"]]
-	else:
-		color = Color.from_string(args["color"], ScriptManager.colors["aa-witintro-blue"])
+	var color := Utils.get_color_from_string(args.get("color", "aa-witintro-blue"), Color.BLACK)
 
 	var dir = {
 		"lr": WitnessTestimonyIntro.AnimateDirection.ANIMATE_LR,

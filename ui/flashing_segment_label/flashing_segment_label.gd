@@ -17,19 +17,8 @@ func _ready():
 func _handle_segment_title(args: Dictionary):
 	var new_text = args.get("text", "")
 
-	var font_color: Color
-	var font_color_str = args.get("font_color", "white")
-	if ScriptManager.colors.has(font_color_str):
-		font_color = ScriptManager.colors[font_color_str]
-	else:
-		font_color = Color.from_string(font_color_str, Color.WHITE)
-
-	var font_outline_color: Color
-	var font_outline_color_str = args.get("font_outline_color", "aa-flashtestimony")
-	if ScriptManager.colors.has(font_outline_color_str):
-		font_outline_color = ScriptManager.colors[font_outline_color_str]
-	else:
-		font_outline_color = Color.from_string(font_outline_color_str, Color.WHITE)
+	var font_color := Utils.get_color_from_string(args.get("font_color", "white"), Color.WHITE)
+	var font_outline_color := Utils.get_color_from_string(args.get("font_outline_color", "aa-flashtestimony"), Color.WHITE)
 
 	var time_in = float(args.get("time_in", "1.433"))
 	var time_out = float(args.get("time_out", "0.34"))
