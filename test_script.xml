@@ -5,10 +5,11 @@
 <wait secs="4.0"/>
 <box anim="in" />
 <wait secs="0.3"/>
-<music res="res://objection_assets/music/pwr/cross-moderato.mp3"/>
+<music res="res://audio/music/pwr/cross-moderato.mp3"/>
 <nametag text="Butz" />
-<sprite pos="center" res="res://larry-new/larry.tres" anim="thumbsup-talk" />
+<sprite pos="center" res="res://characters/larry/larry.tres" anim="thumbsup-talk" />
 <blip type="male"/>
+<segment_title text="Yapping"/>
 Hey, dude! <flash/><shake/><wait secs="0.5"/>
 <pan to="left"/>Check out this <color value="aa-text-red">cool thing</color><evidence res="res://ref-witnesstestimony.png"/> I found!<flash/><shake/><wait secs="0.75"/> What do you think?
 <sprite pos="center" anim="thumbsup-idle" />
@@ -19,8 +20,9 @@ Hey, dude! <flash/><shake/><wait secs="0.5"/>
 <music action="stop"/>
 <bubble type="objection" />
 <box set="out"/>
+<segment_title/>
 <arrow action="hide" />
-<sound res="res://exclamation_sounds/objection-phoenix.mp3"/>
+<sound res="res://ui/exclamations/exclamation_sounds/objection-phoenix.mp3"/>
 <wait secs="1.0"/>
 <play />
 
