@@ -158,7 +158,7 @@ The `dir` argument dictates how the two lines of text should animate out.
 ### Evidence
 
 ```xml
-<evidence side="left|right" action="show|hide|hide_immediate" res="location" />
+<evidence side="left|right" action="show|hide|hide_immediate" res="location" path="location" />
 ```
 
 Updates the evidence/object boxes on the left or right side of the screen.
@@ -173,6 +173,8 @@ The box will animate on-screen, and display the image.
 - If `action="hide"`, then the box will animate off-screen.
 
 - If `action="hide_immediate"`, then the box will immediately disappear, without any animation.
+
+- res is used to show internal engine resources. If you want to bring an external image use "path"
 
 ### Exclamation bubbles
 

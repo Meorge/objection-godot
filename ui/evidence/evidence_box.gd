@@ -12,10 +12,10 @@ func _handle_evidence(args: Dictionary):
 	var action = args.get("action", "show")
 
 	if action == "show":
-		if not args.has("res"):
+		if not args.has("res") and not args.has("path"):
 			Utils.print_error("No resource provided for the evidence command")
 			return
-		show_evidence(args["res"])
+		show_evidence(args)
 	elif action == "hide":
 		hide_evidence()
 	elif action == "hide_immediate":
@@ -25,9 +25,17 @@ func _handle_evidence(args: Dictionary):
 		Utils.print_error("Unknown action \"%s\" for the evidence command")
 
 
-func show_evidence(texture_path: String):
+func load_evidence_from_args(args: Dictionary):
+	if (args.has("res")):
+		return load(args["res"])
+	elif (args.has("path")):
+		var img := Image.load_from_file(args["path"])
+		return ImageTexture.create_from_image(img)
+
+
+func show_evidence(args: Dictionary):
 	sound.play()
-	evidence_holder.texture = load(texture_path)
+	evidence_holder.texture = load_evidence_from_args(args)
 	visible = true
 	play(&"in")
 	await animation_finished
