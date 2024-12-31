@@ -14,4 +14,4 @@ func _handle_music(args: Dictionary):
 	elif action == "stop":
 		stop()
 	else:
-		print_rich("[color=red]ERROR: Unknown action \"%s\" for the music command" % action)
+		Utils.print_error("Unknown action \"%s\" for the music command" % action)

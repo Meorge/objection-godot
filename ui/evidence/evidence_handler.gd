@@ -13,5 +13,5 @@ func _handle_evidence(args: Dictionary):
 	elif side == "right":
 		$EvidenceRight._handle_evidence(args)
 	else:
-		print_rich("[color=red]ERROR: Unknown side \"%s\" for the evidence command" % side)
+		Utils.print_error("Unknown side \"%s\" for the evidence command" % side)
 	

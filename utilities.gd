@@ -17,3 +17,5 @@ static func get_color_from_string(string: String, default: Color) -> Color:
 	else:
 		return Color.from_string(string, default)
 
+static func print_error(string: String):
+	print_rich("[color=red][b]ERROR:[/b] " + string)

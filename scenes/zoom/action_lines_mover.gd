@@ -15,7 +15,7 @@ func _handle_actionlines(args: Dictionary):
 		"right":
 			direction = RIGHT
 		var dir:
-			print_rich("[color=red][b]ERROR:[/b] Direction \"%s\" not valid for actionlines command (must be \"left\" or \"right\")" % dir)
+			Utils.print_error("Direction \"%s\" not valid for actionlines command (must be \"left\" or \"right\")" % dir)
 
 func _set_direction(new_direction: int):
 	direction = new_direction

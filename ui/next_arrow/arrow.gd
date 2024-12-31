@@ -21,4 +21,4 @@ func _handle_arrow(args: Dictionary):
 			visible = false
 			animation_player.stop()
 		_:
-			print_rich("[color=red]ERROR: Invalid action \"%s\" for arrow command" % action)
+			Utils.print_error("Invalid action \"%s\" for arrow command" % action)

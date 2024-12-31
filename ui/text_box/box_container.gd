@@ -19,7 +19,7 @@ func _handle_box(args: Dictionary):
 			global_position = Vector2(0, BOX_POS_OUT_Y)
 			box_text.visible = false
 		else:
-			print_rich("[color=red]ERROR: Unknown setting \"%s\" for setting box visibility (accepted values are \"in\" and \"out\")" % args["set"])
+			Utils.print_error("Unknown setting \"%s\" for setting box visibility (accepted values are \"in\" and \"out\")" % args["set"])
 	elif args.has("anim"):
 		if args["anim"] == "in":
 			if tw: tw.kill()
@@ -32,4 +32,4 @@ func _handle_box(args: Dictionary):
 			tw.tween_callback(func(): box_text.visible = false)
 			tw.tween_property(self, "global_position:y", BOX_POS_OUT_Y, ANIM_TIME)
 		else:
-			print_rich("[color=red]ERROR: Unknown setting \"%s\" for setting box animation (accepted values are \"in\" and \"out\")" % args["set"])
+			Utils.print_error("Unknown setting \"%s\" for setting box animation (accepted values are \"in\" and \"out\")" % args["set"])

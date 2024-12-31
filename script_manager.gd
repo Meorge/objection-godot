@@ -31,10 +31,10 @@ var text_speed: float = TEXT_SPEED_DEFAULT
 
 static func register_handler(tag_name: String, handler: Callable):
 	if instance == null:
-		print_rich("[color=red]ERROR: ScriptManager doesn't exist")
+		Utils.print_error("ScriptManager doesn't exist")
 		return
 	if tag_name in instance.handlers.keys():
-		print_rich("[color=red]ERROR: Handler for \"%s\" already exists" % tag_name)
+		Utils.print_error("Handler for \"%s\" already exists" % tag_name)
 		return
 	instance.handlers[tag_name] = handler
 
@@ -55,7 +55,7 @@ func _display_text():
 				path = path.substr(1, path.length() - 2)
 
 	if not FileAccess.file_exists(path):
-		print_rich("[color=red][b]ERROR:[/b] File at \"%s\" cannot be found." % path)
+		Utils.print_error("File at \"%s\" cannot be found." % path)
 		get_tree().quit(0)
 		return
 

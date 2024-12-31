@@ -24,7 +24,7 @@ func _handle_verdict(args: Dictionary):
 	var group_by_str = args.get("group_by", "letter")
 
 	if not GROUP_BY_DICT.has(group_by_str):
-		print_rich("[color=red][b]ERROR:[/b] The group-by strategy \"%s\" is not valid for the verdict command (must be \"letter\" or \"word\")." % group_by_str)
+		Utils.print_error("The group-by strategy \"%s\" is not valid for the verdict command (must be \"letter\" or \"word\")." % group_by_str)
 		return
 	var group_by: int = GROUP_BY_DICT[group_by_str]
 

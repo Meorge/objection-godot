@@ -13,7 +13,7 @@ func _handle_evidence(args: Dictionary):
 
 	if action == "show":
 		if not args.has("res"):
-			print_rich("[color=red]ERROR: No resource provided for the evidence command")
+			Utils.print_error("No resource provided for the evidence command")
 			return
 		show_evidence(args["res"])
 	elif action == "hide":
@@ -22,7 +22,7 @@ func _handle_evidence(args: Dictionary):
 		evidence_holder.visible = false
 		visible = false
 	else:
-		print_rich("[color=red]ERROR: Unknown action \"%s\" for the evidence command")
+		Utils.print_error("Unknown action \"%s\" for the evidence command")
 
 
 func show_evidence(texture_path: String):
