@@ -32,6 +32,7 @@ func _handle_pan(args: Dictionary):
     
     tw = create_tween()
     var target_global_position: Vector2 = CameraPosition.positions[dest].global_position
-    tw.tween_property(self, "global_position", target_global_position, 0.5).set_trans(Tween.TRANS_SINE)
+    tw.tween_property(self, "global_position", target_global_position, 0.5) \
+        .set_custom_interpolator(PanEase.courtroom_pan_lut_ease)
     tw.tween_callback(func(): current_position = dest)
     pan_will_be_performed.emit(current_position, dest)

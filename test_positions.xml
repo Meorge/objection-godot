@@ -12,6 +12,7 @@ Hey, I'm Phoenix, a defense attorney.
 <play/>
 
 <sprite pos="center" res="res://characters/larry/larry.tres" anim="normal-idle"/>
+<wait secs="1.0"/>
 <pan to="center"/>
 <wait secs="0.5"/>
 <sprite pos="center" anim="normal-talk"/>
@@ -27,6 +28,7 @@ I'm Larry Butz, just some guy.
 <play/>
 
 <sprite pos="right" res="res://characters/edgeworth/edgeworth.tres" anim="normal-idle"/>
+<wait secs="1.0"/>
 <pan to="right"/>
 <wait secs="0.5"/>
 <sprite pos="right" anim="normal-talk"/>
@@ -42,6 +44,7 @@ And I'm Edgeworth, the prosecutor.
 
 <nametag text="Judge"/>
 <sprite pos="judge" res="res://characters/judge/judge.tres" anim="normal-idle"/>
+<wait secs="1.0"/>
 <cut to="judge"/>
 <wait secs="0.5"/>
 <sprite pos="judge" anim="normal-talk"/>
