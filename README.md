@@ -32,6 +32,8 @@ This project is a continuation of the [Objection! rendering engine](https://gith
 
 Many of the assets (including character animations and UI elements) were ripped by contributors to the [Court Records website](https://www.court-records.net).
 
+The *Apollo Justice* "Perceive" background graphics were [ripped from the iOS version of the game by Reddit user u/JBoote1](https://www.reddit.com/r/AceAttorney/comments/mon8pi/comment/gu59ae0/).
+
 ### Fonts
 
 - Name tag font is [Ace Name by user guiguiba on FontStruct](https://fontstruct.com/fontstructions/show/1799842/ace-name)
