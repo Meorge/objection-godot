@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bie8tp5qm8phy"
-path="res://.godot/imported/takethat-10.png-07ac1420d6bee6aa40ca86b8b8bb98e6.ctex"
+uid="uid://copwfda3t60qj"
+path="res://.godot/imported/takethat.png-2ff52298cc10bbef3485237316d821d5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://ui/exclamations/exclamation_animations/takethat-10.png"
-dest_files=["res://.godot/imported/takethat-10.png-07ac1420d6bee6aa40ca86b8b8bb98e6.ctex"]
+source_file="res://ui/exclamations/takethat.png"
+dest_files=["res://.godot/imported/takethat.png-2ff52298cc10bbef3485237316d821d5.ctex"]
 
 [params]
 

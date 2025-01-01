@@ -11,18 +11,19 @@
 <blip type="male"/>
 <segment_title text="Yapping"/>
 Hey, dude! <flash/><shake/><wait secs="0.5"/>
-<pan to="left"/>Check out this <color value="aa-text-red">cool thing</color><evidence res="res://ref-witnesstestimony.png"/> I found!<flash/><shake/><wait secs="0.75"/> What do you think?
+<pan to="left"/>Check out this <color value="aa-text-red">cool thing</color><evidence res="res://ref-witnesstestimony.png"/> I found!<wait secs="0.75"/> What do you think?
 <sprite pos="center" anim="thumbsup-idle" />
 <blip type="none"/>
 <arrow />
 <wait secs="2.0" />
 
 <music action="stop"/>
-<bubble type="objection" />
+<flash />
+<bubble type="holdit" />
 <box set="out"/>
 <segment_title/>
 <arrow action="hide" />
-<sound res="res://ui/exclamations/exclamation_sounds/objection-phoenix.mp3"/>
+<sound res="res://ui/exclamations/exclamation_sounds/holdit-phoenix.mp3"/>
 <wait secs="1.0"/>
 <play />
 

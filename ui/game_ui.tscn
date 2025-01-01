@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=3 uid="uid://cavxmwjgdsolv"]
+[gd_scene load_steps=28 format=3 uid="uid://cavxmwjgdsolv"]
 
 [ext_resource type="Script" path="res://ui/game_ui.gd" id="1_i61tc"]
 [ext_resource type="Texture2D" uid="uid://b3x4aoo200rhg" path="res://ui/text_box/nametag_left.png" id="1_uinmu"]
@@ -13,14 +13,13 @@
 [ext_resource type="PackedScene" uid="uid://c3hlwg4rh13f1" path="res://ui/flashing_segment_label/flashing_segment_label.tscn" id="11_2501h"]
 [ext_resource type="PackedScene" uid="uid://dcitg4aymosj" path="res://ui/witness_testimony/witness_testimony_intro.tscn" id="12_0ob4r"]
 [ext_resource type="Script" path="res://ui/evidence/evidence_handler.gd" id="13_atwk1"]
-[ext_resource type="SpriteFrames" path="res://ui/exclamations/exclamation_animations/exclamations.tres" id="13_sgajj"]
-[ext_resource type="Script" path="res://ui/exclamations/exclamation_bubble.gd" id="14_jg1s6"]
 [ext_resource type="SpriteFrames" path="res://ui/evidence/evidence-right/evidence-right.tres" id="15_eocud"]
 [ext_resource type="Texture2D" uid="uid://beaqrjyvyadas" path="res://icon.svg" id="16_2yr5j"]
 [ext_resource type="Script" path="res://ui/evidence/evidence_box.gd" id="16_v147p"]
 [ext_resource type="SpriteFrames" path="res://ui/evidence/evidence-left/evidence-left.tres" id="17_nsfoq"]
 [ext_resource type="AudioStream" uid="uid://d23tyxxvjexw5" path="res://audio/sound/sfx-evidenceshoop.wav" id="18_khjmp"]
 [ext_resource type="Script" path="res://effects/overlay_flash.gd" id="25_j8y13"]
+[ext_resource type="Script" path="res://ui/exclamations/exclamation_bubble.gd" id="26_dif48"]
 [ext_resource type="Script" path="res://ui/next_arrow/arrow.gd" id="26_mjk5q"]
 [ext_resource type="Texture2D" uid="uid://cqslgdnxhwf3m" path="res://ui/next_arrow/next_arrow.png" id="26_tejqb"]
 [ext_resource type="Script" path="res://ui/verdict/verdict.gd" id="28_32ipn"]
@@ -191,11 +190,14 @@ expand_mode = 2
 [node name="InSound" type="AudioStreamPlayer" parent="EvidenceHandler/EvidenceRight"]
 stream = ExtResource("18_khjmp")
 
-[node name="ExclamationBubble" type="AnimatedSprite2D" parent="."]
-sprite_frames = ExtResource("13_sgajj")
-animation = &"holdit"
+[node name="ExclamationBubbleContainer" type="Node2D" parent="."]
+script = ExtResource("26_dif48")
+
+[node name="InnerContainer" type="Node2D" parent="ExclamationBubbleContainer"]
+
+[node name="BubbleDisplay" type="Sprite2D" parent="ExclamationBubbleContainer/InnerContainer"]
+unique_name_in_owner = true
 centered = false
-script = ExtResource("14_jg1s6")
 
 [node name="OverlayFlash" type="ColorRect" parent="."]
 visible = false

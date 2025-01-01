@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dtkkrjbvlb07w"
-path="res://.godot/imported/holdit-9.png-49c59b4008bd3163d48eeb03efcd3a3c.ctex"
+uid="uid://bhf2dlmul1lbl"
+path="res://.godot/imported/holdit.png-c001d5a86fd5d5e006dbfea0ec9abcab.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://ui/exclamations/exclamation_animations/holdit-9.png"
-dest_files=["res://.godot/imported/holdit-9.png-49c59b4008bd3163d48eeb03efcd3a3c.ctex"]
+source_file="res://ui/exclamations/holdit.png"
+dest_files=["res://.godot/imported/holdit.png-c001d5a86fd5d5e006dbfea0ec9abcab.ctex"]
 
 [params]
 
