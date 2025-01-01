@@ -122,6 +122,8 @@ func set_text(top: String, bottom: String, color: Color, animate_direction: Anim
 				.set_ease(Tween.EASE_IN) \
 				.set_trans(Tween.TRANS_SINE)
 
+	tw.tween_callback(func(): top_label.visible = false; bottom_label.visible = false)
+
 func set_font_color(color: Color):
 	top_label.add_theme_color_override("font_color", color)
 	bottom_label.add_theme_color_override("font_color", color)
