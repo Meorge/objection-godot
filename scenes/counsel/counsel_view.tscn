@@ -8,6 +8,7 @@
 position = Vector2(0, 384)
 
 [node name="CounselViewBackground" type="Sprite2D" parent="."]
+z_index = -10
 texture = ExtResource("1_tw7bp")
 metadata/_edit_lock_ = true
 

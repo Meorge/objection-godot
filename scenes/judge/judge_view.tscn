@@ -8,6 +8,7 @@
 position = Vector2(0, 192)
 
 [node name="JudgeViewBackground" type="Sprite2D" parent="."]
+z_index = -10
 texture = ExtResource("1_ikkhc")
 metadata/_edit_lock_ = true
 

@@ -9,6 +9,7 @@
 position = Vector2(0, 768)
 
 [node name="ActionLinesViewBackground" type="Sprite2D" parent="."]
+z_index = -10
 texture = ExtResource("1_enva1")
 script = ExtResource("2_i70j5")
 metadata/_edit_lock_ = true
