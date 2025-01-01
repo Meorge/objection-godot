@@ -1,6 +1,6 @@
-[gd_scene load_steps=19 format=3 uid="uid://dtsmh3r0kycrw"]
+[gd_scene load_steps=20 format=3 uid="uid://dtsmh3r0kycrw"]
 
-[ext_resource type="Texture2D" uid="uid://pr803jfut16q" path="res://16441499-phoenix-wright-ace-attorney-nintendo-ds-getting-some-details-fro.png" id="1_85epc"]
+[ext_resource type="Texture2D" path="res://16441499-phoenix-wright-ace-attorney-nintendo-ds-getting-some-details-fro.png" id="1_85epc"]
 [ext_resource type="AudioStream" uid="uid://brp8iv61fonns" path="res://audio/sound/sfx-blipmale.wav" id="8_ance2"]
 [ext_resource type="Script" path="res://audio/voice_blip_player.gd" id="9_tg6eo"]
 [ext_resource type="AudioStream" uid="uid://d3as2h3rt3wtp" path="res://audio/sound/sfx-blipfemale.wav" id="10_fdiee"]
@@ -17,6 +17,7 @@
 [ext_resource type="PackedScene" uid="uid://1iruudku7hww" path="res://scenes/counsel/counsel_view.tscn" id="17_apcaq"]
 [ext_resource type="Script" path="res://camera/camera.gd" id="17_efp1a"]
 [ext_resource type="Script" path="res://effects/shaker/shaker_manager.gd" id="17_jypuo"]
+[ext_resource type="PackedScene" uid="uid://cbtonh0u74a8v" path="res://scenes/perceive/perceive_effect.tscn" id="18_7lwyl"]
 [ext_resource type="PackedScene" uid="uid://dd2xc26iwfwel" path="res://scenes/judge/judge_view.tscn" id="18_btfy3"]
 
 [node name="Node2D" type="Node2D"]
@@ -73,6 +74,8 @@ script = ExtResource("16_mecxv")
 [node name="Camera" type="Camera2D" parent="CameraShaker/InnerContainer"]
 unique_name_in_owner = true
 script = ExtResource("17_efp1a")
+
+[node name="PerceiveEffect" parent="CameraShaker/InnerContainer/Camera" instance=ExtResource("18_7lwyl")]
 
 [node name="ShakerManager" type="Node" parent="."]
 script = ExtResource("17_jypuo")

@@ -224,6 +224,22 @@ If no `text` is provided (or `text` is an empty string) then the title will be i
 
 Defaults for the other arguments replicate the look and timing of the "Testimony" flashing label in the *Ace Attorney* DS games.
 
+### "Perceive" background from *Apollo Justice*
+
+```xml
+<perceive set="in|out|auto:auto" />
+<perceive fade="in|out|auto:auto" duration="float:0.5" />
+```
+
+Displays the animated "Perceive" visual behind the characters from *Apollo Justice*.
+
+Either the `set` or the `fade` argument should be used (not both).
+
+If the `set` argument is used, the visual will appear or disappear instantly.
+If the `fade` argument is used, the visual will fade into or out of view over the given `duration`.
+
+If the value of `set` or `fade` is `auto`, then the visual will toggle its state away from the current state (that is, if it is currently visible, it will become invisible, and vice versa).
+
 ## Data types
 
 ### `color`

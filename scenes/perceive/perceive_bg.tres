@@ -1,0 +1,74 @@
+[gd_resource type="SpriteFrames" load_steps=17 format=3 uid="uid://qvbkpkkq2hcu"]
+
+[ext_resource type="Texture2D" uid="uid://cdnyoo5b7xsee" path="res://scenes/perceive/frames/Perceive_BG_01.png" id="1_60jbg"]
+[ext_resource type="Texture2D" uid="uid://bp68glcvb4b72" path="res://scenes/perceive/frames/Perceive_BG_02.png" id="2_3nhtp"]
+[ext_resource type="Texture2D" uid="uid://by7phrq62h4l8" path="res://scenes/perceive/frames/Perceive_BG_03.png" id="3_dgx8n"]
+[ext_resource type="Texture2D" uid="uid://dgpauc0o53vjd" path="res://scenes/perceive/frames/Perceive_BG_04.png" id="4_1oaif"]
+[ext_resource type="Texture2D" uid="uid://bix247l8hij5h" path="res://scenes/perceive/frames/Perceive_BG_05.png" id="5_tfy66"]
+[ext_resource type="Texture2D" uid="uid://du5mefpqxencq" path="res://scenes/perceive/frames/Perceive_BG_06.png" id="6_c0jms"]
+[ext_resource type="Texture2D" uid="uid://c40u132obuspy" path="res://scenes/perceive/frames/Perceive_BG_07.png" id="7_ebue1"]
+[ext_resource type="Texture2D" uid="uid://cxle88iy77uog" path="res://scenes/perceive/frames/Perceive_BG_08.png" id="8_waqsv"]
+[ext_resource type="Texture2D" uid="uid://cpvxd5k7mhx0" path="res://scenes/perceive/frames/Perceive_BG_09.png" id="9_i2lje"]
+[ext_resource type="Texture2D" uid="uid://b8mu5g1w8r7t2" path="res://scenes/perceive/frames/Perceive_BG_10.png" id="10_kn1bn"]
+[ext_resource type="Texture2D" uid="uid://gc40l3g6c2hq" path="res://scenes/perceive/frames/Perceive_BG_11.png" id="11_qi6uw"]
+[ext_resource type="Texture2D" uid="uid://cb7k0r2h51grr" path="res://scenes/perceive/frames/Perceive_BG_12.png" id="12_m3ya5"]
+[ext_resource type="Texture2D" uid="uid://fypw601427q4" path="res://scenes/perceive/frames/Perceive_BG_13.png" id="13_4hbjd"]
+[ext_resource type="Texture2D" uid="uid://cj4qj2ndi2mba" path="res://scenes/perceive/frames/Perceive_BG_14.png" id="14_5v2ep"]
+[ext_resource type="Texture2D" uid="uid://xg34mocyyhpf" path="res://scenes/perceive/frames/Perceive_BG_15.png" id="15_tiji0"]
+[ext_resource type="Texture2D" uid="uid://dgnwf63cva5vd" path="res://scenes/perceive/frames/Perceive_BG_16.png" id="16_f6mfs"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_60jbg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_3nhtp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_dgx8n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_1oaif")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_tfy66")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_c0jms")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_ebue1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_waqsv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_i2lje")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_kn1bn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_qi6uw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_m3ya5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_4hbjd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_5v2ep")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_tiji0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_f6mfs")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
