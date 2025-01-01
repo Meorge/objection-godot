@@ -224,6 +224,22 @@ If no `text` is provided (or `text` is an empty string) then the title will be i
 
 Defaults for the other arguments replicate the look and timing of the "Testimony" flashing label in the *Ace Attorney* DS games.
 
+### Static color background
+
+```xml
+<bg set="in|out|auto:auto" color="color?" />
+<bg fade="in|out|auto:auto" duration="float:0.5" color="color?" />
+```
+
+Sets or fades the background to a solid color.
+
+Either the `set` or the `fade` argument should be used (not both).
+
+If the `set` argument is used, the solid background will appear or disappear instantly.
+If the `fade` argument is used, the background will fade into or out of view over the given `duration`.
+
+If the value of `set` or `fade` is `auto`, then the background will switch to the opposite state.
+
 ### "Perceive" background from *Apollo Justice*
 
 ```xml

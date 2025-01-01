@@ -7,6 +7,7 @@
 <nametag text="Butz" />
 <box anim="in" />
 <wait secs="0.3"/>
+<bg fade="in" duration="3.0" color="red"/>
 <music res="res://audio/music/pwr/cross-moderato.mp3"/>
 <segment_title text="Drugs"/>
 <sprite pos="center" anim="scratch-talk" />
@@ -17,6 +18,7 @@
 <music action="stop"/>
 <box set="out"/>
 <flash/>
+<bg set="in" color="black"/>
 <segment_title text=""/>
 <sound res="res://audio/sound/sfx-realization.wav"/>
 <music res="res://audio/music/perceive.wav"/>

@@ -1,6 +1,5 @@
 [gd_scene load_steps=20 format=3 uid="uid://dtsmh3r0kycrw"]
 
-[ext_resource type="Texture2D" path="res://16441499-phoenix-wright-ace-attorney-nintendo-ds-getting-some-details-fro.png" id="1_85epc"]
 [ext_resource type="AudioStream" uid="uid://brp8iv61fonns" path="res://audio/sound/sfx-blipmale.wav" id="8_ance2"]
 [ext_resource type="Script" path="res://audio/voice_blip_player.gd" id="9_tg6eo"]
 [ext_resource type="AudioStream" uid="uid://d3as2h3rt3wtp" path="res://audio/sound/sfx-blipfemale.wav" id="10_fdiee"]
@@ -19,13 +18,9 @@
 [ext_resource type="Script" path="res://effects/shaker/shaker_manager.gd" id="17_jypuo"]
 [ext_resource type="PackedScene" uid="uid://cbtonh0u74a8v" path="res://scenes/perceive/perceive_effect.tscn" id="18_7lwyl"]
 [ext_resource type="PackedScene" uid="uid://dd2xc26iwfwel" path="res://scenes/judge/judge_view.tscn" id="18_btfy3"]
+[ext_resource type="Script" path="res://ui/behind_character_solid/behind_character_solid.gd" id="18_q6hsr"]
 
 [node name="Node2D" type="Node2D"]
-
-[node name="Reference" type="Sprite2D" parent="."]
-visible = false
-texture = ExtResource("1_85epc")
-centered = false
 
 [node name="VoiceBlipPlayer" type="AudioStreamPlayer" parent="."]
 unique_name_in_owner = true
@@ -76,6 +71,15 @@ unique_name_in_owner = true
 script = ExtResource("17_efp1a")
 
 [node name="PerceiveEffect" parent="CameraShaker/InnerContainer/Camera" instance=ExtResource("18_7lwyl")]
+
+[node name="BehindCharacterSolid" type="ColorRect" parent="CameraShaker/InnerContainer/Camera"]
+z_index = -6
+offset_left = -128.0
+offset_top = -96.0
+offset_right = 128.0
+offset_bottom = 96.0
+color = Color(0, 0, 0, 1)
+script = ExtResource("18_q6hsr")
 
 [node name="ShakerManager" type="Node" parent="."]
 script = ExtResource("17_jypuo")
