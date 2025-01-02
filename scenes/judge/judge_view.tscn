@@ -5,7 +5,6 @@
 [ext_resource type="Script" path="res://camera/camera_position.gd" id="3_umoqs"]
 
 [node name="JudgeView" type="Node2D"]
-position = Vector2(0, 192)
 
 [node name="JudgeViewBackground" type="Sprite2D" parent="."]
 z_index = -10

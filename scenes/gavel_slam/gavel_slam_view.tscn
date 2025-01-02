@@ -10,7 +10,6 @@
 [ext_resource type="AudioStream" uid="uid://17s2bhyrx7fq" path="res://audio/sound/sfx-gavel.wav" id="8_2pawu"]
 
 [node name="GavelSlamView" type="Node2D" node_paths=PackedStringArray("frames")]
-position = Vector2(0, 960)
 script = ExtResource("1_6fkld")
 frames = [NodePath("Gavel1"), NodePath("Gavel2"), NodePath("Gavel3")]
 

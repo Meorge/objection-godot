@@ -5,7 +5,6 @@
 [ext_resource type="Script" path="res://camera/camera_position.gd" id="3_n5j5i"]
 
 [node name="CounselView" type="Node2D"]
-position = Vector2(0, 384)
 
 [node name="CounselViewBackground" type="Sprite2D" parent="."]
 z_index = -10

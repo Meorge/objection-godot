@@ -37,18 +37,23 @@ unique_name_in_owner = true
 
 [node name="JudgeView" parent="." instance=ExtResource("18_btfy3")]
 unique_name_in_owner = true
+position = Vector2(0, 256)
 
 [node name="CounselView" parent="." instance=ExtResource("17_apcaq")]
 unique_name_in_owner = true
+position = Vector2(0, 512)
 
 [node name="BehindCourtView" parent="." instance=ExtResource("10_hg0yk")]
 unique_name_in_owner = true
+position = Vector2(0, 768)
 
 [node name="ActionLinesView" parent="." instance=ExtResource("11_l7imp")]
 unique_name_in_owner = true
+position = Vector2(0, 1024)
 
 [node name="GavelSlamView" parent="." instance=ExtResource("12_2j504")]
 unique_name_in_owner = true
+position = Vector2(0, 1280)
 
 [node name="ScriptManager" type="Node" parent="."]
 unique_name_in_owner = true

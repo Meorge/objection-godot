@@ -1,0 +1,85 @@
+<cut to="left"/>
+<box set="in"/>
+
+<nametag text=""/>
+<cut to="left"/>
+<blip type="male"/>
+Defense
+<shake magnitude="10.0"/>
+<arrow/>
+<wait secs="1.0"/>
+<play/>
+
+<nametag text=""/>
+<cut to="center"/>
+<blip type="male"/>
+Center
+<shake magnitude="10.0"/>
+<arrow/>
+<wait secs="1.0"/>
+<play/>
+
+<nametag text=""/>
+<cut to="right"/>
+<blip type="male"/>
+Prosecutor
+<shake magnitude="10.0"/>
+<arrow/>
+<wait secs="1.0"/>
+<play/>
+
+<nametag text=""/>
+<cut to="judge"/>
+<blip type="male"/>
+Judge
+<shake magnitude="10.0"/>
+<arrow/>
+<wait secs="1.0"/>
+<play/>
+
+<nametag text="Counsel"/>
+<cut to="counsel"/>
+<blip type="male"/>
+Counsel
+<shake magnitude="10.0"/>
+<arrow/>
+<wait secs="1.0"/>
+<play/>
+
+<nametag text=""/>
+<cut to="behind"/>
+<blip type="male"/>
+Behind court
+<shake magnitude="10.0"/>
+<arrow/>
+<wait secs="1.0"/>
+<play/>
+
+<nametag text=""/>
+<cut to="zoom"/>
+<blip type="male"/>
+Zoom
+<shake magnitude="10.0"/>
+<arrow/>
+<wait secs="1.0"/>
+<play/>
+
+<nametag text=""/>
+<cut to="gavel"/>
+<blip type="male"/>
+Gavel
+<shake magnitude="10.0"/>
+<arrow/>
+<wait secs="1.0"/>
+<play/>
+
+<nametag text=""/>
+<cut to="center"/>
+<sprite pos="center" res="res://characters/larry/larry.tres" anim="thinking-idle" />
+<perceive set="in"/>
+<blip type="male"/>
+Perceive
+<shake magnitude="10.0"/>
+<arrow/>
+<wait secs="1.0"/>
+<play/>
