@@ -1,0 +1,29 @@
+<nametag text="" />
+<sprite pos="center" res="res://characters/larry/larry.tres" anim="thumbsup-idle" />
+<box set="out" />
+<box anim="in" />
+<wait secs="0.3"/>
+<music res="res://audio/music/pwr/cross-moderato.mp3"/>
+<nametag text="Butz" />
+<sprite pos="center" res="res://characters/larry/larry.tres" anim="thumbsup-talk" />
+<blip type="male"/>
+<segment_title text="Yapping"/>
+Hey, dude! Look what I found at the park!
+<sprite pos="center" anim="thumbsup-idle" />
+<blip type="none"/>
+<arrow />
+<wait secs="2.0" />
+<play/>
+
+<nametag text=""/>
+<arrow action="hide" />
+<new_evidence slide="in" title="A Duck" description="This is a duck. It is going to quack." res="/Users/malcolmanderson/Documents/Repositories/GodotProjects/ObjectionInGodot4.3/duck.jpg" />
+<speed val="10" />
+<blip type="male"/>
+<color value="aa-text-blue">Duck added to the Court Record.</color>
+<blip type="none"/>
+<arrow />
+<wait secs="4.0"/>
+<new_evidence slide="out" />
+<wait secs="1.0"/>
+<play/>

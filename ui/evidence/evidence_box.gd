@@ -24,16 +24,9 @@ func _handle_evidence(args: Dictionary):
 	else:
 		Utils.print_error("Unknown action \"%s\" for the evidence command")
 
-func load_evidence_from_args(texture_path: String):
-	if (texture_path.begins_with("res://")):
-		return load(texture_path)
-	else:
-		var img := Image.load_from_file(texture_path)
-		return ImageTexture.create_from_image(img)
-
 func show_evidence(texture_path: String):
 	sound.play()
-	evidence_holder.texture = load_evidence_from_args(texture_path)
+	evidence_holder.texture = Utils.load_texture(texture_path)
 	visible = true
 	play(&"in")
 	await animation_finished
