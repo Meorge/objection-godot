@@ -94,6 +94,10 @@ The current built-in locations are:
 
 ### Music and sound effects
 
+> [!WARNING]
+> Loading WAV audio files from outside of Objection-Godot is currently broken.
+> Until it gets fixed, it's best to use MP3 or OGG files instead.
+
 ```xml
 <music action="play|stop" res="path" />
 ```

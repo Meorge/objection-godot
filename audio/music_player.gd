@@ -9,7 +9,7 @@ func _ready():
 func _handle_music(args: Dictionary):
 	var action = args.get("action", "play")
 	if action == "play":
-		stream = load(args["res"])
+		stream = Utils.load_audio(args["res"])
 		play()
 	elif action == "stop":
 		stop()

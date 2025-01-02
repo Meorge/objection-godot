@@ -33,3 +33,25 @@ static func load_texture(path: String) -> ImageTexture:
 	else:
 		var img := Image.load_from_file(path)
 		return ImageTexture.create_from_image(img)
+
+## Loads a sound, either part of the project or externally, from the given path.
+##
+## Adapted from the `load_texture` method written by LuisMayo for PR #18.
+static func load_audio(path: String) -> AudioStream:
+	if path.begins_with("res://"):
+		return load(path) as AudioStream
+	else:
+		var stream: AudioStream
+		match path.get_extension():
+			"ogg":
+				stream = AudioStreamOggVorbis.load_from_file(path)
+			"wav":
+				Utils.print_error("Attempting to load an external WAV - this is currently broken")
+				var f = FileAccess.open(path, FileAccess.READ)
+				stream = AudioStreamWAV.new()
+				stream.data = f.get_buffer(f.get_length())
+			"mp3":
+				var f = FileAccess.open(path, FileAccess.READ)
+				stream = AudioStreamMP3.new()
+				stream.data = f.get_buffer(f.get_length())
+		return stream
