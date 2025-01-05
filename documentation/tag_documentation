@@ -78,6 +78,18 @@ Turns the screen white for `duration` seconds.
 
 Shakes the screen with a given `magnitude` for `duration` seconds.
 
+```xml
+<confetti action="start" count="float:31" />
+```
+
+Starts playing the confetti animation, with `count` flakes of confetti.
+
+```xml
+<confetti action="stop" />
+```
+
+Stops the confetti animation and immediately deletes all on-screen confetti.
+
 ### Sprites
 
 ```xml

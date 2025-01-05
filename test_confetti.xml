@@ -1,0 +1,66 @@
+<wide.character pos="judge" res="res://scenes/wide/judge/judge.png"/>
+
+<nametag text="Judge"/>
+<sprite pos="judge" res="res://characters/judge/judge.tres" anim="normal-idle"/>
+<box set="in"/>
+<cut to="judge"/>
+<wait secs="0.5"/>
+<sprite pos="judge" anim="normal-talk"/>
+<blip type="male"/>
+It's time to party!
+<sprite pos="judge" anim="normal-idle"/>
+<arrow/>
+<wait secs="2.0"/>
+<play/>
+
+<cut to="wide"/>
+<box set="out"/>
+<confetti action="start" />
+<wide.gallery set="in" animate="true"/>
+<wait secs="4.0"/>
+<confetti action="stop" />
+<play/>
+
+<nametag text="Judge"/>
+<sprite pos="judge" res="res://characters/judge/judge.tres" anim="normal-idle"/>
+<wait secs="1.0"/>
+<box set="in"/>
+<cut to="judge"/>
+<wait secs="0.5"/>
+<sprite pos="judge" anim="normal-talk"/>
+<blip type="male"/>
+MORE CONFETTI
+<sprite pos="judge" anim="normal-idle"/>
+<arrow/>
+<wait secs="2.0"/>
+<play/>
+
+<cut to="wide"/>
+<box set="out"/>
+<confetti action="start" count="100" />
+<wide.gallery set="in" animate="true"/>
+<wait secs="4.0"/>
+<confetti action="stop" />
+<play/>
+
+<nametag text="Judge"/>
+<sprite pos="judge" res="res://characters/judge/judge.tres" anim="normal-idle"/>
+<wait secs="1.0"/>
+<box set="in"/>
+<cut to="judge"/>
+<wait secs="0.5"/>
+<sprite pos="judge" anim="normal-talk"/>
+<blip type="male"/>
+MOOOOORE
+<sprite pos="judge" anim="normal-idle"/>
+<arrow/>
+<wait secs="2.0"/>
+<play/>
+
+<cut to="wide"/>
+<box set="out"/>
+<confetti action="start" count="1000" />
+<wide.gallery set="in" animate="true"/>
+<wait secs="4.0"/>
+<confetti action="stop" />
+<play/>
