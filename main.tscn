@@ -1,9 +1,9 @@
-[gd_scene load_steps=20 format=3 uid="uid://dtsmh3r0kycrw"]
+[gd_scene load_steps=21 format=3 uid="uid://dtsmh3r0kycrw"]
 
 [ext_resource type="AudioStream" uid="uid://brp8iv61fonns" path="res://audio/sound/sfx-blipmale.wav" id="8_ance2"]
 [ext_resource type="Script" path="res://audio/voice_blip_player.gd" id="9_tg6eo"]
 [ext_resource type="AudioStream" uid="uid://d3as2h3rt3wtp" path="res://audio/sound/sfx-blipfemale.wav" id="10_fdiee"]
-[ext_resource type="PackedScene" uid="uid://bc3d7k6q7nxe3" path="res://scenes/behind_court/behind_court_view.tscn" id="10_hg0yk"]
+[ext_resource type="PackedScene" uid="uid://bc3d7k6q7nxe3" path="res://scenes/wide/wide_view.tscn" id="10_hg0yk"]
 [ext_resource type="AudioStream" uid="uid://c78qahoasi6ar" path="res://audio/sound/sfx-typwriter.wav" id="11_cis7q"]
 [ext_resource type="PackedScene" uid="uid://b2fk3m2tmi0xu" path="res://scenes/zoom/action_lines_view.tscn" id="11_l7imp"]
 [ext_resource type="PackedScene" uid="uid://dmdrdriv4rjlv" path="res://scenes/gavel_slam/gavel_slam_view.tscn" id="12_2j504"]
@@ -19,6 +19,7 @@
 [ext_resource type="PackedScene" uid="uid://cbtonh0u74a8v" path="res://scenes/perceive/perceive_effect.tscn" id="18_7lwyl"]
 [ext_resource type="PackedScene" uid="uid://dd2xc26iwfwel" path="res://scenes/judge/judge_view.tscn" id="18_btfy3"]
 [ext_resource type="Script" path="res://ui/behind_character_solid/behind_character_solid.gd" id="18_q6hsr"]
+[ext_resource type="PackedScene" uid="uid://dhmhsu0khyno4" path="res://effects/confetti/confetti_container.tscn" id="19_mw2qx"]
 
 [node name="Node2D" type="Node2D"]
 
@@ -85,6 +86,9 @@ offset_right = 128.0
 offset_bottom = 96.0
 color = Color(0, 0, 0, 1)
 script = ExtResource("18_q6hsr")
+
+[node name="ConfettiContainer" parent="CameraShaker/InnerContainer/Camera" instance=ExtResource("19_mw2qx")]
+position = Vector2(-128, -96)
 
 [node name="ShakerManager" type="Node" parent="."]
 script = ExtResource("17_jypuo")

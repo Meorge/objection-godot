@@ -78,6 +78,18 @@ Turns the screen white for `duration` seconds.
 
 Shakes the screen with a given `magnitude` for `duration` seconds.
 
+```xml
+<confetti action="start" count="float:31" />
+```
+
+Starts playing the confetti animation, with `count` flakes of confetti.
+
+```xml
+<confetti action="stop" />
+```
+
+Stops the confetti animation and immediately deletes all on-screen confetti.
+
 ### Sprites
 
 ```xml
@@ -215,6 +227,25 @@ Animates the Judge's gavel slam `num` times in a row.
 The argument `between` gives the delay between slams, if more than one slam is performed.
 
 The argument `after` gives the delay after the last slam before script execution continues.
+
+### Wide shot
+
+> [!NOTE]
+> This refers to the view of the courtroom where the lawyers, witness, judge, and gallery are all visible at once.
+
+```xml
+<wide pos="prosecution|defense|witness|judge" res="location" />
+```
+
+Sets the character at `pos` in the wide shot to use the texture at `res`.
+
+```xml
+<wide.gallery set="in|out" animate="true|false" />
+```
+
+If the argument `set` is provided, makes the gallery visible or invisible.
+
+If the argument `animate` is provided, sets whether or not the gallery should animate.
 
 ### Verdict
 
