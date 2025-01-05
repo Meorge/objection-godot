@@ -216,6 +216,25 @@ The argument `between` gives the delay between slams, if more than one slam is p
 
 The argument `after` gives the delay after the last slam before script execution continues.
 
+### Wide shot
+
+> [!NOTE]
+> This refers to the view of the courtroom where the lawyers, witness, judge, and gallery are all visible at once.
+
+```xml
+<wide pos="prosecution|defense|witness|judge" res="location" />
+```
+
+Sets the character at `pos` in the wide shot to use the texture at `res`.
+
+```xml
+<wide.gallery set="in|out" animate="true|false" />
+```
+
+If the argument `set` is provided, makes the gallery visible or invisible.
+
+If the argument `animate` is provided, sets whether or not the gallery should animate.
+
 ### Verdict
 
 ```xml

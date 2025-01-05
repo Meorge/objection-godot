@@ -1,0 +1,89 @@
+[gd_scene load_steps=10 format=3 uid="uid://bc3d7k6q7nxe3"]
+
+[ext_resource type="Script" path="res://scenes/wide/wide_view.gd" id="1_5cbxd"]
+[ext_resource type="Texture2D" uid="uid://ccyjfwo54rwu" path="res://scenes/wide/bg_court.png" id="1_5ps0i"]
+[ext_resource type="Script" path="res://camera/camera_position.gd" id="2_c4yxc"]
+[ext_resource type="Texture2D" uid="uid://cpfd7f3qiarqv" path="res://scenes/wide/gallery/gallery-1.png" id="3_4npyy"]
+[ext_resource type="Texture2D" uid="uid://xosveweo8coc" path="res://scenes/wide/gallery/gallery-2.png" id="4_ha585"]
+[ext_resource type="Texture2D" uid="uid://ba825viv013a1" path="res://scenes/wide/gallery/gallery-3.png" id="5_334u0"]
+[ext_resource type="Script" path="res://scenes/wide/anchor_by_bottom.gd" id="11_erul1"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_2bdm2"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_4npyy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_ha585")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_334u0")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_n4j1h"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_4npyy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_334u0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_ha585")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="WideView" type="Node2D"]
+script = ExtResource("1_5cbxd")
+
+[node name="WideViewBackground" type="Sprite2D" parent="."]
+z_index = -10
+texture = ExtResource("1_5ps0i")
+metadata/_edit_lock_ = true
+
+[node name="CameraPoint" type="Node2D" parent="."]
+script = ExtResource("2_c4yxc")
+camera_id = "wide"
+
+[node name="GalleryLeft" type="AnimatedSprite2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(-120, -35)
+sprite_frames = SubResource("SpriteFrames_2bdm2")
+frame = 1
+frame_progress = 0.890534
+centered = false
+
+[node name="GalleryRight" type="AnimatedSprite2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(79, -35)
+sprite_frames = SubResource("SpriteFrames_n4j1h")
+centered = false
+flip_h = true
+
+[node name="Judge" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(0, -22)
+
+[node name="Prosecution" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+
+[node name="Defense" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+
+[node name="WitnessContainer" type="Node2D" parent="."]
+position = Vector2(0, 76)
+
+[node name="Witness" type="Sprite2D" parent="WitnessContainer"]
+unique_name_in_owner = true
+position = Vector2(39, -73)
+centered = false
+script = ExtResource("11_erul1")
