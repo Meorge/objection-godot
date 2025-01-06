@@ -1,0 +1,73 @@
+[gd_scene load_steps=8 format=3 uid="uid://ckkqqa1iuewni"]
+
+[ext_resource type="Texture2D" uid="uid://bc1bp3g7kqqyk" path="res://ui/mood_matrix/sprites/Circle.png" id="1_6s1px"]
+[ext_resource type="Script" path="res://ui/mood_matrix/mood_matrix_marker.gd" id="1_etjop"]
+[ext_resource type="Texture2D" uid="uid://dqxg25qfu26hx" path="res://ui/mood_matrix/sprites/Happy.png" id="2_dhci8"]
+[ext_resource type="Texture2D" uid="uid://d2cfcgvv4qa6h" path="res://ui/mood_matrix/sprites/Thinking 1.png" id="3_xpky5"]
+[ext_resource type="Texture2D" uid="uid://bt4bcv38btxgt" path="res://ui/mood_matrix/sprites/Thinking 2.png" id="4_tabs0"]
+[ext_resource type="Texture2D" uid="uid://bmowyfdswmwjm" path="res://ui/mood_matrix/sprites/Thinking 3.png" id="5_rp36t"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_kkcws"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_xpky5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_tabs0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_rp36t")
+}],
+"loop": true,
+"name": &"default",
+"speed": 8.0
+}]
+
+[node name="MoodMatrixMarker" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -23.0
+offset_top = -23.0
+offset_right = 23.0
+offset_bottom = 23.0
+pivot_offset = Vector2(23, 23)
+script = ExtResource("1_etjop")
+
+[node name="MarkerBorder" type="TextureRect" parent="."]
+unique_name_in_owner = true
+layout_mode = 0
+offset_right = 46.0
+offset_bottom = 46.0
+pivot_offset = Vector2(23, 23)
+texture = ExtResource("1_6s1px")
+
+[node name="MarkerBackground" type="TextureRect" parent="."]
+unique_name_in_owner = true
+modulate = Color(0, 0, 0, 1)
+layout_mode = 0
+offset_left = 3.0
+offset_top = 3.0
+offset_right = 43.0
+offset_bottom = 43.0
+pivot_offset = Vector2(20, 20)
+texture = ExtResource("1_6s1px")
+
+[node name="Face" type="TextureRect" parent="."]
+unique_name_in_owner = true
+modulate = Color(0.211765, 0.639216, 0.168627, 1)
+layout_mode = 0
+offset_left = 3.0
+offset_top = 3.0
+offset_right = 43.0
+offset_bottom = 43.0
+pivot_offset = Vector2(20, 20)
+texture = ExtResource("2_dhci8")
+
+[node name="ThinkingAnimation" type="AnimatedSprite2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(23, 23)
+sprite_frames = SubResource("SpriteFrames_kkcws")
+autoplay = "default"
+frame = 2
+frame_progress = 0.29

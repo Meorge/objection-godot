@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="MoodMatrixMarkerType" load_steps=3 format=3 uid="uid://c48rkmj8y5dab"]
+
+[ext_resource type="Script" path="res://ui/mood_matrix/mood_matrix_marker_type.gd" id="1_6lppl"]
+[ext_resource type="Texture2D" uid="uid://dqxg25qfu26hx" path="res://ui/mood_matrix/sprites/Happy.png" id="1_o6mg0"]
+
+[resource]
+script = ExtResource("1_6lppl")
+face_texture = ExtResource("1_o6mg0")
+face_color_inactive = Color(0.211765, 0.639216, 0.168627, 1)
+face_color_active = Color(0, 0, 0, 1)
+background_color_active = Color(0, 0, 0, 1)

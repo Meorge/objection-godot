@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="MoodMatrixMarkerType" load_steps=3 format=3 uid="uid://bqx37qeyclk1"]
+
+[ext_resource type="Texture2D" uid="uid://vs7miafnv1gd" path="res://ui/mood_matrix/sprites/Sad.png" id="1_7t1tf"]
+[ext_resource type="Script" path="res://ui/mood_matrix/mood_matrix_marker_type.gd" id="2_k8aoe"]
+
+[resource]
+script = ExtResource("2_k8aoe")
+face_texture = ExtResource("1_7t1tf")
+face_color_inactive = Color(0.223529, 0.482353, 0.756863, 1)
+face_color_active = Color(0, 0, 0, 1)
+background_color_active = Color(0, 0, 0, 1)
