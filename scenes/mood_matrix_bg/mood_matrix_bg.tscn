@@ -1,0 +1,27 @@
+[gd_scene load_steps=3 format=3 uid="uid://btpnuaw6g48yu"]
+
+[ext_resource type="Shader" uid="uid://ceskm3o6mjmlg" path="res://scenes/mood_matrix_bg/mood_matrix_bg.tres" id="1_o4shm"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_v2m42"]
+shader = ExtResource("1_o4shm")
+shader_parameter/GlowColor = Color(0.196078, 0.427451, 0.521569, 1)
+shader_parameter/BackgroundColor = Color(0.025364, 0.025364, 0.025364, 1)
+shader_parameter/CircleSize = 0.5
+
+[node name="MoodMatrixBg" type="Node2D"]
+
+[node name="TextureRect" type="ColorRect" parent="."]
+z_index = -5
+material = SubResource("ShaderMaterial_v2m42")
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -128.0
+offset_top = -128.0
+offset_right = 128.0
+offset_bottom = 128.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(128, 128)
