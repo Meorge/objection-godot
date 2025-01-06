@@ -1,8 +1,9 @@
-[gd_scene load_steps=8 format=3 uid="uid://ckkqqa1iuewni"]
+[gd_scene load_steps=9 format=3 uid="uid://ckkqqa1iuewni"]
 
 [ext_resource type="Texture2D" uid="uid://bc1bp3g7kqqyk" path="res://ui/mood_matrix/sprites/Circle.png" id="1_6s1px"]
 [ext_resource type="Script" path="res://ui/mood_matrix/mood_matrix_marker.gd" id="1_etjop"]
 [ext_resource type="Texture2D" uid="uid://dqxg25qfu26hx" path="res://ui/mood_matrix/sprites/Happy.png" id="2_dhci8"]
+[ext_resource type="PackedScene" uid="uid://cca1lp414ac80" path="res://ui/mood_matrix/mm_pulse.tscn" id="2_ol065"]
 [ext_resource type="Texture2D" uid="uid://d2cfcgvv4qa6h" path="res://ui/mood_matrix/sprites/Thinking 1.png" id="3_xpky5"]
 [ext_resource type="Texture2D" uid="uid://bt4bcv38btxgt" path="res://ui/mood_matrix/sprites/Thinking 2.png" id="4_tabs0"]
 [ext_resource type="Texture2D" uid="uid://bmowyfdswmwjm" path="res://ui/mood_matrix/sprites/Thinking 3.png" id="5_rp36t"]
@@ -33,6 +34,10 @@ offset_right = 23.0
 offset_bottom = 23.0
 pivot_offset = Vector2(23, 23)
 script = ExtResource("1_etjop")
+
+[node name="Pulse" parent="." instance=ExtResource("2_ol065")]
+unique_name_in_owner = true
+position = Vector2(23, 23)
 
 [node name="MarkerBorder" type="TextureRect" parent="."]
 unique_name_in_owner = true

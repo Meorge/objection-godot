@@ -85,6 +85,7 @@ tracks/5/keys = {
 
 [sub_resource type="Animation" id="Animation_4r01x"]
 resource_name = "markers_in"
+length = 1.5
 tracks/0/type = "bezier"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -166,6 +167,20 @@ tracks/6/keys = {
 }, {
 "args": [],
 "method": &"set_markers_inactive"
+}]
+}
+tracks/7/type = "method"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath(".")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0.8),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"do_intro_pulse"
 }]
 }
 
@@ -282,4 +297,3 @@ marker_type = ExtResource("8_1beay")
 libraries = {
 "": SubResource("AnimationLibrary_hrs3b")
 }
-autoplay = "markers_in"
