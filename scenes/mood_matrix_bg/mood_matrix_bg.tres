@@ -1,0 +1,97 @@
+[gd_resource type="VisualShader" load_steps=8 format=3 uid="uid://ceskm3o6mjmlg"]
+
+[sub_resource type="VisualShaderNodeInput" id="VisualShaderNodeInput_a5lio"]
+input_name = "uv"
+
+[sub_resource type="VisualShaderNodeVectorDistance" id="VisualShaderNodeVectorDistance_ho4ly"]
+default_input_values = [0, Vector2(0, 0), 1, Vector2(0.5, 0.5)]
+op_type = 0
+
+[sub_resource type="VisualShaderNodeSmoothStep" id="VisualShaderNodeSmoothStep_4k17d"]
+default_input_values = [0, 0.0, 1, 0.4, 2, 0.5]
+
+[sub_resource type="VisualShaderNodeMix" id="VisualShaderNodeMix_kcere"]
+default_input_values = [0, Quaternion(0, 0, 0, 0), 1, Quaternion(1, 1, 1, 1), 2, Quaternion(0.5, 0.5, 0.5, 0.5)]
+op_type = 5
+
+[sub_resource type="VisualShaderNodeColorParameter" id="VisualShaderNodeColorParameter_pnjly"]
+parameter_name = "GlowColor"
+default_value_enabled = true
+default_value = Color(0.196078, 0.427451, 0.521569, 1)
+
+[sub_resource type="VisualShaderNodeColorParameter" id="VisualShaderNodeColorParameter_du532"]
+parameter_name = "BackgroundColor"
+default_value_enabled = true
+default_value = Color(0.0253638, 0.0253638, 0.0253638, 1)
+
+[sub_resource type="VisualShaderNodeFloatParameter" id="VisualShaderNodeFloatParameter_abi46"]
+parameter_name = "CircleSize"
+default_value_enabled = true
+default_value = 0.5
+
+[resource]
+code = "shader_type canvas_item;
+render_mode blend_mix;
+
+uniform vec4 GlowColor : source_color = vec4(0.196078, 0.427451, 0.521569, 1.000000);
+uniform vec4 BackgroundColor : source_color = vec4(0.025364, 0.025364, 0.025364, 1.000000);
+uniform float CircleSize = 0.5;
+
+
+
+void fragment() {
+// ColorParameter:6
+	vec4 n_out6p0 = GlowColor;
+
+
+// ColorParameter:7
+	vec4 n_out7p0 = BackgroundColor;
+
+
+// FloatParameter:8
+	float n_out8p0 = CircleSize;
+
+
+// Input:2
+	vec2 n_out2p0 = UV;
+
+
+// Distance:3
+	vec2 n_in3p1 = vec2(0.50000, 0.50000);
+	float n_out3p0 = distance(n_out2p0, n_in3p1);
+
+
+// SmoothStep:4
+	float n_in4p0 = 0.00000;
+	float n_out4p0 = smoothstep(n_in4p0, n_out8p0, n_out3p0);
+
+
+// Mix:5
+	vec4 n_out5p0 = mix(n_out6p0, n_out7p0, vec4(n_out4p0));
+
+
+// Output:0
+	COLOR.rgb = vec3(n_out5p0.xyz);
+
+
+}
+"
+graph_offset = Vector2(-830.714, -75.9406)
+mode = 1
+flags/light_only = false
+nodes/fragment/0/position = Vector2(560, 140)
+nodes/fragment/2/node = SubResource("VisualShaderNodeInput_a5lio")
+nodes/fragment/2/position = Vector2(-2000, 620)
+nodes/fragment/3/node = SubResource("VisualShaderNodeVectorDistance_ho4ly")
+nodes/fragment/3/position = Vector2(-1180, 840)
+nodes/fragment/4/node = SubResource("VisualShaderNodeSmoothStep_4k17d")
+nodes/fragment/4/position = Vector2(-500, 480)
+nodes/fragment/5/node = SubResource("VisualShaderNodeMix_kcere")
+nodes/fragment/5/position = Vector2(-40, 20)
+nodes/fragment/6/node = SubResource("VisualShaderNodeColorParameter_pnjly")
+nodes/fragment/6/position = Vector2(-880, -480)
+nodes/fragment/7/node = SubResource("VisualShaderNodeColorParameter_du532")
+nodes/fragment/7/position = Vector2(-880, -80)
+nodes/fragment/8/node = SubResource("VisualShaderNodeFloatParameter_abi46")
+nodes/fragment/8/position = Vector2(-1180, 420)
+nodes/fragment/connections = PackedInt32Array(2, 0, 3, 0, 3, 0, 4, 2, 5, 0, 0, 0, 4, 0, 5, 2, 6, 0, 5, 0, 7, 0, 5, 1, 8, 0, 4, 1)
