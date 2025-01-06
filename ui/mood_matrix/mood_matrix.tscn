@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://btfayeijnow7g"]
+[gd_scene load_steps=15 format=3 uid="uid://btfayeijnow7g"]
 
 [ext_resource type="Script" path="res://ui/mood_matrix/mood_matrix.gd" id="1_1b2ix"]
 [ext_resource type="Texture2D" uid="uid://dv0sfl42ntyma" path="res://ui/mood_matrix/sprites/Big Circle.png" id="1_fuh6g"]
@@ -9,6 +9,7 @@
 [ext_resource type="Resource" uid="uid://c1d3gtg13meu2" path="res://ui/mood_matrix/mm_angry.tres" id="6_xxsyf"]
 [ext_resource type="Resource" uid="uid://bqx37qeyclk1" path="res://ui/mood_matrix/mm_sad.tres" id="7_d3mif"]
 [ext_resource type="Resource" uid="uid://c3me15y0chlmy" path="res://ui/mood_matrix/mm_surprised.tres" id="8_1beay"]
+[ext_resource type="AudioStream" uid="uid://dudi3jqlabi8e" path="res://ui/mood_matrix/sounds/sfx-moodmatrix-begin.mp3" id="10_exj3j"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_xbxoc"]
 shader = ExtResource("2_jligu")
@@ -95,7 +96,7 @@ tracks/0/loop_wrap = true
 tracks/0/keys = {
 "handle_modes": PackedInt32Array(0, 0),
 "points": PackedFloat32Array(1.5708, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(0, 0.8)
+"times": PackedFloat32Array(0, 0.6)
 }
 tracks/1/type = "bezier"
 tracks/1/imported = false
@@ -106,7 +107,7 @@ tracks/1/loop_wrap = true
 tracks/1/keys = {
 "handle_modes": PackedInt32Array(0, 0),
 "points": PackedFloat32Array(1.4, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(0, 0.8)
+"times": PackedFloat32Array(0, 0.6)
 }
 tracks/2/type = "bezier"
 tracks/2/imported = false
@@ -117,7 +118,7 @@ tracks/2/loop_wrap = true
 tracks/2/keys = {
 "handle_modes": PackedInt32Array(0, 0),
 "points": PackedFloat32Array(1.4, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(0, 0.8)
+"times": PackedFloat32Array(0, 0.6)
 }
 tracks/3/type = "bezier"
 tracks/3/imported = false
@@ -128,7 +129,7 @@ tracks/3/loop_wrap = true
 tracks/3/keys = {
 "handle_modes": PackedInt32Array(0, 0),
 "points": PackedFloat32Array(1.6, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(0, 0.7)
+"times": PackedFloat32Array(0, 0.5)
 }
 tracks/4/type = "bezier"
 tracks/4/imported = false
@@ -139,7 +140,7 @@ tracks/4/loop_wrap = true
 tracks/4/keys = {
 "handle_modes": PackedInt32Array(0, 0),
 "points": PackedFloat32Array(1.6, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(0, 0.7)
+"times": PackedFloat32Array(0, 0.5)
 }
 tracks/5/type = "bezier"
 tracks/5/imported = false
@@ -150,7 +151,7 @@ tracks/5/loop_wrap = true
 tracks/5/keys = {
 "handle_modes": PackedInt32Array(0, 0, 0),
 "points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(0, 0.4, 0.8)
+"times": PackedFloat32Array(0, 0.4, 0.6)
 }
 tracks/6/type = "method"
 tracks/6/imported = false
@@ -159,7 +160,7 @@ tracks/6/path = NodePath(".")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/keys = {
-"times": PackedFloat32Array(0, 0.8),
+"times": PackedFloat32Array(0, 0.6),
 "transitions": PackedFloat32Array(1, 1),
 "values": [{
 "args": [],
@@ -176,7 +177,7 @@ tracks/7/path = NodePath(".")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/keys = {
-"times": PackedFloat32Array(0.8),
+"times": PackedFloat32Array(0.6),
 "transitions": PackedFloat32Array(1),
 "values": [{
 "args": [],
@@ -297,3 +298,7 @@ marker_type = ExtResource("8_1beay")
 libraries = {
 "": SubResource("AnimationLibrary_hrs3b")
 }
+
+[node name="BeginSound" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("10_exj3j")
