@@ -16,6 +16,8 @@ func animate_pulse():
 	tw = create_tween()
 	
 	visible = true
+	scale = Vector2.ONE * 0.4
+	modulate.a = 1.0
 	tw.tween_callback(func(): scale = Vector2.ONE * 0.4; modulate.a = 1.0)
 	tw.tween_property(self, "scale", Vector2.ONE * 1.25, 1.0)
 	tw.parallel().tween_callback(sound_player.play).set_delay(0.2)
