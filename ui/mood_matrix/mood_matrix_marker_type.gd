@@ -5,3 +5,4 @@ extends Resource
 @export var face_color_inactive: Color
 @export var face_color_active: Color
 @export var background_color_active: Color
+@export var pulse_sound: AudioStream
