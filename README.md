@@ -34,6 +34,12 @@ Many of the assets (including character animations and UI elements) were ripped 
 
 The *Apollo Justice* "Perceive" background graphics were [ripped from the iOS version of the game by Reddit user u/JBoote1](https://www.reddit.com/r/AceAttorney/comments/mon8pi/comment/gu59ae0/).
 
+The Mood Matrix graphics were extracted by [ChingKittyCat on Spriters Resource](https://www.spriters-resource.com/3ds/phoenixwrightaceattorneydualdestinies/sheet/151689/).
+
+The Mood Matrix marker sound effects were recorded by [Discord user Jofe and posted on the Ace Attorney Case Developers Discord server](https://discord.com/channels/226527042240249866/226819687114211329/1243706139397455913), then trimmed by Meorge.
+
+Other Mood Matrix sound effects were ripped by [user venser on the Court Records forums](https://www.forums.court-records.net/viewtopic.php?f=10&t=30410).
+
 ### Fonts
 
 - Name tag font is [Ace Name by user guiguiba on FontStruct](https://fontstruct.com/fontstructions/show/1799842/ace-name)
