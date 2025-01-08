@@ -37,7 +37,7 @@ func do_intro_pulse():
 
 func animate_markers_in():
 	%BeginSound.play()
-	await get_tree().create_timer(0.8).timeout
+	# await get_tree().create_timer(0.8).timeout
 	$AnimationPlayer.play("markers_in")
 	await $AnimationPlayer.animation_finished
 
