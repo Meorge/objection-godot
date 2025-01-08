@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://btpnuaw6g48yu"]
+[gd_scene load_steps=9 format=3 uid="uid://btpnuaw6g48yu"]
 
 [ext_resource type="Shader" uid="uid://ceskm3o6mjmlg" path="res://scenes/mood_matrix_bg/mood_matrix_bg.tres" id="1_o4shm"]
 [ext_resource type="Script" path="res://scenes/mood_matrix_bg/mm_lines.gd" id="2_2jkfc"]
@@ -8,6 +8,36 @@ shader = ExtResource("1_o4shm")
 shader_parameter/GlowColor = Color(0.196078, 0.427451, 0.521569, 1)
 shader_parameter/BackgroundColor = Color(0.025364, 0.025364, 0.025364, 1)
 shader_parameter/CircleSize = 0.5
+
+[sub_resource type="Curve" id="Curve_w5lth"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.248302, 1), 0.0, 0.0, 0, 0, Vector2(0.759245, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 4
+
+[sub_resource type="CurveTexture" id="CurveTexture_3p58g"]
+curve = SubResource("Curve_w5lth")
+
+[sub_resource type="Gradient" id="Gradient_b33l3"]
+colors = PackedColorArray(0.185313, 0.576836, 0.791682, 1, 0.705498, 0.86338, 0.95846, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_dw7k1"]
+gradient = SubResource("Gradient_b33l3")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_yabjr"]
+particle_flag_disable_z = true
+direction = Vector3(0, 0, 0)
+spread = 180.0
+initial_velocity_min = 22.03
+initial_velocity_max = 22.03
+gravity = Vector3(0, 0, 0)
+linear_accel_min = 11.21
+linear_accel_max = 11.21
+damping_min = 5.0
+damping_max = 5.0
+scale_max = 5.0
+color_initial_ramp = SubResource("GradientTexture1D_dw7k1")
+alpha_curve = SubResource("CurveTexture_3p58g")
+turbulence_initial_displacement_min = 28.7
+turbulence_initial_displacement_max = 28.7
 
 [node name="MoodMatrixBg" type="Node2D"]
 
@@ -31,3 +61,13 @@ pivot_offset = Vector2(128, 128)
 modulate = Color(0.347, 0.741, 0.875, 0.75)
 z_index = -5
 script = ExtResource("2_2jkfc")
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="."]
+z_index = -5
+amount = 32
+process_material = SubResource("ParticleProcessMaterial_yabjr")
+lifetime = 10.0
+preprocess = 10.0
+randomness = 1.0
+fixed_fps = 60
+local_coords = true
