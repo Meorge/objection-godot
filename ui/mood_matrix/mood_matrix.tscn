@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://btfayeijnow7g"]
+[gd_scene load_steps=19 format=3 uid="uid://btfayeijnow7g"]
 
 [ext_resource type="Script" path="res://ui/mood_matrix/mood_matrix.gd" id="1_1b2ix"]
 [ext_resource type="Texture2D" uid="uid://dv0sfl42ntyma" path="res://ui/mood_matrix/sprites/Big Circle.png" id="1_fuh6g"]
@@ -10,7 +10,10 @@
 [ext_resource type="Resource" uid="uid://bqx37qeyclk1" path="res://ui/mood_matrix/mm_sad.tres" id="7_d3mif"]
 [ext_resource type="Resource" uid="uid://c3me15y0chlmy" path="res://ui/mood_matrix/mm_surprised.tres" id="8_1beay"]
 [ext_resource type="AudioStream" uid="uid://dudi3jqlabi8e" path="res://ui/mood_matrix/sounds/sfx-moodmatrix-begin.mp3" id="10_exj3j"]
+[ext_resource type="Texture2D" uid="uid://b4bey7v6kouu0" path="res://ui/mood_matrix/sprites/Logo Center.png" id="11_0epsa"]
 [ext_resource type="Texture2D" uid="uid://bc1bp3g7kqqyk" path="res://ui/mood_matrix/sprites/Circle.png" id="11_epvi7"]
+[ext_resource type="Texture2D" uid="uid://oyajbv5bc6p3" path="res://ui/mood_matrix/sprites/Logo Inner Ring.png" id="12_ipwrm"]
+[ext_resource type="Texture2D" uid="uid://m6e0tbel0t08" path="res://ui/mood_matrix/sprites/Logo Outer Ring.png" id="13_ymxo3"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_xbxoc"]
 shader = ExtResource("2_jligu")
@@ -219,7 +222,7 @@ tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "handle_modes": PackedInt32Array(0, 0),
-"points": PackedFloat32Array(1.5708, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
+"points": PackedFloat32Array(1.5708, 0, 0, 0, 0, 0, 0, 0, 0, 0),
 "times": PackedFloat32Array(0.6, 1.2)
 }
 tracks/1/type = "bezier"
@@ -316,7 +319,7 @@ tracks/8/interp = 1
 tracks/8/loop_wrap = true
 tracks/8/keys = {
 "handle_modes": PackedInt32Array(0, 0),
-"points": PackedFloat32Array(0.996422, -0.25, 0, 0.25, 0, 1.25, -0.25, 0, 0.25, 0),
+"points": PackedFloat32Array(0.996422, -0.25, 0, 0.25, 0, 1.75, 0, 0, 0, 0),
 "times": PackedFloat32Array(0, 0.5)
 }
 tracks/9/type = "bezier"
@@ -327,7 +330,7 @@ tracks/9/interp = 1
 tracks/9/loop_wrap = true
 tracks/9/keys = {
 "handle_modes": PackedInt32Array(0, 0),
-"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 1.25, -0.25, 0, 0.25, 0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 1.75, 0, 0, 0, 0),
 "times": PackedFloat32Array(0, 0.5)
 }
 tracks/10/type = "bezier"
@@ -349,7 +352,7 @@ tracks/11/interp = 1
 tracks/11/loop_wrap = true
 tracks/11/keys = {
 "handle_modes": PackedInt32Array(0, 0),
-"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 1.25, -0.25, 0, 0.25, 0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 1.75, 0, 0, 0, 0),
 "times": PackedFloat32Array(0, 0.5)
 }
 tracks/12/type = "bezier"
@@ -360,7 +363,7 @@ tracks/12/interp = 1
 tracks/12/loop_wrap = true
 tracks/12/keys = {
 "handle_modes": PackedInt32Array(0, 0),
-"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 1.25, -0.25, 0, 0.25, 0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 1.75, 0, 0, 0, 0),
 "times": PackedFloat32Array(0, 0.5)
 }
 tracks/13/type = "bezier"
@@ -381,7 +384,7 @@ tracks/14/path = NodePath("MoodMatrixLogoDots:rotation")
 tracks/14/interp = 1
 tracks/14/loop_wrap = true
 tracks/14/keys = {
-"times": PackedFloat32Array(0, 0.566667),
+"times": PackedFloat32Array(0, 0.633333),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [0.0, -3.14159]
@@ -393,10 +396,10 @@ tracks/15/path = NodePath("MoodMatrixLogoDots:scale")
 tracks/15/interp = 1
 tracks/15/loop_wrap = true
 tracks/15/keys = {
-"times": PackedFloat32Array(0, 0.566667),
-"transitions": PackedFloat32Array(1, 1),
+"times": PackedFloat32Array(0, 0.5, 0.633333),
+"transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
-"values": [Vector2(1, 1), Vector2(5, 5)]
+"values": [Vector2(1, 1), Vector2(1.75, 1.75), Vector2(4, 4)]
 }
 tracks/16/type = "bezier"
 tracks/16/imported = false
@@ -558,14 +561,14 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -30.0
-offset_top = -30.0
-offset_right = 30.0
-offset_bottom = 30.0
+offset_left = -25.0
+offset_top = -25.0
+offset_right = 25.0
+offset_bottom = 25.0
 grow_horizontal = 2
 grow_vertical = 2
-pivot_offset = Vector2(30, 30)
-texture = ExtResource("11_epvi7")
+pivot_offset = Vector2(25, 25)
+texture = ExtResource("11_0epsa")
 
 [node name="MoodMatrixLogoInnerCircle" type="TextureRect" parent="."]
 modulate = Color(1, 1, 1, 0)
@@ -575,14 +578,14 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -50.0
-offset_top = -50.0
-offset_right = 50.0
-offset_bottom = 50.0
+offset_left = -52.5
+offset_top = -52.5
+offset_right = 52.5
+offset_bottom = 52.5
 grow_horizontal = 2
 grow_vertical = 2
-pivot_offset = Vector2(50, 50)
-texture = ExtResource("1_fuh6g")
+pivot_offset = Vector2(52, 52)
+texture = ExtResource("12_ipwrm")
 expand_mode = 1
 
 [node name="MoodMatrixLogoOuterCircle" type="TextureRect" parent="."]
@@ -600,7 +603,7 @@ offset_bottom = 75.0
 grow_horizontal = 2
 grow_vertical = 2
 pivot_offset = Vector2(75, 75)
-texture = ExtResource("1_fuh6g")
+texture = ExtResource("13_ymxo3")
 expand_mode = 1
 
 [node name="MoodMatrixLogoDots" type="Control" parent="."]
@@ -617,12 +620,13 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -17.0
-offset_top = -67.0
-offset_right = 11.0
-offset_bottom = -39.0
+offset_left = -13.0
+offset_top = -60.0
+offset_right = 13.0
+offset_bottom = -34.0
 grow_horizontal = 2
 grow_vertical = 2
+pivot_offset = Vector2(13, 13)
 texture = ExtResource("11_epvi7")
 expand_mode = 1
 
@@ -633,12 +637,13 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -69.0
-offset_top = -17.0
-offset_right = -41.0
-offset_bottom = 11.0
+offset_left = -60.0
+offset_top = -13.0
+offset_right = -34.0
+offset_bottom = 13.0
 grow_horizontal = 2
 grow_vertical = 2
+pivot_offset = Vector2(13, 13)
 texture = ExtResource("11_epvi7")
 expand_mode = 1
 
@@ -649,12 +654,13 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 32.0
-offset_top = -17.0
+offset_left = 34.0
+offset_top = -13.0
 offset_right = 60.0
-offset_bottom = 11.0
+offset_bottom = 13.0
 grow_horizontal = 2
 grow_vertical = 2
+pivot_offset = Vector2(13, 13)
 texture = ExtResource("11_epvi7")
 expand_mode = 1
 
@@ -665,11 +671,12 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -17.0
-offset_top = 33.0
-offset_right = 11.0
-offset_bottom = 61.0
+offset_left = -13.0
+offset_top = 34.0
+offset_right = 13.0
+offset_bottom = 60.0
 grow_horizontal = 2
 grow_vertical = 2
+pivot_offset = Vector2(13, 13)
 texture = ExtResource("11_epvi7")
 expand_mode = 1
