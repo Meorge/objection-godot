@@ -103,6 +103,9 @@ The current built-in locations are:
 - `left` - The left side of the courtroom, where the defense attorney stands.
 - `center` - The witness stand.
 - `right` - The right side of the courtroom, where the prosecutor stands.
+- `judge` - The view looking up at the Judge.
+- `counsel` - The view of a character standing next to the defense attorney.
+- `zoom` - The view of a character with blue "power lines" moving behind them.
 
 ### Music and sound effects
 
