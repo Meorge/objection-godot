@@ -1,5 +1,6 @@
-[gd_scene load_steps=9 format=3 uid="uid://btpnuaw6g48yu"]
+[gd_scene load_steps=10 format=3 uid="uid://btpnuaw6g48yu"]
 
+[ext_resource type="Script" path="res://scenes/mood_matrix_bg/mood_matrix_bg.gd" id="1_gpwuj"]
 [ext_resource type="Shader" uid="uid://ceskm3o6mjmlg" path="res://scenes/mood_matrix_bg/mood_matrix_bg.tres" id="1_o4shm"]
 [ext_resource type="Script" path="res://scenes/mood_matrix_bg/mm_lines.gd" id="2_2jkfc"]
 
@@ -40,6 +41,8 @@ turbulence_initial_displacement_min = 28.7
 turbulence_initial_displacement_max = 28.7
 
 [node name="MoodMatrixBg" type="Node2D"]
+z_index = -5
+script = ExtResource("1_gpwuj")
 
 [node name="BackgroundGlow" type="ColorRect" parent="."]
 z_index = -5
