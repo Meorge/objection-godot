@@ -309,6 +309,19 @@ If the `fade` argument is used, the visual will fade into or out of view over th
 
 If the value of `set` or `fade` is `auto`, then the visual will toggle its state away from the current state (that is, if it is currently visible, it will become invisible, and vice versa).
 
+### Mood Matrix from *Dual Destinies*
+
+#### Background
+
+```xml
+<mood_matrix.bg set="in|out|auto:auto" />
+<mood_matrix.bg fade="in|out|auto:auto" duration="float:0.5" />
+```
+
+Displays the Mood Matrix visuals behind the characters.
+
+This functions identically to the "Percieve" background - see above for more information.
+
 ## Data types
 
 ### `color`

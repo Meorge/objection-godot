@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://dtsmh3r0kycrw"]
+[gd_scene load_steps=22 format=3 uid="uid://dtsmh3r0kycrw"]
 
 [ext_resource type="AudioStream" uid="uid://brp8iv61fonns" path="res://audio/sound/sfx-blipmale.wav" id="8_ance2"]
 [ext_resource type="Script" path="res://audio/voice_blip_player.gd" id="9_tg6eo"]
@@ -19,6 +19,7 @@
 [ext_resource type="PackedScene" uid="uid://cbtonh0u74a8v" path="res://scenes/perceive/perceive_effect.tscn" id="18_7lwyl"]
 [ext_resource type="PackedScene" uid="uid://dd2xc26iwfwel" path="res://scenes/judge/judge_view.tscn" id="18_btfy3"]
 [ext_resource type="Script" path="res://ui/behind_character_solid/behind_character_solid.gd" id="18_q6hsr"]
+[ext_resource type="PackedScene" uid="uid://btpnuaw6g48yu" path="res://scenes/mood_matrix_bg/mood_matrix_bg.tscn" id="18_rb12j"]
 [ext_resource type="PackedScene" uid="uid://dhmhsu0khyno4" path="res://effects/confetti/confetti_container.tscn" id="19_mw2qx"]
 
 [node name="Node2D" type="Node2D"]
@@ -77,6 +78,8 @@ unique_name_in_owner = true
 script = ExtResource("17_efp1a")
 
 [node name="PerceiveEffect" parent="CameraShaker/InnerContainer/Camera" instance=ExtResource("18_7lwyl")]
+
+[node name="MoodMatrixBg" parent="CameraShaker/InnerContainer/Camera" instance=ExtResource("18_rb12j")]
 
 [node name="BehindCharacterSolid" type="ColorRect" parent="CameraShaker/InnerContainer/Camera"]
 z_index = -6
