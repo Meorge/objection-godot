@@ -1,25 +1,21 @@
-[gd_scene load_steps=10 format=3 uid="uid://4uljkfi84i5m"]
+[gd_scene load_steps=11 format=3 uid="uid://4uljkfi84i5m"]
 
 [ext_resource type="Texture2D" uid="uid://c5v66iikse0pw" path="res://reference_screenshots/new_evidence.png" id="1_hv4tr"]
 [ext_resource type="Script" path="res://ui/new_evidence/new_evidence.gd" id="1_tko8y"]
 [ext_resource type="Texture2D" uid="uid://cj1q8ycfwxsra" path="res://ui/new_evidence/new_evidence.png" id="2_buq41"]
-[ext_resource type="FontFile" uid="uid://c0v5yww5rglpk" path="res://ui/text_box/font/igiari-cyrillic/igiari-cyrillic.ttf" id="3_7mhiv"]
+[ext_resource type="FontFile" uid="uid://dc5yyai7qwx7b" path="res://ui/new_evidence/ace-check.otf/ace-check.otf" id="4_1x1yn"]
 [ext_resource type="Texture2D" uid="uid://beaqrjyvyadas" path="res://icon.svg" id="4_ec6ms"]
+[ext_resource type="FontFile" uid="uid://cign3b7rx7ndg" path="res://ui/new_evidence/court-records.otf/court-records.otf" id="5_v0xlt"]
 [ext_resource type="AudioStream" uid="uid://wnowwes00ott" path="res://audio/sound/sfx-selectjingle.wav" id="6_jqfre"]
 [ext_resource type="AudioStream" uid="uid://s477skafosio" path="res://audio/sound/sfx-selectblip2.wav" id="7_mfbun"]
 
-[sub_resource type="FontVariation" id="FontVariation_3igan"]
-base_font = ExtResource("3_7mhiv")
-spacing_glyph = -1
-spacing_bottom = -3
-baseline_offset = -0.035
+[sub_resource type="FontVariation" id="FontVariation_4hxfw"]
+base_font = ExtResource("4_1x1yn")
+spacing_top = -2
 
 [sub_resource type="FontVariation" id="FontVariation_h1rsw"]
-base_font = ExtResource("3_7mhiv")
-spacing_glyph = -1
-spacing_space = -3
-spacing_top = -2
-spacing_bottom = -3
+base_font = ExtResource("5_v0xlt")
+spacing_bottom = -1
 baseline_offset = -0.035
 
 [node name="NewEvidence" type="Control"]
@@ -53,18 +49,18 @@ layout_mode = 0
 offset_left = 91.0
 offset_top = 8.0
 offset_right = 246.0
-offset_bottom = 25.0
+offset_bottom = 28.0
 theme_override_colors/font_color = Color(0.968627, 0.658824, 0.0941176, 1)
-theme_override_fonts/font = SubResource("FontVariation_3igan")
-theme_override_font_sizes/font_size = 16
+theme_override_fonts/font = SubResource("FontVariation_4hxfw")
+theme_override_font_sizes/font_size = 13
 text = "Passport"
 horizontal_alignment = 1
 
 [node name="Description" type="Label" parent="Background"]
 unique_name_in_owner = true
 layout_mode = 0
-offset_left = 99.0
-offset_top = 27.0
+offset_left = 105.0
+offset_top = 28.0
 offset_right = 245.0
 offset_bottom = 71.0
 theme_override_colors/font_color = Color(0.219608, 0.219608, 0.219608, 1)

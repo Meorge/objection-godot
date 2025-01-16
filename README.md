@@ -43,6 +43,9 @@ The *Apollo Justice* "Perceive" background graphics were [ripped from the iOS ve
   - "Witness Testimony" label uses DFP Gothic EB
 - Flashing top-left "Testimony" label uses DIN Condensed (Bold)
 
+- "New evidence" box title text font is [Ace Check by user guiguiba on FontStruct](https://fontstruct.com/fontstructions/show/1860020/ace-check)
+- "New evidence" box body text font is [Court Records by user guiguiba on FontStruct](https://fontstruct.com/fontstructions/show/1847111/court-records)
+
 ## License
 
 MIT
