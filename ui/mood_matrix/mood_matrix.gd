@@ -6,7 +6,8 @@ extends Control
 @onready var _surprised_marker: MoodMatrixMarker = %Surprised
 
 func _ready():
-	animate_markers_in()
+	ScriptManager.register_handler("mood_matrix.ui", _handle_mood_matrix_ui)
+	ScriptManager.register_handler("mood_matrix.emotion", _handle_mood_matrix_emotion)
 
 func _handle_mood_matrix(args: Dictionary):
 	pass
@@ -37,13 +38,31 @@ func do_intro_pulse():
 
 func animate_markers_in():
 	%BeginSound.play()
-	# await get_tree().create_timer(0.8).timeout
 	$AnimationPlayer.play("markers_in")
 	await $AnimationPlayer.animation_finished
 
-	_happy_marker.set_active()
+func _handle_mood_matrix_ui(args: Dictionary):
+	var animate = args.get("animate", "in")
+	if animate == "in":
+		await animate_markers_in()
 
-	while true:
-		await _happy_marker.do_pulse_anim().finished
-		# await get_tree().create_timer(0.1).timeout
+func _handle_mood_matrix_emotion(args: Dictionary):
+	# <mood_matrix.emotion type="happy" intensity="3" />
+	var markers = {
+		"happy": _happy_marker,
+		"sad": _sad_marker,
+		"angry": _angry_marker,
+		"surprised": _surprised_marker
+	}
+	
+	var emotion_str = args.get("type", "")
+	if emotion_str not in markers:
+		Utils.print_error("Emotion \"%s\" doesn't exist in Mood Matrix" % emotion_str)
+		return
+
+	var marker = markers[emotion_str]
+	var intensity = float(args.get("intensity", "1"))
+
+	marker.set_pulse(intensity)
+	
 	

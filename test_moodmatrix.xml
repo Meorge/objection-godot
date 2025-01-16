@@ -1,0 +1,15 @@
+<sprite pos="center" res="res://characters/polly/polly.tres" anim="normal-idle" />
+<mood_matrix.bg set="in"/>
+<box set="out"/>
+<mood_matrix.ui animate="in" />
+<mood_matrix.emotion type="happy" intensity="1.0" />
+<mood_matrix.emotion type="angry" intensity="3.0" />
+<wait secs="2.25" />
+<mood_matrix.emotion type="sad" intensity="2.0" />
+<wait secs="1.0"/>
+<mood_matrix.emotion type="angry" intensity="0.0" />
+<wait secs="0.5" />
+<mood_matrix.emotion type="happy" intensity="0.0" />
+<mood_matrix.emotion type="surprised" intensity="0.5" />
+<wait secs="4.0" />
+<play />

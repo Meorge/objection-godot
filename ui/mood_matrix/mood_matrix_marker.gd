@@ -17,12 +17,17 @@ func _ready():
 	set_inactive()
 
 func set_thinking():
+	if tw:
+		tw.kill()
 	_face.visible = false
 	_thinking_anim.visible = true
 
 	_background.modulate = Color.BLACK
 
 func set_inactive():
+	if tw:
+		tw.kill()
+	
 	_face.visible = true
 	_thinking_anim.visible = false
 
@@ -30,6 +35,8 @@ func set_inactive():
 	_background.modulate = Color.BLACK
 
 func set_active():
+	if tw:
+		tw.kill()
 	_face.visible = true
 	_thinking_anim.visible = false
 
@@ -38,6 +45,23 @@ func set_active():
 	_pulse.modulate = marker_type.background_color_active
 
 var tw: Tween = null
+
+var repeat_tw: Tween = null
+func set_pulse(intensity: float):
+	if repeat_tw:
+		repeat_tw.kill()
+
+	_pulse.intensity = intensity
+	if intensity <= 0:
+		set_inactive()
+		return
+
+	
+	set_active()
+	repeat_tw = create_tween()
+	repeat_tw.tween_callback(do_pulse_anim)
+	repeat_tw.tween_interval(1.0)
+	repeat_tw.set_loops(-1)
 
 func do_pulse_anim():
 	if tw:
