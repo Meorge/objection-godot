@@ -9,6 +9,14 @@ func _ready():
 	ScriptManager.register_handler("mood_matrix.ui", _handle_mood_matrix_ui)
 	ScriptManager.register_handler("mood_matrix.emotion", _handle_mood_matrix_emotion)
 
+	%Bootup.sound_should_be_played.connect(%BeginSound.play)
+	%Bootup.white_flash.connect(func():
+		var a = create_tween()
+		%WhiteFlash.visible = true
+		%WhiteFlash.color.a = 0.0
+		a.tween_property(%WhiteFlash, "color:a", 1.0, 0.09)
+	)
+
 func _handle_mood_matrix(args: Dictionary):
 	pass
 
@@ -37,13 +45,24 @@ func do_intro_pulse():
 	_surprised_marker.do_intro_pulse_anim()
 
 func animate_markers_in():
-	%BeginSound.play()
+	%WhiteFlash.visible = false
+	%WhiteFlash.color.a = 0.0
 	$AnimationPlayer.play("markers_in")
 	await $AnimationPlayer.animation_finished
 
+func animate_bootup():
+	var bootup_anim: AnimationPlayer = %Bootup.get_node("AnimationPlayer")
+	bootup_anim.play("intro")
+	await bootup_anim.animation_finished
+	bootup_anim.play("RESET")
+
 func _handle_mood_matrix_ui(args: Dictionary):
+	## Options:
+	## - animate="bootup"
 	var animate = args.get("animate", "in")
-	if animate == "in":
+	if animate == "bootup":
+		await animate_bootup()
+	if animate == "emotions_in":
 		await animate_markers_in()
 
 func _handle_mood_matrix_emotion(args: Dictionary):

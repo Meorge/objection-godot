@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://btfayeijnow7g"]
+[gd_scene load_steps=20 format=3 uid="uid://btfayeijnow7g"]
 
 [ext_resource type="Script" path="res://ui/mood_matrix/mood_matrix.gd" id="1_1b2ix"]
 [ext_resource type="Texture2D" uid="uid://dv0sfl42ntyma" path="res://ui/mood_matrix/sprites/Big Circle.png" id="1_fuh6g"]
@@ -14,6 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://bc1bp3g7kqqyk" path="res://ui/mood_matrix/sprites/Circle.png" id="11_epvi7"]
 [ext_resource type="Texture2D" uid="uid://oyajbv5bc6p3" path="res://ui/mood_matrix/sprites/Logo Inner Ring.png" id="12_ipwrm"]
 [ext_resource type="Texture2D" uid="uid://m6e0tbel0t08" path="res://ui/mood_matrix/sprites/Logo Outer Ring.png" id="13_ymxo3"]
+[ext_resource type="PackedScene" uid="uid://cwl2x01p7mvrk" path="res://ui/mood_matrix/bootup/mm_bootup.tscn" id="15_ywdq2"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_xbxoc"]
 shader = ExtResource("2_jligu")
@@ -210,6 +211,30 @@ tracks/16/keys = {
 "points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
 "times": PackedFloat32Array(0)
 }
+tracks/17/type = "value"
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/path = NodePath("MoodMatrixLogoDots:visible")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/18/type = "value"
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/path = NodePath("Big Ring:visible")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
 
 [sub_resource type="Animation" id="Animation_4r01x"]
 resource_name = "markers_in"
@@ -223,7 +248,7 @@ tracks/0/loop_wrap = true
 tracks/0/keys = {
 "handle_modes": PackedInt32Array(0, 0),
 "points": PackedFloat32Array(1.5708, 0, 0, 0, 0, 0, 0, 0, 0, 0),
-"times": PackedFloat32Array(0.6, 1.2)
+"times": PackedFloat32Array(0.533333, 1.13333)
 }
 tracks/1/type = "bezier"
 tracks/1/imported = false
@@ -234,7 +259,7 @@ tracks/1/loop_wrap = true
 tracks/1/keys = {
 "handle_modes": PackedInt32Array(0, 0),
 "points": PackedFloat32Array(1.4, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(0.8, 1.4)
+"times": PackedFloat32Array(0.733333, 1.33333)
 }
 tracks/2/type = "bezier"
 tracks/2/imported = false
@@ -245,7 +270,7 @@ tracks/2/loop_wrap = true
 tracks/2/keys = {
 "handle_modes": PackedInt32Array(0, 0),
 "points": PackedFloat32Array(1.4, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(0.8, 1.4)
+"times": PackedFloat32Array(0.733333, 1.33333)
 }
 tracks/3/type = "bezier"
 tracks/3/imported = false
@@ -256,7 +281,7 @@ tracks/3/loop_wrap = true
 tracks/3/keys = {
 "handle_modes": PackedInt32Array(0, 0),
 "points": PackedFloat32Array(1.6, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(0.8, 1.3)
+"times": PackedFloat32Array(0.733333, 1.23333)
 }
 tracks/4/type = "bezier"
 tracks/4/imported = false
@@ -267,7 +292,7 @@ tracks/4/loop_wrap = true
 tracks/4/keys = {
 "handle_modes": PackedInt32Array(0, 0),
 "points": PackedFloat32Array(1.6, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(0.8, 1.3)
+"times": PackedFloat32Array(0.733333, 1.23333)
 }
 tracks/5/type = "bezier"
 tracks/5/imported = false
@@ -278,7 +303,7 @@ tracks/5/loop_wrap = true
 tracks/5/keys = {
 "handle_modes": PackedInt32Array(0, 0, 0),
 "points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(0.8, 1.2, 1.4)
+"times": PackedFloat32Array(0.733333, 1.13333, 1.33333)
 }
 tracks/6/type = "method"
 tracks/6/imported = false
@@ -287,7 +312,7 @@ tracks/6/path = NodePath(".")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/keys = {
-"times": PackedFloat32Array(0.8, 1.4),
+"times": PackedFloat32Array(0.733333, 1.33333),
 "transitions": PackedFloat32Array(1, 1),
 "values": [{
 "args": [],
@@ -304,7 +329,7 @@ tracks/7/path = NodePath(".")
 tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/keys = {
-"times": PackedFloat32Array(1.4),
+"times": PackedFloat32Array(1.33333),
 "transitions": PackedFloat32Array(1),
 "values": [{
 "args": [],
@@ -320,7 +345,7 @@ tracks/8/loop_wrap = true
 tracks/8/keys = {
 "handle_modes": PackedInt32Array(0, 0),
 "points": PackedFloat32Array(0.996422, -0.25, 0, 0.25, 0, 1.75, 0, 0, 0, 0),
-"times": PackedFloat32Array(0, 0.5)
+"times": PackedFloat32Array(0, 0.433333)
 }
 tracks/9/type = "bezier"
 tracks/9/imported = false
@@ -331,7 +356,7 @@ tracks/9/loop_wrap = true
 tracks/9/keys = {
 "handle_modes": PackedInt32Array(0, 0),
 "points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 1.75, 0, 0, 0, 0),
-"times": PackedFloat32Array(0, 0.5)
+"times": PackedFloat32Array(0, 0.433333)
 }
 tracks/10/type = "bezier"
 tracks/10/imported = false
@@ -342,7 +367,7 @@ tracks/10/loop_wrap = true
 tracks/10/keys = {
 "handle_modes": PackedInt32Array(0, 0),
 "points": PackedFloat32Array(1, 0, 0, 0, 0, 0, 0, 0, 0, 0),
-"times": PackedFloat32Array(0, 0.5)
+"times": PackedFloat32Array(0, 0.433333)
 }
 tracks/11/type = "bezier"
 tracks/11/imported = false
@@ -353,7 +378,7 @@ tracks/11/loop_wrap = true
 tracks/11/keys = {
 "handle_modes": PackedInt32Array(0, 0),
 "points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 1.75, 0, 0, 0, 0),
-"times": PackedFloat32Array(0, 0.5)
+"times": PackedFloat32Array(0, 0.433333)
 }
 tracks/12/type = "bezier"
 tracks/12/imported = false
@@ -364,7 +389,7 @@ tracks/12/loop_wrap = true
 tracks/12/keys = {
 "handle_modes": PackedInt32Array(0, 0),
 "points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 1.75, 0, 0, 0, 0),
-"times": PackedFloat32Array(0, 0.5)
+"times": PackedFloat32Array(0, 0.433333)
 }
 tracks/13/type = "bezier"
 tracks/13/imported = false
@@ -375,7 +400,7 @@ tracks/13/loop_wrap = true
 tracks/13/keys = {
 "handle_modes": PackedInt32Array(0, 0),
 "points": PackedFloat32Array(1, 0, 0, 0, 0, 0, 0, 0, 0, 0),
-"times": PackedFloat32Array(0, 0.5)
+"times": PackedFloat32Array(0, 0.433333)
 }
 tracks/14/type = "value"
 tracks/14/imported = false
@@ -384,7 +409,7 @@ tracks/14/path = NodePath("MoodMatrixLogoDots:rotation")
 tracks/14/interp = 1
 tracks/14/loop_wrap = true
 tracks/14/keys = {
-"times": PackedFloat32Array(0, 0.633333),
+"times": PackedFloat32Array(0, 0.566666),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [0.0, -3.14159]
@@ -396,7 +421,7 @@ tracks/15/path = NodePath("MoodMatrixLogoDots:scale")
 tracks/15/interp = 1
 tracks/15/loop_wrap = true
 tracks/15/keys = {
-"times": PackedFloat32Array(0, 0.5, 0.633333),
+"times": PackedFloat32Array(0, 0.433333, 0.566666),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
 "values": [Vector2(1, 1), Vector2(1.75, 1.75), Vector2(4, 4)]
@@ -410,7 +435,7 @@ tracks/16/loop_wrap = true
 tracks/16/keys = {
 "handle_modes": PackedInt32Array(0, 0, 0),
 "points": PackedFloat32Array(1, 0, 0, 0, 0, 1.2, 0, 0, 0, 0, 0.5, 0, 0, 0, 0),
-"times": PackedFloat32Array(0, 0.166667, 0.466667)
+"times": PackedFloat32Array(0, 0.166667, 0.4)
 }
 tracks/17/type = "bezier"
 tracks/17/imported = false
@@ -421,7 +446,7 @@ tracks/17/loop_wrap = true
 tracks/17/keys = {
 "handle_modes": PackedInt32Array(0, 0, 0),
 "points": PackedFloat32Array(1, 0, 0, 0, 0, 1.2, 0, 0, 0, 0, 0.5, 0, 0, 0, 0),
-"times": PackedFloat32Array(0, 0.166667, 0.466667)
+"times": PackedFloat32Array(0, 0.166667, 0.4)
 }
 tracks/18/type = "bezier"
 tracks/18/imported = false
@@ -432,7 +457,31 @@ tracks/18/loop_wrap = true
 tracks/18/keys = {
 "handle_modes": PackedInt32Array(0, 0),
 "points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(0.166667, 0.466667)
+"times": PackedFloat32Array(0.166667, 0.4)
+}
+tracks/19/type = "value"
+tracks/19/imported = false
+tracks/19/enabled = true
+tracks/19/path = NodePath("MoodMatrixLogoDots:visible")
+tracks/19/interp = 1
+tracks/19/loop_wrap = true
+tracks/19/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/20/type = "value"
+tracks/20/imported = false
+tracks/20/enabled = true
+tracks/20/path = NodePath("Big Ring:visible")
+tracks/20/interp = 1
+tracks/20/loop_wrap = true
+tracks/20/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_hrs3b"]
@@ -468,6 +517,7 @@ grow_vertical = 2
 color = Color(0.313726, 0.654902, 0.862745, 0.329412)
 
 [node name="Big Ring" type="TextureRect" parent="."]
+visible = false
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -607,6 +657,7 @@ texture = ExtResource("13_ymxo3")
 expand_mode = 1
 
 [node name="MoodMatrixLogoDots" type="Control" parent="."]
+visible = false
 anchors_preset = 0
 offset_left = 128.0
 offset_top = 96.0
@@ -680,3 +731,17 @@ grow_vertical = 2
 pivot_offset = Vector2(13, 13)
 texture = ExtResource("11_epvi7")
 expand_mode = 1
+
+[node name="Bootup" parent="." instance=ExtResource("15_ywdq2")]
+unique_name_in_owner = true
+layout_mode = 1
+
+[node name="WhiteFlash" type="ColorRect" parent="."]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2

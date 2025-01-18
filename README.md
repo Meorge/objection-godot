@@ -40,6 +40,8 @@ The Mood Matrix marker sound effects were recorded by [Discord user Jofe and pos
 
 Other Mood Matrix sound effects were ripped by [user venser on the Court Records forums](https://www.forums.court-records.net/viewtopic.php?f=10&t=30410).
 
+The math for the moon-style progress indicator was done by [Valérie/slartibartfass](https://github.com/vbettaque).
+
 ### Fonts
 
 - Name tag font is [Ace Name by user guiguiba on FontStruct](https://fontstruct.com/fontstructions/show/1799842/ace-name)
@@ -47,6 +49,7 @@ Other Mood Matrix sound effects were ripped by [user venser on the Court Records
 - Several fonts are from [RapBattleEditor0510's "Phoenix Wright: Ace Attorney Font Pack 2" on DeviantArt](https://www.deviantart.com/rapbattleeditor0510/art/Fonts-Phoenix-Wright-Ace-Attorney-Font-Pack-2-873499678):
   - Verdict label uses DFMincho StdN W12
   - "Witness Testimony" label uses DFP Gothic EB
+  - Mood Matrix bootup percent-complete label uses DFPKaGei W6
 - Flashing top-left "Testimony" label uses DIN Condensed (Bold)
 
 - "New evidence" box title text font is [Ace Check by user guiguiba on FontStruct](https://fontstruct.com/fontstructions/show/1860020/ace-check)
