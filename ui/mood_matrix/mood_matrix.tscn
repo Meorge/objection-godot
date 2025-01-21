@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://btfayeijnow7g"]
+[gd_scene load_steps=21 format=3 uid="uid://btfayeijnow7g"]
 
 [ext_resource type="Script" path="res://ui/mood_matrix/mood_matrix.gd" id="1_1b2ix"]
 [ext_resource type="Texture2D" uid="uid://dv0sfl42ntyma" path="res://ui/mood_matrix/sprites/Big Circle.png" id="1_fuh6g"]
@@ -9,7 +9,8 @@
 [ext_resource type="Resource" uid="uid://c1d3gtg13meu2" path="res://ui/mood_matrix/mm_angry.tres" id="6_xxsyf"]
 [ext_resource type="Resource" uid="uid://bqx37qeyclk1" path="res://ui/mood_matrix/mm_sad.tres" id="7_d3mif"]
 [ext_resource type="Resource" uid="uid://c3me15y0chlmy" path="res://ui/mood_matrix/mm_surprised.tres" id="8_1beay"]
-[ext_resource type="AudioStream" uid="uid://dudi3jqlabi8e" path="res://ui/mood_matrix/sounds/sfx-moodmatrix-begin.mp3" id="10_exj3j"]
+[ext_resource type="AudioStream" uid="uid://7ok2i246t8we" path="res://ui/mood_matrix/sounds/kokoro_start.wav" id="10_e78te"]
+[ext_resource type="AudioStream" uid="uid://c6dj6paetwpej" path="res://ui/mood_matrix/sounds/kokoro_restart.wav" id="10_kumx7"]
 [ext_resource type="Texture2D" uid="uid://b4bey7v6kouu0" path="res://ui/mood_matrix/sprites/Logo Center.png" id="11_0epsa"]
 [ext_resource type="Texture2D" uid="uid://bc1bp3g7kqqyk" path="res://ui/mood_matrix/sprites/Circle.png" id="11_epvi7"]
 [ext_resource type="Texture2D" uid="uid://oyajbv5bc6p3" path="res://ui/mood_matrix/sprites/Logo Inner Ring.png" id="12_ipwrm"]
@@ -599,9 +600,13 @@ libraries = {
 "": SubResource("AnimationLibrary_hrs3b")
 }
 
-[node name="BeginSound" type="AudioStreamPlayer" parent="."]
+[node name="BootupSound" type="AudioStreamPlayer" parent="."]
 unique_name_in_owner = true
-stream = ExtResource("10_exj3j")
+stream = ExtResource("10_e78te")
+
+[node name="RestartSound" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("10_kumx7")
 
 [node name="MoodMatrixLogoCenter" type="TextureRect" parent="."]
 modulate = Color(1, 1, 1, 0)

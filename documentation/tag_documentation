@@ -325,7 +325,7 @@ This functions identically to the "Percieve" background - see above for more inf
 #### Foreground UI
 
 ```xml
-<mood_matrix.ui animate="bootup" />
+<mood_matrix.bootup.animate_in />
 ```
 
 Plays the "bootup" animation for a Mood Matrix segment, the first half of the introduction.
@@ -333,12 +333,18 @@ The screen is tinted blue, and a "loading" indicator appears and fills up.
 Once it is full, the logo appears and animates out, quickly fading the screen to white.
 
 ```xml
-<mood_matrix.ui animate="emotions_in" />
+<mood_matrix.ui.animate_in play_sound="bool:true" />
 ```
 
 Plays the second half of the normal introduction animation, where the logo continues animating and the emotion markers appear.
 This clears the white overlay that the "bootup" animation sets.
 Place any commands you'd like to execute behind the white flash after the "bootup" command and before this command.
+
+```xml
+<mood_matrix.ui.set_visible value="bool:true" />
+```
+
+Sets the UI with the emotion markers to be visible or invisible, with no animation.
 
 #### Noise Level
 

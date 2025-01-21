@@ -1,11 +1,10 @@
-[gd_scene load_steps=17 format=3 uid="uid://cwl2x01p7mvrk"]
+[gd_scene load_steps=16 format=3 uid="uid://cwl2x01p7mvrk"]
 
 [ext_resource type="Script" path="res://ui/mood_matrix/bootup/mm_bootup.gd" id="1_1cegr"]
 [ext_resource type="Shader" path="res://ui/mood_matrix/bootup/mm_bootup.gdshader" id="1_idgji"]
 [ext_resource type="Texture2D" uid="uid://3d1iyvjk7pno" path="res://ui/mood_matrix/sprites/Intro Wipe Gradient.png" id="1_qmayk"]
 [ext_resource type="Script" path="res://ui/mood_matrix/bootup/bootup_completion_label.gd" id="3_p8ku6"]
 [ext_resource type="FontFile" uid="uid://r6jfs8pm8uh8" path="res://ui/mood_matrix/fonts/DFKaGei-W6__DFPKaGei-W6__DFGKaGei-W6.ttc" id="3_vk4qf"]
-[ext_resource type="AudioStream" uid="uid://ujv25p57i2e2" path="res://ui/mood_matrix/sounds/sfx-moodmatrix-loading.wav" id="4_w6n7a"]
 [ext_resource type="Texture2D" uid="uid://bjbkaicn0p5eu" path="res://ui/mood_matrix/sprites/Bootup Spinner.png" id="5_qjshp"]
 [ext_resource type="Texture2D" uid="uid://b4bey7v6kouu0" path="res://ui/mood_matrix/sprites/Logo Center.png" id="6_1650j"]
 [ext_resource type="Texture2D" uid="uid://oyajbv5bc6p3" path="res://ui/mood_matrix/sprites/Logo Inner Ring.png" id="7_kmpvu"]
@@ -279,7 +278,7 @@ tracks/20/keys = {
 
 [sub_resource type="Animation" id="Animation_oahpg"]
 resource_name = "intro"
-length = 4.86667
+length = 4.4333
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -412,125 +411,110 @@ tracks/10/keys = {
 "update": 0,
 "values": [0, 0, 25, 99]
 }
-tracks/11/type = "audio"
+tracks/11/type = "value"
 tracks/11/imported = false
 tracks/11/enabled = true
-tracks/11/path = NodePath("IntroSound")
+tracks/11/path = NodePath("AnimatedMoon:material:shader_parameter/in_color")
 tracks/11/interp = 1
 tracks/11/loop_wrap = true
 tracks/11/keys = {
-"clips": [{
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("4_w6n7a")
-}],
-"times": PackedFloat32Array(0)
-}
-tracks/11/use_blend = true
-tracks/12/type = "value"
-tracks/12/imported = false
-tracks/12/enabled = true
-tracks/12/path = NodePath("AnimatedMoon:material:shader_parameter/in_color")
-tracks/12/interp = 1
-tracks/12/loop_wrap = true
-tracks/12/keys = {
 "times": PackedFloat32Array(2.83333, 2.86667, 2.93333, 3.1),
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 0,
 "values": [Color(0.211765, 0.729412, 0.803922, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(0.211765, 0.729412, 0.803922, 1)]
 }
-tracks/13/type = "value"
-tracks/13/imported = false
-tracks/13/enabled = true
-tracks/13/path = NodePath("AnimatedMoon:scale")
-tracks/13/interp = 1
-tracks/13/loop_wrap = true
-tracks/13/keys = {
-"times": PackedFloat32Array(2.83333, 3, 3.23333, 4.43333, 4.63333),
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("AnimatedMoon:scale")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(2.83333, 3, 3.23333, 4.23333, 4.43333),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1),
 "update": 0,
 "values": [Vector2(1, 1), Vector2(1.05, 1.05), Vector2(1, 1), Vector2(0.95, 0.95), Vector2(1.1, 1.1)]
 }
-tracks/14/type = "value"
-tracks/14/imported = false
-tracks/14/enabled = true
-tracks/14/path = NodePath("Logo:modulate:a")
-tracks/14/interp = 1
-tracks/14/loop_wrap = true
-tracks/14/keys = {
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("Logo:modulate:a")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
 "times": PackedFloat32Array(2.86667, 2.93333),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [0.0, 1.0]
 }
-tracks/15/type = "value"
-tracks/15/imported = false
-tracks/15/enabled = true
-tracks/15/path = NodePath("Logo/MoodMatrixLogoDots:rotation")
-tracks/15/interp = 1
-tracks/15/loop_wrap = true
-tracks/15/keys = {
-"times": PackedFloat32Array(2.93333, 4.43333, 4.63333),
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("Logo/MoodMatrixLogoDots:rotation")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(2.93333, 4.23333, 4.43333),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
 "values": [0.785398, 0.610865, -0.785398]
 }
-tracks/16/type = "value"
-tracks/16/imported = false
-tracks/16/enabled = true
-tracks/16/path = NodePath("Logo:scale")
-tracks/16/interp = 1
-tracks/16/loop_wrap = true
-tracks/16/keys = {
-"times": PackedFloat32Array(2.93333, 4.43333, 4.63333),
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("Logo:scale")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(2.93333, 4.23333, 4.43333),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
 "values": [Vector2(0.8, 0.8), Vector2(0.78, 0.78), Vector2(0.9, 0.9)]
 }
-tracks/17/type = "value"
-tracks/17/imported = false
-tracks/17/enabled = true
-tracks/17/path = NodePath("Spinner:rotation")
-tracks/17/interp = 1
-tracks/17/loop_wrap = true
-tracks/17/keys = {
+tracks/16/type = "value"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath("Spinner:rotation")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
 "times": PackedFloat32Array(0, 0.166667, 0.333333, 1),
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 0,
 "values": [0.698132, 1.5708, 4.71239, 6.28319]
 }
-tracks/18/type = "value"
-tracks/18/imported = false
-tracks/18/enabled = true
-tracks/18/path = NodePath("Spinner:self_modulate:a")
-tracks/18/interp = 1
-tracks/18/loop_wrap = true
-tracks/18/keys = {
+tracks/17/type = "value"
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/path = NodePath("Spinner:self_modulate:a")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/keys = {
 "times": PackedFloat32Array(0, 0.1, 0.6, 0.966667),
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 0,
 "values": [0.0, 1.0, 1.0, 0.0]
 }
-tracks/19/type = "value"
-tracks/19/imported = false
-tracks/19/enabled = true
-tracks/19/path = NodePath("BlueTintBackground:color:a")
-tracks/19/interp = 1
-tracks/19/loop_wrap = true
-tracks/19/keys = {
+tracks/18/type = "value"
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/path = NodePath("BlueTintBackground:color:a")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [0.6]
 }
-tracks/20/type = "method"
-tracks/20/imported = false
-tracks/20/enabled = true
-tracks/20/path = NodePath(".")
-tracks/20/interp = 1
-tracks/20/loop_wrap = true
-tracks/20/keys = {
-"times": PackedFloat32Array(4.3, 4.43333),
+tracks/19/type = "method"
+tracks/19/imported = false
+tracks/19/enabled = true
+tracks/19/path = NodePath(".")
+tracks/19/interp = 1
+tracks/19/loop_wrap = true
+tracks/19/keys = {
+"times": PackedFloat32Array(0, 4.23333),
 "transitions": PackedFloat32Array(1, 1),
 "values": [{
 "args": [],
@@ -603,9 +587,8 @@ color = Color(0.113725, 0.494118, 0.717647, 0.6)
 [node name="VerticalWipe" type="TextureRect" parent="DarkBackground"]
 modulate = Color(0.384, 0.791, 0.913, 0.541)
 layout_mode = 0
-offset_top = 146.0
 offset_right = 224.0
-offset_bottom = 166.0
+offset_bottom = 20.0
 texture = ExtResource("1_qmayk")
 expand_mode = 1
 
