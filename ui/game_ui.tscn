@@ -1,9 +1,10 @@
-[gd_scene load_steps=31 format=3 uid="uid://cavxmwjgdsolv"]
+[gd_scene load_steps=32 format=3 uid="uid://cavxmwjgdsolv"]
 
 [ext_resource type="Script" path="res://ui/game_ui.gd" id="1_i61tc"]
 [ext_resource type="Texture2D" uid="uid://b3x4aoo200rhg" path="res://ui/text_box/nametag_left.png" id="1_uinmu"]
 [ext_resource type="PackedScene" uid="uid://cdt8wkw6ibt27" path="res://ui/mood_matrix/noise/mm_noise.tscn" id="2_22ds2"]
 [ext_resource type="Texture2D" uid="uid://ckysnuyauklhy" path="res://ui/text_box/nametag_center.png" id="2_xtvfo"]
+[ext_resource type="PackedScene" uid="uid://ee5bf1t2kme1" path="res://ui/mood_matrix/shutdown/mm_shutdown.tscn" id="3_4ax0h"]
 [ext_resource type="Script" path="res://effects/shaker/control_shaker.gd" id="3_op4cl"]
 [ext_resource type="Texture2D" uid="uid://biw5x0gyerjj0" path="res://ui/text_box/nametag_right.png" id="3_vdgvt"]
 [ext_resource type="FontFile" uid="uid://faumch8kfu2c" path="res://ui/text_box/font/ace-name/ace-name.ttf" id="4_b14rb"]
@@ -70,6 +71,8 @@ _data = {
 script = ExtResource("1_i61tc")
 
 [node name="MoodMatrixNoise" parent="." instance=ExtResource("2_22ds2")]
+
+[node name="MoodMatrixShutdown" parent="." instance=ExtResource("3_4ax0h")]
 
 [node name="BoxShaker" type="Control" parent="."]
 unique_name_in_owner = true

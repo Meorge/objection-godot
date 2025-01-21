@@ -412,6 +412,14 @@ Plays the disappear animation for the noise UI, removing it from view.
 Animates the noise level percentage from the value provided as `from` to the value provided as `to`.
 If no value is provided for `from`, then the last value displayed in the UI is used.
 
+#### Shutdown animation
+
+```xml
+<mood_matrix.shutdown text="string:BYE BYE" />
+```
+
+Plays the Mood Matrix shutdown animation. If no text is provided, "BYE BYE" is displayed as in the games.
+
 ## Data types
 
 ### `color`
