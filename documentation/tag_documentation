@@ -340,6 +340,72 @@ Plays the second half of the normal introduction animation, where the logo conti
 This clears the white overlay that the "bootup" animation sets.
 Place any commands you'd like to execute behind the white flash after the "bootup" command and before this command.
 
+#### Noise Level
+
+```xml
+<mood_matrix.noise.animate from="int" to="int" sound_code="" />
+```
+
+Performs a Mood Matrix noise animation, consisting of the steps:
+
+- A noise animation sound effect specified by `sound_code` is played (see below).
+- The noise UI is animated in. If `from` is specified, then the initial noise level is that integer percent; otherwise, it is the last value displayed.
+- The noise is changed from the current value (or the value specified by `from`) to the value specified by `to`.
+- If the `sound_code` ends with `_0`, an extra "noise cleared" animation is played.
+- The noise UI is animated out.
+
+The valid sound codes are:
+
+- `100_0` - Played when the noise level goes from 100% to 0%.
+- `100_m` - Played when the noise level goes from 100% to a medium-sized value (like 50%).
+- `100_s` - Played when the noise level goes from 100% to a small value (like 20%).
+- `m_0` - For when the noise level goes from a medium-sized value to 0%.
+- `m_100` - For when the noise level goes from a medium-sized value to 100%.
+- `m_s` - For when the noise level goes from a medium-sized value to a small value.
+- `s_0` - For when the noise level goes from a small value to 0%.
+- `s_m` - For when the noise level goes from a small value to a medium-sized value.
+
+Again, note that for the sound codes ending in `_0` (i.e., those where the final noise level is 0%), an extra animation will play to align with the sound effect.
+
+```xml
+<mood_matrix.noise.set_level level="int" />
+```
+
+Sets the noise level percentage to `level`.
+This does not automatically cause the noise UI to display.
+
+```xml
+<mood_matrix.noise.set_visible value="bool:true" />
+```
+
+Sets the noise UI to be instantly visible or invisible, depending on `value`, with no animation.
+
+```xml
+<mood_matrix.noise.set_label text="string:NOISE LEVEL" />
+```
+
+Sets the label for the noise UI to `text`.
+By default, this is `NOISE LEVEL`, to match the games.
+
+```xml
+<mood_matrix.noise.animate_in />
+```
+
+Plays the appear animation for the noise UI, and leaves it on-screen.
+
+```xml
+<mood_matrix.noise.animate_out />
+```
+
+Plays the disappear animation for the noise UI, removing it from view.
+
+```xml
+<mood_matrix.noise.animate_level from="int" to="int" />
+```
+
+Animates the noise level percentage from the value provided as `from` to the value provided as `to`.
+If no value is provided for `from`, then the last value displayed in the UI is used.
+
 ## Data types
 
 ### `color`
