@@ -33,12 +33,8 @@ func _handle_mood_matrix_noise_animate(args: Dictionary):
 
 ## Sets the Mood Matrix noise UI in without any intro animation.
 func _handle_mood_matrix_noise_set_visible(args: Dictionary):
-	# <mood_matrix.noise.set_visible value="true" noise_value="100" />
+	# <mood_matrix.noise.set_visible value="true" />
 	var now_visible: bool = args.get("value", "true") == "true"
-	
-	if args.has("noise_level"):
-		var noise_level: int = int(args["noise_level"])
-		%PercentLabel.text = "%s%%" % noise_level
 
 	if now_visible:
 		set_in()
