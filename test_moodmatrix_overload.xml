@@ -1,0 +1,8 @@
+<sprite pos="center" res="res://characters/polly/polly.tres" anim="normal-idle" />
+<box set="out"/>
+<mood_matrix.ui.set_visible value="true" />
+<mood_matrix.bg set="in"/>
+<wait secs="1.0" />
+<mood_matrix.ui.animate_in_overload />
+<wait secs="3.0" />
+<play />

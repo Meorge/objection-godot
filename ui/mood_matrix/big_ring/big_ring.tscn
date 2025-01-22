@@ -1,10 +1,20 @@
-[gd_scene load_steps=4 format=3 uid="uid://ccucfiqev8sqs"]
+[gd_scene load_steps=14 format=3 uid="uid://ccucfiqev8sqs"]
 
 [ext_resource type="Texture2D" uid="uid://dv0sfl42ntyma" path="res://ui/mood_matrix/sprites/Big Circle.png" id="1_tft0m"]
+[ext_resource type="Script" path="res://ui/mood_matrix/big_ring/mm_big_ring.gd" id="2_dedu1"]
 [ext_resource type="Texture2D" uid="uid://0bs7w57uv3x1" path="res://ui/mood_matrix/sprites/Big Circle Noise LR 3.png" id="2_wrjpg"]
+[ext_resource type="Texture2D" uid="uid://b3cl5175qyoxb" path="res://ui/mood_matrix/sprites/Big Circle Noise Diag 3.png" id="3_06yth"]
+[ext_resource type="Texture2D" uid="uid://c4psv6ru4flql" path="res://ui/mood_matrix/sprites/Big Circle Noise Diag 2.png" id="3_7udbc"]
 [ext_resource type="Texture2D" uid="uid://dkvfyp4tyw70c" path="res://ui/mood_matrix/sprites/Big Circle Noise Diag 4.png" id="3_hxt6r"]
+[ext_resource type="Script" path="res://ui/mood_matrix/big_ring/mm_ring_noise.gd" id="3_n6pwm"]
+[ext_resource type="Texture2D" uid="uid://ehl2vmsx67x7" path="res://ui/mood_matrix/sprites/Big Circle Noise LR 0.png" id="4_a1p50"]
+[ext_resource type="Texture2D" uid="uid://crrxdod6ibdn6" path="res://ui/mood_matrix/sprites/Big Circle Noise Diag 1.png" id="4_u6ue2"]
+[ext_resource type="Texture2D" uid="uid://d3pmx6i1c67rh" path="res://ui/mood_matrix/sprites/Big Circle Noise LR 1.png" id="5_bndm6"]
+[ext_resource type="Texture2D" uid="uid://buqtfjl33ur4h" path="res://ui/mood_matrix/sprites/Big Circle Noise LR 2.png" id="6_eojth"]
+[ext_resource type="Texture2D" uid="uid://on28expkx5gx" path="res://ui/mood_matrix/sprites/Big Circle Noise LR 4.png" id="7_bgdby"]
+[ext_resource type="Texture2D" uid="uid://djgwbiodtw0rc" path="res://ui/mood_matrix/sprites/Big Circle Noise Diag 0.png" id="9_7jnmo"]
 
-[node name="Big Ring" type="TextureRect"]
+[node name="Big Ring" type="TextureRect" node_paths=PackedStringArray("ring_parts")]
 self_modulate = Color(1, 1, 1, 0.185)
 anchors_preset = 8
 anchor_left = 0.5
@@ -19,6 +29,8 @@ grow_horizontal = 2
 grow_vertical = 2
 pivot_offset = Vector2(128, 128)
 texture = ExtResource("1_tft0m")
+script = ExtResource("2_dedu1")
+ring_parts = [NodePath("NoiseRight"), NodePath("NoiseLeft"), NodePath("NoiseTR"), NodePath("NoiseBR"), NodePath("NoiseTL"), NodePath("NoiseBL")]
 
 [node name="NoiseRight" type="TextureRect" parent="."]
 layout_mode = 0
@@ -28,6 +40,20 @@ offset_right = 265.0
 offset_bottom = 161.0
 texture = ExtResource("2_wrjpg")
 expand_mode = 1
+script = ExtResource("3_n6pwm")
+textures = Array[Texture2D]([ExtResource("4_a1p50"), ExtResource("5_bndm6"), ExtResource("6_eojth"), ExtResource("2_wrjpg"), ExtResource("7_bgdby")])
+
+[node name="NoiseLeft" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = -8.5
+offset_top = 95.0
+offset_right = 21.5
+offset_bottom = 161.0
+texture = ExtResource("2_wrjpg")
+expand_mode = 1
+flip_h = true
+script = ExtResource("3_n6pwm")
+textures = Array[Texture2D]([ExtResource("4_a1p50"), ExtResource("5_bndm6"), ExtResource("6_eojth"), ExtResource("2_wrjpg"), ExtResource("7_bgdby")])
 
 [node name="NoiseTR" type="TextureRect" parent="."]
 layout_mode = 0
@@ -37,6 +63,8 @@ offset_right = 252.5
 offset_bottom = 94.5
 texture = ExtResource("3_hxt6r")
 expand_mode = 1
+script = ExtResource("3_n6pwm")
+textures = Array[Texture2D]([ExtResource("9_7jnmo"), ExtResource("4_u6ue2"), ExtResource("3_7udbc"), ExtResource("3_06yth"), ExtResource("3_hxt6r")])
 
 [node name="NoiseBR" type="TextureRect" parent="."]
 layout_mode = 0
@@ -47,6 +75,8 @@ offset_bottom = 234.5
 texture = ExtResource("3_hxt6r")
 expand_mode = 1
 flip_v = true
+script = ExtResource("3_n6pwm")
+textures = Array[Texture2D]([ExtResource("9_7jnmo"), ExtResource("4_u6ue2"), ExtResource("3_7udbc"), ExtResource("3_06yth"), ExtResource("3_hxt6r")])
 
 [node name="NoiseTL" type="TextureRect" parent="."]
 layout_mode = 0
@@ -57,6 +87,8 @@ offset_bottom = 94.5
 texture = ExtResource("3_hxt6r")
 expand_mode = 1
 flip_h = true
+script = ExtResource("3_n6pwm")
+textures = Array[Texture2D]([ExtResource("9_7jnmo"), ExtResource("4_u6ue2"), ExtResource("3_7udbc"), ExtResource("3_06yth"), ExtResource("3_hxt6r")])
 
 [node name="NoiseBL" type="TextureRect" parent="."]
 layout_mode = 0
@@ -68,13 +100,5 @@ texture = ExtResource("3_hxt6r")
 expand_mode = 1
 flip_h = true
 flip_v = true
-
-[node name="NoiseLeft" type="TextureRect" parent="."]
-layout_mode = 0
-offset_left = -8.5
-offset_top = 95.0
-offset_right = 21.5
-offset_bottom = 161.0
-texture = ExtResource("2_wrjpg")
-expand_mode = 1
-flip_h = true
+script = ExtResource("3_n6pwm")
+textures = Array[Texture2D]([ExtResource("9_7jnmo"), ExtResource("4_u6ue2"), ExtResource("3_7udbc"), ExtResource("3_06yth"), ExtResource("3_hxt6r")])

@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://btfayeijnow7g"]
+[gd_scene load_steps=23 format=3 uid="uid://btfayeijnow7g"]
 
 [ext_resource type="Script" path="res://ui/mood_matrix/mood_matrix.gd" id="1_1b2ix"]
 [ext_resource type="PackedScene" uid="uid://ckkqqa1iuewni" path="res://ui/mood_matrix/mood_matrix_marker.tscn" id="2_0h0un"]
@@ -9,6 +9,7 @@
 [ext_resource type="Resource" uid="uid://c1d3gtg13meu2" path="res://ui/mood_matrix/mm_angry.tres" id="6_xxsyf"]
 [ext_resource type="Resource" uid="uid://bqx37qeyclk1" path="res://ui/mood_matrix/mm_sad.tres" id="7_d3mif"]
 [ext_resource type="Resource" uid="uid://c3me15y0chlmy" path="res://ui/mood_matrix/mm_surprised.tres" id="8_1beay"]
+[ext_resource type="Texture2D" uid="uid://xe04jct48gse" path="res://ui/mood_matrix/sprites/Pulse 3.png" id="10_cy4d2"]
 [ext_resource type="AudioStream" uid="uid://7ok2i246t8we" path="res://ui/mood_matrix/sounds/kokoro_start.wav" id="10_e78te"]
 [ext_resource type="AudioStream" uid="uid://c6dj6paetwpej" path="res://ui/mood_matrix/sounds/kokoro_restart.wav" id="10_kumx7"]
 [ext_resource type="Texture2D" uid="uid://b4bey7v6kouu0" path="res://ui/mood_matrix/sprites/Logo Center.png" id="11_0epsa"]
@@ -16,6 +17,7 @@
 [ext_resource type="Texture2D" uid="uid://oyajbv5bc6p3" path="res://ui/mood_matrix/sprites/Logo Inner Ring.png" id="12_ipwrm"]
 [ext_resource type="Texture2D" uid="uid://m6e0tbel0t08" path="res://ui/mood_matrix/sprites/Logo Outer Ring.png" id="13_ymxo3"]
 [ext_resource type="PackedScene" uid="uid://cwl2x01p7mvrk" path="res://ui/mood_matrix/bootup/mm_bootup.tscn" id="15_ywdq2"]
+[ext_resource type="AudioStream" uid="uid://qq1jyrdlk7lh" path="res://ui/mood_matrix/sounds/kokoro_bousou.wav" id="17_el0uo"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_xbxoc"]
 shader = ExtResource("2_jligu")
@@ -26,7 +28,7 @@ length = 0.001
 tracks/0/type = "bezier"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Markers:rotation")
+tracks/0/path = NodePath("Frame/Markers:rotation")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -37,7 +39,7 @@ tracks/0/keys = {
 tracks/1/type = "bezier"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Markers:scale:x")
+tracks/1/path = NodePath("Frame/Markers:scale:x")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -48,7 +50,7 @@ tracks/1/keys = {
 tracks/2/type = "bezier"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("Markers:scale:y")
+tracks/2/path = NodePath("Frame/Markers:scale:y")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -59,7 +61,7 @@ tracks/2/keys = {
 tracks/3/type = "bezier"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("Big Ring:scale:x")
+tracks/3/path = NodePath("Frame/BigRing:scale:x")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
@@ -70,7 +72,7 @@ tracks/3/keys = {
 tracks/4/type = "bezier"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("Big Ring:scale:y")
+tracks/4/path = NodePath("Frame/BigRing:scale:y")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
@@ -81,7 +83,7 @@ tracks/4/keys = {
 tracks/5/type = "bezier"
 tracks/5/imported = false
 tracks/5/enabled = true
-tracks/5/path = NodePath("Squares Background:modulate:a")
+tracks/5/path = NodePath("Frame/Squares Background:modulate:a")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
@@ -227,7 +229,7 @@ tracks/17/keys = {
 tracks/18/type = "value"
 tracks/18/imported = false
 tracks/18/enabled = true
-tracks/18/path = NodePath("Big Ring:visible")
+tracks/18/path = NodePath("Frame/BigRing:visible")
 tracks/18/interp = 1
 tracks/18/loop_wrap = true
 tracks/18/keys = {
@@ -243,7 +245,7 @@ length = 2.0
 tracks/0/type = "bezier"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Markers:rotation")
+tracks/0/path = NodePath("Frame/Markers:rotation")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -254,7 +256,7 @@ tracks/0/keys = {
 tracks/1/type = "bezier"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Markers:scale:x")
+tracks/1/path = NodePath("Frame/Markers:scale:x")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -265,7 +267,7 @@ tracks/1/keys = {
 tracks/2/type = "bezier"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("Markers:scale:y")
+tracks/2/path = NodePath("Frame/Markers:scale:y")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -276,7 +278,7 @@ tracks/2/keys = {
 tracks/3/type = "bezier"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("Big Ring:scale:x")
+tracks/3/path = NodePath("Frame/BigRing:scale:x")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
@@ -287,7 +289,7 @@ tracks/3/keys = {
 tracks/4/type = "bezier"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("Big Ring:scale:y")
+tracks/4/path = NodePath("Frame/BigRing:scale:y")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
@@ -298,7 +300,7 @@ tracks/4/keys = {
 tracks/5/type = "bezier"
 tracks/5/imported = false
 tracks/5/enabled = true
-tracks/5/path = NodePath("Squares Background:modulate:a")
+tracks/5/path = NodePath("Frame/Squares Background:modulate:a")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
@@ -475,7 +477,7 @@ tracks/19/keys = {
 tracks/20/type = "value"
 tracks/20/imported = false
 tracks/20/enabled = true
-tracks/20/path = NodePath("Big Ring:visible")
+tracks/20/path = NodePath("Frame/BigRing:visible")
 tracks/20/interp = 1
 tracks/20/loop_wrap = true
 tracks/20/keys = {
@@ -500,7 +502,16 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_1b2ix")
 
-[node name="Squares Background" type="ColorRect" parent="."]
+[node name="Frame" type="Control" parent="."]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Squares Background" type="ColorRect" parent="Frame"]
 modulate = Color(1, 1, 1, 0)
 material = SubResource("ShaderMaterial_xbxoc")
 layout_mode = 1
@@ -517,7 +528,8 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.313726, 0.654902, 0.862745, 0.329412)
 
-[node name="Big Ring" parent="." instance=ExtResource("4_ycctq")]
+[node name="BigRing" parent="Frame" instance=ExtResource("4_ycctq")]
+unique_name_in_owner = true
 visible = false
 layout_mode = 0
 anchors_preset = 0
@@ -532,7 +544,7 @@ offset_bottom = 225.0
 grow_horizontal = 1
 grow_vertical = 1
 
-[node name="Markers" type="Control" parent="."]
+[node name="Markers" type="Control" parent="Frame"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -543,7 +555,7 @@ rotation = 1.5708
 scale = Vector2(1.4, 1.4)
 pivot_offset = Vector2(128, 96)
 
-[node name="Happy" parent="Markers" instance=ExtResource("2_0h0un")]
+[node name="Happy" parent="Frame/Markers" instance=ExtResource("2_0h0un")]
 unique_name_in_owner = true
 offset_left = 8.0
 offset_top = 8.0
@@ -551,7 +563,7 @@ offset_right = 54.0
 offset_bottom = 54.0
 marker_type = ExtResource("5_gnfxl")
 
-[node name="Angry" parent="Markers" instance=ExtResource("2_0h0un")]
+[node name="Angry" parent="Frame/Markers" instance=ExtResource("2_0h0un")]
 unique_name_in_owner = true
 layout_mode = 1
 anchors_preset = 1
@@ -564,7 +576,7 @@ offset_bottom = 54.0
 grow_horizontal = 0
 marker_type = ExtResource("6_xxsyf")
 
-[node name="Sad" parent="Markers" instance=ExtResource("2_0h0un")]
+[node name="Sad" parent="Frame/Markers" instance=ExtResource("2_0h0un")]
 unique_name_in_owner = true
 layout_mode = 1
 anchors_preset = 2
@@ -577,7 +589,7 @@ offset_bottom = -8.0
 grow_vertical = 0
 marker_type = ExtResource("7_d3mif")
 
-[node name="Surprised" parent="Markers" instance=ExtResource("2_0h0un")]
+[node name="Surprised" parent="Frame/Markers" instance=ExtResource("2_0h0un")]
 unique_name_in_owner = true
 layout_mode = 1
 anchors_preset = 3
@@ -592,6 +604,60 @@ offset_bottom = -8.0
 grow_horizontal = 0
 grow_vertical = 0
 marker_type = ExtResource("8_1beay")
+
+[node name="OverloadWarning" type="TextureRect" parent="Frame"]
+unique_name_in_owner = true
+self_modulate = Color(0.345, 0.808, 0.945, 1)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -44.0
+offset_top = -44.5
+offset_right = 44.0
+offset_bottom = 44.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("10_cy4d2")
+
+[node name="OverloadWarningExclamationMark" type="Control" parent="Frame/OverloadWarning"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="Frame/OverloadWarning/OverloadWarningExclamationMark"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -10.0
+offset_top = -41.0
+offset_right = 10.0
+offset_bottom = 14.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect2" type="ColorRect" parent="Frame/OverloadWarning/OverloadWarningExclamationMark"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -10.0
+offset_top = 23.0
+offset_right = 10.0
+offset_bottom = 42.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
@@ -622,6 +688,7 @@ grow_horizontal = 2
 grow_vertical = 2
 pivot_offset = Vector2(25, 25)
 texture = ExtResource("11_0epsa")
+metadata/_edit_lock_ = true
 
 [node name="MoodMatrixLogoInnerCircle" type="TextureRect" parent="."]
 modulate = Color(1, 1, 1, 0)
@@ -640,6 +707,7 @@ grow_vertical = 2
 pivot_offset = Vector2(52, 52)
 texture = ExtResource("12_ipwrm")
 expand_mode = 1
+metadata/_edit_lock_ = true
 
 [node name="MoodMatrixLogoOuterCircle" type="TextureRect" parent="."]
 modulate = Color(1, 1, 1, 0)
@@ -658,6 +726,7 @@ grow_vertical = 2
 pivot_offset = Vector2(75, 75)
 texture = ExtResource("13_ymxo3")
 expand_mode = 1
+metadata/_edit_lock_ = true
 
 [node name="MoodMatrixLogoDots" type="Control" parent="."]
 visible = false
@@ -738,6 +807,7 @@ expand_mode = 1
 [node name="Bootup" parent="." instance=ExtResource("15_ywdq2")]
 unique_name_in_owner = true
 layout_mode = 1
+metadata/_edit_lock_ = true
 
 [node name="WhiteFlash" type="ColorRect" parent="."]
 unique_name_in_owner = true
@@ -748,3 +818,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="OverloadSound" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("17_el0uo")

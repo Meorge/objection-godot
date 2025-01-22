@@ -5,9 +5,12 @@ extends Control
 @onready var _angry_marker: MoodMatrixMarker = %Angry
 @onready var _surprised_marker: MoodMatrixMarker = %Surprised
 
+var _shake_frame: bool = false
+
 func _ready():
 	ScriptManager.register_handler("mood_matrix.bootup.animate_in", _handle_mood_matrix_bootup_animate_in)
 	ScriptManager.register_handler("mood_matrix.ui.animate_in", _handle_mood_matrix_ui_animate_in)
+	ScriptManager.register_handler("mood_matrix.ui.animate_in_overload", _handle_mood_matrix_ui_animate_in_overload)
 
 	ScriptManager.register_handler("mood_matrix.ui.set_visible", _handle_mood_matrix_ui_set_visible)
 
@@ -20,6 +23,15 @@ func _ready():
 		%WhiteFlash.color.a = 0.0
 		a.tween_property(%WhiteFlash, "color:a", 1.0, 0.09)
 	)
+
+	%OverloadWarning.self_modulate.a = 0.0
+	%OverloadWarningExclamationMark.visible = false
+
+func _process(delta):
+	if _shake_frame:
+		%Frame.position = lerp(%Frame.position, Vector2(randf_range(-3.0, 3.0), randf_range(-2.0, 2.0)), delta * 10.0)
+	else:
+		%Frame.position = lerp(%Frame.position, Vector2.ZERO, delta)
 
 func set_markers_thinking():
 	_happy_marker.set_thinking()
@@ -92,5 +104,51 @@ func _handle_mood_matrix_emotion(args: Dictionary):
 	var intensity = float(args.get("intensity", "1"))
 
 	marker.set_pulse(intensity)
-	
-	
+
+func _handle_mood_matrix_ui_animate_in_overload(args: Dictionary):	
+	var overload_tw := create_tween()
+	overload_tw.tween_callback(%OverloadSound.play)
+	overload_tw.tween_callback(_animate_overload_symbol)
+	overload_tw.tween_callback(_animate_big_shake)
+	overload_tw.tween_callback(func():
+		_happy_marker.set_thinking()
+		_sad_marker.set_thinking()
+		_angry_marker.set_thinking()
+		_surprised_marker.set_thinking()
+	)
+	overload_tw.tween_interval(1.0)
+	overload_tw.tween_callback(func(): _shake_frame = true)
+	overload_tw.tween_callback(%BigRing.start_ring_noise)
+	overload_tw.tween_interval(5.0)
+	overload_tw.tween_callback(func(): _shake_frame = false)
+
+	await overload_tw.finished
+
+func _animate_overload_symbol():
+	var tw := create_tween()
+	tw.tween_callback(func(): %OverloadWarning.self_modulate.a = 1.0)
+	tw.tween_interval(1.2)
+	tw.tween_property(%OverloadWarning, "self_modulate:a", 0.0, 0.1)
+
+	var excl_tw := create_tween()
+	excl_tw.tween_callback(func(): %OverloadWarningExclamationMark.visible = true)
+	excl_tw.tween_interval(0.3)
+	excl_tw.tween_callback(func(): %OverloadWarningExclamationMark.visible = false)
+	excl_tw.tween_interval(0.3)
+	excl_tw.tween_callback(func(): %OverloadWarningExclamationMark.visible = true)
+	excl_tw.tween_interval(0.3)
+	excl_tw.tween_callback(func(): %OverloadWarningExclamationMark.visible = false)
+	excl_tw.tween_interval(0.3)
+	excl_tw.tween_callback(func(): %OverloadWarningExclamationMark.visible = true)
+	excl_tw.tween_interval(0.3)
+	excl_tw.tween_callback(func(): %OverloadWarningExclamationMark.visible = false)
+
+func _animate_big_shake():
+	var tw := create_tween()
+	const BIG_SHAKE_MAGNITUDE = 3.0
+	const BIG_SHAKE_DURATION = 0.06
+	tw.tween_property(%Frame, "position:x", BIG_SHAKE_MAGNITUDE, BIG_SHAKE_DURATION / 2.0)
+	for i in 3:
+		tw.tween_property(%Frame, "position:x", -BIG_SHAKE_MAGNITUDE, BIG_SHAKE_DURATION)
+		tw.tween_property(%Frame, "position:x", BIG_SHAKE_MAGNITUDE, BIG_SHAKE_DURATION)
+	tw.tween_property(%Frame, "position:x", 0.0, BIG_SHAKE_DURATION / 2.0)

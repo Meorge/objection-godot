@@ -346,6 +346,14 @@ Place any commands you'd like to execute behind the white flash after the "bootu
 
 Sets the UI with the emotion markers to be visible or invisible, with no animation.
 
+
+```xml
+<mood_matrix.ui.set_ring_noise value="bool:true" />
+```
+
+Sets whether or not the white ring in the Mood Matrix UI should have noise on its edges, as it appears in an "emotional overload" segment.
+
+
 #### Noise Level
 
 ```xml
