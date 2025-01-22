@@ -1,10 +1,10 @@
 [gd_scene load_steps=21 format=3 uid="uid://btfayeijnow7g"]
 
 [ext_resource type="Script" path="res://ui/mood_matrix/mood_matrix.gd" id="1_1b2ix"]
-[ext_resource type="Texture2D" uid="uid://dv0sfl42ntyma" path="res://ui/mood_matrix/sprites/Big Circle.png" id="1_fuh6g"]
 [ext_resource type="PackedScene" uid="uid://ckkqqa1iuewni" path="res://ui/mood_matrix/mood_matrix_marker.tscn" id="2_0h0un"]
 [ext_resource type="Shader" uid="uid://c8s5w0sa8imat" path="res://ui/mood_matrix/mood_matrix_corner_squares.tres" id="2_jligu"]
 [ext_resource type="Texture2D" uid="uid://cluu566coe6d3" path="res://ui/mood_matrix/sprites/Tiled Grid Background.png" id="2_rgoqv"]
+[ext_resource type="PackedScene" uid="uid://ccucfiqev8sqs" path="res://ui/mood_matrix/big_ring/big_ring.tscn" id="4_ycctq"]
 [ext_resource type="Resource" uid="uid://c48rkmj8y5dab" path="res://ui/mood_matrix/mm_happy.tres" id="5_gnfxl"]
 [ext_resource type="Resource" uid="uid://c1d3gtg13meu2" path="res://ui/mood_matrix/mm_angry.tres" id="6_xxsyf"]
 [ext_resource type="Resource" uid="uid://bqx37qeyclk1" path="res://ui/mood_matrix/mm_sad.tres" id="7_d3mif"]
@@ -517,22 +517,20 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.313726, 0.654902, 0.862745, 0.329412)
 
-[node name="Big Ring" type="TextureRect" parent="."]
+[node name="Big Ring" parent="." instance=ExtResource("4_ycctq")]
 visible = false
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -128.5
-offset_top = -128.5
-offset_right = 128.5
-offset_bottom = 128.5
-grow_horizontal = 2
-grow_vertical = 2
-pivot_offset = Vector2(128, 128)
-texture = ExtResource("1_fuh6g")
+layout_mode = 0
+anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 0.0
+offset_top = -32.0
+offset_right = 257.0
+offset_bottom = 225.0
+grow_horizontal = 1
+grow_vertical = 1
 
 [node name="Markers" type="Control" parent="."]
 layout_mode = 1
