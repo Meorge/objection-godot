@@ -30,6 +30,7 @@ func _ready():
 
 	%OverloadWarning.self_modulate.a = 0.0
 	%OverloadWarningExclamationMark.visible = false
+	%BehindMarkersWhiteFlash.visible = false
 
 func _process(delta):
 	if _shake_frame:
@@ -121,10 +122,29 @@ func _handle_mood_matrix_ui_animate_in_overload(args: Dictionary):
 		_angry_marker.set_thinking()
 		_surprised_marker.set_thinking()
 	)
+
+	overload_tw.tween_callback(_angry_marker.animate_overload)
 	overload_tw.tween_interval(1.0)
 	overload_tw.tween_callback(func(): _shake_frame = true)
 	overload_tw.tween_callback(%BigRing.start_ring_noise)
-	overload_tw.tween_interval(5.0)
+	overload_tw.tween_interval(2.66)
+
+	# White flash, other emotions move out
+	overload_tw.tween_callback(func(): %BehindMarkersWhiteFlash.visible = true)
+	# overload_tw.tween_interval(0.1)
+
+	const OFFSET_MAGNITUDE = 80
+	const OFFSET_DURATION = 0.2
+	overload_tw.tween_property(%HappyOffset, "position", Vector2.from_angle(7 * PI / 4) * OFFSET_MAGNITUDE, OFFSET_DURATION).set_trans(Tween.TRANS_CUBIC).set_ease(Tween.EASE_OUT)
+	# overload_tw.parallel().tween_property(%AngryOffset, "position", Vector2.from_angle(5 * PI / 4) * OFFSET_MAGNITUDE, OFFSET_DURATION).set_trans(Tween.TRANS_CUBIC).set_ease(Tween.EASE_OUT)
+	overload_tw.parallel().tween_property(%SurprisedOffset, "position", Vector2.from_angle(3 * PI / 4) * OFFSET_MAGNITUDE, OFFSET_DURATION).set_trans(Tween.TRANS_CUBIC).set_ease(Tween.EASE_OUT)
+	overload_tw.parallel().tween_property(%SadOffset, "position", Vector2.from_angle(1 * PI / 4) * OFFSET_MAGNITUDE, OFFSET_DURATION).set_trans(Tween.TRANS_CUBIC).set_ease(Tween.EASE_OUT)
+
+	overload_tw.tween_callback(func(): %BehindMarkersWhiteFlash.visible = false).set_delay(0.03)
+
+
+
+	overload_tw.tween_interval(5.0 - 2.66 - 0.2 - OFFSET_DURATION)
 	overload_tw.tween_callback(func(): _shake_frame = false)
 
 	await overload_tw.finished

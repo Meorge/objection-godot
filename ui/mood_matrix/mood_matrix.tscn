@@ -607,6 +607,18 @@ offset_bottom = 225.0
 grow_horizontal = 1
 grow_vertical = 1
 
+[node name="BehindMarkersWhiteFlash" type="ColorRect" parent="Frame"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.1
+anchor_top = -0.1
+anchor_right = 1.1
+anchor_bottom = 1.1
+grow_horizontal = 2
+grow_vertical = 2
+
 [node name="Markers" type="Control" parent="Frame"]
 layout_mode = 1
 anchors_preset = 15
@@ -618,7 +630,16 @@ rotation = 1.5708
 scale = Vector2(1.4, 1.4)
 pivot_offset = Vector2(128, 96)
 
-[node name="Happy" parent="Frame/Markers" instance=ExtResource("2_0h0un")]
+[node name="HappyOffset" type="Control" parent="Frame/Markers"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Happy" parent="Frame/Markers/HappyOffset" instance=ExtResource("2_0h0un")]
 unique_name_in_owner = true
 offset_left = 8.0
 offset_top = 8.0
@@ -626,7 +647,16 @@ offset_right = 54.0
 offset_bottom = 54.0
 marker_type = ExtResource("5_gnfxl")
 
-[node name="Angry" parent="Frame/Markers" instance=ExtResource("2_0h0un")]
+[node name="AngryOffset" type="Control" parent="Frame/Markers"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Angry" parent="Frame/Markers/AngryOffset" instance=ExtResource("2_0h0un")]
 unique_name_in_owner = true
 layout_mode = 1
 anchors_preset = 1
@@ -639,7 +669,16 @@ offset_bottom = 54.0
 grow_horizontal = 0
 marker_type = ExtResource("6_xxsyf")
 
-[node name="Sad" parent="Frame/Markers" instance=ExtResource("2_0h0un")]
+[node name="SadOffset" type="Control" parent="Frame/Markers"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Sad" parent="Frame/Markers/SadOffset" instance=ExtResource("2_0h0un")]
 unique_name_in_owner = true
 layout_mode = 1
 anchors_preset = 2
@@ -652,7 +691,16 @@ offset_bottom = -8.0
 grow_vertical = 0
 marker_type = ExtResource("7_d3mif")
 
-[node name="Surprised" parent="Frame/Markers" instance=ExtResource("2_0h0un")]
+[node name="SurprisedOffset" type="Control" parent="Frame/Markers"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Surprised" parent="Frame/Markers/SurprisedOffset" instance=ExtResource("2_0h0un")]
 unique_name_in_owner = true
 layout_mode = 1
 anchors_preset = 3
