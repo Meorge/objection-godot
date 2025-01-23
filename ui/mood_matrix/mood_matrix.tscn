@@ -1,9 +1,11 @@
-[gd_scene load_steps=23 format=3 uid="uid://btfayeijnow7g"]
+[gd_scene load_steps=25 format=3 uid="uid://btfayeijnow7g"]
 
 [ext_resource type="Script" path="res://ui/mood_matrix/mood_matrix.gd" id="1_1b2ix"]
 [ext_resource type="PackedScene" uid="uid://ckkqqa1iuewni" path="res://ui/mood_matrix/mood_matrix_marker.tscn" id="2_0h0un"]
 [ext_resource type="Shader" uid="uid://c8s5w0sa8imat" path="res://ui/mood_matrix/mood_matrix_corner_squares.tres" id="2_jligu"]
 [ext_resource type="Texture2D" uid="uid://cluu566coe6d3" path="res://ui/mood_matrix/sprites/Tiled Grid Background.png" id="2_rgoqv"]
+[ext_resource type="Texture2D" uid="uid://vph7un5841xg" path="res://ui/mood_matrix/sprites/Large Noise.png" id="2_snp1r"]
+[ext_resource type="Texture2D" uid="uid://b2kw7ntgc5ptw" path="res://ui/mood_matrix/sprites/Small Noise.png" id="3_b8nkm"]
 [ext_resource type="PackedScene" uid="uid://ccucfiqev8sqs" path="res://ui/mood_matrix/big_ring/big_ring.tscn" id="4_ycctq"]
 [ext_resource type="Resource" uid="uid://c48rkmj8y5dab" path="res://ui/mood_matrix/mm_happy.tres" id="5_gnfxl"]
 [ext_resource type="Resource" uid="uid://c1d3gtg13meu2" path="res://ui/mood_matrix/mm_angry.tres" id="6_xxsyf"]
@@ -501,6 +503,67 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_1b2ix")
+large_noise_texture = ExtResource("2_snp1r")
+small_noise_texture = ExtResource("3_b8nkm")
+
+[node name="BGNoiseSpike" type="HBoxContainer" parent="."]
+unique_name_in_owner = true
+modulate = Color(0.13, 0.677, 0.78, 0.5)
+layout_mode = 0
+offset_top = 76.0
+offset_right = 280.0
+offset_bottom = 116.0
+scale = Vector2(1, 1e-05)
+pivot_offset = Vector2(0, 20)
+theme_override_constants/separation = 0
+
+[node name="TextureRect" type="TextureRect" parent="BGNoiseSpike"]
+custom_minimum_size = Vector2(40, 0)
+layout_mode = 2
+texture = ExtResource("2_snp1r")
+expand_mode = 1
+
+[node name="TextureRect2" type="TextureRect" parent="BGNoiseSpike"]
+custom_minimum_size = Vector2(40, 0)
+layout_mode = 2
+texture = ExtResource("2_snp1r")
+expand_mode = 1
+
+[node name="TextureRect3" type="TextureRect" parent="BGNoiseSpike"]
+custom_minimum_size = Vector2(40, 0)
+layout_mode = 2
+texture = ExtResource("2_snp1r")
+expand_mode = 1
+
+[node name="TextureRect4" type="TextureRect" parent="BGNoiseSpike"]
+custom_minimum_size = Vector2(40, 0)
+layout_mode = 2
+texture = ExtResource("2_snp1r")
+expand_mode = 1
+
+[node name="TextureRect5" type="TextureRect" parent="BGNoiseSpike"]
+custom_minimum_size = Vector2(40, 0)
+layout_mode = 2
+texture = ExtResource("2_snp1r")
+expand_mode = 1
+
+[node name="TextureRect6" type="TextureRect" parent="BGNoiseSpike"]
+custom_minimum_size = Vector2(40, 0)
+layout_mode = 2
+texture = ExtResource("2_snp1r")
+expand_mode = 1
+
+[node name="TextureRect7" type="TextureRect" parent="BGNoiseSpike"]
+custom_minimum_size = Vector2(40, 0)
+layout_mode = 2
+texture = ExtResource("2_snp1r")
+expand_mode = 1
+
+[node name="TextureRect8" type="TextureRect" parent="BGNoiseSpike"]
+custom_minimum_size = Vector2(40, 0)
+layout_mode = 2
+texture = ExtResource("2_snp1r")
+expand_mode = 1
 
 [node name="Frame" type="Control" parent="."]
 unique_name_in_owner = true

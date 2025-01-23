@@ -5,6 +5,10 @@ extends Control
 @onready var _angry_marker: MoodMatrixMarker = %Angry
 @onready var _surprised_marker: MoodMatrixMarker = %Surprised
 
+@export_group("Noise Textures")
+@export var large_noise_texture: Texture2D
+@export var small_noise_texture: Texture2D
+
 var _shake_frame: bool = false
 
 func _ready():
@@ -108,6 +112,7 @@ func _handle_mood_matrix_emotion(args: Dictionary):
 func _handle_mood_matrix_ui_animate_in_overload(args: Dictionary):	
 	var overload_tw := create_tween()
 	overload_tw.tween_callback(%OverloadSound.play)
+	overload_tw.tween_callback(_animate_bg_noise_spike)
 	overload_tw.tween_callback(_animate_overload_symbol)
 	overload_tw.tween_callback(_animate_big_shake)
 	overload_tw.tween_callback(func():
@@ -123,6 +128,30 @@ func _handle_mood_matrix_ui_animate_in_overload(args: Dictionary):
 	overload_tw.tween_callback(func(): _shake_frame = false)
 
 	await overload_tw.finished
+
+func _animate_bg_noise_spike():
+	var move_tween := create_tween()
+
+	%BGNoiseSpike.position.x = 0.0
+	move_tween.tween_property(%BGNoiseSpike, "position:x", -10.0, 0.2)
+
+	var scale_tween := create_tween()
+	%BGNoiseSpike.scale.y = 0.0
+	scale_tween.tween_property(%BGNoiseSpike, "scale:y", 4.0, 0.06)
+	scale_tween.tween_property(%BGNoiseSpike, "scale:y", 0.0, 0.16)
+
+	var change_sprites_tween := create_tween()
+	for i in %BGNoiseSpike.get_children():
+		if i is not TextureRect:
+			continue
+		i.texture = large_noise_texture
+
+	change_sprites_tween.tween_callback(func():
+		for i in %BGNoiseSpike.get_children():
+			if i is not TextureRect:
+				continue
+			i.texture = small_noise_texture
+	).set_delay(0.1)
 
 func _animate_overload_symbol():
 	var tw := create_tween()
