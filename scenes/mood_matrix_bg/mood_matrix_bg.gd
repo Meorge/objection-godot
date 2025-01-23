@@ -12,9 +12,16 @@ var _in: bool = false
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	ScriptManager.register_handler("mood_matrix.bg", _handle_bg)
+	ScriptManager.register_handler("mood_matrix.bg.set_time_scale", _handle_mood_matrix_bg_set_time_scale)
 	modulate.a = 0.0
 	_in = false
 
+func _handle_mood_matrix_bg_set_time_scale(args: Dictionary):
+	var new_time_scale := float(args.get("value", "1.0"))
+	%Lines.time_scale = new_time_scale
+	var particles: GPUParticles2D = %GPUParticles2D
+	particles.speed_scale = new_time_scale
+	
 func _handle_bg(args: Dictionary):
 	if tw: tw.kill()
 

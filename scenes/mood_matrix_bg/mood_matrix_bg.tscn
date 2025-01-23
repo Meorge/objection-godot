@@ -61,11 +61,13 @@ grow_vertical = 2
 pivot_offset = Vector2(128, 128)
 
 [node name="Lines" type="Node2D" parent="."]
+unique_name_in_owner = true
 modulate = Color(0.347, 0.741, 0.875, 0.75)
 z_index = -5
 script = ExtResource("2_2jkfc")
 
 [node name="GPUParticles2D" type="GPUParticles2D" parent="."]
+unique_name_in_owner = true
 z_index = -5
 amount = 32
 process_material = SubResource("ParticleProcessMaterial_yabjr")

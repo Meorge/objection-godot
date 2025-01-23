@@ -6,11 +6,14 @@ var first_radius: float = INITIAL_FIRST_RADIUS
 
 var t_mid: float = 0.5
 
+var time_scale: float = 1.0
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.
 
 func _process(delta):
+	delta *= time_scale
 	first_radius += delta * 10
 	while first_radius > INITIAL_FIRST_RADIUS + RADIUS_DISTANCE:
 		first_radius -= RADIUS_DISTANCE

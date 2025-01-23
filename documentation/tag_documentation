@@ -322,6 +322,14 @@ Displays the Mood Matrix visuals behind the characters.
 
 This functions identically to the "Percieve" background - see above for more information.
 
+```xml
+<mood_matrix.bg.set_time_scale value="float:1.0" />
+```
+
+Sets the time scale for the background animation.
+
+A value of `1.0` is good for standard Mood Matrix segments, and a value of around `6.0` works well for overload segments.
+
 #### Foreground UI
 
 ```xml
