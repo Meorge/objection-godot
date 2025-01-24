@@ -40,7 +40,6 @@ script = ExtResource("1_etjop")
 
 [node name="Pulse" parent="." instance=ExtResource("2_ol065")]
 unique_name_in_owner = true
-visible = false
 position = Vector2(23, 23)
 
 [node name="OverloadPulse" type="Node2D" parent="."]
@@ -60,7 +59,7 @@ unique_name_in_owner = true
 self_modulate = Color(1, 1, 1, 0.75)
 texture = ExtResource("3_rgx2h")
 
-[node name="SecondaryScaler" type="Control" parent="."]
+[node name="PrimaryScaler" type="Control" parent="."]
 unique_name_in_owner = true
 layout_mode = 1
 anchors_preset = 15
@@ -70,7 +69,17 @@ grow_horizontal = 2
 grow_vertical = 2
 pivot_offset = Vector2(23, 23)
 
-[node name="MarkerBorder" type="TextureRect" parent="SecondaryScaler"]
+[node name="SecondaryScaler" type="Control" parent="PrimaryScaler"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(23, 23)
+
+[node name="MarkerBorder" type="TextureRect" parent="PrimaryScaler/SecondaryScaler"]
 unique_name_in_owner = true
 layout_mode = 0
 offset_right = 46.0
@@ -78,7 +87,7 @@ offset_bottom = 46.0
 pivot_offset = Vector2(23, 23)
 texture = ExtResource("1_6s1px")
 
-[node name="MarkerBackground" type="TextureRect" parent="SecondaryScaler"]
+[node name="MarkerBackground" type="TextureRect" parent="PrimaryScaler/SecondaryScaler"]
 unique_name_in_owner = true
 layout_mode = 0
 offset_left = 3.0
@@ -88,7 +97,7 @@ offset_bottom = 43.0
 pivot_offset = Vector2(20, 20)
 texture = ExtResource("1_6s1px")
 
-[node name="MarkerOverloadedGradient" type="TextureRect" parent="SecondaryScaler"]
+[node name="MarkerOverloadedGradient" type="TextureRect" parent="PrimaryScaler/SecondaryScaler"]
 unique_name_in_owner = true
 visible = false
 modulate = Color(0.468507, 0.917483, 0, 1)
@@ -100,7 +109,7 @@ offset_bottom = 43.0
 pivot_offset = Vector2(20, 20)
 texture = ExtResource("4_ufaae")
 
-[node name="Face" type="TextureRect" parent="SecondaryScaler"]
+[node name="Face" type="TextureRect" parent="PrimaryScaler/SecondaryScaler"]
 unique_name_in_owner = true
 modulate = Color(0.211765, 0.639216, 0.168627, 1)
 layout_mode = 0
@@ -111,7 +120,7 @@ offset_bottom = 43.0
 pivot_offset = Vector2(20, 20)
 texture = ExtResource("2_dhci8")
 
-[node name="OverloadedFace" type="TextureRect" parent="SecondaryScaler"]
+[node name="OverloadedFace" type="TextureRect" parent="PrimaryScaler/SecondaryScaler"]
 unique_name_in_owner = true
 visible = false
 modulate = Color(0.211765, 0.639216, 0.168627, 1)

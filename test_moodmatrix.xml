@@ -4,15 +4,15 @@
 <mood_matrix.bootup.animate_in />
 <mood_matrix.bg set="in"/>
 <mood_matrix.ui.animate_in play_sound="false" />
-<mood_matrix.emotion type="happy" intensity="1.0" />
-<mood_matrix.emotion type="angry" intensity="3.0" />
+<mood_matrix.ui.set_emotion_level type="happy" intensity="1.0" />
+<mood_matrix.ui.set_emotion_level type="angry" intensity="3.0" />
 <wait secs="2.25" />
-<mood_matrix.emotion type="sad" intensity="2.0" />
+<mood_matrix.ui.set_emotion_level type="sad" intensity="2.0" />
 <wait secs="1.0"/>
-<mood_matrix.emotion type="angry" intensity="0.0" />
+<mood_matrix.ui.set_emotion_level type="angry" intensity="0.0" />
 <wait secs="0.5" />
-<mood_matrix.emotion type="happy" intensity="0.0" />
-<mood_matrix.emotion type="surprised" intensity="0.5" />
+<mood_matrix.ui.set_emotion_level type="happy" intensity="0.0" />
+<mood_matrix.ui.set_emotion_level type="surprised" intensity="0.5" />
 <wait secs="1.0" />
 <mood_matrix.ui.set_visible value="false" />
 <wait secs="1.0" />

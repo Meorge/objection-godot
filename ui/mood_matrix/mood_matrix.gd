@@ -18,7 +18,8 @@ func _ready():
 
 	ScriptManager.register_handler("mood_matrix.ui.set_visible", _handle_mood_matrix_ui_set_visible)
 
-	ScriptManager.register_handler("mood_matrix.emotion", _handle_mood_matrix_emotion)
+	ScriptManager.register_handler("mood_matrix.ui.set_emotion_level", _handle_mood_matrix_ui_set_emotion_level)
+	ScriptManager.register_handler("mood_matrix.ui.reset_marker_positions", _handle_mood_matrix_ui_reset_marker_positions)
 
 	%Bootup.sound_should_be_played.connect(%BootupSound.play)
 	%Bootup.white_flash.connect(func():
@@ -36,7 +37,7 @@ func _process(delta):
 	if _shake_frame:
 		%Frame.position = lerp(%Frame.position, Vector2(randf_range(-3.0, 3.0), randf_range(-2.0, 2.0)), delta * 10.0)
 	else:
-		%Frame.position = lerp(%Frame.position, Vector2.ZERO, delta)
+		%Frame.position = lerp(%Frame.position, Vector2.ZERO, delta * 10.0)
 
 func set_markers_thinking():
 	_happy_marker.set_thinking()
@@ -91,7 +92,7 @@ func _handle_mood_matrix_ui_set_visible(args: Dictionary):
 	else:
 		$AnimationPlayer.play("RESET")
 
-func _handle_mood_matrix_emotion(args: Dictionary):
+func _handle_mood_matrix_ui_set_emotion_level(args: Dictionary):
 	# <mood_matrix.emotion type="happy" intensity="3" />
 	var markers = {
 		"happy": _happy_marker,
@@ -104,13 +105,23 @@ func _handle_mood_matrix_emotion(args: Dictionary):
 	if emotion_str not in markers:
 		Utils.print_error("Emotion \"%s\" doesn't exist in Mood Matrix" % emotion_str)
 		return
+	
+	var do_overload = args.get("overload", "false") == "true"
 
 	var marker = markers[emotion_str]
 	var intensity = float(args.get("intensity", "1"))
 
-	marker.set_pulse(intensity)
+	marker.set_pulse(intensity, do_overload)
 
-func _handle_mood_matrix_ui_animate_in_overload(args: Dictionary):	
+func _handle_mood_matrix_ui_animate_in_overload(args: Dictionary):
+	var emotions_to_keep = args.get("emotions", "").split(",")
+	var markers = {
+		"happy": _happy_marker,
+		"sad": _sad_marker,
+		"angry": _angry_marker,
+		"surprised": _surprised_marker
+	}
+
 	var overload_tw := create_tween()
 	overload_tw.tween_callback(%OverloadSound.play)
 	overload_tw.tween_callback(_animate_bg_noise_spike)
@@ -123,7 +134,12 @@ func _handle_mood_matrix_ui_animate_in_overload(args: Dictionary):
 		_surprised_marker.set_thinking()
 	)
 
-	overload_tw.tween_callback(_angry_marker.animate_overload)
+	for e in emotions_to_keep:
+		if e not in markers:
+			Utils.print_error("Emotion \"%s\" doesn't exist" % [e])
+			continue
+		overload_tw.tween_callback(markers[e].animate_overload)
+
 	overload_tw.tween_interval(1.0)
 	overload_tw.tween_callback(func(): _shake_frame = true)
 	overload_tw.tween_callback(%BigRing.start_ring_noise)
@@ -131,20 +147,24 @@ func _handle_mood_matrix_ui_animate_in_overload(args: Dictionary):
 
 	# White flash, other emotions move out
 	overload_tw.tween_callback(func(): %BehindMarkersWhiteFlash.visible = true)
-	# overload_tw.tween_interval(0.1)
 
 	const OFFSET_MAGNITUDE = 80
 	const OFFSET_DURATION = 0.2
-	overload_tw.tween_property(%HappyOffset, "position", Vector2.from_angle(7 * PI / 4) * OFFSET_MAGNITUDE, OFFSET_DURATION).set_trans(Tween.TRANS_CUBIC).set_ease(Tween.EASE_OUT)
-	# overload_tw.parallel().tween_property(%AngryOffset, "position", Vector2.from_angle(5 * PI / 4) * OFFSET_MAGNITUDE, OFFSET_DURATION).set_trans(Tween.TRANS_CUBIC).set_ease(Tween.EASE_OUT)
-	overload_tw.parallel().tween_property(%SurprisedOffset, "position", Vector2.from_angle(3 * PI / 4) * OFFSET_MAGNITUDE, OFFSET_DURATION).set_trans(Tween.TRANS_CUBIC).set_ease(Tween.EASE_OUT)
-	overload_tw.parallel().tween_property(%SadOffset, "position", Vector2.from_angle(1 * PI / 4) * OFFSET_MAGNITUDE, OFFSET_DURATION).set_trans(Tween.TRANS_CUBIC).set_ease(Tween.EASE_OUT)
+
+	# This is a bit scrunkly but I'm tired and wanna get this done. Maybe another
+	# day I'll refactor it to be more streamlined.
+	if "happy" not in emotions_to_keep:
+		overload_tw.parallel().tween_property(%HappyOffset, "position", Vector2.from_angle(7 * PI / 4) * OFFSET_MAGNITUDE, OFFSET_DURATION).set_trans(Tween.TRANS_CUBIC).set_ease(Tween.EASE_OUT)
+	if "angry" not in emotions_to_keep:
+		overload_tw.parallel().tween_property(%AngryOffset, "position", Vector2.from_angle(5 * PI / 4) * OFFSET_MAGNITUDE, OFFSET_DURATION).set_trans(Tween.TRANS_CUBIC).set_ease(Tween.EASE_OUT)
+	if "surprised" not in emotions_to_keep:
+		overload_tw.parallel().tween_property(%SurprisedOffset, "position", Vector2.from_angle(3 * PI / 4) * OFFSET_MAGNITUDE, OFFSET_DURATION).set_trans(Tween.TRANS_CUBIC).set_ease(Tween.EASE_OUT)
+	if "sad" not in emotions_to_keep:
+		overload_tw.parallel().tween_property(%SadOffset, "position", Vector2.from_angle(1 * PI / 4) * OFFSET_MAGNITUDE, OFFSET_DURATION).set_trans(Tween.TRANS_CUBIC).set_ease(Tween.EASE_OUT)
 
 	overload_tw.tween_callback(func(): %BehindMarkersWhiteFlash.visible = false).set_delay(0.03)
 
-
-
-	overload_tw.tween_interval(5.0 - 2.66 - 0.2 - OFFSET_DURATION)
+	overload_tw.tween_interval(5.0 - 2.66 - 0.2 - OFFSET_DURATION - 1.0)
 	overload_tw.tween_callback(func(): _shake_frame = false)
 
 	await overload_tw.finished
@@ -201,3 +221,9 @@ func _animate_big_shake():
 		tw.tween_property(%Frame, "position:x", -BIG_SHAKE_MAGNITUDE, BIG_SHAKE_DURATION)
 		tw.tween_property(%Frame, "position:x", BIG_SHAKE_MAGNITUDE, BIG_SHAKE_DURATION)
 	tw.tween_property(%Frame, "position:x", 0.0, BIG_SHAKE_DURATION / 2.0)
+
+func _handle_mood_matrix_ui_reset_marker_positions(_args: Dictionary):
+	%HappyOffset.position = Vector2.ZERO
+	%AngryOffset.position = Vector2.ZERO
+	%SurprisedOffset.position = Vector2.ZERO
+	%SadOffset.position = Vector2.ZERO

@@ -349,11 +349,17 @@ This clears the white overlay that the "bootup" animation sets.
 Place any commands you'd like to execute behind the white flash after the "bootup" command and before this command.
 
 ```xml
+<mood_matrix.ui.animate_in_overload emotions="happy,sad,angry,surprised" />
+```
+
+Plays the "emotional overload" animation.
+The active emotions are listed, separated by commas, in the `emotions` argument.
+
+```xml
 <mood_matrix.ui.set_visible value="bool:true" />
 ```
 
 Sets the UI with the emotion markers to be visible or invisible, with no animation.
-
 
 ```xml
 <mood_matrix.ui.set_ring_noise value="bool:true" />
@@ -361,6 +367,13 @@ Sets the UI with the emotion markers to be visible or invisible, with no animati
 
 Sets whether or not the white ring in the Mood Matrix UI should have noise on its edges, as it appears in an "emotional overload" segment.
 
+```xml
+<mood_matrix.ui.set_emotion_level type="happy|sad|angry|surprised" intensity="float:1.0" overload="bool:false" />
+```
+
+Sets the intensity of the emotion marker specified by `type`.
+Normally, `intensity` controls the size of the ripples emanating from the emotion marker.
+If `overload` is `true`, the marker will display the large ripples from the "emotional overload" segments, and `intensity` is ignored.
 
 #### Noise Level
 

@@ -67,34 +67,37 @@ func set_overloaded():
 var tw: Tween = null
 
 var repeat_tw: Tween = null
-func set_pulse(intensity: float):
+func set_pulse(intensity: float, do_overload: bool = false):
 	if repeat_tw:
 		repeat_tw.kill()
 
 	_pulse.intensity = intensity
-	if intensity <= 0:
+	if intensity == 0:
 		set_inactive()
+		return
+	elif intensity < 0:
+		set_thinking()
 		return
 
 	
 	set_active()
 	repeat_tw = create_tween()
-	repeat_tw.tween_callback(do_pulse_anim)
+	repeat_tw.tween_callback(func(): do_pulse_anim(do_overload))
 	repeat_tw.tween_interval(1.0)
 	repeat_tw.set_loops(-1)
 
-func do_pulse_anim():
+func do_pulse_anim(do_overload: bool = false):
 	if tw:
 		tw.kill()
 	
 	_pulse.sound_player.stream = marker_type.pulse_sound
 
 	tw = create_tween()
-	tw.tween_callback(_pulse.animate_pulse)
-	tw.tween_property(self, "scale", Vector2.ONE * 1.1, 0.25)
-	tw.tween_callback(func(): scale = Vector2.ONE)
-	tw.tween_property(self, "scale", Vector2.ONE * 1.25, 0.75)
-	tw.tween_callback(func(): scale = Vector2.ONE)
+	tw.tween_callback(_pulse.animate_overload_pulse if do_overload else _pulse.animate_pulse)
+	tw.tween_property(%PrimaryScaler, "scale", Vector2.ONE * 1.1, 0.25)
+	tw.tween_callback(func(): %PrimaryScaler.scale = Vector2.ONE)
+	tw.tween_property(%PrimaryScaler, "scale", Vector2.ONE * 1.25, 0.75)
+	tw.tween_callback(func(): %PrimaryScaler.scale = Vector2.ONE)
 	return tw
 
 func do_intro_pulse_anim():
@@ -105,9 +108,9 @@ func do_intro_pulse_anim():
 
 	tw = create_tween()
 	tw.tween_callback(_pulse.animate_pulse)
-	tw.tween_callback(func(): scale = Vector2.ONE * 1.5)
-	tw.tween_property(self, "scale", Vector2.ONE * 0.95, 0.9)
-	tw.tween_property(self, "scale", Vector2.ONE, 0.1)
+	tw.tween_callback(func(): %PrimaryScaler.scale = Vector2.ONE * 1.5)
+	tw.tween_property(%PrimaryScaler, "scale", Vector2.ONE * 0.95, 0.9)
+	tw.tween_property(%PrimaryScaler, "scale", Vector2.ONE, 0.1)
 	return tw
 
 func animate_overload():
@@ -115,10 +118,10 @@ func animate_overload():
 	var pulse_tw = animate_overload_pulse()
 	overload_tw.tween_callback(set_overloaded)
 	overload_tw.tween_callback(animate_overload_waves)
-	overload_tw.tween_property(self, "scale", Vector2.ONE * 1.5, 3.66).set_trans(Tween.TRANS_CIRC).set_ease(Tween.EASE_IN)
+	overload_tw.tween_property(%PrimaryScaler, "scale", Vector2.ONE * 1.5, 3.66).set_trans(Tween.TRANS_CIRC).set_ease(Tween.EASE_IN)
 	overload_tw.tween_callback(set_active)
-	overload_tw.tween_callback(func(): scale = Vector2.ONE * 1.6)
-	overload_tw.tween_property(self, "scale", Vector2.ONE, 0.33)
+	overload_tw.tween_callback(func(): %PrimaryScaler.scale = Vector2.ONE * 1.6)
+	overload_tw.tween_property(%PrimaryScaler, "scale", Vector2.ONE, 0.33)
 	overload_tw.tween_callback(func(): pulse_tw.kill())
 
 func animate_overload_pulse():
@@ -142,7 +145,7 @@ func animate_overload_waves():
 	var overload_waves_tween := create_tween()
 	%OverloadPulse.visible = true
 	%OverloadPulse.scale = Vector2.ONE * 0.5
-	overload_waves_tween.tween_property(%OverloadPulse, "scale", Vector2.ONE * 2.0, 3.66).set_trans(Tween.TRANS_CIRC).set_ease(Tween.EASE_IN) # TODO: find right duration
+	overload_waves_tween.tween_property(%OverloadPulse, "scale", Vector2.ONE * 2.0, 3.66).set_trans(Tween.TRANS_CIRC).set_ease(Tween.EASE_IN)
 	overload_waves_tween.parallel().tween_property(%OverloadPulse, "rotation", TAU * 4, 3.66)
 	overload_waves_tween.tween_callback(x_scale_tween.kill)
 	overload_waves_tween.tween_callback(func(): %OverloadPulse.visible = false)
