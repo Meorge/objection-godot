@@ -1,0 +1,33 @@
+[gd_scene load_steps=6 format=3 uid="uid://cca1lp414ac80"]
+
+[ext_resource type="Texture2D" uid="uid://cs4ghdbme3kqh" path="res://ui/mood_matrix/sprites/Pulse 1.png" id="1_bgl7n"]
+[ext_resource type="Script" path="res://ui/mood_matrix/mm_pulse.gd" id="1_tqb7k"]
+[ext_resource type="Texture2D" uid="uid://dhgxpfk6h2gl8" path="res://ui/mood_matrix/sprites/Pulse 2.png" id="2_ayf7x"]
+[ext_resource type="Texture2D" uid="uid://xe04jct48gse" path="res://ui/mood_matrix/sprites/Pulse 3.png" id="3_lewr3"]
+[ext_resource type="Texture2D" uid="uid://e1xamfybyc8w" path="res://ui/mood_matrix/sprites/Overload Ripple.png" id="5_u2kym"]
+
+[node name="Pulse" type="Node2D"]
+modulate = Color(0.122567, 0.814849, 7.70092e-07, 1)
+script = ExtResource("1_tqb7k")
+
+[node name="PulseNormal" type="Node2D" parent="."]
+unique_name_in_owner = true
+
+[node name="Pulse 1" type="Sprite2D" parent="PulseNormal"]
+self_modulate = Color(1, 1, 1, 0.75)
+texture = ExtResource("1_bgl7n")
+
+[node name="Pulse 2" type="Sprite2D" parent="PulseNormal"]
+self_modulate = Color(1, 1, 1, 0.5)
+texture = ExtResource("2_ayf7x")
+
+[node name="Pulse 3" type="Sprite2D" parent="PulseNormal"]
+self_modulate = Color(1, 1, 1, 0.2)
+texture = ExtResource("3_lewr3")
+
+[node name="PulseSound" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+
+[node name="PulseOverload" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+texture = ExtResource("5_u2kym")

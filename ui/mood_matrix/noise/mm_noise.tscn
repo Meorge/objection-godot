@@ -1,0 +1,134 @@
+[gd_scene load_steps=9 format=3 uid="uid://cdt8wkw6ibt27"]
+
+[ext_resource type="Script" path="res://ui/mood_matrix/noise/mm_noise.gd" id="1_4350j"]
+[ext_resource type="FontFile" uid="uid://r6jfs8pm8uh8" path="res://ui/mood_matrix/fonts/DFKaGei-W6__DFPKaGei-W6__DFGKaGei-W6.ttc" id="1_s2ds4"]
+[ext_resource type="Script" path="res://ui/mood_matrix/noise/noise_line.gd" id="2_tqo6c"]
+[ext_resource type="Texture2D" uid="uid://b2kw7ntgc5ptw" path="res://ui/mood_matrix/sprites/Small Noise.png" id="3_jmkfb"]
+[ext_resource type="Texture2D" uid="uid://vph7un5841xg" path="res://ui/mood_matrix/sprites/Large Noise.png" id="4_khwrv"]
+[ext_resource type="AudioStream" uid="uid://tw1d154ih5nf" path="res://ui/mood_matrix/sounds/noise/kokoro_noise_100_m.wav" id="7_2nofp"]
+
+[sub_resource type="FontVariation" id="FontVariation_skylw"]
+base_font = ExtResource("1_s2ds4")
+variation_face_index = 1
+
+[sub_resource type="FontVariation" id="FontVariation_bhkoh"]
+base_font = ExtResource("1_s2ds4")
+variation_face_index = 1
+variation_embolden = -0.5
+spacing_glyph = 3
+
+[node name="MoodMatrixNoise" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_4350j")
+
+[node name="NoiseSound" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("7_2nofp")
+
+[node name="BackgroundOverlay" type="ColorRect" parent="."]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.021, 0.09, 0.149, 0.75)
+
+[node name="WhiteOverlay" type="ColorRect" parent="."]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(1, 1, 1, 0)
+
+[node name="BlueOverlay" type="ColorRect" parent="."]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.055, 0.654, 0.851, 0)
+
+[node name="CenterContent" type="Control" parent="."]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(0, 96)
+
+[node name="NoiseLine" type="Control" parent="CenterContent"]
+unique_name_in_owner = true
+modulate = Color(0.21, 0.79, 0.958, 0.502)
+anchors_preset = 0
+offset_top = 76.0
+offset_right = 256.0
+offset_bottom = 116.0
+pivot_offset = Vector2(0, 20)
+script = ExtResource("2_tqo6c")
+small_noise_texture = ExtResource("3_jmkfb")
+large_noise_texture = ExtResource("4_khwrv")
+noise_size = 0.4
+
+[node name="FlatNoise" type="ColorRect" parent="CenterContent/NoiseLine"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -1.0
+offset_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(0, 1)
+
+[node name="Labels" type="VBoxContainer" parent="CenterContent"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -65.5
+offset_top = -25.0
+offset_right = 65.5
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(0, 25)
+theme_override_constants/separation = 3
+
+[node name="NoiseLevelLabel" type="Label" parent="CenterContent/Labels"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_fonts/font = SubResource("FontVariation_skylw")
+theme_override_font_sizes/font_size = 20
+text = "NOISE LEVEL"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="PercentLabel" type="Label" parent="CenterContent/Labels"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0.584, 0.913, 1, 0)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = SubResource("FontVariation_bhkoh")
+theme_override_font_sizes/font_size = 25
+text = "100%"
+horizontal_alignment = 1
+vertical_alignment = 1

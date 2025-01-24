@@ -309,6 +309,153 @@ If the `fade` argument is used, the visual will fade into or out of view over th
 
 If the value of `set` or `fade` is `auto`, then the visual will toggle its state away from the current state (that is, if it is currently visible, it will become invisible, and vice versa).
 
+### Mood Matrix from *Dual Destinies*
+
+#### Background
+
+```xml
+<mood_matrix.bg set="in|out|auto:auto" />
+<mood_matrix.bg fade="in|out|auto:auto" duration="float:0.5" />
+```
+
+Displays the Mood Matrix visuals behind the characters.
+
+This functions identically to the "Percieve" background - see above for more information.
+
+```xml
+<mood_matrix.bg.set_time_scale value="float:1.0" />
+```
+
+Sets the time scale for the background animation.
+
+A value of `1.0` is good for standard Mood Matrix segments, and a value of around `6.0` works well for overload segments.
+
+#### Foreground UI
+
+```xml
+<mood_matrix.bootup.animate_in />
+```
+
+Plays the "bootup" animation for a Mood Matrix segment, the first half of the introduction.
+The screen is tinted blue, and a "loading" indicator appears and fills up.
+Once it is full, the logo appears and animates out, quickly fading the screen to white.
+
+```xml
+<mood_matrix.ui.animate_in play_sound="bool:true" />
+```
+
+Plays the second half of the normal introduction animation, where the logo continues animating and the emotion markers appear.
+This clears the white overlay that the "bootup" animation sets.
+Place any commands you'd like to execute behind the white flash after the "bootup" command and before this command.
+
+```xml
+<mood_matrix.ui.animate_in_overload emotions="happy,sad,angry,surprised" />
+```
+
+Plays the "emotional overload" animation.
+The active emotions are listed, separated by commas, in the `emotions` argument.
+
+```xml
+<mood_matrix.ui.set_visible value="bool:true" />
+```
+
+Sets the UI with the emotion markers to be visible or invisible, with no animation.
+
+```xml
+<mood_matrix.ui.set_ring_noise value="bool:true" />
+```
+
+Sets whether or not the white ring in the Mood Matrix UI should have noise on its edges, as it appears in an "emotional overload" segment.
+
+```xml
+<mood_matrix.ui.set_emotion_level type="happy|sad|angry|surprised" intensity="float:1.0" overload="bool:false" />
+```
+
+Sets the intensity of the emotion marker specified by `type`.
+Normally, `intensity` controls the size of the ripples emanating from the emotion marker.
+If `overload` is `true`, the marker will display the large ripples from the "emotional overload" segments, and `intensity` is ignored.
+
+```xml
+<mood_matrix.ui.set_overload_tints emotions="happy,sad,angry,surprised" />
+```
+
+Sets cycling tints over the screen corresponding to the colors for the given `emotions`.
+To stop this effect, use this command with an empty string for `emotions`.
+
+#### Noise Level
+
+```xml
+<mood_matrix.noise.animate from="int" to="int" sound_code="" />
+```
+
+Performs a Mood Matrix noise animation, consisting of the steps:
+
+- A noise animation sound effect specified by `sound_code` is played (see below).
+- The noise UI is animated in. If `from` is specified, then the initial noise level is that integer percent; otherwise, it is the last value displayed.
+- The noise is changed from the current value (or the value specified by `from`) to the value specified by `to`.
+- If the `sound_code` ends with `_0`, an extra "noise cleared" animation is played.
+- The noise UI is animated out.
+
+The valid sound codes are:
+
+- `100_0` - Played when the noise level goes from 100% to 0%.
+- `100_m` - Played when the noise level goes from 100% to a medium-sized value (like 50%).
+- `100_s` - Played when the noise level goes from 100% to a small value (like 20%).
+- `m_0` - For when the noise level goes from a medium-sized value to 0%.
+- `m_100` - For when the noise level goes from a medium-sized value to 100%.
+- `m_s` - For when the noise level goes from a medium-sized value to a small value.
+- `s_0` - For when the noise level goes from a small value to 0%.
+- `s_m` - For when the noise level goes from a small value to a medium-sized value.
+
+Again, note that for the sound codes ending in `_0` (i.e., those where the final noise level is 0%), an extra animation will play to align with the sound effect.
+
+```xml
+<mood_matrix.noise.set_level level="int" />
+```
+
+Sets the noise level percentage to `level`.
+This does not automatically cause the noise UI to display.
+
+```xml
+<mood_matrix.noise.set_visible value="bool:true" />
+```
+
+Sets the noise UI to be instantly visible or invisible, depending on `value`, with no animation.
+
+```xml
+<mood_matrix.noise.set_label text="string:NOISE LEVEL" />
+```
+
+Sets the label for the noise UI to `text`.
+By default, this is `NOISE LEVEL`, to match the games.
+
+```xml
+<mood_matrix.noise.animate_in />
+```
+
+Plays the appear animation for the noise UI, and leaves it on-screen.
+
+```xml
+<mood_matrix.noise.animate_out />
+```
+
+Plays the disappear animation for the noise UI, removing it from view.
+
+```xml
+<mood_matrix.noise.animate_level from="int" to="int" />
+```
+
+Animates the noise level percentage from the value provided as `from` to the value provided as `to`.
+If no value is provided for `from`, then the last value displayed in the UI is used.
+
+#### Shutdown animation
+
+```xml
+<mood_matrix.shutdown text="string:BYE BYE" />
+```
+
+Plays the Mood Matrix shutdown animation. If no text is provided, "BYE BYE" is displayed as in the games.
+
 ## Data types
 
 ### `color`
