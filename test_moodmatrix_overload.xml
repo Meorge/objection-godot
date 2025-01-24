@@ -1,16 +1,19 @@
 <sprite pos="center" res="res://characters/polly/polly.tres" anim="normal-idle" />
 <box set="out"/>
+<wait secs="2.0" />
 <mood_matrix.bootup.animate_in />
 <mood_matrix.bg set="in"/>
 <mood_matrix.bg.set_time_scale value="6"/>
 <mood_matrix.ui.animate_in play_sound="false" />
-<mood_matrix.ui.animate_in_overload emotions="angry" />
+<mood_matrix.ui.animate_in_overload emotions="angry,sad" />
+<mood_matrix.ui.set_overload_tints emotions="angry,sad" />
 <mood_matrix.ui.set_emotion_level type="angry" overload="true" />
-<wait secs="2.0" />
-<!-- <mood_matrix.ui.reset_marker_positions />
-<mood_matrix.ui.set_emotion_level type="angry" intensity="1" />
-<mood_matrix.ui.set_emotion_level type="happy" intensity="0" />
-<mood_matrix.ui.set_emotion_level type="sad" intensity="0" />
-<mood_matrix.ui.set_emotion_level type="surprised" intensity="0" /> -->
-<wait secs="2.0" />
+<mood_matrix.ui.set_emotion_level type="sad" overload="true" />
+<music res="res://audio/music/mood_matrix/mood_matrix_overload.wav"/>
+<wait secs="3.0" />
+<nametag text="Polly"/>
+<box set="in"/>
+<speed val="5" />
+<sprite pos="center" anim="normal-talk" />
+SQUAAA<shake magnitude="5.0" duration="10.0" />AAAAA<sound res="res://audio/sound/sfx-roar.wav" />AA<sound res="res://audio/sound/sfx-roar.wav" />AA<shake magnitude="10.0" duration="10.0" />A<sound res="res://audio/sound/sfx-roar.wav" />AA
 <play />

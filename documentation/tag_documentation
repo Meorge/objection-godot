@@ -375,6 +375,13 @@ Sets the intensity of the emotion marker specified by `type`.
 Normally, `intensity` controls the size of the ripples emanating from the emotion marker.
 If `overload` is `true`, the marker will display the large ripples from the "emotional overload" segments, and `intensity` is ignored.
 
+```xml
+<mood_matrix.ui.set_overload_tints emotions="happy,sad,angry,surprised" />
+```
+
+Sets cycling tints over the screen corresponding to the colors for the given `emotions`.
+To stop this effect, use this command with an empty string for `emotions`.
+
 #### Noise Level
 
 ```xml

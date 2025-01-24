@@ -139,6 +139,8 @@ theme_override_fonts/font = ExtResource("4_b14rb")
 theme_override_font_sizes/font_size = 8
 text = "Gumshoe"
 
+[node name="MoodMatrix" parent="." instance=ExtResource("20_w2rvm")]
+
 [node name="DialogueLabel" type="RichTextLabel" parent="."]
 unique_name_in_owner = true
 offset_left = 10.0
@@ -206,8 +208,6 @@ script = ExtResource("26_dif48")
 [node name="BubbleDisplay" type="Sprite2D" parent="ExclamationBubbleContainer/InnerContainer"]
 unique_name_in_owner = true
 centered = false
-
-[node name="MoodMatrix" parent="." instance=ExtResource("20_w2rvm")]
 
 [node name="OverlayFlash" type="ColorRect" parent="."]
 visible = false

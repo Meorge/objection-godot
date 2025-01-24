@@ -1,5 +1,7 @@
 extends Control
 
+const MARKERS = ["happy", "sad", "angry", "surprised"]
+
 @onready var _happy_marker: MoodMatrixMarker = %Happy
 @onready var _sad_marker: MoodMatrixMarker = %Sad
 @onready var _angry_marker: MoodMatrixMarker = %Angry
@@ -15,6 +17,7 @@ func _ready():
 	ScriptManager.register_handler("mood_matrix.bootup.animate_in", _handle_mood_matrix_bootup_animate_in)
 	ScriptManager.register_handler("mood_matrix.ui.animate_in", _handle_mood_matrix_ui_animate_in)
 	ScriptManager.register_handler("mood_matrix.ui.animate_in_overload", _handle_mood_matrix_ui_animate_in_overload)
+	ScriptManager.register_handler("mood_matrix.ui.set_overload_tints", _handle_mood_matrix_ui_set_overload_tints)
 
 	ScriptManager.register_handler("mood_matrix.ui.set_visible", _handle_mood_matrix_ui_set_visible)
 
@@ -166,7 +169,7 @@ func _handle_mood_matrix_ui_animate_in_overload(args: Dictionary):
 
 	overload_tw.tween_interval(5.0 - 2.66 - 0.2 - OFFSET_DURATION - 1.0)
 	overload_tw.tween_callback(func(): _shake_frame = false)
-
+	
 	await overload_tw.finished
 
 func _animate_bg_noise_spike():
@@ -227,3 +230,16 @@ func _handle_mood_matrix_ui_reset_marker_positions(_args: Dictionary):
 	%AngryOffset.position = Vector2.ZERO
 	%SurprisedOffset.position = Vector2.ZERO
 	%SadOffset.position = Vector2.ZERO
+
+func _handle_mood_matrix_ui_set_overload_tints(args: Dictionary):
+	var emotions = args.get("emotions", "").split(",")
+	var tints: Array[Color] = []
+	if "happy" in emotions:
+		tints.append(_happy_marker.marker_type.background_color_active)
+	if "angry" in emotions:
+		tints.append(_angry_marker.marker_type.background_color_active)
+	if "surprised" in emotions:
+		tints.append(_surprised_marker.marker_type.background_color_active)
+	if "sad" in emotions:
+		tints.append(_sad_marker.marker_type.background_color_active)
+	%OverloadTint.set_tints(tints)

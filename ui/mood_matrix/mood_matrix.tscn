@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://btfayeijnow7g"]
+[gd_scene load_steps=26 format=3 uid="uid://btfayeijnow7g"]
 
 [ext_resource type="Script" path="res://ui/mood_matrix/mood_matrix.gd" id="1_1b2ix"]
 [ext_resource type="PackedScene" uid="uid://ckkqqa1iuewni" path="res://ui/mood_matrix/mood_matrix_marker.tscn" id="2_0h0un"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://ccucfiqev8sqs" path="res://ui/mood_matrix/big_ring/big_ring.tscn" id="4_ycctq"]
 [ext_resource type="Resource" uid="uid://c48rkmj8y5dab" path="res://ui/mood_matrix/mm_happy.tres" id="5_gnfxl"]
 [ext_resource type="Resource" uid="uid://c1d3gtg13meu2" path="res://ui/mood_matrix/mm_angry.tres" id="6_xxsyf"]
+[ext_resource type="Script" path="res://ui/mood_matrix/overload_tint.gd" id="7_buprc"]
 [ext_resource type="Resource" uid="uid://bqx37qeyclk1" path="res://ui/mood_matrix/mm_sad.tres" id="7_d3mif"]
 [ext_resource type="Resource" uid="uid://c3me15y0chlmy" path="res://ui/mood_matrix/mm_surprised.tres" id="8_1beay"]
 [ext_resource type="Texture2D" uid="uid://xe04jct48gse" path="res://ui/mood_matrix/sprites/Pulse 3.png" id="10_cy4d2"]
@@ -618,6 +619,17 @@ anchor_right = 1.1
 anchor_bottom = 1.1
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="OverloadTint" type="ColorRect" parent="Frame"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.985, 0.128, 0, 0.25)
+script = ExtResource("7_buprc")
 
 [node name="Markers" type="Control" parent="Frame"]
 layout_mode = 1

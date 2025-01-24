@@ -36,9 +36,9 @@ func animate_overload_pulse():
 	%PulseOverload.visible = true
 	%PulseNormal.visible = false
 	scale = Vector2.ONE
-	modulate.a = 0.75
+	modulate.a = 0.5
 
-	tw.tween_callback(func(): scale = Vector2.ONE; modulate.a = 0.75)
+	tw.tween_callback(func(): scale = Vector2.ONE; modulate.a = 0.5)
 	tw.tween_property(self, "scale", Vector2.ONE * 1.25, 0.66).set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_SINE)
 	tw.parallel().tween_callback(sound_player.play).set_delay(0.2)
 	tw.parallel().tween_property(self, "modulate:a", 0.0, 0.66)
