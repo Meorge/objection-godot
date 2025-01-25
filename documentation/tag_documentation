@@ -13,48 +13,49 @@ Starts the current queued text and commands.
 Once this tag is reached, the text will clear, so it's best to put a `<wait>` tag immediately before it so the viewer has time to read the text.
 
 ```xml
-<wait secs="float" />
+<wait duration="float" />
 ```
 
-Pauses movement through the script for a given number of `secs`.
+Pauses movement through the script for `duration` seconds.
 
 ```xml
-<speed val="default|float" />
+<set_text_speed value="float:1.0" />
 ```
 
-Sets the speed for the text display to `val`.
-
-To reset it to the default speed, pass `val="default"`.
+Sets the speed for the text display to `value`.
+The default is `1.0`.
 
 ### Name tag and text box
 
 ```xml
-<nametag text="string" />
+<nametag.set_text text="string" />
 ```
 
-Sets the nametag to display the given string `text`. If `text` is an empty string, then the nametag will be hidden.
+Sets the nametag to display the given string `text`. If `text` is not present or is an empty string, then the nametag will be hidden.
 
 ```xml
-<box set="in|out" />
+<box.set_visible value="bool:true" />
 ```
 
-Makes the text box instantaneously appear if `set="in"`, or disappear if `set="out"`.
+Sets the visibility of the text box.
 
 ```xml
-<box anim="in|out" />
+<box.animate_in />
 ```
 
-Slides the text box onto the screen if `anim="in"`, or off-screen if `anim="out"`.
+Moves the text box on-screen from below.
 
 ```xml
-<arrow action="show|hide" />
+<box.animate_out />
 ```
 
-Shows or hides the "next dialogue" arrow at the bottom-right corner of the text box.
-If no `action` is provided, it defaults to showing the arrow.
+Moves the text box down past the bottom of the screen.
 
-Note that the arrow is not a child of the text box.
-That means that if the text box is hidden, such as with `<box set="out" />`, and the arrow is shown with `<arrow action="show" />`, the arrow will appear above the scene.
+```xml
+<arrow.set_visible value="bool:true" />
+```
+
+Sets the visibility of the "next dialogue" arrow in the corner of the text box.
 
 ### Text color
 
@@ -79,13 +80,13 @@ Turns the screen white for `duration` seconds.
 Shakes the screen with a given `magnitude` for `duration` seconds.
 
 ```xml
-<confetti action="start" count="float:31" />
+<confetti.start count="float:31" />
 ```
 
 Starts playing the confetti animation, with `count` flakes of confetti.
 
 ```xml
-<confetti action="stop" />
+<confetti.stop />
 ```
 
 Stops the confetti animation and immediately deletes all on-screen confetti.
@@ -93,7 +94,7 @@ Stops the confetti animation and immediately deletes all on-screen confetti.
 ### Sprites
 
 ```xml
-<sprite pos="string" res="path" anim="string" />
+<sprite.set pos="string" res="path" anim="string" />
 ```
 
 Changes the animated sprite for the given `pos`, to use the animation named `anim` within the `SpriteFrames` asset at the path `res`.
@@ -114,23 +115,26 @@ The current built-in locations are:
 > Until it gets fixed, it's best to use MP3 or OGG files instead.
 
 ```xml
-<music action="play|stop" res="path" />
+<music.play res="path" />
 ```
 
-Performs a music-related `action`.
-
-- If `action="play"`, then the music file at the path given by `res` will start playing.
-
-- If `action="stop"`, then the currently playing music will be stopped.
+Plays the music file given by `res`.
+If `res` is not specified or is an empty string, then the last loaded music will be played.
 
 ```xml
-<sound res="path" />
+<music.stop />
+```
+
+Stops the currently-playing music.
+
+```xml
+<sound.play res="path" />
 ```
 
 Plays the sound effect at the path given by `res` once.
 
 ```xml
-<blip type="male|female|typewriter|none" />
+<blip.set type="male|female|typewriter|none" />
 ```
 
 Sets the speaking blip sound effect to `type`.
@@ -144,13 +148,13 @@ Sets the speaking blip sound effect to `type`.
 ### Camera
 
 ```xml
-<cut to="location" />
+<camera.cut to="location" />
 ```
 
 Immediately snaps the camera to the location given by `to`.
 
 ```xml
-<pan to="location" />
+<camera.pan to="location" />
 ```
 
 Moves the camera to the location given by `to` over a short period of time.
@@ -160,7 +164,7 @@ This is intended to be used when the initial and final positions of the camera a
 ### "Witness Testimony" title text
 
 ```xml
-<bigtext top="string" bottom="string" color="string" dir="lr|ud" />
+<segment_title.play top="string" bottom="string" color="string" dir="lr|ud" />
 ```
 
 Displays a "Witness Testimony" animation in large block letters.
@@ -177,41 +181,44 @@ The `dir` argument dictates how the two lines of text should animate out.
 ### Evidence
 
 ```xml
-<evidence side="left|right" action="show|hide|hide_immediate" res="location" />
+<evidence.show side="left|right:right" res="path:" />
 ```
 
-Updates the evidence/object boxes on the left or right side of the screen.
+Plays an animation of evidence appearing on the side specified by `side`, either `left` or `right`.
+The texture at the path specified by `res` is shown in the evidence box.
 
-The `side` argument must be either `"left"` or `"right"`, and indicates which evidence box should receive the command.
+```xml
+<evidence.hide side="left|right:right" />
+```
 
-The `action` argument states what action the evidence box should perform.
+Plays an animation of evidence on the side specified by `side`, either `left` or `right`, disappearing.
 
-- If `action="show"`, then the `res` argument must be a path to the image to display in the box.
-The box will animate on-screen, and display the image.
+```xml
+<evidence.hide_immediate side="left|right:right" />
+```
 
-- If `action="hide"`, then the box will animate off-screen.
-
-- If `action="hide_immediate"`, then the box will immediately disappear, without any animation.
+Immediately hides the evidence on the side specified by `side`, either `left` or `right`, without any animation.
 
 ### New evidence
 
 ```xml
-<new_evidence slide="in|out|auto:auto" title="string" description="string" res="" />
+<new_evidence.animate_in title="string:" description="string:" res="string:" />
 ```
 
-Animates the "new evidence" box in or out.
+Animates the "new evidence" box on-screen, sliding in from the right.
+The provided `title` and `description` text are displayed on the box.
+A path to an image to display as the evidence thumbnail can be provided with `res`.
 
-If `slide` is `in` (or it is `auto` and the box is currently out), the box will slide in while playing the corresponding jingle.
-The evidence title, description, and thumbnail texture can be set with the `title`, `description`, and `res` arguments respectively.
+```xml
+<new_evidence.animate_out />
+```
 
-If `slide` is `out` (or it is `auto` and the box is currently in), the box will slide out of view while playing the corresponding sound effect.
-
-
+Animates the "new evidence" box off-screen, sliding off to the left.
 
 ### Exclamation bubbles
 
 ```xml
-<bubble type="objection|holdit|takethat" />
+<bubble.animate type="objection|holdit|takethat" />
 ```
 
 Animates an exclamation bubble given by `type`.
@@ -222,7 +229,7 @@ To play a character's voice clip along with the bubble, use a `<sound>` tag at t
 ### Gavel slam
 
 ```xml
-<gavel num="int:3" between="float:0.17" after="float:0.766" />
+<gavel.animate num="int:3" between="float:0.17" after="float:0.766" />
 ```
 
 Animates the Judge's gavel slam `num` times in a row.
@@ -237,23 +244,27 @@ The argument `after` gives the delay after the last slam before script execution
 > This refers to the view of the courtroom where the lawyers, witness, judge, and gallery are all visible at once.
 
 ```xml
-<wide pos="prosecution|defense|witness|judge" res="location" />
+<wide.set_sprite pos="prosecution|defense|witness|judge" res="location" />
 ```
 
 Sets the character at `pos` in the wide shot to use the texture at `res`.
 
 ```xml
-<wide.gallery set="in|out" animate="true|false" />
+<wide.gallery.set_visible value="bool" />
 ```
 
-If the argument `set` is provided, makes the gallery visible or invisible.
+Sets the visibility of the people in the gallery.
 
-If the argument `animate` is provided, sets whether or not the gallery should animate.
+```xml
+<wide.gallery.set_animated value="bool" />
+```
+
+Sets whether or not the people in the gallery move back and forth.
 
 ### Verdict
 
 ```xml
-<verdict text="string" group_by="word|letter:letter" font_color="color:white" font_outline_color="color:black" />
+<verdict.animate text="string" group_by="word|letter:letter" font_color="color:white" font_outline_color="color:black" />
 ```
 
 Displays the provided `text` on-screen as if it were the Judge's verdict, with a dramatic animation and sound effects.
@@ -266,7 +277,7 @@ The `font_color` and `font_outline_color` arguments set the color of the text an
 ### Flashing segment label
 
 ```xml
-<segment_title text="string:" font_color="color:white" font_outline_color="color:aa-flashtestimony" time_in="float:1.433" time_out="float:0.34" />
+<segment_title.set text="string:" font_color="color:white" font_outline_color="color:aa-flashtestimony" time_in="float:1.433" time_out="float:0.34" />
 ```
 
 Displays a flashing label in the top-left corner of the screen with the provided `text`.
@@ -280,53 +291,76 @@ Defaults for the other arguments replicate the look and timing of the "Testimony
 ### Static color background
 
 ```xml
-<bg set="in|out|auto:auto" color="color?" />
-<bg fade="in|out|auto:auto" duration="float:0.5" color="color?" />
+<bg.set_visible value="bool:true" />
 ```
 
-Sets or fades the background to a solid color.
+Sets whether or not the solid-color background is visible.
 
-Either the `set` or the `fade` argument should be used (not both).
+```xml
+<bg.set_color value="color" />
+```
 
-If the `set` argument is used, the solid background will appear or disappear instantly.
-If the `fade` argument is used, the background will fade into or out of view over the given `duration`.
+Sets the color of the background.
 
-If the value of `set` or `fade` is `auto`, then the background will switch to the opposite state.
+```xml
+<bg.animate_in duration="float:0.5" />
+```
+
+Fades in the solid-color background over `duration` seconds.
+
+```xml
+<bg.animate_out duration="float:0.5" />
+```
+
+Fades out the solid-color background over `duration` seconds.
 
 ### "Perceive" background from *Apollo Justice*
 
 ```xml
-<perceive set="in|out|auto:auto" />
-<perceive fade="in|out|auto:auto" duration="float:0.5" />
+<perceive.set_visible value="bool:true" />
 ```
 
-Displays the animated "Perceive" visual behind the characters from *Apollo Justice*.
+Sets whether or not the "Perceive" background is visible.
 
-Either the `set` or the `fade` argument should be used (not both).
+```xml
+<perceive.animate_in duration="float:0.5" />
+```
 
-If the `set` argument is used, the visual will appear or disappear instantly.
-If the `fade` argument is used, the visual will fade into or out of view over the given `duration`.
+Fades in the "Perceive" background over `duration` seconds.
 
-If the value of `set` or `fade` is `auto`, then the visual will toggle its state away from the current state (that is, if it is currently visible, it will become invisible, and vice versa).
+```xml
+<perceive.animate_out duration="float:0.5" />
+```
+
+Fades out the "Perceive" background over `duration` seconds.
 
 ### Mood Matrix from *Dual Destinies*
 
 #### Background
 
 ```xml
-<mood_matrix.bg set="in|out|auto:auto" />
-<mood_matrix.bg fade="in|out|auto:auto" duration="float:0.5" />
+<mood_matrix.bg.set_visible value="bool:true" />
 ```
 
-Displays the Mood Matrix visuals behind the characters.
+Sets whether or not the Mood Matrix background is visible.
 
-This functions identically to the "Percieve" background - see above for more information.
+```xml
+<mood_matrix.bg.animate_in duration="float:0.5" />
+```
+
+Fades in the Mood Matrix background over `duration` seconds.
+
+```xml
+<mood_matrix.bg.animate_out duration="float:0.5" />
+```
+
+Fades out the Mood Matrix background over `duration` seconds.
 
 ```xml
 <mood_matrix.bg.set_time_scale value="float:1.0" />
 ```
 
-Sets the time scale for the background animation.
+Sets the time scale for the Mood Matrix background animation.
 
 A value of `1.0` is good for standard Mood Matrix segments, and a value of around `6.0` works well for overload segments.
 

@@ -8,22 +8,6 @@ func _ready():
 	frame = 0
 	evidence_holder.visible = false
 
-func _handle_evidence(args: Dictionary):
-	var action = args.get("action", "show")
-
-	if action == "show":
-		if not args.has("res"):
-			Utils.print_error("No resource provided for the evidence command")
-			return
-		show_evidence(args["res"])
-	elif action == "hide":
-		hide_evidence()
-	elif action == "hide_immediate":
-		evidence_holder.visible = false
-		visible = false
-	else:
-		Utils.print_error("Unknown action \"%s\" for the evidence command")
-
 func show_evidence(texture_path: String):
 	sound.play()
 	evidence_holder.texture = Utils.load_texture(texture_path)
@@ -32,10 +16,13 @@ func show_evidence(texture_path: String):
 	await animation_finished
 	evidence_holder.visible = true
 
-
 func hide_evidence():
 	evidence_holder.visible = false
 	sound.play()
 	play(&"out")
 	await animation_finished
+	visible = false
+
+func hide_evidence_immediate():
+	evidence_holder.visible = false
 	visible = false

@@ -14,22 +14,17 @@ var _in: bool = false
 
 func _ready():
 	background.position.x = 256
-	ScriptManager.register_handler("new_evidence", _handle_new_evidence)
+	ScriptManager.register_handler("new_evidence.animate_in", _handle_new_evidence_animate_in)
+	ScriptManager.register_handler("new_evidence.animate_out", _handle_new_evidence_animate_out)
 
+func _handle_new_evidence_animate_in(args: Dictionary):
+	title.text = args.get("title", "")
+	description.text = args.get("description", "")
+	thumbnail.texture = Utils.load_texture(args.get("res", ""))
+	animate_in()
 
-func _handle_new_evidence(args: Dictionary):
-	var slide = args.get("slide", "auto")
-
-	if slide == "auto":
-		slide = "out" if _in else "in"
-
-	if slide == "in":
-		title.text = args.get("title", "")
-		description.text = args.get("description", "")
-		thumbnail.texture = Utils.load_texture(args.get("res", ""))
-		animate_in()
-	elif slide == "out":
-		animate_out()
+func _handle_new_evidence_animate_out():
+	animate_out()
 
 func animate_in():
 	background.position.x = 256

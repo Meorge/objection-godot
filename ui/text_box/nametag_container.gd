@@ -4,10 +4,10 @@ extends MarginContainer
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	ScriptManager.register_handler("nametag", _handle_nametag)
+	ScriptManager.register_handler("nametag.set_text", _handle_nametag_set_text)
 	visible = false
 
-func _handle_nametag(args: Dictionary):
+func _handle_nametag_set_text(args: Dictionary):
 	if args.get("text", "") == "":
 		visible = false
 	else:

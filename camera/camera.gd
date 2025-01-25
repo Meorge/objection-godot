@@ -14,17 +14,17 @@ func _enter_tree():
     instance = self
     
 func _ready():
-    ScriptManager.register_handler("cut", _handle_cut)
-    ScriptManager.register_handler("pan", _handle_pan)
+    ScriptManager.register_handler("camera.cut", _handle_camera_cut)
+    ScriptManager.register_handler("camera.pan", _handle_camera_pan)
 
-func _handle_cut(args: Dictionary):
+func _handle_camera_cut(args: Dictionary):
     var dest = args.get("to", "center")
     global_position = CameraPosition.positions[dest].global_position
     if tw: tw.kill()
     current_position = dest
     cut_performed.emit(current_position)
 
-func _handle_pan(args: Dictionary):
+func _handle_camera_pan(args: Dictionary):
     var dest = args.get("to", "center")
 
     if tw:

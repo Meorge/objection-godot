@@ -12,29 +12,37 @@ extends Node2D
 }
 
 func _ready():
-    ScriptManager.register_handler("wide.gallery", _handle_gallery)
-    ScriptManager.register_handler("wide.character", _handle_court)
+    ScriptManager.register_handler("wide.gallery.set_visible", _handle_wide_gallery_set_visible)
+    ScriptManager.register_handler("wide.gallery.set_animated", _handle_wide_gallery_set_animated)
+    ScriptManager.register_handler("wide.set_sprite", _handle_wide_set_sprite)
 
-func _handle_gallery(args: Dictionary):
-    if args.has("set"):
-        var in_or_out: String = args["set"]
-        if not ["in", "out"].has(in_or_out):
-            Utils.print_error("Value \"%s\" is not valid for wide.gallery set argument (must be \"in\" or \"out\"")
-            return
-        _set_gallery_visibility(in_or_out == "in")
+func _handle_wide_gallery_set_visible(args: Dictionary):
+    var true_or_false: String = args["value"]
+    if not ["true", "false"].has(true_or_false):
+        Utils.print_error("Value \"%s\" is not valid for wide.gallery.set_visible (must be \"true\" or \"false\"")
+        return
+    _set_gallery_visibility(true_or_false == "true")
 
-    if args.has("animate"):
-        var true_or_false: String = args["animate"]
-        if not ["true", "false"].has(true_or_false):
-            Utils.print_error("Value \"%s\" is not valid for wide.gallery animate argument (must be \"true\" or \"false\")")
-            return
-        _set_gallery_animate(true_or_false == "true")
+func _handle_wide_gallery_set_animated(args: Dictionary):
+    var true_or_false: String = args["value"]
+    if not ["true", "false"].has(true_or_false):
+        Utils.print_error("Value \"%s\" is not valid for wide.gallery.set_animated (must be \"true\" or \"false\")")
+        return
+    _set_gallery_animate(true_or_false == "true")
             
 
-func _handle_court(args: Dictionary):
+func _handle_wide_set_sprite(args: Dictionary):
+    if "pos" not in args:
+        Utils.print_error("pos argument not provided for wide.set_sprite")
+        return
+
     var pos_str: String = args["pos"]  # TODO: print error if argument not present
     var sprite: Sprite2D = sprites[pos_str]  # TODO: print error if not found
-    sprite.texture = Utils.load_texture(args["res"])
+
+    if "res" in args and args["res"] != "":
+        sprite.texture = Utils.load_texture(args["res"])
+    else:
+        sprite.texture = null
     
     if pos_str == "witness":
         %Witness.update_position()

@@ -7,9 +7,12 @@ func _enter_tree():
 	instance = self
 
 func _ready():
-	ScriptManager.register_handler("sound", _handle_sound)
+	ScriptManager.register_handler("sound.play", _handle_sound_play)
 
-func _handle_sound(args: Dictionary):
+func _handle_sound_play(args: Dictionary):
+	if "res" not in args:
+		Utils.print_error("res argument not provided for sound.play command")
+		return
 	play_sound(args["res"])
 
 func play_sound(path: String):
