@@ -1,6 +1,6 @@
 [gd_scene load_steps=9 format=3 uid="uid://dcitg4aymosj"]
 
-[ext_resource type="Script" path="res://ui/witness_testimony/witness_testimony_intro.gd" id="1_33j3h"]
+[ext_resource type="Script" uid="uid://dldpipkvge774" path="res://ui/witness_testimony/witness_testimony_intro.gd" id="1_33j3h"]
 [ext_resource type="Material" uid="uid://c582bcoxkfs27" path="res://ui/witness_testimony/witness_testimony_shine.tres" id="2_13b8k"]
 [ext_resource type="FontFile" uid="uid://cgnqjv63f3x13" path="res://ui/witness_testimony/DFHeiA_0.ttc" id="2_qmbe2"]
 [ext_resource type="Shader" uid="uid://b5yu1yd058snr" path="res://ui/witness_testimony/witness_testimony_intro_shine.tres" id="2_xlbkf"]

@@ -1,7 +1,7 @@
 [gd_scene load_steps=12 format=3 uid="uid://ckkqqa1iuewni"]
 
 [ext_resource type="Texture2D" uid="uid://bc1bp3g7kqqyk" path="res://ui/mood_matrix/sprites/Circle.png" id="1_6s1px"]
-[ext_resource type="Script" path="res://ui/mood_matrix/mood_matrix_marker.gd" id="1_etjop"]
+[ext_resource type="Script" uid="uid://uplxmbn4m154" path="res://ui/mood_matrix/mood_matrix_marker.gd" id="1_etjop"]
 [ext_resource type="Texture2D" uid="uid://dqxg25qfu26hx" path="res://ui/mood_matrix/sprites/Happy.png" id="2_dhci8"]
 [ext_resource type="PackedScene" uid="uid://cca1lp414ac80" path="res://ui/mood_matrix/mm_pulse.tscn" id="2_ol065"]
 [ext_resource type="Texture2D" uid="uid://dhgxpfk6h2gl8" path="res://ui/mood_matrix/sprites/Pulse 2.png" id="3_rgx2h"]

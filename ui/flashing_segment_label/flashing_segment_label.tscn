@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://c3hlwg4rh13f1"]
 
 [ext_resource type="FontFile" uid="uid://c3q46b4hop76" path="res://ui/flashing_segment_label/DINCondensed-Bold.ttf" id="1_6l2g1"]
-[ext_resource type="Script" path="res://ui/flashing_segment_label/flashing_segment_label.gd" id="2_vn8sj"]
+[ext_resource type="Script" uid="uid://erexx1rrva5" path="res://ui/flashing_segment_label/flashing_segment_label.gd" id="2_vn8sj"]
 
 [node name="FlashingSegmentLabel" type="Label"]
 offset_left = 2.0

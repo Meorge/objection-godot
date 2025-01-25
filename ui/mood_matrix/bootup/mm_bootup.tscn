@@ -1,9 +1,9 @@
 [gd_scene load_steps=16 format=3 uid="uid://cwl2x01p7mvrk"]
 
-[ext_resource type="Script" path="res://ui/mood_matrix/bootup/mm_bootup.gd" id="1_1cegr"]
-[ext_resource type="Shader" path="res://ui/mood_matrix/bootup/mm_bootup.gdshader" id="1_idgji"]
+[ext_resource type="Script" uid="uid://ch42iumuh3o08" path="res://ui/mood_matrix/bootup/mm_bootup.gd" id="1_1cegr"]
+[ext_resource type="Shader" uid="uid://c0e7jgdkdhygh" path="res://ui/mood_matrix/bootup/mm_bootup.gdshader" id="1_idgji"]
 [ext_resource type="Texture2D" uid="uid://3d1iyvjk7pno" path="res://ui/mood_matrix/sprites/Intro Wipe Gradient.png" id="1_qmayk"]
-[ext_resource type="Script" path="res://ui/mood_matrix/bootup/bootup_completion_label.gd" id="3_p8ku6"]
+[ext_resource type="Script" uid="uid://cv5o4l2747f43" path="res://ui/mood_matrix/bootup/bootup_completion_label.gd" id="3_p8ku6"]
 [ext_resource type="FontFile" uid="uid://r6jfs8pm8uh8" path="res://ui/mood_matrix/fonts/DFKaGei-W6__DFPKaGei-W6__DFGKaGei-W6.ttc" id="3_vk4qf"]
 [ext_resource type="Texture2D" uid="uid://bjbkaicn0p5eu" path="res://ui/mood_matrix/sprites/Bootup Spinner.png" id="5_qjshp"]
 [ext_resource type="Texture2D" uid="uid://b4bey7v6kouu0" path="res://ui/mood_matrix/sprites/Logo Center.png" id="6_1650j"]
@@ -527,8 +527,8 @@ tracks/19/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_78ieq"]
 _data = {
-"RESET": SubResource("Animation_falt4"),
-"intro": SubResource("Animation_oahpg")
+&"RESET": SubResource("Animation_falt4"),
+&"intro": SubResource("Animation_oahpg")
 }
 
 [node name="MoodMatrixBootup" type="Control"]
@@ -653,7 +653,7 @@ texture = ExtResource("5_qjshp")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
-"": SubResource("AnimationLibrary_78ieq")
+&"": SubResource("AnimationLibrary_78ieq")
 }
 
 [node name="IntroSound" type="AudioStreamPlayer" parent="."]

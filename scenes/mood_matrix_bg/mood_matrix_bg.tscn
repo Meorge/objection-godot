@@ -1,8 +1,8 @@
 [gd_scene load_steps=10 format=3 uid="uid://btpnuaw6g48yu"]
 
-[ext_resource type="Script" path="res://scenes/mood_matrix_bg/mood_matrix_bg.gd" id="1_gpwuj"]
+[ext_resource type="Script" uid="uid://bg5lfs0sfuarw" path="res://scenes/mood_matrix_bg/mood_matrix_bg.gd" id="1_gpwuj"]
 [ext_resource type="Shader" uid="uid://ceskm3o6mjmlg" path="res://scenes/mood_matrix_bg/mood_matrix_bg.tres" id="1_o4shm"]
-[ext_resource type="Script" path="res://scenes/mood_matrix_bg/mm_lines.gd" id="2_2jkfc"]
+[ext_resource type="Script" uid="uid://bbgwdxhg32mp8" path="res://scenes/mood_matrix_bg/mm_lines.gd" id="2_2jkfc"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_v2m42"]
 shader = ExtResource("1_o4shm")
@@ -70,9 +70,9 @@ script = ExtResource("2_2jkfc")
 unique_name_in_owner = true
 z_index = -5
 amount = 32
-process_material = SubResource("ParticleProcessMaterial_yabjr")
 lifetime = 10.0
 preprocess = 10.0
 randomness = 1.0
 fixed_fps = 60
 local_coords = true
+process_material = SubResource("ParticleProcessMaterial_yabjr")

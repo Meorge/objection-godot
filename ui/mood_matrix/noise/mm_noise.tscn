@@ -1,8 +1,8 @@
 [gd_scene load_steps=9 format=3 uid="uid://cdt8wkw6ibt27"]
 
-[ext_resource type="Script" path="res://ui/mood_matrix/noise/mm_noise.gd" id="1_4350j"]
+[ext_resource type="Script" uid="uid://bohvu63f0827r" path="res://ui/mood_matrix/noise/mm_noise.gd" id="1_4350j"]
 [ext_resource type="FontFile" uid="uid://r6jfs8pm8uh8" path="res://ui/mood_matrix/fonts/DFKaGei-W6__DFPKaGei-W6__DFGKaGei-W6.ttc" id="1_s2ds4"]
-[ext_resource type="Script" path="res://ui/mood_matrix/noise/noise_line.gd" id="2_tqo6c"]
+[ext_resource type="Script" uid="uid://nswen8qsljjf" path="res://ui/mood_matrix/noise/noise_line.gd" id="2_tqo6c"]
 [ext_resource type="Texture2D" uid="uid://b2kw7ntgc5ptw" path="res://ui/mood_matrix/sprites/Small Noise.png" id="3_jmkfb"]
 [ext_resource type="Texture2D" uid="uid://vph7un5841xg" path="res://ui/mood_matrix/sprites/Large Noise.png" id="4_khwrv"]
 [ext_resource type="AudioStream" uid="uid://tw1d154ih5nf" path="res://ui/mood_matrix/sounds/noise/kokoro_noise_100_m.wav" id="7_2nofp"]
