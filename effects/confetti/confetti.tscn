@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://cjnflcxo4f6iq"]
 
 [ext_resource type="Texture2D" uid="uid://c5d7yolw0y5e0" path="res://effects/confetti/sprites/confetti-1.png" id="1_2nltx"]
-[ext_resource type="Script" path="res://effects/confetti/confetti.gd" id="2_23dyk"]
+[ext_resource type="Script" uid="uid://e6dwvjel8r1n" path="res://effects/confetti/confetti.gd" id="2_23dyk"]
 [ext_resource type="Texture2D" uid="uid://bgu0axbrluxeo" path="res://effects/confetti/sprites/confetti-2.png" id="3_1hqdw"]
 [ext_resource type="Texture2D" uid="uid://phy8oyeepae1" path="res://effects/confetti/sprites/confetti-3.png" id="4_g8h1t"]
 [ext_resource type="Texture2D" uid="uid://bdnnnj82wjr13" path="res://effects/confetti/sprites/confetti-4.png" id="5_tjfjj"]

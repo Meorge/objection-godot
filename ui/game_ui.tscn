@@ -1,32 +1,32 @@
 [gd_scene load_steps=32 format=3 uid="uid://cavxmwjgdsolv"]
 
-[ext_resource type="Script" path="res://ui/game_ui.gd" id="1_i61tc"]
+[ext_resource type="Script" uid="uid://ca23jlw3brvj" path="res://ui/game_ui.gd" id="1_i61tc"]
 [ext_resource type="Texture2D" uid="uid://b3x4aoo200rhg" path="res://ui/text_box/nametag_left.png" id="1_uinmu"]
 [ext_resource type="PackedScene" uid="uid://cdt8wkw6ibt27" path="res://ui/mood_matrix/noise/mm_noise.tscn" id="2_22ds2"]
 [ext_resource type="Texture2D" uid="uid://ckysnuyauklhy" path="res://ui/text_box/nametag_center.png" id="2_xtvfo"]
 [ext_resource type="PackedScene" uid="uid://ee5bf1t2kme1" path="res://ui/mood_matrix/shutdown/mm_shutdown.tscn" id="3_4ax0h"]
-[ext_resource type="Script" path="res://effects/shaker/control_shaker.gd" id="3_op4cl"]
+[ext_resource type="Script" uid="uid://c0634a8t2xntl" path="res://effects/shaker/control_shaker.gd" id="3_op4cl"]
 [ext_resource type="Texture2D" uid="uid://biw5x0gyerjj0" path="res://ui/text_box/nametag_right.png" id="3_vdgvt"]
 [ext_resource type="FontFile" uid="uid://faumch8kfu2c" path="res://ui/text_box/font/ace-name/ace-name.ttf" id="4_b14rb"]
-[ext_resource type="Script" path="res://ui/text_box/box_container.gd" id="5_6gk4r"]
+[ext_resource type="Script" uid="uid://dpqf0cybqssbw" path="res://ui/text_box/box_container.gd" id="5_6gk4r"]
 [ext_resource type="Texture2D" uid="uid://2xbilq1bbwrb" path="res://ui/text_box/mainbox.png" id="5_r7fiw"]
 [ext_resource type="FontFile" uid="uid://c0v5yww5rglpk" path="res://ui/text_box/font/igiari-cyrillic/igiari-cyrillic.ttf" id="6_ggym5"]
-[ext_resource type="Script" path="res://ui/text_box/nametag_container.gd" id="7_3rn5j"]
+[ext_resource type="Script" uid="uid://bpt8a16polm6p" path="res://ui/text_box/nametag_container.gd" id="7_3rn5j"]
 [ext_resource type="PackedScene" uid="uid://c3hlwg4rh13f1" path="res://ui/flashing_segment_label/flashing_segment_label.tscn" id="11_2501h"]
 [ext_resource type="PackedScene" uid="uid://dcitg4aymosj" path="res://ui/witness_testimony/witness_testimony_intro.tscn" id="12_0ob4r"]
-[ext_resource type="Script" path="res://ui/evidence/evidence_handler.gd" id="13_atwk1"]
+[ext_resource type="Script" uid="uid://c16luqchb24gw" path="res://ui/evidence/evidence_handler.gd" id="13_atwk1"]
 [ext_resource type="SpriteFrames" path="res://ui/evidence/evidence-right/evidence-right.tres" id="15_eocud"]
 [ext_resource type="Texture2D" uid="uid://beaqrjyvyadas" path="res://icon.svg" id="16_2yr5j"]
-[ext_resource type="Script" path="res://ui/evidence/evidence_box.gd" id="16_v147p"]
+[ext_resource type="Script" uid="uid://cho5omt3ky2hs" path="res://ui/evidence/evidence_box.gd" id="16_v147p"]
 [ext_resource type="SpriteFrames" path="res://ui/evidence/evidence-left/evidence-left.tres" id="17_nsfoq"]
 [ext_resource type="AudioStream" uid="uid://d23tyxxvjexw5" path="res://audio/sound/sfx-evidenceshoop.wav" id="18_khjmp"]
 [ext_resource type="PackedScene" uid="uid://btfayeijnow7g" path="res://ui/mood_matrix/mood_matrix.tscn" id="20_w2rvm"]
-[ext_resource type="Script" path="res://effects/overlay_flash.gd" id="25_j8y13"]
+[ext_resource type="Script" uid="uid://da23bga5fbvcr" path="res://effects/overlay_flash.gd" id="25_j8y13"]
 [ext_resource type="PackedScene" uid="uid://4uljkfi84i5m" path="res://ui/new_evidence/new_evidence.tscn" id="25_y6iq0"]
-[ext_resource type="Script" path="res://ui/exclamations/exclamation_bubble.gd" id="26_dif48"]
-[ext_resource type="Script" path="res://ui/next_arrow/arrow.gd" id="26_mjk5q"]
+[ext_resource type="Script" uid="uid://dygkb3ocnsddv" path="res://ui/exclamations/exclamation_bubble.gd" id="26_dif48"]
+[ext_resource type="Script" uid="uid://c6ol6ykljlaw0" path="res://ui/next_arrow/arrow.gd" id="26_mjk5q"]
 [ext_resource type="Texture2D" uid="uid://cqslgdnxhwf3m" path="res://ui/next_arrow/next_arrow.png" id="26_tejqb"]
-[ext_resource type="Script" path="res://ui/verdict/verdict.gd" id="28_32ipn"]
+[ext_resource type="Script" uid="uid://duuvd1vttg3uv" path="res://ui/verdict/verdict.gd" id="28_32ipn"]
 [ext_resource type="PackedScene" uid="uid://dpskq5d2xahc7" path="res://ui/verdict/verdict_single_letter_label.tscn" id="29_xl8j8"]
 
 [sub_resource type="Animation" id="Animation_j8fsi"]
@@ -63,8 +63,8 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_eecjn"]
 _data = {
-"RESET": SubResource("Animation_j8fsi"),
-"arrow": SubResource("Animation_248la")
+&"RESET": SubResource("Animation_j8fsi"),
+&"arrow": SubResource("Animation_248la")
 }
 
 [node name="GameUI" type="CanvasLayer"]
@@ -235,7 +235,7 @@ texture = ExtResource("26_tejqb")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Arrow"]
 libraries = {
-"": SubResource("AnimationLibrary_eecjn")
+&"": SubResource("AnimationLibrary_eecjn")
 }
 autoplay = "arrow"
 

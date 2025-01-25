@@ -1,6 +1,6 @@
 [gd_scene load_steps=26 format=3 uid="uid://btfayeijnow7g"]
 
-[ext_resource type="Script" path="res://ui/mood_matrix/mood_matrix.gd" id="1_1b2ix"]
+[ext_resource type="Script" uid="uid://pm26s186qitn" path="res://ui/mood_matrix/mood_matrix.gd" id="1_1b2ix"]
 [ext_resource type="PackedScene" uid="uid://ckkqqa1iuewni" path="res://ui/mood_matrix/mood_matrix_marker.tscn" id="2_0h0un"]
 [ext_resource type="Shader" uid="uid://c8s5w0sa8imat" path="res://ui/mood_matrix/mood_matrix_corner_squares.tres" id="2_jligu"]
 [ext_resource type="Texture2D" uid="uid://cluu566coe6d3" path="res://ui/mood_matrix/sprites/Tiled Grid Background.png" id="2_rgoqv"]
@@ -9,7 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://ccucfiqev8sqs" path="res://ui/mood_matrix/big_ring/big_ring.tscn" id="4_ycctq"]
 [ext_resource type="Resource" uid="uid://c48rkmj8y5dab" path="res://ui/mood_matrix/mm_happy.tres" id="5_gnfxl"]
 [ext_resource type="Resource" uid="uid://c1d3gtg13meu2" path="res://ui/mood_matrix/mm_angry.tres" id="6_xxsyf"]
-[ext_resource type="Script" path="res://ui/mood_matrix/overload_tint.gd" id="7_buprc"]
+[ext_resource type="Script" uid="uid://cxfedudbow23p" path="res://ui/mood_matrix/overload_tint.gd" id="7_buprc"]
 [ext_resource type="Resource" uid="uid://bqx37qeyclk1" path="res://ui/mood_matrix/mm_sad.tres" id="7_d3mif"]
 [ext_resource type="Resource" uid="uid://c3me15y0chlmy" path="res://ui/mood_matrix/mm_surprised.tres" id="8_1beay"]
 [ext_resource type="Texture2D" uid="uid://xe04jct48gse" path="res://ui/mood_matrix/sprites/Pulse 3.png" id="10_cy4d2"]
@@ -492,8 +492,8 @@ tracks/20/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_hrs3b"]
 _data = {
-"RESET": SubResource("Animation_07ng6"),
-"markers_in": SubResource("Animation_4r01x")
+&"RESET": SubResource("Animation_07ng6"),
+&"markers_in": SubResource("Animation_4r01x")
 }
 
 [node name="MoodMatrix" type="Control"]
@@ -784,7 +784,7 @@ grow_vertical = 2
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
-"": SubResource("AnimationLibrary_hrs3b")
+&"": SubResource("AnimationLibrary_hrs3b")
 }
 
 [node name="BootupSound" type="AudioStreamPlayer" parent="."]

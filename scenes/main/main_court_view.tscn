@@ -1,10 +1,10 @@
 [gd_scene load_steps=7 format=3 uid="uid://bf1hsaiiken00"]
 
 [ext_resource type="Texture2D" uid="uid://7hf18s3ktxh5" path="res://scenes/main/bg_main.png" id="1_k8f7i"]
-[ext_resource type="Script" path="res://scenes/main/foreground_parallax_effect.gd" id="3_g0edo"]
+[ext_resource type="Script" uid="uid://krlb2pf6iqxl" path="res://scenes/main/foreground_parallax_effect.gd" id="3_g0edo"]
 [ext_resource type="Texture2D" uid="uid://3tv08jnwudpw" path="res://scenes/main/pr_bench.png" id="3_x5fvn"]
-[ext_resource type="Script" path="res://camera/camera_position.gd" id="4_ikhnx"]
-[ext_resource type="Script" path="res://characters/character_sprite.gd" id="5_d7q3c"]
+[ext_resource type="Script" uid="uid://dfievmc3jlsp0" path="res://camera/camera_position.gd" id="4_ikhnx"]
+[ext_resource type="Script" uid="uid://orssj05snx0v" path="res://characters/character_sprite.gd" id="5_d7q3c"]
 [ext_resource type="Texture2D" uid="uid://c3kfwsomlhq40" path="res://scenes/main/witness_stand.png" id="6_g0uw8"]
 
 [node name="MainCourtView" type="Node2D"]

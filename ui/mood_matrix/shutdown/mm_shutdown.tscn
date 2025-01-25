@@ -1,7 +1,7 @@
 [gd_scene load_steps=12 format=3 uid="uid://ee5bf1t2kme1"]
 
 [ext_resource type="Texture2D" uid="uid://b4bey7v6kouu0" path="res://ui/mood_matrix/sprites/Logo Center.png" id="1_uae7a"]
-[ext_resource type="Script" path="res://ui/mood_matrix/shutdown/mm_shutdown.gd" id="1_vf51q"]
+[ext_resource type="Script" uid="uid://bn6312q7q7h3q" path="res://ui/mood_matrix/shutdown/mm_shutdown.gd" id="1_vf51q"]
 [ext_resource type="Texture2D" uid="uid://oyajbv5bc6p3" path="res://ui/mood_matrix/sprites/Logo Inner Ring.png" id="2_3rhdr"]
 [ext_resource type="Texture2D" uid="uid://m6e0tbel0t08" path="res://ui/mood_matrix/sprites/Logo Outer Ring.png" id="3_b088u"]
 [ext_resource type="Texture2D" uid="uid://bc1bp3g7kqqyk" path="res://ui/mood_matrix/sprites/Circle.png" id="4_vp8km"]
@@ -248,8 +248,8 @@ tracks/9/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_axbex"]
 _data = {
-"RESET": SubResource("Animation_j5ced"),
-"shutdown": SubResource("Animation_d4in5")
+&"RESET": SubResource("Animation_j5ced"),
+&"shutdown": SubResource("Animation_d4in5")
 }
 
 [sub_resource type="FontVariation" id="FontVariation_s1to6"]
@@ -426,7 +426,7 @@ expand_mode = 1
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 unique_name_in_owner = true
 libraries = {
-"": SubResource("AnimationLibrary_axbex")
+&"": SubResource("AnimationLibrary_axbex")
 }
 
 [node name="ShutdownSound" type="AudioStreamPlayer" parent="."]

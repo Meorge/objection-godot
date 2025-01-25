@@ -1,12 +1,12 @@
 [gd_scene load_steps=10 format=3 uid="uid://bc3d7k6q7nxe3"]
 
-[ext_resource type="Script" path="res://scenes/wide/wide_view.gd" id="1_5cbxd"]
+[ext_resource type="Script" uid="uid://bepoengfulbke" path="res://scenes/wide/wide_view.gd" id="1_5cbxd"]
 [ext_resource type="Texture2D" uid="uid://ccyjfwo54rwu" path="res://scenes/wide/bg_court.png" id="1_5ps0i"]
-[ext_resource type="Script" path="res://camera/camera_position.gd" id="2_c4yxc"]
+[ext_resource type="Script" uid="uid://dfievmc3jlsp0" path="res://camera/camera_position.gd" id="2_c4yxc"]
 [ext_resource type="Texture2D" uid="uid://cpfd7f3qiarqv" path="res://scenes/wide/gallery/gallery-1.png" id="3_4npyy"]
 [ext_resource type="Texture2D" uid="uid://xosveweo8coc" path="res://scenes/wide/gallery/gallery-2.png" id="4_ha585"]
 [ext_resource type="Texture2D" uid="uid://ba825viv013a1" path="res://scenes/wide/gallery/gallery-3.png" id="5_334u0"]
-[ext_resource type="Script" path="res://scenes/wide/anchor_by_bottom.gd" id="11_erul1"]
+[ext_resource type="Script" uid="uid://by35sxke8bmlq" path="res://scenes/wide/anchor_by_bottom.gd" id="11_erul1"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_2bdm2"]
 animations = [{

@@ -1,9 +1,9 @@
 [gd_scene load_steps=5 format=3 uid="uid://b2fk3m2tmi0xu"]
 
 [ext_resource type="Texture2D" uid="uid://c831lnbc0hn5q" path="res://scenes/zoom/bg_action.png" id="1_enva1"]
-[ext_resource type="Script" path="res://scenes/zoom/action_lines_mover.gd" id="2_i70j5"]
-[ext_resource type="Script" path="res://camera/camera_position.gd" id="3_iv0qa"]
-[ext_resource type="Script" path="res://characters/character_sprite.gd" id="3_sj0pu"]
+[ext_resource type="Script" uid="uid://xu320vy122i0" path="res://scenes/zoom/action_lines_mover.gd" id="2_i70j5"]
+[ext_resource type="Script" uid="uid://dfievmc3jlsp0" path="res://camera/camera_position.gd" id="3_iv0qa"]
+[ext_resource type="Script" uid="uid://orssj05snx0v" path="res://characters/character_sprite.gd" id="3_sj0pu"]
 
 [node name="ActionLinesView" type="Node2D"]
 

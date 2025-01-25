@@ -1,12 +1,12 @@
 [gd_scene load_steps=9 format=3 uid="uid://dmdrdriv4rjlv"]
 
-[ext_resource type="Script" path="res://scenes/gavel_slam/gavel_slam.gd" id="1_6fkld"]
+[ext_resource type="Script" uid="uid://bg1722ic87n57" path="res://scenes/gavel_slam/gavel_slam.gd" id="1_6fkld"]
 [ext_resource type="Texture2D" uid="uid://3s3i112aph57" path="res://scenes/gavel_slam/gavel_slam_bg.png" id="1_te6jw"]
 [ext_resource type="Texture2D" uid="uid://cjaovmpk06q0v" path="res://scenes/gavel_slam/gavel_slam_block.png" id="2_ye8ve"]
 [ext_resource type="Texture2D" uid="uid://cgug3qxv1am31" path="res://scenes/gavel_slam/gavel_slam_gavel_1.png" id="3_i208c"]
 [ext_resource type="Texture2D" uid="uid://cl17ehvn2l6vw" path="res://scenes/gavel_slam/gavel_slam_gavel_2.png" id="4_j75wo"]
 [ext_resource type="Texture2D" uid="uid://ca5vobni5qjai" path="res://scenes/gavel_slam/gavel_slam_gavel_3.png" id="5_f8xpv"]
-[ext_resource type="Script" path="res://camera/camera_position.gd" id="6_ep5cf"]
+[ext_resource type="Script" uid="uid://dfievmc3jlsp0" path="res://camera/camera_position.gd" id="6_ep5cf"]
 [ext_resource type="AudioStream" uid="uid://17s2bhyrx7fq" path="res://audio/sound/sfx-gavel.wav" id="8_2pawu"]
 
 [node name="GavelSlamView" type="Node2D" node_paths=PackedStringArray("frames")]

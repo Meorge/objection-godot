@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://dhmhsu0khyno4"]
 
-[ext_resource type="Script" path="res://effects/confetti/confetti_container.gd" id="1_fu70i"]
+[ext_resource type="Script" uid="uid://b6rl8h6ouagnr" path="res://effects/confetti/confetti_container.gd" id="1_fu70i"]
 [ext_resource type="PackedScene" uid="uid://cjnflcxo4f6iq" path="res://effects/confetti/confetti.tscn" id="2_mot1p"]
 
 [node name="ConfettiContainer" type="Node2D"]
