@@ -6,7 +6,7 @@
 This project reads an XML-like file (currently with a hard-coded name, but will be changed in the future) and plays it out as an *Ace Attorney* scene without any user input, then exits automatically.
 For script examples, see the `test_*.xml` files.
 
-This project currently uses Godot 4.3.
+This project currently uses Godot 4.4-beta.
 
 ## Usage
 
