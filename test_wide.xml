@@ -1,60 +1,62 @@
 <!-- Gallery animation test -->
-<cut to="wide"/>
-<wide.gallery set="out"/>
+<camera.cut to="wide"/>
+<wide.gallery.set_visible value="false"/>
 Empty
-<wait secs="1.0"/>
+<wait duration="1.0"/>
 <play/>
 
 <!-- Gallery animation test -->
-<cut to="wide"/>
-<wide.gallery set="in" animate="true"/>
+<camera.cut to="wide"/>
+<wide.gallery.set_visible value="true"/>
+<wide.gallery.set_animated value="true"/>
 Gallery in
-<wait secs="1.0"/>
+<wait duration="1.0"/>
 <play/>
 
 <!-- Remove gallery -->
-<cut to="wide"/>
-<wide.gallery set="out"/>
+<camera.cut to="wide"/>
+<wide.gallery.set_visible value="false"/>
 Gallery out
-<wait secs="1.0"/>
+<wait duration="1.0"/>
 <play/>
 
 <!-- Gallery in, but no animation -->
-<cut to="wide"/>
-<wide.gallery set="in" animate="false"/>
+<camera.cut to="wide"/>
+<wide.gallery.set_visible value="true"/>
+<wide.gallery.set_animated value="false"/>
 Gallery in (no animation)
-<wait secs="1.0"/>
+<wait duration="1.0"/>
 <play/>
 
 <!-- Prosecution and defense in -->
-<cut to="wide"/>
-<wide.character pos="prosecution" res="res://scenes/wide/attorneys/edgeworth.png"/>
-<wide.character pos="defense" res="res://scenes/wide/attorneys/phoenix.png"/>
+<camera.cut to="wide"/>
+<wide.set_sprite pos="prosecution" res="res://scenes/wide/attorneys/edgeworth.png"/>
+<wide.set_sprite pos="defense" res="res://scenes/wide/attorneys/phoenix.png"/>
 Prosecution and defense in
-<wait secs="1.0"/>
+<wait duration="1.0"/>
 <play/>
 
 <!-- Different prosecution and defense in -->
-<cut to="wide"/>
-<wide.character pos="prosecution" res="res://scenes/wide/attorneys/karma.png"/>
-<wide.character pos="defense" res="res://scenes/wide/attorneys/mia.png"/>
+<camera.cut to="wide"/>
+<wide.set_sprite pos="prosecution" res="res://scenes/wide/attorneys/karma.png"/>
+<wide.set_sprite pos="defense" res="res://scenes/wide/attorneys/mia.png"/>
 Different prosecution and defense in
-<wait secs="1.0"/>
+<wait duration="1.0"/>
 <play/>
 
 <!-- Witnesses in -->
-<cut to="wide"/>
+<camera.cut to="wide"/>
 Various witnesses
-<wide.character pos="witness" res="res://scenes/wide/witnesses/acro.png"/>
-<wait secs="0.5"/>
-<wide.character pos="witness" res="res://scenes/wide/witnesses/april.png"/>
-<wait secs="0.5"/>
-<wide.character pos="witness" res="res://scenes/wide/witnesses/bikini.png"/>
-<wait secs="0.5"/>
-<wide.character pos="witness" res="res://scenes/wide/witnesses/ini.png"/>
-<wait secs="0.5"/>
-<wide.character pos="witness" res="res://scenes/wide/witnesses/morgan.png"/>
-<wait secs="0.5"/>
-<wide.character pos="witness" res="res://scenes/wide/witnesses/wellington.png"/>
-<wait secs="1.0"/>
+<wide.set_sprite pos="witness" res="res://scenes/wide/witnesses/acro.png"/>
+<wait duration="0.5"/>
+<wide.set_sprite pos="witness" res="res://scenes/wide/witnesses/april.png"/>
+<wait duration="0.5"/>
+<wide.set_sprite pos="witness" res="res://scenes/wide/witnesses/bikini.png"/>
+<wait duration="0.5"/>
+<wide.set_sprite pos="witness" res="res://scenes/wide/witnesses/ini.png"/>
+<wait duration="0.5"/>
+<wide.set_sprite pos="witness" res="res://scenes/wide/witnesses/morgan.png"/>
+<wait duration="0.5"/>
+<wide.set_sprite pos="witness" res="res://scenes/wide/witnesses/wellington.png"/>
+<wait duration="1.0"/>
 <play/>

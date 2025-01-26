@@ -14,10 +14,10 @@ extends Node
 # - gavel <frame>
 
 var handlers := {
-	"blip": _handle_blip,
-	"sprite": _handle_sprite,
+	"blip.set": _handle_blip_set,
+	"sprite.set": _handle_sprite_set,
 	"wait": _handle_wait,
-	"speed": _handle_speed,
+	"set_text_speed": _handle_set_text_speed,
 }
 
 static var instance: ScriptManager
@@ -121,7 +121,7 @@ func _handle_command(text_bits: Array[Dictionary]):
 			await handler.call(bit["args"])
 
 
-func _handle_blip(args: Dictionary):
+func _handle_blip_set(args: Dictionary):
 	match args["type"]:
 		"male":
 			VoiceBlipPlayer.instance.start_blips(VoiceBlipPlayer.Gender.MALE)
@@ -135,7 +135,7 @@ func _handle_blip(args: Dictionary):
 			Utils.print_error("Invalid blip type \"%s\" provided" % args["type"])
 
 
-func _handle_sprite(args: Dictionary):
+func _handle_sprite_set(args: Dictionary):
 	var sprite_to_change: CharacterSpriteContainer = CharacterSpriteContainer.sprite_containers[args["pos"]]
 
 	if args.has("res"):
@@ -145,15 +145,14 @@ func _handle_sprite(args: Dictionary):
 	sprite_to_change.play()
 
 func _handle_wait(args: Dictionary):
-	await get_tree().create_timer(float(args["secs"])).timeout
+	if "duration" not in args:
+		Utils.print_error("duration not provided for wait")
+		return
+	await get_tree().create_timer(float(args["duration"])).timeout
 
-
-func _handle_speed(args: Dictionary):
-	var new_val: float = TEXT_SPEED_DEFAULT
-	if args.get("val", TEXT_SPEED_DEFAULT) != "default":
-		new_val = float(args.get("val", TEXT_SPEED_DEFAULT))
-	text_speed = new_val
-
+func _handle_set_text_speed(args: Dictionary):
+	var new_speed := float(args.get("value", "1.0")) * TEXT_SPEED_DEFAULT
+	text_speed = new_speed
 
 static func parse_xml_str(xml_str: String) -> Array[Dictionary]:
 	var p := XMLParser.new()

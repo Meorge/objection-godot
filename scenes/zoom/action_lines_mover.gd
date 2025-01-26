@@ -6,9 +6,9 @@ var direction: int = LEFT
 enum { LEFT = -1, RIGHT = 1 }
 
 func _ready():
-	ScriptManager.register_handler("actionlines", _handle_actionlines)
+	ScriptManager.register_handler("action_lines.set_direction", _handle_action_lines_set_direction)
 
-func _handle_actionlines(args: Dictionary):
+func _handle_action_lines_set_direction(args: Dictionary):
 	match args.get("dir", "left"):
 		"left":
 			direction = LEFT

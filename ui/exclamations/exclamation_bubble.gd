@@ -17,9 +17,9 @@ var _state: int = STATE_WAITING
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	ScriptManager.register_handler("bubble", _handle_bubble)
+	ScriptManager.register_handler("bubble.animate", _handle_bubble_animate)
 
-func _handle_bubble(args: Dictionary):
+func _handle_bubble_animate(args: Dictionary):
 	var type = args.get("type", "objection")
 	magnitude = float(args.get("magnitude", "4.0"))
 

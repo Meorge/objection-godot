@@ -5,18 +5,15 @@ extends Node2D
 var _flakes: Array[ConfettiFlake] = []
 
 func _ready():
-    ScriptManager.register_handler("confetti", _handle_confetti)
+    ScriptManager.register_handler("confetti.start", _handle_confetti_start)
+    ScriptManager.register_handler("confetti.stop", _handle_confetti_stop)
 
-func _handle_confetti(args: Dictionary):
-    var action: String = args.get("action", "toggle")
+func _handle_confetti_start(args: Dictionary):
+    var num_flakes: int = int(args.get("count", "31"))
+    spawn_confetti(num_flakes)
 
-    if action == "start":
-        var num_flakes: int = int(args.get("count", "31"))
-        spawn_confetti(num_flakes)
-    elif action == "stop":
-        delete_confetti()
-    else:
-        Utils.print_error("Action \"%s\" is not valid for confetti command (options are \"start\" and \"stop\")" % action)
+func _handle_confetti_stop(_args: Dictionary):
+    delete_confetti()
 
 func delete_confetti():
     for f in _flakes:

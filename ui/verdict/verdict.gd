@@ -17,9 +17,9 @@ const GROUP_BY_DICT = {
 }
 
 func _ready():
-	ScriptManager.register_handler("verdict", _handle_verdict)
+	ScriptManager.register_handler("verdict.animate", _handle_verdict_animate)
 
-func _handle_verdict(args: Dictionary):
+func _handle_verdict_animate(args: Dictionary):
 	var text = args["text"]
 	var group_by_str = args.get("group_by", "letter")
 

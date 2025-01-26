@@ -1,41 +1,41 @@
-<sprite pos="center" res="res://characters/larry/larry.tres" anim="thinking-idle" />
-<box set="out"/>
-<wait secs="3.0" />
+<sprite.set pos="center" res="res://characters/larry/larry.tres" anim="thinking-idle" />
+<box.set_visible value="false"/>
+<wait duration="3.0" />
 
 <!-- Using main animate command -->
 <mood_matrix.noise.animate from="100" to="20" sound_code="100_s" />
 
-<wait secs="1.0" />
+<wait duration="1.0" />
 
 <!-- Manually setting level, and animating in and out -->
 <mood_matrix.noise.set_level level="50" />
 <mood_matrix.noise.animate_in />
-<wait secs="2.0" />
+<wait duration="2.0" />
 <mood_matrix.noise.animate_out />
 
-<wait secs="1.0" />
+<wait duration="1.0" />
 
 <!-- Setting visibility without animation -->
 <mood_matrix.noise.set_visible value="true" />
-<wait secs="1.0" />
+<wait duration="1.0" />
 <mood_matrix.noise.set_visible value="false" />
 
-<wait secs="1.0" />
+<wait duration="1.0" />
 
 <!-- Calling noise level animation manually -->
 <mood_matrix.noise.set_visible value="true" />
-<wait secs="1.0" />
+<wait duration="1.0" />
 <mood_matrix.noise.animate_level to="60" />
-<wait secs="1.0" />
+<wait duration="1.0" />
 <mood_matrix.noise.set_visible value="false" />
 
-<wait secs="1.0" />
+<wait duration="1.0" />
 
 <!-- Animating to zero -->
 <mood_matrix.noise.animate from="100" to="0" sound_code="100_0" />
 
 
-<wait secs="1.0" />
+<wait duration="1.0" />
 
 <!-- Setting noise level label -->
 <mood_matrix.noise.set_label text="NONSENSE LEVEL" />

@@ -1,5 +1,5 @@
-<sprite pos="center" res="res://characters/larry/larry.tres" anim="thinking-idle" />
-<mood_matrix.bg set="in"/>
-<box set="out"/>
-<wait secs="8.0" />
+<sprite.set pos="center" res="res://characters/larry/larry.tres" anim="thinking-idle" />
+<mood_matrix.bg.set_visible value="true"/>
+<box.set_visible value="false"/>
+<wait duration="8.0" />
 <play />

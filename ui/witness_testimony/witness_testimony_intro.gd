@@ -32,9 +32,9 @@ func _ready():
 	bottom_label.visible = false
 	set_shine_offset(10.0)
 
-	ScriptManager.register_handler("bigtext", _handle_big_text)
+	ScriptManager.register_handler("big_title.play", _handle_big_title_play)
 
-func _handle_big_text(args: Dictionary):
+func _handle_big_title_play(args: Dictionary):
 	var color := Utils.get_color_from_string(args.get("color", "aa-witintro-blue"), Color.BLACK)
 
 	var dir = {

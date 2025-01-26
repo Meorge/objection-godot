@@ -8,9 +8,9 @@ var delay_between_slams: float = 0.2
 var finish_wait_time: float = 0.4
 
 func _ready():
-	ScriptManager.register_handler("gavel", _handle_gavel)
+	ScriptManager.register_handler("gavel.animate", _handle_gavel_animate)
 
-func _handle_gavel(args: Dictionary):
+func _handle_gavel_animate(args: Dictionary):
 	delay_between_slams = float(args.get("between", "0.17"))
 	finish_wait_time = float(args.get("after", "0.766"))
 	await play_slams(int(args.get("num", "1")))
