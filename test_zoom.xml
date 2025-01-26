@@ -1,30 +1,30 @@
-<cut to="zoom"/>
-<box set="in"/>
-<nametag text="Phoenix"/>
-<blip type="male"/>
-<sprite pos="zoom" res="res://characters/phoenix/phoenix.tres" anim="zoom-talk"/>
+<camera.cut to="zoom"/>
+<box.set_visible value="true"/>
+<nametag.set_text text="Phoenix"/>
+<blip.set type="male"/>
+<sprite.set pos="zoom" res="res://characters/phoenix/phoenix.tres" anim="zoom-talk"/>
 YOU HAVE UNO IT CAME FREE WITH YOUR XBOX
-<sprite pos="zoom" anim="zoom-idle" />
-<arrow />
-<wait secs="4.0"/>
-<arrow action="hide"/>
+<sprite.set pos="zoom" anim="zoom-idle" />
+<arrow.set_visible/>
+<wait duration="4.0"/>
+<arrow.set_visible value="false"/>
 <play/>
 
-<box set="out"/>
-<cut to="gavel"/>
-<gavel num="3"/>
-<sprite pos="zoom" res="res://characters/edgeworth/edgeworth.tres" anim="zoom-idle"/>
-<actionlines dir="right"/>
-<cut to="zoom"/>
-<box set="in"/>
-<wait secs="0.5"/>
-<sprite pos="zoom" anim="zoom-talk"/>
-<nametag text="Edgeworth"/>
-<blip type="male"/>
+<box.set_visible value="false"/>
+<camera.cut to="gavel"/>
+<gavel.animate num="3"/>
+<sprite.set pos="zoom" res="res://characters/edgeworth/edgeworth.tres" anim="zoom-idle"/>
+<action_lines.set_direction value="right"/>
+<camera.cut to="zoom"/>
+<box.set_visible value="true"/>
+<wait duration="0.5"/>
+<sprite.set pos="zoom" anim="zoom-talk"/>
+<nametag.set_text text="Edgeworth"/>
+<blip.set type="male"/>
 I DONT HAVE UNOOOOOOOOO
-<sprite pos="zoom" anim="zoom-idle"/>
-<arrow/>
-<wait secs="2.0"/>
-<box set="out"/>
-<arrow action="hide"/>
+<sprite.set pos="zoom" anim="zoom-idle"/>
+<arrow.set_visible/>
+<wait duration="2.0"/>
+<box.set_visible value="false"/>
+<arrow.set_visible value="false"/>
 <play/>

@@ -1,32 +1,32 @@
-<cut to="left"/>
-<box set="in"/>
-<nametag text="Phoenix"/>
-<blip type="male"/>
-<sprite pos="left" res="res://characters/phoenix/phoenix.tres" anim="thinking-talk"/>
+<camera.cut to="left"/>
+<box.set_visible value="true"/>
+<nametag.set_text text="Phoenix"/>
+<blip.set type="male"/>
+<sprite.set pos="left" res="res://characters/phoenix/phoenix.tres" anim="thinking-talk"/>
 I like to eat pineapple on my pizza.
-<sprite pos="left" anim="thinking-idle" />
-<arrow />
-<wait secs="4.0"/>
-<arrow action="hide"/>
+<sprite.set pos="left" anim="thinking-idle" />
+<arrow.set_visible/>
+<wait duration="4.0"/>
+<arrow.set_visible value="false"/>
 <play/>
 
-<box set="out"/>
-<cut to="judge"/>
-<nametag text="Judge"/>
-<sprite pos="judge" res="res://characters/judge/judge.tres" anim="normal-idle"/>
-<box set="in"/>
-<sprite pos="judge" anim="normal-talk"/>
-<blip type="male"/>
+<box.set_visible value="false"/>
+<camera.cut to="judge"/>
+<nametag.set_text text="Judge"/>
+<sprite.set pos="judge" res="res://characters/judge/judge.tres" anim="normal-idle"/>
+<box.set_visible value="true"/>
+<sprite.set pos="judge" anim="normal-talk"/>
+<blip.set type="male"/>
 I hereby declare you...
-<sprite pos="judge" anim="normal-idle"/>
-<arrow/>
-<wait secs="2.0"/>
-<box set="out"/>
-<arrow action="hide"/>
-<verdict text="Very Cringe" group_by="word" font_color="red" font_outline_color="blue"/>
-<wait secs="3.0"/>
-<verdict text=""/>
-<wait secs="2.0"/>
-<verdict text="Just Kidding" group_by="letter"/>
-<wait secs="5.0"/>
+<sprite.set pos="judge" anim="normal-idle"/>
+<arrow.set_visible/>
+<wait duration="2.0"/>
+<box.set_visible value="false"/>
+<arrow.set_visible value="false"/>
+<verdict.animate text="Very Cringe" group_by="word" font_color="red" font_outline_color="blue"/>
+<wait duration="3.0"/>
+<verdict.animate text=""/>
+<wait duration="2.0"/>
+<verdict.animate text="Just Kidding" group_by="letter"/>
+<wait duration="5.0"/>
 <play/>

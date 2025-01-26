@@ -1,30 +1,30 @@
-<sprite pos="center" res="res://characters/larry/larry.tres" anim="thinking-idle" />
-<nametag text="" />
-<box set="out" />
-<wait secs="1.0"/>
-<bigtext top="Larry" bottom="Tries Drugs" color="#17B242" dir="lr" />
-<wait secs="4.0"/>
-<nametag text="Butz" />
-<box anim="in" />
-<wait secs="0.3"/>
-<bg fade="in" duration="3.0" color="red"/>
-<music res="res://audio/music/pwr/cross-moderato.mp3"/>
-<segment_title text="Drugs"/>
-<sprite pos="center" anim="scratch-talk" />
-<blip type="male"/>
-<speed val="20"/>Aw,<sprite pos="center" anim="scratch-idle" /><wait secs="0.5"/><sprite pos="center" anim="scratch-talk" /> man,<sprite pos="center" anim="scratch-idle" /><wait secs="0.5"/><sprite pos="center" anim="scratch-talk" /> these edibles ain't sh--
-<sprite pos="center" anim="sweating" />
-<blip type="none"/>
-<music action="stop"/>
-<box set="out"/>
+<sprite.set pos="center" res="res://characters/larry/larry.tres" anim="thinking-idle" />
+<nametag.set_text text="" />
+<box.set_visible value="false" />
+<wait duration="1.0"/>
+<big_title.play top="Larry" bottom="Tries Drugs" color="#17B242" dir="lr" />
+<wait duration="4.0"/>
+<nametag.set_text text="Butz" />
+<box.animate_in />
+<wait duration="0.3"/>
+<music.play res="res://audio/music/pwr/cross-moderato.mp3"/>
+<segment_title.set text="Drugs"/>
+<sprite.set pos="center" anim="scratch-talk" />
+<blip.set type="male"/>
+<set_text_speed value="20"/>Aw,<sprite.set pos="center" anim="scratch-idle" /><wait duration="0.5"/><sprite.set pos="center" anim="scratch-talk" /> man,<sprite.set pos="center" anim="scratch-idle" /><wait duration="0.5"/><sprite.set pos="center" anim="scratch-talk" /> these edibles ain't sh--
+<sprite.set pos="center" anim="sweating" />
+<blip.set type="none"/>
+<music.stop/>
+<box.set_visible value="false"/>
 <flash/>
-<bg set="in" color="black"/>
-<segment_title text=""/>
-<sound res="res://audio/sound/sfx-realization.wav"/>
-<music res="res://audio/music/perceive.wav"/>
-<wait secs="1.0"/>
+<bg.set_color value="black"/>
+<bg.animate_in/>
+<segment_title.set text=""/>
+<sound.play res="res://audio/sound/sfx-realization.wav"/>
+<music.play res="res://audio/music/perceive.wav"/>
+<wait duration="1.0"/>
 <play/>
 
-<perceive fade="in"/>
-<wait secs="10.0"/>
+<perceive.animate_in/>
+<wait duration="10.0"/>
 <play/>

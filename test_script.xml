@@ -1,36 +1,36 @@
-<nametag text="" />
-<box set="out" />
-<wait secs="1.0"/>
-<bigtext top="Bro Is" bottom="Yapping" color="aa-witintro-red" dir="lr" />
-<wait secs="4.0"/>
-<box anim="in" />
-<wait secs="0.3"/>
-<music res="res://audio/music/pwr/cross-moderato.mp3"/>
-<nametag text="Butz" />
-<sprite pos="center" res="res://characters/larry/larry.tres" anim="thumbsup-talk" />
-<blip type="male"/>
-<segment_title text="Yapping"/>
-Hey, dude! <flash/><shake/><wait secs="0.5"/>
-<pan to="left"/>Check out this <color value="aa-text-red">cool thing</color><evidence res="res://ref-witnesstestimony.png"/> I found!<wait secs="0.75"/> What do you think?
-<sprite pos="center" anim="thumbsup-idle" />
-<blip type="none"/>
-<arrow />
-<wait secs="2.0" />
+<nametag.set_text text="" />
+<box.set_visible value="false" />
+<wait duration="1.0"/>
+<big_title.play top="Bro Is" bottom="Yapping" color="aa-witintro-red" dir="lr" />
+<wait duration="4.0"/>
+<box.animate_in />
+<wait duration="0.3"/>
+<music.play res="res://audio/music/pwr/cross-moderato.mp3"/>
+<nametag.set_text text="Butz" />
+<sprite.set pos="center" res="res://characters/larry/larry.tres" anim="thumbsup-talk" />
+<blip.set type="male"/>
+<segment_title.set text="Yapping"/>
+Hey, dude! <flash/><shake/><wait duration="0.5"/>
+<camera.pan to="left"/>Check out this <color value="aa-text-red">cool thing</color><evidence.show res="res://ref-witnesstestimony.png"/> I found!<wait duration="0.75"/> What do you think?
+<sprite.set pos="center" anim="thumbsup-idle" />
+<blip.set type="none"/>
+<arrow.set_visible/>
+<wait duration="2.0" />
 
-<music action="stop"/>
+<music.stop/>
 <flash />
 <bubble type="holdit" />
-<box set="out"/>
-<segment_title/>
-<arrow action="hide" />
-<sound res="res://ui/exclamations/exclamation_sounds/holdit-phoenix.mp3"/>
-<wait secs="1.0"/>
+<box.set_visible value="false"/>
+<segment_title.set/>
+<arrow.set_visible value="false" />
+<sound.play res="res://ui/exclamations/exclamation_sounds/holdit-phoenix.mp3"/>
+<wait duration="1.0"/>
 <play />
 
-<blip type="male" />
-<box set="in"/>
-I'm going to put that away.<evidence side="right" action="hide"/> Here is some more <color value="aa-text-red">text</color> starting from <color value="aa-text-blue">the beginning</color>
-<blip type="none" />
-<arrow />
-<wait secs="2.0" />
+<blip.set type="male" />
+<box.set_visible value="true"/>
+I'm going to put that away.<evidence.hide side="right"/> Here is some more <color value="aa-text-red">text</color> starting from <color value="aa-text-blue">the beginning</color>
+<blip.set type="none" />
+<arrow.set_visible/>
+<wait duration="2.0" />
 <play />

@@ -91,6 +91,12 @@ Starts playing the confetti animation, with `count` flakes of confetti.
 
 Stops the confetti animation and immediately deletes all on-screen confetti.
 
+```xml
+<action_lines.set_direction value="left|right" />
+```
+
+Sets the background action lines from the `zoom` camera position to move either `left` or `right`.
+
 ### Sprites
 
 ```xml
@@ -164,7 +170,7 @@ This is intended to be used when the initial and final positions of the camera a
 ### "Witness Testimony" title text
 
 ```xml
-<segment_title.play top="string" bottom="string" color="string" dir="lr|ud" />
+<big_title.play top="string" bottom="string" color="string" dir="lr|ud" />
 ```
 
 Displays a "Witness Testimony" animation in large block letters.

@@ -1,45 +1,45 @@
-<cut to="left"/>
-<box set="in"/>
-<nametag text="Phoenix"/>
-<blip type="male"/>
-<sprite pos="left" res="res://characters/phoenix/phoenix.tres" anim="normal-talk"/>
+<camera.cut to="left"/>
+<box.set_visible value="true"/>
+<nametag.set_text text="Phoenix"/>
+<blip.set type="male"/>
+<sprite.set pos="left" res="res://characters/phoenix/phoenix.tres" anim="normal-talk"/>
 Hey, I'm Phoenix, a defense attorney.
-<sprite pos="left" anim="normal-idle" />
-<arrow />
-<wait secs="2.0"/>
-<box set="out"/>
-<arrow action="hide"/>
+<sprite.set pos="left" anim="normal-idle" />
+<arrow.set_visible/>
+<wait duration="2.0"/>
+<box.set_visible value="false"/>
+<arrow.set_visible value="false"/>
 <play/>
 
-<cut to="gavel"/>
-<gavel num="3"/>
-<sprite pos="center" res="res://characters/larry/larry.tres" anim="normal-idle"/>
-<cut to="center"/>
-<wait secs="0.5"/>
-<sprite pos="center" anim="normal-talk"/>
-<box set="in"/>
-<nametag text="Butz"/>
-<blip type="male"/>
+<camera.cut to="gavel"/>
+<gavel.animate num="3"/>
+<sprite.set pos="center" res="res://characters/larry/larry.tres" anim="normal-idle"/>
+<camera.cut to="center"/>
+<wait duration="0.5"/>
+<sprite.set pos="center" anim="normal-talk"/>
+<box.set_visible value="true"/>
+<nametag.set_text text="Butz"/>
+<blip.set type="male"/>
 I'm Larry Butz, just some guy.
-<sprite pos="center" anim="normal-idle"/>
-<arrow/>
-<wait secs="2.0"/>
-<box set="out"/>
-<arrow action="hide"/>
+<sprite.set pos="center" anim="normal-idle"/>
+<arrow.set_visible/>
+<wait duration="2.0"/>
+<box.set_visible value="false"/>
+<arrow.set_visible value="false"/>
 <play/>
 
-<cut to="gavel"/>
-<gavel num="10" between="0.01" />
-<sprite pos="right" res="res://characters/edgeworth/edgeworth.tres" anim="normal-idle"/>
-<cut to="right"/>
-<wait secs="0.5"/>
-<sprite pos="right" anim="normal-talk"/>
-<box set="in"/>
-<nametag text="Edgeworth"/>
-<blip type="male"/>
+<camera.cut to="gavel"/>
+<gavel.animate num="10" between="0.01" />
+<sprite.set pos="right" res="res://characters/edgeworth/edgeworth.tres" anim="normal-idle"/>
+<camera.cut to="right"/>
+<wait duration="0.5"/>
+<sprite.set pos="right" anim="normal-talk"/>
+<box.set_visible value="true"/>
+<nametag.set_text text="Edgeworth"/>
+<blip.set type="male"/>
 And I'm Edgeworth, the prosecutor.
-<sprite pos="right" anim="normal-idle"/>
-<arrow/>
-<wait secs="2.0"/>
-<arrow action="hide"/>
+<sprite.set pos="right" anim="normal-idle"/>
+<arrow.set_visible/>
+<wait duration="2.0"/>
+<arrow.set_visible value="false"/>
 <play/>

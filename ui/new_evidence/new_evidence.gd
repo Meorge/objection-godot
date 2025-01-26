@@ -23,7 +23,7 @@ func _handle_new_evidence_animate_in(args: Dictionary):
 	thumbnail.texture = Utils.load_texture(args.get("res", ""))
 	animate_in()
 
-func _handle_new_evidence_animate_out():
+func _handle_new_evidence_animate_out(args: Dictionary):
 	animate_out()
 
 func animate_in():

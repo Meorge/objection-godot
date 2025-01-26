@@ -19,10 +19,12 @@ func _handle_perceive_set_visible(args: Dictionary):
 
 func _handle_perceive_animate_in(args: Dictionary):
 	if tw: tw.kill()
+	tw = create_tween()
 	var duration: float = float(args.get("duration", 0.5))
 	tw.tween_property(self, "modulate:a", 1.0, duration)
 
 func _handle_perceive_animate_out(args: Dictionary):
 	if tw: tw.kill()
+	tw = create_tween()
 	var duration: float = float(args.get("duration", 0.5))
 	tw.tween_property(self, "modulate:a", 0.0, duration)

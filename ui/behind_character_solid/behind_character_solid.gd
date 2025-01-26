@@ -23,15 +23,17 @@ func _handle_bg_set_color(args: Dictionary):
 		Utils.print_error("value argument not provided for bg.set_color")
 		return
 	var existing_a = color.a
-	color = Utils.get_color_from_string(args["color"], Color.BLACK)
+	color = Utils.get_color_from_string(args["value"], Color.BLACK)
 	color.a = existing_a
 
 func _handle_bg_animate_in(args: Dictionary):
 	if tw: tw.kill()
+	tw = create_tween()
 	var duration: float = float(args.get("duration", 0.5))
 	tw.tween_property(self, "color:a", 1.0, duration)
 
 func _handle_bg_animate_out(args: Dictionary):
 	if tw: tw.kill()
+	tw = create_tween()
 	var duration: float = float(args.get("duration", 0.5))
 	tw.tween_property(self, "color:a", 0.0, duration)
