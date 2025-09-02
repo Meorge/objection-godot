@@ -1,0 +1,12 @@
+<feenie>
+    <cast>
+        <character id="a" display_name="Guy One" character="phoenix" />
+        <character id="b" display_name="Guy 2" character="edgeworth" />
+        <character id="c" display_name="The Third One" character="larry" />
+    </cast>
+    <conversation>
+        <dialog id="a">Hey it's me, Phoenix.</dialog>
+        <dialog id="b">And I'm Edgeworth. Wow!</dialog>
+        <dialog id="c">Don't forget about me, Larry. I talk a whole lot so my text is going to have to go over multiple lines because of just how much text there is ha ha ha ha</dialog>
+    </conversation>
+</feenie>

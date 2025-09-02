@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://cm0jdo28dnbbi"]
+
+[ext_resource type="Script" uid="uid://dd8dy31mn7ex4" path="res://feenie/feenie_engine.gd" id="1_fic6p"]
+
+[node name="FeenieTest" type="Node2D"]
+
+[node name="Node2D" type="Node" parent="."]
+script = ExtResource("1_fic6p")
