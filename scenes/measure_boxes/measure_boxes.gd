@@ -1,15 +1,12 @@
+class_name BoxSplitter
 extends Node2D
 
 @onready var dialogue_box: RichTextLabel = %DialogueLabel
 
-# Called when the node enters the scene tree for the first time.
-func _ready():
-    var my_text := "Hello, my name is Malcolm. I like to write code on the computer. I am very tired while writing this, which is why it sucks so bad."
-
-    var output = split_text_into_blocks(my_text)
-    print(output)
-
 func split_text_into_blocks(text: String) -> Array[String]:
+    if dialogue_box == null:
+        dialogue_box = %DialogueLabel
+        
     var text_blocks: Array[String] = []
     var split_text: PackedStringArray = text.split(" ")
     var current_text: String = ""
