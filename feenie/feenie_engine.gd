@@ -1,3 +1,4 @@
+class_name FeenieEngine
 extends Node
 
 ## Feenie is a simpler, higher-level engine for rendering basic conversations.
@@ -74,18 +75,9 @@ var character_configs: Dictionary = {
 @onready var box_splitter: BoxSplitter = %BoxSplitter
 
 func _get_character_id_from_id(id: String) -> String:
-    print(characters)
-    print(id)
     return characters[id]["character"]
 
-func _ready():
-    var f := FileAccess.open("res://feenie_test.xml", FileAccess.READ)
-    var feenie_xml := f.get_as_text().replace("\n", "")
-    print(generate_xml(feenie_xml))
-
 func generate_xml(feenie_xml: String) -> String:
-    parse(feenie_xml)
-
     var output_xml: Array[String] = []
     
     # Start music
@@ -122,9 +114,9 @@ func generate_xml(feenie_xml: String) -> String:
 
         # Talk
         output_xml.append("<box.set_visible value=\"true\"/>\n")
-        output_xml.append("<blip.set type=\"%s\" />\n" % [char_blip])
+        output_xml.append("<blip.set type=\"%s\" />" % [char_blip])
         output_xml.append(block["text"])
-        output_xml.append("\n")
+        output_xml.append("")
 
         # End character talking animation once text is done
         output_xml.append("<sprite.set pos=\"%s\" anim=\"normal-idle\" />\n" % [char_pos])
@@ -140,7 +132,7 @@ func generate_xml(feenie_xml: String) -> String:
 
         prev_char_id = char_id
     
-    var xml_str: String = "".join(output_xml)
+    var xml_str: String = "".join(output_xml).strip_edges()
     return xml_str
 
 func parse(xml_str: String):
@@ -162,7 +154,7 @@ func _parse_element(p: XMLParser):
         ParsePhase.PHASE_NONE:
             match p.get_node_name():
                 "feenie":
-                    print("Starting parsing of Feenie script")
+                    pass
                 "cast":
                     current_phase = ParsePhase.PHASE_CAST
                 "conversation":
@@ -174,9 +166,9 @@ func _parse_element(p: XMLParser):
                 for attr_i in p.get_attribute_count():
                     attributes[p.get_attribute_name(attr_i)] = p.get_attribute_value(attr_i)
                 
-                var id: String = attributes["id"]
-                var display_name: String = attributes["display_name"] # TODO: currently required
-                var character: String = attributes["character"] # TODO: currently required
+                var id: String = attributes.get("id", "user")
+                var display_name: String = attributes.get("display_name", "User")
+                var character: String = attributes.get("character", "phoenix")
                 characters[id] = {"display_name": display_name, "character": character}
 
         ParsePhase.PHASE_CONVERSATION:
@@ -196,7 +188,7 @@ func _parse_element_text(p: XMLParser):
                 return
             var text_blocks = box_splitter.split_text_into_blocks(raw_text)
             for block in text_blocks:
-                dialog_blocks.append({"id": current_id, "text": block})
+                dialog_blocks.append({"id": current_id, "text": block.strip_edges()})
 
 
 func _parse_element_end(p: XMLParser):
