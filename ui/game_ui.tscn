@@ -143,6 +143,7 @@ text = "Gumshoe"
 
 [node name="DialogueLabel" type="RichTextLabel" parent="."]
 unique_name_in_owner = true
+scroll_active = false
 offset_left = 10.0
 offset_top = 132.0
 offset_right = 251.0
