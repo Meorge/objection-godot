@@ -6,12 +6,15 @@
         <character id="d" display_name="Yet Another Guy" character="judge" />
     </cast>
     <conversation>
+        <startmusic res="res://audio/music/pwr/cross-moderato.mp3"/>
         <dialog id="a" anim="coffee">Hey it's me, Phoenix.</dialog>
         <dialog id="b">And I'm Edgeworth. Wow!</dialog>
+        <stopmusic/>
         <objection id="b" />
         <objection id="a" />
         <objection id="c" />
         <objection id="d" />
+        <startmusic res="res://audio/music/pwr/press.mp3"/>
         <dialog id="c">Don't forget about me, Larry. I talk a whole lot so my text is going to have to go over multiple lines because of just how much text there is ha ha ha ha</dialog>
         <dialog id="b">Now we're back to Edgeworth.</dialog>
         <dialog id="a">Can I get a little time in the spotlight again?</dialog>

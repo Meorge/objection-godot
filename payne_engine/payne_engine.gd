@@ -239,6 +239,14 @@ func generate_xml() -> String:
     var prev_char_id: String = ""
 
     for block in dialog_blocks:
+        if block.has("music"):
+            if block["music"] == "stop":
+                output_xml.append("<music.stop />")
+                continue
+            else:
+                output_xml.append("<music.play res=\"%s\" />" % [block["music"]])
+                continue
+
         var user: Dictionary = characters[block["id"]]
         
 
@@ -257,49 +265,50 @@ func generate_xml() -> String:
             output_xml.append("<play />")
             continue
 
-        var char_pos = char_config.get("pos", "center")
-        var char_blip = char_config.get("blip", "male")
-        var char_res = char_config.get("res", "res://characters/%s/%s.tres" % [char_id, char_id])
-        var display_name: String = user["display_name"]
+        elif block.has("text"):
+            var char_pos = char_config.get("pos", "center")
+            var char_blip = char_config.get("blip", "male")
+            var char_res = char_config.get("res", "res://characters/%s/%s.tres" % [char_id, char_id])
+            var display_name: String = user["display_name"]
 
-        var char_anim = block.get("anim", "RANDOM")
-        if char_anim == "RANDOM":
-            var anims: Array = char_config["anims"]
-            char_anim = anims.pick_random()
+            var char_anim = block.get("anim", "RANDOM")
+            if char_anim == "RANDOM":
+                var anims: Array = char_config["anims"]
+                char_anim = anims.pick_random()
 
-        # Set text box for character
-        output_xml.append("<nametag.set_text text=\"%s\" />" % [display_name])
-        # Set character idle animation
-        output_xml.append("<sprite.set pos=\"%s\" res=\"%s\" anim=\"%s-idle\"/>\n" % [char_pos, char_res, char_anim])
+            # Set text box for character
+            output_xml.append("<nametag.set_text text=\"%s\" />" % [display_name])
+            # Set character idle animation
+            output_xml.append("<sprite.set pos=\"%s\" res=\"%s\" anim=\"%s-idle\"/>\n" % [char_pos, char_res, char_anim])
 
-        # Cut camera to this character's position
-        output_xml.append("<camera.cut to=\"%s\" />\n" % [char_pos])
+            # Cut camera to this character's position
+            output_xml.append("<camera.cut to=\"%s\" />\n" % [char_pos])
 
-        # Short wait before starting text box
-        output_xml.append("<wait duration=\"0.5\"/>")
+            # Short wait before starting text box
+            output_xml.append("<wait duration=\"0.5\"/>")
 
-        # Start character talking animation
-        output_xml.append("<sprite.set pos=\"%s\" anim=\"%s-talk\" />\n" % [char_pos, char_anim])
+            # Start character talking animation
+            output_xml.append("<sprite.set pos=\"%s\" anim=\"%s-talk\" />\n" % [char_pos, char_anim])
 
-        # Talk
-        output_xml.append("<box.set_visible value=\"true\"/>\n")
-        output_xml.append("<blip.set type=\"%s\" />" % [char_blip])
-        output_xml.append(block["text"])
-        output_xml.append("")
+            # Talk
+            output_xml.append("<box.set_visible value=\"true\"/>\n")
+            output_xml.append("<blip.set type=\"%s\" />" % [char_blip])
+            output_xml.append(block["text"])
+            output_xml.append("")
 
-        # End character talking animation once text is done
-        output_xml.append("<sprite.set pos=\"%s\" anim=\"%s-idle\" />\n" % [char_pos, char_anim])
-        output_xml.append("<blip.set type=\"none\" />\n")
+            # End character talking animation once text is done
+            output_xml.append("<sprite.set pos=\"%s\" anim=\"%s-idle\" />\n" % [char_pos, char_anim])
+            output_xml.append("<blip.set type=\"none\" />\n")
 
-        output_xml.append("<arrow.set_visible/>\n")
-        output_xml.append("<wait duration=\"2.0\"/>\n")
+            output_xml.append("<arrow.set_visible/>\n")
+            output_xml.append("<wait duration=\"2.0\"/>\n")
 
-        output_xml.append("<arrow.set_visible value=\"false\"/>\n")
-        output_xml.append("<sound.play res=\"res://audio/sound/sfx-pichoop.wav\" />")
-        output_xml.append("<play/>\n")
-        output_xml.append("\n")
+            output_xml.append("<arrow.set_visible value=\"false\"/>\n")
+            output_xml.append("<sound.play res=\"res://audio/sound/sfx-pichoop.wav\" />")
+            output_xml.append("<play/>\n")
+            output_xml.append("\n")
 
-        prev_char_id = char_id
+            prev_char_id = char_id
     
     var xml_str: String = "".join(output_xml).strip_edges()
     return xml_str
@@ -354,6 +363,10 @@ func _parse_element(p: XMLParser):
                 dialog_blocks.append({"id": p.get_named_attribute_value_safe("id"), "bubble_type": "holdit"})
             elif p.get_node_name() == "takethat":
                 dialog_blocks.append({"id": p.get_named_attribute_value_safe("id"), "bubble_type": "takethat"})
+            elif p.get_node_name() == "stopmusic":
+                dialog_blocks.append({"music": "stop"})
+            elif p.get_node_name() == "startmusic":
+                dialog_blocks.append({"music": p.get_named_attribute_value_safe("res")})
 
 
 func _parse_element_text(p: XMLParser):
