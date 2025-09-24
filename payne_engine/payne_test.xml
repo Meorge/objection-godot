@@ -1,4 +1,4 @@
-<feenie>
+<payne>
     <cast>
         <character id="a" display_name="Guy One" character="phoenix" />
         <character id="b" display_name="Guy 2" character="edgeworth" />
@@ -13,4 +13,4 @@
         <dialog id="a">Can I get a little time in the spotlight again?</dialog>
         <dialog id="d">Ha ha, I'm here too, of course!</dialog>
     </conversation>
-</feenie>
+</payne>

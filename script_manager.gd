@@ -49,11 +49,11 @@ func _ready():
 func _display_text():
 	var path: String = "res://script.xml"
 
-	var use_feenie: bool = false
+	var use_payne: bool = false
 
 	for arg in OS.get_cmdline_user_args():
-		if arg == "--feenie":
-			use_feenie = true
+		if arg == "--payne":
+			use_payne = true
 		elif arg.begins_with("--render-script="):
 			path = arg.get_slice("=", 1)
 			if (path[0] == "\"" and path[-1] == "\"") or (path[0] == "'" and path[-1] == "'"):
@@ -69,8 +69,9 @@ func _display_text():
 	var f := FileAccess.open(path, FileAccess.READ)
 
 	var xml_str: String = ""
-	if use_feenie:
-		xml_str = %FeenieEngine.generate_xml(f.get_as_text().replace("\n", ""))
+	if use_payne:
+		%PayneEngine.parse(f.get_as_text().replace("\n", ""))
+		xml_str = %PayneEngine.generate_xml()
 	else:
 		xml_str = f.get_as_text().replace("\n", "")
 

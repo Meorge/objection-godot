@@ -7,7 +7,7 @@
 [ext_resource type="AudioStream" uid="uid://c78qahoasi6ar" path="res://audio/sound/sfx-typwriter.wav" id="11_cis7q"]
 [ext_resource type="PackedScene" uid="uid://b2fk3m2tmi0xu" path="res://scenes/zoom/action_lines_view.tscn" id="11_l7imp"]
 [ext_resource type="PackedScene" uid="uid://dmdrdriv4rjlv" path="res://scenes/gavel_slam/gavel_slam_view.tscn" id="12_2j504"]
-[ext_resource type="PackedScene" uid="uid://cm0jdo28dnbbi" path="res://feenie/feenie_engine.tscn" id="12_ryguw"]
+[ext_resource type="PackedScene" uid="uid://cm0jdo28dnbbi" path="res://payne_engine/payne_engine.tscn" id="12_ryguw"]
 [ext_resource type="Script" uid="uid://ch44pd7uit5eu" path="res://script_manager.gd" id="13_dml7f"]
 [ext_resource type="Script" uid="uid://61hix0haabkg" path="res://audio/sound_player.gd" id="14_2tbeq"]
 [ext_resource type="Script" uid="uid://cvm6ybd54htp6" path="res://audio/music_player.gd" id="15_n5jm8"]
@@ -58,7 +58,7 @@ position = Vector2(0, 1024)
 unique_name_in_owner = true
 position = Vector2(0, 1280)
 
-[node name="FeenieEngine" parent="." instance=ExtResource("12_ryguw")]
+[node name="PayneEngine" parent="." instance=ExtResource("12_ryguw")]
 unique_name_in_owner = true
 
 [node name="ScriptManager" type="Node" parent="."]

@@ -1,7 +1,7 @@
-class_name FeenieEngine
+class_name PayneEngine
 extends Node
 
-## Feenie is a simpler, higher-level engine for rendering basic conversations.
+## Payne is a simpler, higher-level engine for rendering basic conversations.
 
 enum ParsePhase { PHASE_NONE, PHASE_CAST, PHASE_CONVERSATION }
 
@@ -77,7 +77,7 @@ var character_configs: Dictionary = {
 func _get_character_id_from_id(id: String) -> String:
     return characters[id]["character"]
 
-func generate_xml(feenie_xml: String) -> String:
+func generate_xml() -> String:
     var output_xml: Array[String] = []
     
     # Start music
@@ -153,7 +153,7 @@ func _parse_element(p: XMLParser):
     match current_phase:
         ParsePhase.PHASE_NONE:
             match p.get_node_name():
-                "feenie":
+                "payne":
                     pass
                 "cast":
                     current_phase = ParsePhase.PHASE_CAST
