@@ -28,9 +28,23 @@ var character_configs: Dictionary = {
     "dahlia": {"blip": "female"},
     "dee": {"blip": "female"},
     "desiree": {"blip": "female"},
-    "edgeworth": {"pos": "right", "blip": "male"},
+    "edgeworth": {
+        "pos": "right",
+        "blip": "male",
+        "sounds": {
+            "holdit": "res://ui/exclamations/exclamation_sounds/holdit-edgeworth.wav",
+            "objection": "res://ui/exclamations/exclamation_sounds/objection-edgeworth.mp3",
+            "takethat": "res://ui/exclamations/exclamation_sounds/takethat-edgeworth.wav"
+        }
+    },
     "ema": {"blip": "female"},
-    "franziska": {"pos": "right", "blip": "female"},
+    "franziska": {
+        "pos": "right",
+        "blip": "female",
+        "sounds": {
+            "objection": "res://ui/exclamations/exclamation_sounds/objection-franziska.wav",
+        }
+    },
     "gant": {},
     "grossberg": {},
     "gumshoe": {},
@@ -38,9 +52,19 @@ var character_configs: Dictionary = {
     "jake": {"blip": "male"},
     "judge": {"pos": "judge"},
     "judge_brother": {"pos": "judge"},
-    "karma": {"pos": "right"},
+    "karma": {
+        "pos": "right",
+        "sounds": {
+            "objection": "res://ui/exclamations/exclamation_sounds/objection-karma.mp3"
+        }
+    },
     "killer": {},
-    "klavier": {"pos": "right"},
+    "klavier": {
+        "pos": "right",
+        "sounds": {
+            "objection": "res://ui/exclamations/exclamation_sounds/objection-klavier.wav"
+        }
+    },
     "lana": {"blip": "female"},
     "larry": {},
     "lisa": {"blip": "female"},
@@ -50,13 +74,33 @@ var character_configs: Dictionary = {
     "max": {},
     "maya": {"blip": "female"},
     "meekins": {},
-    "mia_attorney": {"pos": "left", "blip": "female"},
+    "mia_attorney": {
+        "pos": "left",
+        "blip": "female",
+        "sounds": {
+            "holdit": "res://ui/exclamations/exclamation_sounds/holdit-mia.wav",
+            "objection": "res://ui/exclamations/exclamation_sounds/objection-mia.wav",
+            "takethat": "res://ui/exclamations/exclamation_sounds/takethat-mia.wav"
+        }
+    },
     "moe": {},
     "morgan": {"blip": "female"},
     "oldbag": {"blip": "female"},
-    "payne": {"pos": "right"},
+    "payne": {
+        "pos": "right",
+        "sounds": {
+            "objection": "res://ui/exclamations/exclamation_sounds/objection-payne.mp3"
+        }
+    },
     "pearl": {"blip": "female"},
-    "phoenix": {"pos": "left"},
+    "phoenix": {
+        "pos": "left",
+        "sounds": {
+            "holdit": "res://ui/exclamations/exclamation_sounds/holdit-phoenix.mp3",
+            "objection": "res://ui/exclamations/exclamation_sounds/objection-phoenix.mp3",
+            "takethat": "res://ui/exclamations/exclamation_sounds/takethat-phoenix.mp3"
+        }
+    },
     "polly": {},
     "redd": {},
     "regina": {"blip": "female"},
@@ -87,16 +131,28 @@ func generate_xml() -> String:
 
     for block in dialog_blocks:
         var user: Dictionary = characters[block["id"]]
-        var display_name: String = user["display_name"]
+        
 
         var char_id = _get_character_id_from_id(block["id"])
         var char_config: Dictionary = character_configs[char_id]
+
+        if block.has("bubble_type"):
+            var bubble_type = block["bubble_type"]
+            var sound_path = char_config.get("sounds", {}).get(bubble_type, "res://audio/sound/objection-generic.wav")
+            
+            output_xml.append("<box.set_visible value=\"false\"/>")
+            output_xml.append("<flash />")
+            output_xml.append("<sound.play res=\"%s\" />" % [sound_path])
+            output_xml.append("<bubble.animate type=\"%s\" />" % [bubble_type])
+            output_xml.append("<wait duration=\"1.5\"/>")
+            output_xml.append("<play />")
+            continue
+
         var char_pos = char_config.get("pos", "center")
         var char_blip = char_config.get("blip", "male")
         var char_res = char_config.get("res", "res://characters/%s/%s.tres" % [char_id, char_id])
 
-        # if char_id != prev_char_id:
-        #     output_xml.append("<box.set_visible value=\"false\"/>\n")
+        var display_name: String = user["display_name"]
 
         # Set text box for character
         output_xml.append("<nametag.set_text text=\"%s\" />" % [display_name])
@@ -178,6 +234,12 @@ func _parse_element(p: XMLParser):
                     attributes[p.get_attribute_name(attr_i)] = p.get_attribute_value(attr_i)
                 
                 current_id = attributes["id"]
+            elif p.get_node_name() == "objection":
+                dialog_blocks.append({"id": p.get_named_attribute_value_safe("id"), "bubble_type": "objection"})
+            elif p.get_node_name() == "holdit":
+                dialog_blocks.append({"id": p.get_named_attribute_value_safe("id"), "bubble_type": "holdit"})
+            elif p.get_node_name() == "takethat":
+                dialog_blocks.append({"id": p.get_named_attribute_value_safe("id"), "bubble_type": "takethat"})
 
 
 func _parse_element_text(p: XMLParser):
