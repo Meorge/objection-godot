@@ -6,7 +6,7 @@
         <character id="d" display_name="Yet Another Guy" character="judge" />
     </cast>
     <conversation>
-        <dialog id="a">Hey it's me, Phoenix.</dialog>
+        <dialog id="a" anim="coffee">Hey it's me, Phoenix.</dialog>
         <dialog id="b">And I'm Edgeworth. Wow!</dialog>
         <objection id="b" />
         <objection id="a" />

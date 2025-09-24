@@ -13,107 +13,216 @@ var characters: Dictionary = {}
 var dialog_blocks: Array[Dictionary] = []
 
 var current_id: String = ""
+var current_anim: String = "RANDOM"
 
 var character_configs: Dictionary = {
-    "acro": {},
-    "adrian": {"blip": "female"},
-    "angel": {"blip": "female"},
-    "april": {"blip": "female"},
-    "armstrong": {},
-    "athena": {"pos": "left", "blip": "female"},
-    "atmey": {},
-    "bentrilo": {},
-    "bikini": {"blip": "female"},
-    "cody": {},
-    "dahlia": {"blip": "female"},
-    "dee": {"blip": "female"},
-    "desiree": {"blip": "female"},
+    "acro": {
+        "anims": ["cries", "disappointed", "normal", "serious"]
+    },
+    "adrian": {
+        "blip": "female",
+        "anims": ["book", "disappointed", "normal", "scared", "serious", "surprised", "sweating", "thinking"]
+    },
+    "angel": {
+        "blip": "female",
+        "anims": ["lunch", "mad", "normal", "queen", "smiling", "sweating"]
+    },
+    "april": {
+        "blip": "female",
+        "anims": ["crying", "glaring", "normal", "side", "stiff", "thinking"]
+    },
+    "armstrong": {
+        "anims": ["inviting", "normal", "sad", "sweating", "thinking"]
+    },
+    "athena": {
+        "pos": "left",
+        "blip": "female",
+        "anims": ["confident", "defeated", "deskslam", "happy", "normal", "objection", "pumped", "screen", "shaking", "thinking"]
+    },
+    "atmey": {
+        "anims": ["confident", "monocle", "normal", "sweating", "twitch"]
+    },
+    "bentrilo": {
+        "anims": ["mad", "normal", "side", "side", "smack"]
+    },
+    "bikini": {
+        "blip": "female",
+        "anims": ["normal", "panic", "serious", "thinking"]
+    },
+    "cody": {
+        "anims": ["confident", "crying", "mutter", "normal", "sword"]
+    },
+    "dahlia": {
+        "blip": "female",
+        "anims": ["crying", "hair", "hate", "normal", "sweating", "thinking"]
+    },
+    "dee": {
+        "blip": "female",
+        "anims": ["coldsmile", "confessing", "normal", "sweating"]
+    },
+    "desiree": {
+        "blip": "female",
+        "anims": ["normal", "sweating", "thinking"]
+    },
     "edgeworth": {
         "pos": "right",
         "blip": "male",
+        "anims": ["confident", "document", "handondesk", "normal", "pointing", "strained", "thinking"],
         "sounds": {
             "holdit": "res://ui/exclamations/exclamation_sounds/holdit-edgeworth.wav",
             "objection": "res://ui/exclamations/exclamation_sounds/objection-edgeworth.mp3",
             "takethat": "res://ui/exclamations/exclamation_sounds/takethat-edgeworth.wav"
         }
     },
-    "ema": {"blip": "female"},
+    "ema": {
+        "blip": "female",
+        "anims": ["cheerful", "confident", "disappointed", "mad", "normal", "notes", "pumped", "sad", "serious", "surprised", "thinking"]
+    },
     "franziska": {
         "pos": "right",
         "blip": "female",
+        "anims": ["clench", "mad", "normal", "ready", "sweating", "tisk", "withwhip"],
         "sounds": {
             "objection": "res://ui/exclamations/exclamation_sounds/objection-franziska.wav",
         }
     },
-    "gant": {},
-    "grossberg": {},
-    "gumshoe": {},
-    "ini": {"blip": "female"},
-    "jake": {"blip": "male"},
-    "judge": {"pos": "judge"},
-    "judge_brother": {"pos": "judge"},
+    "gant": {
+        "anims": ["glare", "impatient", "normal", "smiling", "sweating", "thinking"]
+    },
+    "grossberg": {
+        "anims": ["normal", "sweating"]
+    },
+    "gumshoe": {
+        "anims": ["confident", "disheartened", "laughing", "mad", "normal", "pumped", "side", "thinking"]
+    },
+    "ini": {
+        "blip": "female",
+        "anims": ["mad", "normal", "spin", "sweating", "teehee", "thinking"]
+    },
+    "jake": {
+        "blip": "male",
+        "anims": ["mad", "normal", "serious", "shave", "smirk"]
+    },
+    "judge": {
+        "pos": "judge",
+        "anims": ["normal", "surprised", "warning"]
+    },
+    "judge_brother": {
+        "pos": "judge",
+        "anims": ["normal", "surprised", "warning"]
+    },
     "karma": {
         "pos": "right",
         "sounds": {
             "objection": "res://ui/exclamations/exclamation_sounds/objection-karma.mp3"
-        }
+        },
+        "anims": ["badmood", "break", "normal", "smirk", "snap", "sweat"]
     },
-    "killer": {},
+    "killer": {
+        "anims": ["normal", "steaming", "sweating"]
+    },
     "klavier": {
         "pos": "right",
         "sounds": {
             "objection": "res://ui/exclamations/exclamation_sounds/objection-klavier.wav"
-        }
+        },
+        "anims": ["fist-sweat", "fist", "lean", "nervous", "normal", "objection", "pounds", "snaps", "sweats", "up"]
     },
-    "lana": {"blip": "female"},
-    "larry": {},
-    "lisa": {"blip": "female"},
-    "lotta": {"blip": "female"},
-    "maggey": {"blip": "female"},
-    "matt": {},
-    "max": {},
-    "maya": {"blip": "female"},
-    "meekins": {},
+    "lana": {
+        "blip": "female",
+        "anims": ["forceful", "mad", "normal", "ohmy", "profile", "sideglance", "smiling", "sweating"]
+    },
+    "larry": {
+        "anims": ["hello", "mad", "nervous", "normal", "scratch", "stylish", "thinking", "thumbsup"]
+    },
+    "lisa": {
+        "blip": "female",
+        "anims": ["normal", "smiling", "sweating"]
+    },
+    "lotta": {
+        "blip": "female",
+        "anims": ["badmood", "confident", "disappointed", "mad", "normal", "shy", "smiling", "thinking"]
+    },
+    "maggey": {
+        "blip": "female",
+        "anims": ["normal", "pumped", "sad", "shining"]
+    },
+    "matt": {
+        "anims": ["dialing", "laughs", "normal", "onphone", "sweats", "thinking", "trueself"]
+    },
+    "max": {
+        "anims": ["billy", "normal", "sweating", "toss1", "toss2", "whatev"]
+    },
+    "maya": {
+        "blip": "female",
+        "anims": ["cheerful", "confident", "crying", "disheartened", "mad", "normal", "pumped", "sad", "surprised", "thinking", "worried"]
+    },
+    "meekins": {
+        "anims": ["megaphone", "punch", "sad", "saluting", "thoughtful"]
+    },
     "mia_attorney": {
         "pos": "left",
         "blip": "female",
+        "anims": ["confident", "handsondesk", "normal", "pointing", "sweating", "thinking"],
         "sounds": {
             "holdit": "res://ui/exclamations/exclamation_sounds/holdit-mia.wav",
             "objection": "res://ui/exclamations/exclamation_sounds/objection-mia.wav",
             "takethat": "res://ui/exclamations/exclamation_sounds/takethat-mia.wav"
         }
     },
-    "moe": {},
-    "morgan": {"blip": "female"},
-    "oldbag": {"blip": "female"},
+    "moe": {
+        "anims": ["mad", "normal", "sad", "serious", "tsk"]
+    },
+    "morgan": {
+        "blip": "female",
+        "anims": ["glare", "normal", "sad", "sleeve"]
+    },
+    "oldbag": {
+        "blip": "female",
+        "anims": ["inlove", "mad", "normal", "teasing", "teehee"]
+    },
     "payne": {
         "pos": "right",
+        "anims": ["confident", "normal", "sweating"],
         "sounds": {
             "objection": "res://ui/exclamations/exclamation_sounds/objection-payne.mp3"
         }
     },
-    "pearl": {"blip": "female"},
+    "pearl": {
+        "blip": "female",
+        "anims": ["cheerful", "cries", "disappointed", "fight", "normal", "shy", "sparkle", "surprised", "thinking"]
+    },
     "phoenix": {
         "pos": "left",
+        "anims": ["coffee", "confident", "document", "handsondesk", "normal", "pointing", "sheepish", "sweating", "thinking"],
         "sounds": {
             "holdit": "res://ui/exclamations/exclamation_sounds/holdit-phoenix.mp3",
             "objection": "res://ui/exclamations/exclamation_sounds/objection-phoenix.mp3",
             "takethat": "res://ui/exclamations/exclamation_sounds/takethat-phoenix.mp3"
         }
     },
-    "polly": {},
-    "redd": {},
-    "regina": {"blip": "female"},
-    "ron": {},
-    "sahwit": {},
-    "sal": {},
-    "terry": {},
-    "tigre": {},
-    "victor": {},
-    "viola": {"blip": "female"},
-    "wellington": {},
-    "will": {},
-    "yanni": {}
+    "polly": {
+        "anims": ["normal"]
+    },
+    "redd": {
+        "anims": ["mymy", "normal", "shouting", "sweating", "thinking"]
+    },
+    "regina": {
+        "blip": "female",
+        "anims": ["confident", "happy", "normal", "sad", "sparkles", "thinking"]
+    },
+    "ron": {
+        "anims": ["emphatic", "normal", "shouting", "sweating", "thinking"]
+    },
+    "sahwit": { "anims": ["glaring", "normal", "twitching"]},
+    "sal": { "anims": ["mad", "normal", "thinking", "wiggle", "worried"]},
+    "terry": { "anims": ["normal", "sad", "serious", "thinking"]},
+    "tigre": { "anims": ["compliant", "mad", "normal", "roar", "shameless", "simpering"]},
+    "victor": { "anims": ["mad", "normal", "shy", "side", "sweating"]},
+    "viola": { "blip": "female", "anims": ["crying", "heehee", "normal"] },
+    "wellington": { "anims": ["mad", "normal", "sweating", "twitch"]},
+    "will": { "anims": ["hanky", "nervous", "normal", "thinking"] },
+    "yanni": { "anims": ["angry", "normal", "side", "thoughtful"]}
 }
 
 @onready var box_splitter: BoxSplitter = %BoxSplitter
@@ -139,7 +248,7 @@ func generate_xml() -> String:
         if block.has("bubble_type"):
             var bubble_type = block["bubble_type"]
             var sound_path = char_config.get("sounds", {}).get(bubble_type, "res://audio/sound/objection-generic.wav")
-            
+
             output_xml.append("<box.set_visible value=\"false\"/>")
             output_xml.append("<flash />")
             output_xml.append("<sound.play res=\"%s\" />" % [sound_path])
@@ -151,13 +260,17 @@ func generate_xml() -> String:
         var char_pos = char_config.get("pos", "center")
         var char_blip = char_config.get("blip", "male")
         var char_res = char_config.get("res", "res://characters/%s/%s.tres" % [char_id, char_id])
-
         var display_name: String = user["display_name"]
+
+        var char_anim = block.get("anim", "RANDOM")
+        if char_anim == "RANDOM":
+            var anims: Array = char_config["anims"]
+            char_anim = anims.pick_random()
 
         # Set text box for character
         output_xml.append("<nametag.set_text text=\"%s\" />" % [display_name])
         # Set character idle animation
-        output_xml.append("<sprite.set pos=\"%s\" res=\"%s\" anim=\"normal-idle\"/>\n" % [char_pos, char_res])
+        output_xml.append("<sprite.set pos=\"%s\" res=\"%s\" anim=\"%s-idle\"/>\n" % [char_pos, char_res, char_anim])
 
         # Cut camera to this character's position
         output_xml.append("<camera.cut to=\"%s\" />\n" % [char_pos])
@@ -166,7 +279,7 @@ func generate_xml() -> String:
         output_xml.append("<wait duration=\"0.5\"/>")
 
         # Start character talking animation
-        output_xml.append("<sprite.set pos=\"%s\" anim=\"normal-talk\" />\n" % [char_pos])
+        output_xml.append("<sprite.set pos=\"%s\" anim=\"%s-talk\" />\n" % [char_pos, char_anim])
 
         # Talk
         output_xml.append("<box.set_visible value=\"true\"/>\n")
@@ -175,7 +288,7 @@ func generate_xml() -> String:
         output_xml.append("")
 
         # End character talking animation once text is done
-        output_xml.append("<sprite.set pos=\"%s\" anim=\"normal-idle\" />\n" % [char_pos])
+        output_xml.append("<sprite.set pos=\"%s\" anim=\"%s-idle\" />\n" % [char_pos, char_anim])
         output_xml.append("<blip.set type=\"none\" />\n")
 
         output_xml.append("<arrow.set_visible/>\n")
@@ -234,6 +347,7 @@ func _parse_element(p: XMLParser):
                     attributes[p.get_attribute_name(attr_i)] = p.get_attribute_value(attr_i)
                 
                 current_id = attributes["id"]
+                current_anim = attributes.get("anim", "RANDOM")
             elif p.get_node_name() == "objection":
                 dialog_blocks.append({"id": p.get_named_attribute_value_safe("id"), "bubble_type": "objection"})
             elif p.get_node_name() == "holdit":
@@ -250,7 +364,7 @@ func _parse_element_text(p: XMLParser):
                 return
             var text_blocks = box_splitter.split_text_into_blocks(raw_text)
             for block in text_blocks:
-                dialog_blocks.append({"id": current_id, "text": block.strip_edges()})
+                dialog_blocks.append({"id": current_id, "text": block.strip_edges(), "anim": current_anim})
 
 
 func _parse_element_end(p: XMLParser):
