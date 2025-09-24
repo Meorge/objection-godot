@@ -48,8 +48,13 @@ func _ready():
 
 func _display_text():
 	var path: String = "res://script.xml"
+
+	var use_payne: bool = false
+
 	for arg in OS.get_cmdline_user_args():
-		if arg.begins_with("--render-script="):
+		if arg == "--payne":
+			use_payne = true
+		elif arg.begins_with("--render-script="):
 			path = arg.get_slice("=", 1)
 			if (path[0] == "\"" and path[-1] == "\"") or (path[0] == "'" and path[-1] == "'"):
 				path = path.substr(1, path.length() - 2)
@@ -60,9 +65,17 @@ func _display_text():
 		return
 
 	print_rich("Running script at \"%s\"..." % path)
-	
+
 	var f := FileAccess.open(path, FileAccess.READ)
-	var text_bits := parse_xml_str(f.get_as_text().replace("\n", ""))
+
+	var xml_str: String = ""
+	if use_payne:
+		%PayneEngine.parse(f.get_as_text().replace("\n", ""))
+		xml_str = %PayneEngine.generate_xml()
+	else:
+		xml_str = f.get_as_text().replace("\n", "")
+
+	var text_bits := parse_xml_str(xml_str)
 
 	# Start with a blank text box.
 	dialogue_label.text = ""

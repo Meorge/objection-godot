@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://dc2il2yy32gk5"]
+
+[ext_resource type="Script" uid="uid://b8out6vrtm0a6" path="res://scenes/measure_boxes/measure_boxes.gd" id="1_7xcxo"]
+[ext_resource type="PackedScene" uid="uid://brxypopoc7mg5" path="res://ui/text_box/dialogue_label.tscn" id="2_pq3yh"]
+
+[node name="MeasureBoxes" type="Node2D"]
+script = ExtResource("1_7xcxo")
+
+[node name="DialogueLabel" parent="." instance=ExtResource("2_pq3yh")]
+unique_name_in_owner = true

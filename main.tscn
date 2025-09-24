@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://dtsmh3r0kycrw"]
+[gd_scene load_steps=23 format=3 uid="uid://dtsmh3r0kycrw"]
 
 [ext_resource type="AudioStream" uid="uid://brp8iv61fonns" path="res://audio/sound/sfx-blipmale.wav" id="8_ance2"]
 [ext_resource type="Script" uid="uid://2pc3qdy2g7m" path="res://audio/voice_blip_player.gd" id="9_tg6eo"]
@@ -7,6 +7,7 @@
 [ext_resource type="AudioStream" uid="uid://c78qahoasi6ar" path="res://audio/sound/sfx-typwriter.wav" id="11_cis7q"]
 [ext_resource type="PackedScene" uid="uid://b2fk3m2tmi0xu" path="res://scenes/zoom/action_lines_view.tscn" id="11_l7imp"]
 [ext_resource type="PackedScene" uid="uid://dmdrdriv4rjlv" path="res://scenes/gavel_slam/gavel_slam_view.tscn" id="12_2j504"]
+[ext_resource type="PackedScene" uid="uid://cm0jdo28dnbbi" path="res://payne_engine/payne_engine.tscn" id="12_ryguw"]
 [ext_resource type="Script" uid="uid://ch44pd7uit5eu" path="res://script_manager.gd" id="13_dml7f"]
 [ext_resource type="Script" uid="uid://61hix0haabkg" path="res://audio/sound_player.gd" id="14_2tbeq"]
 [ext_resource type="Script" uid="uid://cvm6ybd54htp6" path="res://audio/music_player.gd" id="15_n5jm8"]
@@ -56,6 +57,9 @@ position = Vector2(0, 1024)
 [node name="GavelSlamView" parent="." instance=ExtResource("12_2j504")]
 unique_name_in_owner = true
 position = Vector2(0, 1280)
+
+[node name="PayneEngine" parent="." instance=ExtResource("12_ryguw")]
+unique_name_in_owner = true
 
 [node name="ScriptManager" type="Node" parent="."]
 unique_name_in_owner = true

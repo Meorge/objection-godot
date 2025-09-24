@@ -10,11 +10,11 @@
 [ext_resource type="FontFile" uid="uid://faumch8kfu2c" path="res://ui/text_box/font/ace-name/ace-name.ttf" id="4_b14rb"]
 [ext_resource type="Script" uid="uid://dpqf0cybqssbw" path="res://ui/text_box/box_container.gd" id="5_6gk4r"]
 [ext_resource type="Texture2D" uid="uid://2xbilq1bbwrb" path="res://ui/text_box/mainbox.png" id="5_r7fiw"]
-[ext_resource type="FontFile" uid="uid://c0v5yww5rglpk" path="res://ui/text_box/font/igiari-cyrillic/igiari-cyrillic.ttf" id="6_ggym5"]
 [ext_resource type="Script" uid="uid://bpt8a16polm6p" path="res://ui/text_box/nametag_container.gd" id="7_3rn5j"]
 [ext_resource type="PackedScene" uid="uid://c3hlwg4rh13f1" path="res://ui/flashing_segment_label/flashing_segment_label.tscn" id="11_2501h"]
 [ext_resource type="PackedScene" uid="uid://dcitg4aymosj" path="res://ui/witness_testimony/witness_testimony_intro.tscn" id="12_0ob4r"]
 [ext_resource type="Script" uid="uid://c16luqchb24gw" path="res://ui/evidence/evidence_handler.gd" id="13_atwk1"]
+[ext_resource type="PackedScene" uid="uid://brxypopoc7mg5" path="res://ui/text_box/dialogue_label.tscn" id="13_mq1hb"]
 [ext_resource type="SpriteFrames" path="res://ui/evidence/evidence-right/evidence-right.tres" id="15_eocud"]
 [ext_resource type="Texture2D" uid="uid://beaqrjyvyadas" path="res://icon.svg" id="16_2yr5j"]
 [ext_resource type="Script" uid="uid://cho5omt3ky2hs" path="res://ui/evidence/evidence_box.gd" id="16_v147p"]
@@ -141,21 +141,9 @@ text = "Gumshoe"
 
 [node name="MoodMatrix" parent="." instance=ExtResource("20_w2rvm")]
 
-[node name="DialogueLabel" type="RichTextLabel" parent="."]
+[node name="DialogueLabel" parent="." instance=ExtResource("13_mq1hb")]
 unique_name_in_owner = true
 scroll_active = false
-offset_left = 10.0
-offset_top = 132.0
-offset_right = 251.0
-offset_bottom = 187.0
-theme_override_fonts/normal_font = ExtResource("6_ggym5")
-theme_override_font_sizes/normal_font_size = 16
-bbcode_enabled = true
-text = "Now, the victim entered
-Studio One at approximately
-[color=#f17038]1:00 PM.[/color]"
-shortcut_keys_enabled = false
-visible_characters_behavior = 1
 
 [node name="FlashingSegmentLabel" parent="." instance=ExtResource("11_2501h")]
 
