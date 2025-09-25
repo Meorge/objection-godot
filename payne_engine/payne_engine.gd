@@ -71,7 +71,7 @@ var character_configs: Dictionary = {
         "anims": ["confident", "document", "handondesk", "normal", "pointing", "strained", "thinking"],
         "sounds": {
             "holdit": "res://ui/exclamations/exclamation_sounds/holdit-edgeworth.wav",
-            "objection": "res://ui/exclamations/exclamation_sounds/objection-edgeworth.mp3",
+            "objection": "res://ui/exclamations/exclamation_sounds/objection-edgeworth.wav",
             "takethat": "res://ui/exclamations/exclamation_sounds/takethat-edgeworth.wav"
         }
     },
@@ -115,7 +115,7 @@ var character_configs: Dictionary = {
     "karma": {
         "pos": "right",
         "sounds": {
-            "objection": "res://ui/exclamations/exclamation_sounds/objection-karma.mp3"
+            "objection": "res://ui/exclamations/exclamation_sounds/objection-karma.wav"
         },
         "anims": ["badmood", "break", "normal", "smirk", "snap", "sweat"]
     },
@@ -186,7 +186,7 @@ var character_configs: Dictionary = {
         "pos": "right",
         "anims": ["confident", "normal", "sweating"],
         "sounds": {
-            "objection": "res://ui/exclamations/exclamation_sounds/objection-payne.mp3"
+            "objection": "res://ui/exclamations/exclamation_sounds/objection-payne.wav"
         }
     },
     "pearl": {
@@ -197,9 +197,9 @@ var character_configs: Dictionary = {
         "pos": "left",
         "anims": ["coffee", "confident", "document", "handsondesk", "normal", "pointing", "sheepish", "sweating", "thinking"],
         "sounds": {
-            "holdit": "res://ui/exclamations/exclamation_sounds/holdit-phoenix.mp3",
-            "objection": "res://ui/exclamations/exclamation_sounds/objection-phoenix.mp3",
-            "takethat": "res://ui/exclamations/exclamation_sounds/takethat-phoenix.mp3"
+            "holdit": "res://ui/exclamations/exclamation_sounds/holdit-phoenix.wav",
+            "objection": "res://ui/exclamations/exclamation_sounds/objection-phoenix.wav",
+            "takethat": "res://ui/exclamations/exclamation_sounds/takethat-phoenix.wav"
         }
     },
     "polly": {
@@ -235,7 +235,7 @@ func generate_xml() -> String:
     var output_xml: Array[String] = []
     
     # Start music
-    output_xml.append("<music.play res=\"res://audio/music/pwr/cross-moderato.mp3\"/>\n")
+    output_xml.append("<music.play res=\"res://audio/music/pwr/cross-moderato.wav\"/>\n")
 
     var prev_evidence: String = ""
     var evidence_side: String = ""

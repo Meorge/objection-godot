@@ -6,7 +6,7 @@
         <character id="d" display_name="Yet Another Guy" character="judge" />
     </cast>
     <conversation>
-        <startmusic res="res://audio/music/pwr/cross-moderato.mp3"/>
+        <startmusic res="res://audio/music/pwr/cross-moderato.wav"/>
         <dialog id="a" anim="coffee">Hey it's me, Phoenix.</dialog>
         <newevidence title="The Counsel" description="The defense's counsel goes here." res="res://scenes/counsel/bg_counsel.png" />
         <dialog id="b" evidence="res://scenes/counsel/bg_counsel.png">And I'm Edgeworth. Wow!</dialog>
@@ -18,7 +18,7 @@
         <objection id="a" />
         <objection id="c" />
         <objection id="d" />
-        <startmusic res="res://audio/music/pwr/press.mp3"/>
+        <startmusic res="res://audio/music/pwr/press.wav"/>
         <dialog id="c">Here is an extremely long dialog item, that will have to be split up over multiple boxes due to its extreme length. Sometimes people just go on and on, so we have to be able to handle this.</dialog>
         <gavel slams="3" />
         <dialog id="b">Now we're back to Edgeworth.</dialog>

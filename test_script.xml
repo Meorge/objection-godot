@@ -5,7 +5,7 @@
 <wait duration="4.0"/>
 <box.animate_in />
 <wait duration="0.3"/>
-<music.play res="res://audio/music/pwr/cross-moderato.mp3"/>
+<music.play res="res://audio/music/pwr/cross-moderato.wav"/>
 <nametag.set_text text="Butz" />
 <sprite.set pos="center" res="res://characters/larry/larry.tres" anim="thumbsup-talk" />
 <blip.set type="male"/>
@@ -23,7 +23,7 @@ Hey, dude! <flash/><shake/><wait duration="0.5"/>
 <box.set_visible value="false"/>
 <segment_title.set/>
 <arrow.set_visible value="false" />
-<sound.play res="res://ui/exclamations/exclamation_sounds/holdit-phoenix.mp3"/>
+<sound.play res="res://ui/exclamations/exclamation_sounds/holdit-phoenix.wav"/>
 <wait duration="1.0"/>
 <play />
 

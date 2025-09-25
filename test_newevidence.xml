@@ -3,7 +3,7 @@
 <box.set_visible value="false" />
 <box.animate_in />
 <wait duration="0.3"/>
-<music.play res="res://audio/music/pwr/cross-moderato.mp3"/>
+<music.play res="res://audio/music/pwr/cross-moderato.wav"/>
 <nametag.set_text text="Butz" />
 <sprite.set pos="center" res="res://characters/larry/larry.tres" anim="thumbsup-talk" />
 <blip.set type="male"/>
