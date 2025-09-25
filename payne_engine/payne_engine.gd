@@ -240,8 +240,9 @@ func generate_xml() -> String:
     var prev_evidence: String = ""
     var evidence_side: String = ""
 
-    for block in dialog_blocks:
-        if block.has("music"):
+    for block_i in dialog_blocks.size():
+        var block = dialog_blocks[block_i]
+        if block["type"] == "music":
             if block["music"] == "stop":
                 output_xml.append("<music.stop />")
                 continue
@@ -249,9 +250,7 @@ func generate_xml() -> String:
                 output_xml.append("<music.play res=\"%s\" />" % [block["music"]])
                 continue
 
-
-
-        if block.has("bubble_type"):
+        elif block["type"] == "bubble":
             var user: Dictionary = characters[block["id"]]
             var char_id = _get_character_id_from_id(block["id"])
             var char_config: Dictionary = character_configs[char_id]
@@ -268,7 +267,7 @@ func generate_xml() -> String:
             output_xml.append("<play />")
             continue
 
-        elif block.has("slams"):
+        elif block["type"] == "gavel":
             var num_slams = int(block["slams"])
             output_xml.append("<box.set_visible value=\"false\"/>")
             output_xml.append("<camera.cut to=\"gavel\" />")
@@ -276,7 +275,20 @@ func generate_xml() -> String:
             output_xml.append("<play />")
             continue
 
-        elif block.has("text"):
+        elif block["type"] == "newevidence":
+            output_xml.append("<arrow.set_visible/>\n")
+
+            output_xml.append("<wait duration=\"1.0\" />")
+
+            output_xml.append("<new_evidence.animate_in title=\"%s\" description=\"%s\" res=\"%s\" />" % [block.get("title", ""), block.get("description", ""), block.get("res", "")])
+            output_xml.append("<wait duration=\"4.0\" />")
+            output_xml.append("<arrow.set_visible value=\"false\"/>\n")
+            output_xml.append("<sound.play res=\"res://audio/sound/sfx-pichoop.wav\" />")
+            output_xml.append("<new_evidence.animate_out />")
+            output_xml.append("<play/>\n")
+            output_xml.append("\n")
+
+        elif block["type"] == "text":
             var user: Dictionary = characters[block["id"]]
             var char_id = _get_character_id_from_id(block["id"])
             var char_config: Dictionary = character_configs[char_id]
@@ -328,13 +340,14 @@ func generate_xml() -> String:
             output_xml.append("<sprite.set pos=\"%s\" anim=\"%s-idle\" />\n" % [char_pos, char_anim])
             output_xml.append("<blip.set type=\"none\" />\n")
 
-            output_xml.append("<arrow.set_visible/>\n")
-            output_xml.append("<wait duration=\"2.0\"/>\n")
+            if dialog_blocks.size() > block_i + 1 and dialog_blocks[block_i + 1]["type"] != "newevidence":
+                output_xml.append("<arrow.set_visible/>\n")
+                output_xml.append("<wait duration=\"2.0\"/>\n")
 
-            output_xml.append("<arrow.set_visible value=\"false\"/>\n")
-            output_xml.append("<sound.play res=\"res://audio/sound/sfx-pichoop.wav\" />")
-            output_xml.append("<play/>\n")
-            output_xml.append("\n")
+                output_xml.append("<arrow.set_visible value=\"false\"/>\n")
+                output_xml.append("<sound.play res=\"res://audio/sound/sfx-pichoop.wav\" />")
+                output_xml.append("<play/>\n")
+                output_xml.append("\n")
 
             prev_evidence = evidence
     
@@ -388,17 +401,45 @@ func _parse_element(p: XMLParser):
                 current_evidence = attributes.get("evidence", "")
 
             elif p.get_node_name() == "objection":
-                dialog_blocks.append({"id": p.get_named_attribute_value_safe("id"), "bubble_type": "objection"})
+                dialog_blocks.append({
+                    "type": "bubble",
+                    "id": p.get_named_attribute_value_safe("id"),
+                    "bubble_type": "objection"
+                })
             elif p.get_node_name() == "holdit":
-                dialog_blocks.append({"id": p.get_named_attribute_value_safe("id"), "bubble_type": "holdit"})
+                dialog_blocks.append({
+                    "type": "bubble",
+                    "id": p.get_named_attribute_value_safe("id"),
+                    "bubble_type": "holdit"
+                })
             elif p.get_node_name() == "takethat":
-                dialog_blocks.append({"id": p.get_named_attribute_value_safe("id"), "bubble_type": "takethat"})
+                dialog_blocks.append({
+                    "type": "bubble",
+                    "id": p.get_named_attribute_value_safe("id"),
+                    "bubble_type": "takethat"
+                })
             elif p.get_node_name() == "stopmusic":
-                dialog_blocks.append({"music": "stop"})
+                dialog_blocks.append({
+                    "type": "music",
+                    "music": "stop"
+                })
             elif p.get_node_name() == "startmusic":
-                dialog_blocks.append({"music": p.get_named_attribute_value_safe("res")})
+                dialog_blocks.append({
+                    "type": "music",
+                    "music": p.get_named_attribute_value_safe("res")
+                })
             elif p.get_node_name() == "gavel":
-                dialog_blocks.append({"slams": p.get_named_attribute_value_safe("slams")})
+                dialog_blocks.append({
+                    "type": "gavel",
+                    "slams": p.get_named_attribute_value_safe("slams")
+                })
+            elif p.get_node_name() == "newevidence":
+                dialog_blocks.append({
+                    "type": "newevidence",
+                    "title": p.get_named_attribute_value("title"),
+                    "description": p.get_named_attribute_value_safe("description"),
+                    "res": p.get_named_attribute_value_safe("res")
+                })
 
 
 func _parse_element_text(p: XMLParser):
@@ -409,7 +450,13 @@ func _parse_element_text(p: XMLParser):
                 return
             var text_blocks = box_splitter.split_text_into_blocks(raw_text)
             for block in text_blocks:
-                dialog_blocks.append({"id": current_id, "text": block.strip_edges(), "anim": current_anim, "evidence": current_evidence})
+                dialog_blocks.append({
+                    "type": "text",
+                    "id": current_id,
+                    "text": block.strip_edges(),
+                    "anim": current_anim,
+                    "evidence": current_evidence
+                })
 
 
 func _parse_element_end(p: XMLParser):

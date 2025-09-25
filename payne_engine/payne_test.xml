@@ -8,8 +8,10 @@
     <conversation>
         <startmusic res="res://audio/music/pwr/cross-moderato.mp3"/>
         <dialog id="a" anim="coffee">Hey it's me, Phoenix.</dialog>
+        <newevidence title="The Counsel" description="The defense's counsel goes here." res="res://scenes/counsel/bg_counsel.png" />
         <dialog id="b" evidence="res://scenes/counsel/bg_counsel.png">And I'm Edgeworth. Wow!</dialog>
         <dialog id="c" evidence="res://scenes/judge/bg_judge.png">Larry is also here.</dialog>
+        <newevidence title="The Judge's Seat" description="This is where the Judge sits." res="res://scenes/judge/bg_judge.png" />
         <dialog id="a">Phoenix again!</dialog>
         <stopmusic/>
         <objection id="b" />
