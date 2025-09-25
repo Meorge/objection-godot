@@ -14,6 +14,7 @@ var dialog_blocks: Array[Dictionary] = []
 
 var current_id: String = ""
 var current_anim: String = "RANDOM"
+var current_evidence: String = ""
 
 var character_configs: Dictionary = {
     "acro": {
@@ -236,7 +237,8 @@ func generate_xml() -> String:
     # Start music
     output_xml.append("<music.play res=\"res://audio/music/pwr/cross-moderato.mp3\"/>\n")
 
-    var prev_char_id: String = ""
+    var prev_evidence: String = ""
+    var evidence_side: String = ""
 
     for block in dialog_blocks:
         if block.has("music"):
@@ -257,6 +259,7 @@ func generate_xml() -> String:
             var bubble_type = block["bubble_type"]
             var sound_path = char_config.get("sounds", {}).get(bubble_type, "res://audio/sound/objection-generic.wav")
 
+            output_xml.append("<evidence.hide_immediate side=\"%s\" />" % [evidence_side])
             output_xml.append("<box.set_visible value=\"false\"/>")
             output_xml.append("<flash />")
             output_xml.append("<sound.play res=\"%s\" />" % [sound_path])
@@ -288,6 +291,14 @@ func generate_xml() -> String:
                 var anims: Array = char_config["anims"]
                 char_anim = anims.pick_random()
 
+            var evidence: String = block.get("evidence", "")
+
+            # Hide any existing evidence
+            if evidence == "" and prev_evidence == "":
+                output_xml.append("<evidence.hide_immediate side=\"%s\" />" % [evidence_side])
+            elif prev_evidence != "":
+                output_xml.append("<evidence.hide side=\"%s\" />" % [evidence_side])
+
             # Set text box for character
             output_xml.append("<nametag.set_text text=\"%s\" />" % [display_name])
             # Set character idle animation
@@ -302,6 +313,11 @@ func generate_xml() -> String:
             # Start character talking animation
             output_xml.append("<sprite.set pos=\"%s\" anim=\"%s-talk\" />\n" % [char_pos, char_anim])
 
+            # If this box has evidence, then display it.
+            if evidence != "" and evidence != prev_evidence:
+                evidence_side = "left" if char_pos == "right" else "right"
+                output_xml.append("<evidence.show res=\"%s\" side=\"%s\" />" % [block["evidence"], evidence_side])
+                
             # Talk
             output_xml.append("<box.set_visible value=\"true\"/>\n")
             output_xml.append("<blip.set type=\"%s\" />" % [char_blip])
@@ -320,7 +336,7 @@ func generate_xml() -> String:
             output_xml.append("<play/>\n")
             output_xml.append("\n")
 
-            prev_char_id = char_id
+            prev_evidence = evidence
     
     var xml_str: String = "".join(output_xml).strip_edges()
     return xml_str
@@ -369,6 +385,8 @@ func _parse_element(p: XMLParser):
                 
                 current_id = attributes["id"]
                 current_anim = attributes.get("anim", "RANDOM")
+                current_evidence = attributes.get("evidence", "")
+
             elif p.get_node_name() == "objection":
                 dialog_blocks.append({"id": p.get_named_attribute_value_safe("id"), "bubble_type": "objection"})
             elif p.get_node_name() == "holdit":
@@ -391,7 +409,7 @@ func _parse_element_text(p: XMLParser):
                 return
             var text_blocks = box_splitter.split_text_into_blocks(raw_text)
             for block in text_blocks:
-                dialog_blocks.append({"id": current_id, "text": block.strip_edges(), "anim": current_anim})
+                dialog_blocks.append({"id": current_id, "text": block.strip_edges(), "anim": current_anim, "evidence": current_evidence})
 
 
 func _parse_element_end(p: XMLParser):

@@ -2,20 +2,22 @@
     <cast>
         <character id="a" display_name="Guy One" character="phoenix" />
         <character id="b" display_name="Guy 2" character="edgeworth" />
-        <character id="c" display_name="The Third One" character="franziska" />
+        <character id="c" display_name="The Third One" character="larry" />
         <character id="d" display_name="Yet Another Guy" character="judge" />
     </cast>
     <conversation>
         <startmusic res="res://audio/music/pwr/cross-moderato.mp3"/>
         <dialog id="a" anim="coffee">Hey it's me, Phoenix.</dialog>
-        <dialog id="b">And I'm Edgeworth. Wow!</dialog>
+        <dialog id="b" evidence="res://scenes/counsel/bg_counsel.png">And I'm Edgeworth. Wow!</dialog>
+        <dialog id="c" evidence="res://scenes/judge/bg_judge.png">Larry is also here.</dialog>
+        <dialog id="a">Phoenix again!</dialog>
         <stopmusic/>
         <objection id="b" />
         <objection id="a" />
         <objection id="c" />
         <objection id="d" />
         <startmusic res="res://audio/music/pwr/press.mp3"/>
-        <dialog id="c">Don't forget about me, Larry. I talk a whole lot so my text is going to have to go over multiple lines because of just how much text there is ha ha ha ha</dialog>
+        <dialog id="c">Here is an extremely long dialog item, that will have to be split up over multiple boxes due to its extreme length. Sometimes people just go on and on, so we have to be able to handle this.</dialog>
         <gavel slams="3" />
         <dialog id="b">Now we're back to Edgeworth.</dialog>
         <dialog id="a">Can I get a little time in the spotlight again?</dialog>
