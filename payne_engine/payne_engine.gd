@@ -247,13 +247,13 @@ func generate_xml() -> String:
                 output_xml.append("<music.play res=\"%s\" />" % [block["music"]])
                 continue
 
-        var user: Dictionary = characters[block["id"]]
-        
 
-        var char_id = _get_character_id_from_id(block["id"])
-        var char_config: Dictionary = character_configs[char_id]
 
         if block.has("bubble_type"):
+            var user: Dictionary = characters[block["id"]]
+            var char_id = _get_character_id_from_id(block["id"])
+            var char_config: Dictionary = character_configs[char_id]
+
             var bubble_type = block["bubble_type"]
             var sound_path = char_config.get("sounds", {}).get(bubble_type, "res://audio/sound/objection-generic.wav")
 
@@ -265,7 +265,19 @@ func generate_xml() -> String:
             output_xml.append("<play />")
             continue
 
+        elif block.has("slams"):
+            var num_slams = int(block["slams"])
+            output_xml.append("<box.set_visible value=\"false\"/>")
+            output_xml.append("<camera.cut to=\"gavel\" />")
+            output_xml.append("<gavel.animate num=\"%s\" />" % [num_slams])
+            output_xml.append("<play />")
+            continue
+
         elif block.has("text"):
+            var user: Dictionary = characters[block["id"]]
+            var char_id = _get_character_id_from_id(block["id"])
+            var char_config: Dictionary = character_configs[char_id]
+
             var char_pos = char_config.get("pos", "center")
             var char_blip = char_config.get("blip", "male")
             var char_res = char_config.get("res", "res://characters/%s/%s.tres" % [char_id, char_id])
@@ -367,6 +379,8 @@ func _parse_element(p: XMLParser):
                 dialog_blocks.append({"music": "stop"})
             elif p.get_node_name() == "startmusic":
                 dialog_blocks.append({"music": p.get_named_attribute_value_safe("res")})
+            elif p.get_node_name() == "gavel":
+                dialog_blocks.append({"slams": p.get_named_attribute_value_safe("slams")})
 
 
 func _parse_element_text(p: XMLParser):
