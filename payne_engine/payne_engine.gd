@@ -381,24 +381,26 @@ func _parse_element(p: XMLParser):
 
         ParsePhase.PHASE_CAST:
             if p.get_node_name() == "character":
-                var attributes := {}
-                for attr_i in p.get_attribute_count():
-                    attributes[p.get_attribute_name(attr_i)] = p.get_attribute_value(attr_i)
+                var id: String = p.get_named_attribute_value_safe("id")
+                if id == "": id = "user"
+
+                var display_name: String = p.get_named_attribute_value_safe("display_name")
+                if display_name == "": display_name = "User"
+
+                var character: String = p.get_named_attribute_value_safe("character")
+                if character == "": character = "phoenix"
                 
-                var id: String = attributes.get("id", "user")
-                var display_name: String = attributes.get("display_name", "User")
-                var character: String = attributes.get("character", "phoenix")
                 characters[id] = {"display_name": display_name, "character": character}
 
         ParsePhase.PHASE_CONVERSATION:
             if p.get_node_name() == "dialog":
-                var attributes := {}
-                for attr_i in p.get_attribute_count():
-                    attributes[p.get_attribute_name(attr_i)] = p.get_attribute_value(attr_i)
-                
-                current_id = attributes["id"]
-                current_anim = attributes.get("anim", "RANDOM")
-                current_evidence = attributes.get("evidence", "")
+                current_id = p.get_named_attribute_value_safe("id")
+                if current_id == "": current_id = "user"
+
+                current_anim = p.get_named_attribute_value_safe("anim")
+                if current_anim == "": current_anim = "RANDOM"
+
+                current_evidence = p.get_named_attribute_value_safe("evidence")
 
             elif p.get_node_name() == "objection":
                 dialog_blocks.append({
