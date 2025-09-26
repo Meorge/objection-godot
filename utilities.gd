@@ -46,12 +46,7 @@ static func load_audio(path: String) -> AudioStream:
 			"ogg":
 				stream = AudioStreamOggVorbis.load_from_file(path)
 			"wav":
-				Utils.print_error("Attempting to load an external WAV - this is currently broken")
-				var f = FileAccess.open(path, FileAccess.READ)
-				stream = AudioStreamWAV.new()
-				stream.data = f.get_buffer(f.get_length())
+				stream = AudioStreamWAV.load_from_file(path)
 			"mp3":
-				var f = FileAccess.open(path, FileAccess.READ)
-				stream = AudioStreamMP3.new()
-				stream.data = f.get_buffer(f.get_length())
+				stream = AudioStreamMP3.load_from_file(path)
 		return stream
