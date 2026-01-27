@@ -1,13 +1,13 @@
-[gd_resource type="SpriteFrames" load_steps=8 format=3]
+[gd_resource type="SpriteFrames" format=3 uid="uid://ceq7abcu1lqry"]
 
-[ext_resource type="Texture2D" path="./evidence-in-right-0.png" id="evidence-in-right-0"]
-[ext_resource type="Texture2D" path="./evidence-in-right-1.png" id="evidence-in-right-1"]
-[ext_resource type="Texture2D" path="./evidence-in-right-2.png" id="evidence-in-right-2"]
-[ext_resource type="Texture2D" path="./evidence-in-right-3.png" id="evidence-in-right-3"]
-[ext_resource type="Texture2D" path="./evidence-out-right-0.png" id="evidence-out-right-0"]
-[ext_resource type="Texture2D" path="./evidence-out-right-1.png" id="evidence-out-right-1"]
-[ext_resource type="Texture2D" path="./evidence-out-right-2.png" id="evidence-out-right-2"]
-[ext_resource type="Texture2D" path="./evidence-out-right-3.png" id="evidence-out-right-3"]
+[ext_resource type="Texture2D" uid="uid://d334pxaqcf2j7" path="res://ui/evidence/evidence-right/evidence-in-right-0.png" id="evidence-in-right-0"]
+[ext_resource type="Texture2D" uid="uid://cf8i6ahtyur38" path="res://ui/evidence/evidence-right/evidence-in-right-1.png" id="evidence-in-right-1"]
+[ext_resource type="Texture2D" uid="uid://05vwdlcl3tby" path="res://ui/evidence/evidence-right/evidence-in-right-2.png" id="evidence-in-right-2"]
+[ext_resource type="Texture2D" uid="uid://3vtlaooj4whe" path="res://ui/evidence/evidence-right/evidence-in-right-3.png" id="evidence-in-right-3"]
+[ext_resource type="Texture2D" uid="uid://c3cwj0utno2ox" path="res://ui/evidence/evidence-right/evidence-out-right-0.png" id="evidence-out-right-0"]
+[ext_resource type="Texture2D" uid="uid://bi7v3yolgv6kp" path="res://ui/evidence/evidence-right/evidence-out-right-1.png" id="evidence-out-right-1"]
+[ext_resource type="Texture2D" uid="uid://0glkocchn6ds" path="res://ui/evidence/evidence-right/evidence-out-right-2.png" id="evidence-out-right-2"]
+[ext_resource type="Texture2D" uid="uid://dbd08s1ht536t" path="res://ui/evidence/evidence-right/evidence-out-right-3.png" id="evidence-out-right-3"]
 
 [resource]
 animations = [{

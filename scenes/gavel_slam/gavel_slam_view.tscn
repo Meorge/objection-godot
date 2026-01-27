@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://dmdrdriv4rjlv"]
+[gd_scene format=3 uid="uid://dmdrdriv4rjlv"]
 
 [ext_resource type="Script" uid="uid://bg1722ic87n57" path="res://scenes/gavel_slam/gavel_slam.gd" id="1_6fkld"]
 [ext_resource type="Texture2D" uid="uid://3s3i112aph57" path="res://scenes/gavel_slam/gavel_slam_bg.png" id="1_te6jw"]
@@ -9,32 +9,32 @@
 [ext_resource type="Script" uid="uid://dfievmc3jlsp0" path="res://camera/camera_position.gd" id="6_ep5cf"]
 [ext_resource type="AudioStream" uid="uid://17s2bhyrx7fq" path="res://audio/sound/sfx-gavel.wav" id="8_2pawu"]
 
-[node name="GavelSlamView" type="Node2D" node_paths=PackedStringArray("frames")]
+[node name="GavelSlamView" type="Node2D" unique_id=168482421 node_paths=PackedStringArray("frames")]
 script = ExtResource("1_6fkld")
 frames = [NodePath("Gavel1"), NodePath("Gavel2"), NodePath("Gavel3")]
 
-[node name="Background" type="Sprite2D" parent="."]
+[node name="Background" type="Sprite2D" parent="." unique_id=1879959158]
 clip_children = 2
 texture = ExtResource("1_te6jw")
 metadata/_edit_lock_ = true
 
-[node name="Block" type="Sprite2D" parent="."]
+[node name="Block" type="Sprite2D" parent="." unique_id=1526931642]
 texture = ExtResource("2_ye8ve")
 metadata/_edit_lock_ = true
 
-[node name="Gavel1" type="Sprite2D" parent="."]
+[node name="Gavel1" type="Sprite2D" parent="." unique_id=1093073345]
 texture = ExtResource("3_i208c")
 
-[node name="Gavel2" type="Sprite2D" parent="."]
+[node name="Gavel2" type="Sprite2D" parent="." unique_id=470811277]
 texture = ExtResource("4_j75wo")
 
-[node name="Gavel3" type="Sprite2D" parent="."]
+[node name="Gavel3" type="Sprite2D" parent="." unique_id=306675899]
 texture = ExtResource("5_f8xpv")
 
-[node name="CameraPoint" type="Node2D" parent="."]
+[node name="CameraPoint" type="Node2D" parent="." unique_id=519595038]
 script = ExtResource("6_ep5cf")
 camera_id = "gavel"
 
-[node name="GavelSlamSound" type="AudioStreamPlayer" parent="."]
+[node name="GavelSlamSound" type="AudioStreamPlayer" parent="." unique_id=1012367779]
 unique_name_in_owner = true
 stream = ExtResource("8_2pawu")

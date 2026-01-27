@@ -1,11 +1,11 @@
-[gd_scene load_steps=3 format=3 uid="uid://cm0jdo28dnbbi"]
+[gd_scene format=3 uid="uid://cm0jdo28dnbbi"]
 
 [ext_resource type="Script" uid="uid://dd8dy31mn7ex4" path="res://payne_engine/payne_engine.gd" id="1_6t5b6"]
 [ext_resource type="PackedScene" uid="uid://dc2il2yy32gk5" path="res://scenes/measure_boxes/measure_boxes.tscn" id="2_nr1lx"]
 
-[node name="PayneEngine" type="Node2D"]
+[node name="PayneEngine" type="Node2D" unique_id=42846727]
 script = ExtResource("1_6t5b6")
 
-[node name="BoxSplitter" parent="." instance=ExtResource("2_nr1lx")]
+[node name="BoxSplitter" parent="." unique_id=307520649 instance=ExtResource("2_nr1lx")]
 unique_name_in_owner = true
 visible = false

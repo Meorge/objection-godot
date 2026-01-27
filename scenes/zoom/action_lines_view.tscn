@@ -1,23 +1,23 @@
-[gd_scene load_steps=5 format=3 uid="uid://b2fk3m2tmi0xu"]
+[gd_scene format=3 uid="uid://b2fk3m2tmi0xu"]
 
 [ext_resource type="Texture2D" uid="uid://c831lnbc0hn5q" path="res://scenes/zoom/bg_action.png" id="1_enva1"]
 [ext_resource type="Script" uid="uid://xu320vy122i0" path="res://scenes/zoom/action_lines_mover.gd" id="2_i70j5"]
 [ext_resource type="Script" uid="uid://dfievmc3jlsp0" path="res://camera/camera_position.gd" id="3_iv0qa"]
 [ext_resource type="Script" uid="uid://orssj05snx0v" path="res://characters/character_sprite.gd" id="3_sj0pu"]
 
-[node name="ActionLinesView" type="Node2D"]
+[node name="ActionLinesView" type="Node2D" unique_id=1343022790]
 
-[node name="ActionLinesViewBackground" type="Sprite2D" parent="."]
+[node name="ActionLinesViewBackground" type="Sprite2D" parent="." unique_id=1654826692]
 z_index = -10
 texture = ExtResource("1_enva1")
 script = ExtResource("2_i70j5")
 metadata/_edit_lock_ = true
 
-[node name="ActionLinesCharacter" type="AnimatedSprite2D" parent="."]
+[node name="ActionLinesCharacter" type="AnimatedSprite2D" parent="." unique_id=151825779]
 script = ExtResource("3_sj0pu")
 container_id = "zoom"
 metadata/_edit_lock_ = true
 
-[node name="CameraPoint" type="Node2D" parent="."]
+[node name="CameraPoint" type="Node2D" parent="." unique_id=478874229]
 script = ExtResource("3_iv0qa")
 camera_id = "zoom"

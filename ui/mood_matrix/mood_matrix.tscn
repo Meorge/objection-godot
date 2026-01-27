@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://btfayeijnow7g"]
+[gd_scene format=3 uid="uid://btfayeijnow7g"]
 
 [ext_resource type="Script" uid="uid://pm26s186qitn" path="res://ui/mood_matrix/mood_matrix.gd" id="1_1b2ix"]
 [ext_resource type="PackedScene" uid="uid://ckkqqa1iuewni" path="res://ui/mood_matrix/mood_matrix_marker.tscn" id="2_0h0un"]
@@ -496,7 +496,7 @@ _data = {
 &"markers_in": SubResource("Animation_4r01x")
 }
 
-[node name="MoodMatrix" type="Control"]
+[node name="MoodMatrix" type="Control" unique_id=499797810]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -507,7 +507,7 @@ script = ExtResource("1_1b2ix")
 large_noise_texture = ExtResource("2_snp1r")
 small_noise_texture = ExtResource("3_b8nkm")
 
-[node name="BGNoiseSpike" type="HBoxContainer" parent="."]
+[node name="BGNoiseSpike" type="HBoxContainer" parent="." unique_id=615338931]
 unique_name_in_owner = true
 modulate = Color(0.13, 0.677, 0.78, 0.5)
 layout_mode = 0
@@ -518,55 +518,55 @@ scale = Vector2(1, 1e-05)
 pivot_offset = Vector2(0, 20)
 theme_override_constants/separation = 0
 
-[node name="TextureRect" type="TextureRect" parent="BGNoiseSpike"]
+[node name="TextureRect" type="TextureRect" parent="BGNoiseSpike" unique_id=854471478]
 custom_minimum_size = Vector2(40, 0)
 layout_mode = 2
 texture = ExtResource("2_snp1r")
 expand_mode = 1
 
-[node name="TextureRect2" type="TextureRect" parent="BGNoiseSpike"]
+[node name="TextureRect2" type="TextureRect" parent="BGNoiseSpike" unique_id=1464215117]
 custom_minimum_size = Vector2(40, 0)
 layout_mode = 2
 texture = ExtResource("2_snp1r")
 expand_mode = 1
 
-[node name="TextureRect3" type="TextureRect" parent="BGNoiseSpike"]
+[node name="TextureRect3" type="TextureRect" parent="BGNoiseSpike" unique_id=1352248694]
 custom_minimum_size = Vector2(40, 0)
 layout_mode = 2
 texture = ExtResource("2_snp1r")
 expand_mode = 1
 
-[node name="TextureRect4" type="TextureRect" parent="BGNoiseSpike"]
+[node name="TextureRect4" type="TextureRect" parent="BGNoiseSpike" unique_id=83095974]
 custom_minimum_size = Vector2(40, 0)
 layout_mode = 2
 texture = ExtResource("2_snp1r")
 expand_mode = 1
 
-[node name="TextureRect5" type="TextureRect" parent="BGNoiseSpike"]
+[node name="TextureRect5" type="TextureRect" parent="BGNoiseSpike" unique_id=357694150]
 custom_minimum_size = Vector2(40, 0)
 layout_mode = 2
 texture = ExtResource("2_snp1r")
 expand_mode = 1
 
-[node name="TextureRect6" type="TextureRect" parent="BGNoiseSpike"]
+[node name="TextureRect6" type="TextureRect" parent="BGNoiseSpike" unique_id=408094992]
 custom_minimum_size = Vector2(40, 0)
 layout_mode = 2
 texture = ExtResource("2_snp1r")
 expand_mode = 1
 
-[node name="TextureRect7" type="TextureRect" parent="BGNoiseSpike"]
+[node name="TextureRect7" type="TextureRect" parent="BGNoiseSpike" unique_id=1858716539]
 custom_minimum_size = Vector2(40, 0)
 layout_mode = 2
 texture = ExtResource("2_snp1r")
 expand_mode = 1
 
-[node name="TextureRect8" type="TextureRect" parent="BGNoiseSpike"]
+[node name="TextureRect8" type="TextureRect" parent="BGNoiseSpike" unique_id=1356647280]
 custom_minimum_size = Vector2(40, 0)
 layout_mode = 2
 texture = ExtResource("2_snp1r")
 expand_mode = 1
 
-[node name="Frame" type="Control" parent="."]
+[node name="Frame" type="Control" parent="." unique_id=317473699]
 unique_name_in_owner = true
 layout_mode = 1
 anchors_preset = 15
@@ -575,7 +575,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Squares Background" type="ColorRect" parent="Frame"]
+[node name="Squares Background" type="ColorRect" parent="Frame" unique_id=598217954]
 modulate = Color(1, 1, 1, 0)
 material = SubResource("ShaderMaterial_xbxoc")
 layout_mode = 1
@@ -592,7 +592,7 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.313726, 0.654902, 0.862745, 0.329412)
 
-[node name="BigRing" parent="Frame" instance=ExtResource("4_ycctq")]
+[node name="BigRing" parent="Frame" unique_id=1925326027 instance=ExtResource("4_ycctq")]
 unique_name_in_owner = true
 visible = false
 layout_mode = 0
@@ -608,7 +608,7 @@ offset_bottom = 225.0
 grow_horizontal = 1
 grow_vertical = 1
 
-[node name="BehindMarkersWhiteFlash" type="ColorRect" parent="Frame"]
+[node name="BehindMarkersWhiteFlash" type="ColorRect" parent="Frame" unique_id=166698640]
 unique_name_in_owner = true
 visible = false
 layout_mode = 1
@@ -620,7 +620,7 @@ anchor_bottom = 1.1
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="OverloadTint" type="ColorRect" parent="Frame"]
+[node name="OverloadTint" type="ColorRect" parent="Frame" unique_id=721403489]
 unique_name_in_owner = true
 layout_mode = 1
 anchors_preset = 15
@@ -631,7 +631,7 @@ grow_vertical = 2
 color = Color(0.985, 0.128, 0, 0.25)
 script = ExtResource("7_buprc")
 
-[node name="Markers" type="Control" parent="Frame"]
+[node name="Markers" type="Control" parent="Frame" unique_id=363906833]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -642,7 +642,7 @@ rotation = 1.5708
 scale = Vector2(1.4, 1.4)
 pivot_offset = Vector2(128, 96)
 
-[node name="HappyOffset" type="Control" parent="Frame/Markers"]
+[node name="HappyOffset" type="Control" parent="Frame/Markers" unique_id=1951167334]
 unique_name_in_owner = true
 layout_mode = 1
 anchors_preset = 15
@@ -651,15 +651,16 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Happy" parent="Frame/Markers/HappyOffset" instance=ExtResource("2_0h0un")]
+[node name="Happy" parent="Frame/Markers/HappyOffset" unique_id=597847983 instance=ExtResource("2_0h0un")]
 unique_name_in_owner = true
+layout_mode = 0
 offset_left = 8.0
 offset_top = 8.0
 offset_right = 54.0
 offset_bottom = 54.0
 marker_type = ExtResource("5_gnfxl")
 
-[node name="AngryOffset" type="Control" parent="Frame/Markers"]
+[node name="AngryOffset" type="Control" parent="Frame/Markers" unique_id=1465683755]
 unique_name_in_owner = true
 layout_mode = 1
 anchors_preset = 15
@@ -668,7 +669,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Angry" parent="Frame/Markers/AngryOffset" instance=ExtResource("2_0h0un")]
+[node name="Angry" parent="Frame/Markers/AngryOffset" unique_id=1574030197 instance=ExtResource("2_0h0un")]
 unique_name_in_owner = true
 layout_mode = 1
 anchors_preset = 1
@@ -681,7 +682,7 @@ offset_bottom = 54.0
 grow_horizontal = 0
 marker_type = ExtResource("6_xxsyf")
 
-[node name="SadOffset" type="Control" parent="Frame/Markers"]
+[node name="SadOffset" type="Control" parent="Frame/Markers" unique_id=754133866]
 unique_name_in_owner = true
 layout_mode = 1
 anchors_preset = 15
@@ -690,7 +691,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Sad" parent="Frame/Markers/SadOffset" instance=ExtResource("2_0h0un")]
+[node name="Sad" parent="Frame/Markers/SadOffset" unique_id=2019071893 instance=ExtResource("2_0h0un")]
 unique_name_in_owner = true
 layout_mode = 1
 anchors_preset = 2
@@ -703,7 +704,7 @@ offset_bottom = -8.0
 grow_vertical = 0
 marker_type = ExtResource("7_d3mif")
 
-[node name="SurprisedOffset" type="Control" parent="Frame/Markers"]
+[node name="SurprisedOffset" type="Control" parent="Frame/Markers" unique_id=1969671619]
 unique_name_in_owner = true
 layout_mode = 1
 anchors_preset = 15
@@ -712,7 +713,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Surprised" parent="Frame/Markers/SurprisedOffset" instance=ExtResource("2_0h0un")]
+[node name="Surprised" parent="Frame/Markers/SurprisedOffset" unique_id=1465249098 instance=ExtResource("2_0h0un")]
 unique_name_in_owner = true
 layout_mode = 1
 anchors_preset = 3
@@ -728,7 +729,7 @@ grow_horizontal = 0
 grow_vertical = 0
 marker_type = ExtResource("8_1beay")
 
-[node name="OverloadWarning" type="TextureRect" parent="Frame"]
+[node name="OverloadWarning" type="TextureRect" parent="Frame" unique_id=910188831]
 unique_name_in_owner = true
 self_modulate = Color(0.345, 0.808, 0.945, 1)
 layout_mode = 1
@@ -745,7 +746,7 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("10_cy4d2")
 
-[node name="OverloadWarningExclamationMark" type="Control" parent="Frame/OverloadWarning"]
+[node name="OverloadWarningExclamationMark" type="Control" parent="Frame/OverloadWarning" unique_id=1568927171]
 unique_name_in_owner = true
 layout_mode = 1
 anchors_preset = 15
@@ -754,7 +755,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="ColorRect" type="ColorRect" parent="Frame/OverloadWarning/OverloadWarningExclamationMark"]
+[node name="ColorRect" type="ColorRect" parent="Frame/OverloadWarning/OverloadWarningExclamationMark" unique_id=62083496]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -768,7 +769,7 @@ offset_bottom = 14.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="ColorRect2" type="ColorRect" parent="Frame/OverloadWarning/OverloadWarningExclamationMark"]
+[node name="ColorRect2" type="ColorRect" parent="Frame/OverloadWarning/OverloadWarningExclamationMark" unique_id=552785542]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -782,20 +783,18 @@ offset_bottom = 42.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-libraries = {
-&"": SubResource("AnimationLibrary_hrs3b")
-}
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1065510120]
+libraries/ = SubResource("AnimationLibrary_hrs3b")
 
-[node name="BootupSound" type="AudioStreamPlayer" parent="."]
+[node name="BootupSound" type="AudioStreamPlayer" parent="." unique_id=999747408]
 unique_name_in_owner = true
 stream = ExtResource("10_e78te")
 
-[node name="RestartSound" type="AudioStreamPlayer" parent="."]
+[node name="RestartSound" type="AudioStreamPlayer" parent="." unique_id=748972208]
 unique_name_in_owner = true
 stream = ExtResource("10_kumx7")
 
-[node name="MoodMatrixLogoCenter" type="TextureRect" parent="."]
+[node name="MoodMatrixLogoCenter" type="TextureRect" parent="." unique_id=1560561833]
 modulate = Color(1, 1, 1, 0)
 layout_mode = 1
 anchors_preset = 8
@@ -813,7 +812,7 @@ pivot_offset = Vector2(25, 25)
 texture = ExtResource("11_0epsa")
 metadata/_edit_lock_ = true
 
-[node name="MoodMatrixLogoInnerCircle" type="TextureRect" parent="."]
+[node name="MoodMatrixLogoInnerCircle" type="TextureRect" parent="." unique_id=159651169]
 modulate = Color(1, 1, 1, 0)
 layout_mode = 1
 anchors_preset = 8
@@ -832,7 +831,7 @@ texture = ExtResource("12_ipwrm")
 expand_mode = 1
 metadata/_edit_lock_ = true
 
-[node name="MoodMatrixLogoOuterCircle" type="TextureRect" parent="."]
+[node name="MoodMatrixLogoOuterCircle" type="TextureRect" parent="." unique_id=691724375]
 modulate = Color(1, 1, 1, 0)
 layout_mode = 1
 anchors_preset = 8
@@ -851,7 +850,7 @@ texture = ExtResource("13_ymxo3")
 expand_mode = 1
 metadata/_edit_lock_ = true
 
-[node name="MoodMatrixLogoDots" type="Control" parent="."]
+[node name="MoodMatrixLogoDots" type="Control" parent="." unique_id=185314478]
 visible = false
 anchors_preset = 0
 offset_left = 128.0
@@ -859,7 +858,7 @@ offset_top = 96.0
 offset_right = 128.0
 offset_bottom = 96.0
 
-[node name="MoodMatrixLogoTopDot" type="TextureRect" parent="MoodMatrixLogoDots"]
+[node name="MoodMatrixLogoTopDot" type="TextureRect" parent="MoodMatrixLogoDots" unique_id=768808025]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -876,7 +875,7 @@ pivot_offset = Vector2(13, 13)
 texture = ExtResource("11_epvi7")
 expand_mode = 1
 
-[node name="MoodMatrixLogoLeftDot" type="TextureRect" parent="MoodMatrixLogoDots"]
+[node name="MoodMatrixLogoLeftDot" type="TextureRect" parent="MoodMatrixLogoDots" unique_id=837247478]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -893,7 +892,7 @@ pivot_offset = Vector2(13, 13)
 texture = ExtResource("11_epvi7")
 expand_mode = 1
 
-[node name="MoodMatrixLogoRightDot" type="TextureRect" parent="MoodMatrixLogoDots"]
+[node name="MoodMatrixLogoRightDot" type="TextureRect" parent="MoodMatrixLogoDots" unique_id=583587003]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -910,7 +909,7 @@ pivot_offset = Vector2(13, 13)
 texture = ExtResource("11_epvi7")
 expand_mode = 1
 
-[node name="MoodMatrixLogoBottomDot" type="TextureRect" parent="MoodMatrixLogoDots"]
+[node name="MoodMatrixLogoBottomDot" type="TextureRect" parent="MoodMatrixLogoDots" unique_id=1517011757]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -927,12 +926,12 @@ pivot_offset = Vector2(13, 13)
 texture = ExtResource("11_epvi7")
 expand_mode = 1
 
-[node name="Bootup" parent="." instance=ExtResource("15_ywdq2")]
+[node name="Bootup" parent="." unique_id=1264745708 instance=ExtResource("15_ywdq2")]
 unique_name_in_owner = true
 layout_mode = 1
 metadata/_edit_lock_ = true
 
-[node name="WhiteFlash" type="ColorRect" parent="."]
+[node name="WhiteFlash" type="ColorRect" parent="." unique_id=390625574]
 unique_name_in_owner = true
 visible = false
 layout_mode = 1
@@ -942,6 +941,6 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="OverloadSound" type="AudioStreamPlayer" parent="."]
+[node name="OverloadSound" type="AudioStreamPlayer" parent="." unique_id=1000674274]
 unique_name_in_owner = true
 stream = ExtResource("17_el0uo")

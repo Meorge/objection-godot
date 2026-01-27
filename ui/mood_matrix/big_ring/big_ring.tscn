@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://ccucfiqev8sqs"]
+[gd_scene format=3 uid="uid://ccucfiqev8sqs"]
 
 [ext_resource type="Texture2D" uid="uid://dv0sfl42ntyma" path="res://ui/mood_matrix/sprites/Big Circle.png" id="1_tft0m"]
 [ext_resource type="Script" uid="uid://bdiybi3j8643h" path="res://ui/mood_matrix/big_ring/mm_big_ring.gd" id="2_dedu1"]
@@ -14,7 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://on28expkx5gx" path="res://ui/mood_matrix/sprites/Big Circle Noise LR 4.png" id="7_bgdby"]
 [ext_resource type="Texture2D" uid="uid://djgwbiodtw0rc" path="res://ui/mood_matrix/sprites/Big Circle Noise Diag 0.png" id="9_7jnmo"]
 
-[node name="Big Ring" type="TextureRect" node_paths=PackedStringArray("ring_parts")]
+[node name="Big Ring" type="TextureRect" unique_id=1181143534 node_paths=PackedStringArray("ring_parts")]
 self_modulate = Color(1, 1, 1, 0.185)
 anchors_preset = 8
 anchor_left = 0.5
@@ -32,7 +32,7 @@ texture = ExtResource("1_tft0m")
 script = ExtResource("2_dedu1")
 ring_parts = [NodePath("NoiseRight"), NodePath("NoiseLeft"), NodePath("NoiseTR"), NodePath("NoiseBR"), NodePath("NoiseTL"), NodePath("NoiseBL")]
 
-[node name="NoiseRight" type="TextureRect" parent="."]
+[node name="NoiseRight" type="TextureRect" parent="." unique_id=1168179546]
 layout_mode = 0
 offset_left = 235.0
 offset_top = 95.0
@@ -43,7 +43,7 @@ expand_mode = 1
 script = ExtResource("3_n6pwm")
 textures = Array[Texture2D]([ExtResource("4_a1p50"), ExtResource("5_bndm6"), ExtResource("6_eojth"), ExtResource("2_wrjpg"), ExtResource("7_bgdby")])
 
-[node name="NoiseLeft" type="TextureRect" parent="."]
+[node name="NoiseLeft" type="TextureRect" parent="." unique_id=1018163425]
 layout_mode = 0
 offset_left = -8.5
 offset_top = 95.0
@@ -55,7 +55,7 @@ flip_h = true
 script = ExtResource("3_n6pwm")
 textures = Array[Texture2D]([ExtResource("4_a1p50"), ExtResource("5_bndm6"), ExtResource("6_eojth"), ExtResource("2_wrjpg"), ExtResource("7_bgdby")])
 
-[node name="NoiseTR" type="TextureRect" parent="."]
+[node name="NoiseTR" type="TextureRect" parent="." unique_id=1411880362]
 layout_mode = 0
 offset_left = 197.5
 offset_top = 20.5
@@ -66,7 +66,7 @@ expand_mode = 1
 script = ExtResource("3_n6pwm")
 textures = Array[Texture2D]([ExtResource("9_7jnmo"), ExtResource("4_u6ue2"), ExtResource("3_7udbc"), ExtResource("3_06yth"), ExtResource("3_hxt6r")])
 
-[node name="NoiseBR" type="TextureRect" parent="."]
+[node name="NoiseBR" type="TextureRect" parent="." unique_id=154187206]
 layout_mode = 0
 offset_left = 197.5
 offset_top = 160.5
@@ -78,7 +78,7 @@ flip_v = true
 script = ExtResource("3_n6pwm")
 textures = Array[Texture2D]([ExtResource("9_7jnmo"), ExtResource("4_u6ue2"), ExtResource("3_7udbc"), ExtResource("3_06yth"), ExtResource("3_hxt6r")])
 
-[node name="NoiseTL" type="TextureRect" parent="."]
+[node name="NoiseTL" type="TextureRect" parent="." unique_id=1924129430]
 layout_mode = 0
 offset_left = 3.5
 offset_top = 20.5
@@ -90,7 +90,7 @@ flip_h = true
 script = ExtResource("3_n6pwm")
 textures = Array[Texture2D]([ExtResource("9_7jnmo"), ExtResource("4_u6ue2"), ExtResource("3_7udbc"), ExtResource("3_06yth"), ExtResource("3_hxt6r")])
 
-[node name="NoiseBL" type="TextureRect" parent="."]
+[node name="NoiseBL" type="TextureRect" parent="." unique_id=264460730]
 layout_mode = 0
 offset_left = 3.5
 offset_top = 160.5

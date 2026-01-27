@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://ee5bf1t2kme1"]
+[gd_scene format=3 uid="uid://ee5bf1t2kme1"]
 
 [ext_resource type="Texture2D" uid="uid://b4bey7v6kouu0" path="res://ui/mood_matrix/sprites/Logo Center.png" id="1_uae7a"]
 [ext_resource type="Script" uid="uid://bn6312q7q7h3q" path="res://ui/mood_matrix/shutdown/mm_shutdown.gd" id="1_vf51q"]
@@ -256,7 +256,7 @@ _data = {
 base_font = ExtResource("6_x2y8t")
 variation_face_index = 1
 
-[node name="MoodMatrixShutdown" type="Control"]
+[node name="MoodMatrixShutdown" type="Control" unique_id=64857939]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -265,7 +265,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_vf51q")
 
-[node name="BackgroundOverlay" type="ColorRect" parent="."]
+[node name="BackgroundOverlay" type="ColorRect" parent="." unique_id=908242987]
 unique_name_in_owner = true
 layout_mode = 1
 anchors_preset = 15
@@ -275,7 +275,7 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.021, 0.09, 0.149, 0)
 
-[node name="BlueTint" type="ColorRect" parent="."]
+[node name="BlueTint" type="ColorRect" parent="." unique_id=619500430]
 self_modulate = Color(1, 1, 1, 0)
 layout_mode = 1
 anchors_preset = 15
@@ -285,7 +285,7 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.113725, 0.494118, 0.717647, 0.6)
 
-[node name="Logo" type="Control" parent="."]
+[node name="Logo" type="Control" parent="." unique_id=1937884539]
 visible = false
 layout_mode = 1
 anchors_preset = 15
@@ -296,7 +296,7 @@ grow_vertical = 2
 scale = Vector2(0.8, 0.8)
 pivot_offset = Vector2(128, 96)
 
-[node name="MoodMatrixLogoCenter" type="TextureRect" parent="Logo"]
+[node name="MoodMatrixLogoCenter" type="TextureRect" parent="Logo" unique_id=113448618]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -312,7 +312,7 @@ grow_vertical = 2
 pivot_offset = Vector2(25, 25)
 texture = ExtResource("1_uae7a")
 
-[node name="MoodMatrixLogoInnerCircle" type="TextureRect" parent="Logo"]
+[node name="MoodMatrixLogoInnerCircle" type="TextureRect" parent="Logo" unique_id=277975979]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -329,7 +329,7 @@ pivot_offset = Vector2(52, 52)
 texture = ExtResource("2_3rhdr")
 expand_mode = 1
 
-[node name="MoodMatrixLogoOuterCircle" type="TextureRect" parent="Logo"]
+[node name="MoodMatrixLogoOuterCircle" type="TextureRect" parent="Logo" unique_id=2060023344]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -346,8 +346,7 @@ pivot_offset = Vector2(75, 75)
 texture = ExtResource("3_b088u")
 expand_mode = 1
 
-[node name="MoodMatrixLogoDots" type="Control" parent="Logo"]
-layout_mode = 3
+[node name="MoodMatrixLogoDots" type="Control" parent="Logo" unique_id=1639209329]
 anchors_preset = 0
 offset_left = 128.0
 offset_top = 96.0
@@ -355,7 +354,7 @@ offset_right = 128.0
 offset_bottom = 96.0
 rotation = 0.785398
 
-[node name="MoodMatrixLogoTopDot" type="TextureRect" parent="Logo/MoodMatrixLogoDots"]
+[node name="MoodMatrixLogoTopDot" type="TextureRect" parent="Logo/MoodMatrixLogoDots" unique_id=1728539342]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -372,7 +371,7 @@ pivot_offset = Vector2(13, 13)
 texture = ExtResource("4_vp8km")
 expand_mode = 1
 
-[node name="MoodMatrixLogoLeftDot" type="TextureRect" parent="Logo/MoodMatrixLogoDots"]
+[node name="MoodMatrixLogoLeftDot" type="TextureRect" parent="Logo/MoodMatrixLogoDots" unique_id=1630632943]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -389,7 +388,7 @@ pivot_offset = Vector2(13, 13)
 texture = ExtResource("4_vp8km")
 expand_mode = 1
 
-[node name="MoodMatrixLogoRightDot" type="TextureRect" parent="Logo/MoodMatrixLogoDots"]
+[node name="MoodMatrixLogoRightDot" type="TextureRect" parent="Logo/MoodMatrixLogoDots" unique_id=2066351222]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -406,7 +405,7 @@ pivot_offset = Vector2(13, 13)
 texture = ExtResource("4_vp8km")
 expand_mode = 1
 
-[node name="MoodMatrixLogoBottomDot" type="TextureRect" parent="Logo/MoodMatrixLogoDots"]
+[node name="MoodMatrixLogoBottomDot" type="TextureRect" parent="Logo/MoodMatrixLogoDots" unique_id=1568459441]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -423,16 +422,14 @@ pivot_offset = Vector2(13, 13)
 texture = ExtResource("4_vp8km")
 expand_mode = 1
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=302863762]
 unique_name_in_owner = true
-libraries = {
-&"": SubResource("AnimationLibrary_axbex")
-}
+libraries/ = SubResource("AnimationLibrary_axbex")
 
-[node name="ShutdownSound" type="AudioStreamPlayer" parent="."]
+[node name="ShutdownSound" type="AudioStreamPlayer" parent="." unique_id=19535375]
 unique_name_in_owner = true
 
-[node name="LabelContainer" type="Control" parent="."]
+[node name="LabelContainer" type="Control" parent="." unique_id=1360397358]
 unique_name_in_owner = true
 modulate = Color(0.228, 0.765, 0.868, 0)
 layout_mode = 1
@@ -445,7 +442,7 @@ grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(1e-05, 1e-05)
 
-[node name="ShutdownLabel" type="Label" parent="LabelContainer"]
+[node name="ShutdownLabel" type="Label" parent="LabelContainer" unique_id=1341297741]
 unique_name_in_owner = true
 layout_mode = 1
 anchors_preset = 8
@@ -465,7 +462,7 @@ text = "BYE BYE"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="WhiteFlash" type="ColorRect" parent="."]
+[node name="WhiteFlash" type="ColorRect" parent="." unique_id=1138750795]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0

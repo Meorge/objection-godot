@@ -1,4 +1,4 @@
-[gd_resource type="SpriteFrames" load_steps=17 format=3 uid="uid://qvbkpkkq2hcu"]
+[gd_resource type="SpriteFrames" format=3 uid="uid://qvbkpkkq2hcu"]
 
 [ext_resource type="Texture2D" uid="uid://cdnyoo5b7xsee" path="res://scenes/perceive/frames/Perceive_BG_01.png" id="1_60jbg"]
 [ext_resource type="Texture2D" uid="uid://bp68glcvb4b72" path="res://scenes/perceive/frames/Perceive_BG_02.png" id="2_3nhtp"]

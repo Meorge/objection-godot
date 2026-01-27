@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://cbtonh0u74a8v"]
+[gd_scene format=3 uid="uid://cbtonh0u74a8v"]
 
 [ext_resource type="SpriteFrames" uid="uid://qvbkpkkq2hcu" path="res://scenes/perceive/perceive_bg.tres" id="1_7g8kv"]
 [ext_resource type="Script" uid="uid://b2vv5x64tgxdo" path="res://scenes/perceive/perceive_effect.gd" id="2_3s3gd"]
@@ -41,7 +41,7 @@ _data = {
 &"rotate": SubResource("Animation_vox1w")
 }
 
-[node name="PerceiveEffect" type="AnimatedSprite2D"]
+[node name="PerceiveEffect" type="AnimatedSprite2D" unique_id=1149596773]
 z_index = -5
 scale = Vector2(0.33, 0.33)
 sprite_frames = ExtResource("1_7g8kv")
@@ -49,8 +49,6 @@ autoplay = "default"
 frame_progress = 0.177206
 script = ExtResource("2_3s3gd")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-libraries = {
-&"": SubResource("AnimationLibrary_4ejas")
-}
-autoplay = "rotate"
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=402214255]
+libraries/ = SubResource("AnimationLibrary_4ejas")
+autoplay = &"rotate"

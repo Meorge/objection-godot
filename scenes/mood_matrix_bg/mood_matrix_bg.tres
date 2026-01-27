@@ -1,4 +1,4 @@
-[gd_resource type="VisualShader" load_steps=8 format=3 uid="uid://ceskm3o6mjmlg"]
+[gd_resource type="VisualShader" format=3 uid="uid://ceskm3o6mjmlg"]
 
 [sub_resource type="VisualShaderNodeInput" id="VisualShaderNodeInput_a5lio"]
 input_name = "uv"
@@ -30,52 +30,6 @@ default_value_enabled = true
 default_value = 0.5
 
 [resource]
-code = "shader_type canvas_item;
-render_mode blend_mix;
-
-uniform vec4 GlowColor : source_color = vec4(0.196078, 0.427451, 0.521569, 1.000000);
-uniform vec4 BackgroundColor : source_color = vec4(0.025364, 0.025364, 0.025364, 1.000000);
-uniform float CircleSize = 0.5;
-
-
-
-void fragment() {
-// ColorParameter:6
-	vec4 n_out6p0 = GlowColor;
-
-
-// ColorParameter:7
-	vec4 n_out7p0 = BackgroundColor;
-
-
-// FloatParameter:8
-	float n_out8p0 = CircleSize;
-
-
-// Input:2
-	vec2 n_out2p0 = UV;
-
-
-// Distance:3
-	vec2 n_in3p1 = vec2(0.50000, 0.50000);
-	float n_out3p0 = distance(n_out2p0, n_in3p1);
-
-
-// SmoothStep:4
-	float n_in4p0 = 0.00000;
-	float n_out4p0 = smoothstep(n_in4p0, n_out8p0, n_out3p0);
-
-
-// Mix:5
-	vec4 n_out5p0 = mix(n_out6p0, n_out7p0, vec4(n_out4p0));
-
-
-// Output:0
-	COLOR.rgb = vec3(n_out5p0.xyz);
-
-
-}
-"
 mode = 1
 flags/light_only = false
 nodes/fragment/0/position = Vector2(560, 140)

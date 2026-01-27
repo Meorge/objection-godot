@@ -1,6 +1,6 @@
-[gd_resource type="Resource" script_class="MoodMatrixMarkerType" load_steps=4 format=3 uid="uid://c48rkmj8y5dab"]
+[gd_resource type="Resource" script_class="MoodMatrixMarkerType" format=3 uid="uid://c48rkmj8y5dab"]
 
-[ext_resource type="Script" path="res://ui/mood_matrix/mood_matrix_marker_type.gd" id="1_6lppl"]
+[ext_resource type="Script" uid="uid://b6cdoarrf2irn" path="res://ui/mood_matrix/mood_matrix_marker_type.gd" id="1_6lppl"]
 [ext_resource type="Texture2D" uid="uid://dqxg25qfu26hx" path="res://ui/mood_matrix/sprites/Happy.png" id="1_o6mg0"]
 [ext_resource type="AudioStream" uid="uid://ulkjl0v6om02" path="res://ui/mood_matrix/sounds/happy.wav" id="2_c3ssa"]
 

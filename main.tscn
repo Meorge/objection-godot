@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://dtsmh3r0kycrw"]
+[gd_scene format=3 uid="uid://dtsmh3r0kycrw"]
 
 [ext_resource type="AudioStream" uid="uid://brp8iv61fonns" path="res://audio/sound/sfx-blipmale.wav" id="8_ance2"]
 [ext_resource type="Script" uid="uid://2pc3qdy2g7m" path="res://audio/voice_blip_player.gd" id="9_tg6eo"]
@@ -23,9 +23,9 @@
 [ext_resource type="PackedScene" uid="uid://btpnuaw6g48yu" path="res://scenes/mood_matrix_bg/mood_matrix_bg.tscn" id="18_rb12j"]
 [ext_resource type="PackedScene" uid="uid://dhmhsu0khyno4" path="res://effects/confetti/confetti_container.tscn" id="19_mw2qx"]
 
-[node name="Node2D" type="Node2D"]
+[node name="Node2D" type="Node2D" unique_id=55095031]
 
-[node name="VoiceBlipPlayer" type="AudioStreamPlayer" parent="."]
+[node name="VoiceBlipPlayer" type="AudioStreamPlayer" parent="." unique_id=1209069332]
 unique_name_in_owner = true
 stream = ExtResource("8_ance2")
 script = ExtResource("9_tg6eo")
@@ -33,59 +33,59 @@ male_blip = ExtResource("8_ance2")
 female_blip = ExtResource("10_fdiee")
 typewriter_blip = ExtResource("11_cis7q")
 
-[node name="GameUI" parent="." instance=ExtResource("16_48a6l")]
+[node name="GameUI" parent="." unique_id=513186316 instance=ExtResource("16_48a6l")]
 
-[node name="MainCourtView" parent="." instance=ExtResource("17_43555")]
+[node name="MainCourtView" parent="." unique_id=200518689 instance=ExtResource("17_43555")]
 unique_name_in_owner = true
 
-[node name="JudgeView" parent="." instance=ExtResource("18_btfy3")]
+[node name="JudgeView" parent="." unique_id=451937967 instance=ExtResource("18_btfy3")]
 unique_name_in_owner = true
 position = Vector2(0, 256)
 
-[node name="CounselView" parent="." instance=ExtResource("17_apcaq")]
+[node name="CounselView" parent="." unique_id=361191430 instance=ExtResource("17_apcaq")]
 unique_name_in_owner = true
 position = Vector2(0, 512)
 
-[node name="BehindCourtView" parent="." instance=ExtResource("10_hg0yk")]
+[node name="BehindCourtView" parent="." unique_id=356151274 instance=ExtResource("10_hg0yk")]
 unique_name_in_owner = true
 position = Vector2(0, 768)
 
-[node name="ActionLinesView" parent="." instance=ExtResource("11_l7imp")]
+[node name="ActionLinesView" parent="." unique_id=858518367 instance=ExtResource("11_l7imp")]
 unique_name_in_owner = true
 position = Vector2(0, 1024)
 
-[node name="GavelSlamView" parent="." instance=ExtResource("12_2j504")]
+[node name="GavelSlamView" parent="." unique_id=213206636 instance=ExtResource("12_2j504")]
 unique_name_in_owner = true
 position = Vector2(0, 1280)
 
-[node name="PayneEngine" parent="." instance=ExtResource("12_ryguw")]
+[node name="PayneEngine" parent="." unique_id=1835586967 instance=ExtResource("12_ryguw")]
 unique_name_in_owner = true
 
-[node name="ScriptManager" type="Node" parent="."]
+[node name="ScriptManager" type="Node" parent="." unique_id=485835766]
 unique_name_in_owner = true
 script = ExtResource("13_dml7f")
 
-[node name="SoundPlayer" type="Node" parent="."]
+[node name="SoundPlayer" type="Node" parent="." unique_id=1931714140]
 script = ExtResource("14_2tbeq")
 
-[node name="MusicPlayer" type="AudioStreamPlayer" parent="."]
+[node name="MusicPlayer" type="AudioStreamPlayer" parent="." unique_id=917029111]
 script = ExtResource("15_n5jm8")
 
-[node name="CameraShaker" type="Node2D" parent="."]
+[node name="CameraShaker" type="Node2D" parent="." unique_id=382758064]
 unique_name_in_owner = true
 script = ExtResource("16_mecxv")
 
-[node name="InnerContainer" type="Node2D" parent="CameraShaker"]
+[node name="InnerContainer" type="Node2D" parent="CameraShaker" unique_id=1292854040]
 
-[node name="Camera" type="Camera2D" parent="CameraShaker/InnerContainer"]
+[node name="Camera" type="Camera2D" parent="CameraShaker/InnerContainer" unique_id=1529074158]
 unique_name_in_owner = true
 script = ExtResource("17_efp1a")
 
-[node name="PerceiveEffect" parent="CameraShaker/InnerContainer/Camera" instance=ExtResource("18_7lwyl")]
+[node name="PerceiveEffect" parent="CameraShaker/InnerContainer/Camera" unique_id=2070462003 instance=ExtResource("18_7lwyl")]
 
-[node name="MoodMatrixBg" parent="CameraShaker/InnerContainer/Camera" instance=ExtResource("18_rb12j")]
+[node name="MoodMatrixBg" parent="CameraShaker/InnerContainer/Camera" unique_id=1802634595 instance=ExtResource("18_rb12j")]
 
-[node name="BehindCharacterSolid" type="ColorRect" parent="CameraShaker/InnerContainer/Camera"]
+[node name="BehindCharacterSolid" type="ColorRect" parent="CameraShaker/InnerContainer/Camera" unique_id=1752860790]
 z_index = -6
 offset_left = -128.0
 offset_top = -96.0
@@ -94,8 +94,8 @@ offset_bottom = 96.0
 color = Color(0, 0, 0, 1)
 script = ExtResource("18_q6hsr")
 
-[node name="ConfettiContainer" parent="CameraShaker/InnerContainer/Camera" instance=ExtResource("19_mw2qx")]
+[node name="ConfettiContainer" parent="CameraShaker/InnerContainer/Camera" unique_id=436977951 instance=ExtResource("19_mw2qx")]
 position = Vector2(-128, -96)
 
-[node name="ShakerManager" type="Node" parent="."]
+[node name="ShakerManager" type="Node" parent="." unique_id=1980143541]
 script = ExtResource("17_jypuo")

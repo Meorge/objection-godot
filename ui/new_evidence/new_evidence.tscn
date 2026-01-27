@@ -1,10 +1,10 @@
-[gd_scene load_steps=11 format=3 uid="uid://4uljkfi84i5m"]
+[gd_scene format=3 uid="uid://4uljkfi84i5m"]
 
 [ext_resource type="Texture2D" uid="uid://c5v66iikse0pw" path="res://reference_screenshots/new_evidence.png" id="1_hv4tr"]
 [ext_resource type="Script" uid="uid://by25nvoosux5x" path="res://ui/new_evidence/new_evidence.gd" id="1_tko8y"]
 [ext_resource type="Texture2D" uid="uid://cj1q8ycfwxsra" path="res://ui/new_evidence/new_evidence.png" id="2_buq41"]
 [ext_resource type="FontFile" uid="uid://dc5yyai7qwx7b" path="res://ui/new_evidence/ace-check.otf/ace-check.otf" id="4_1x1yn"]
-[ext_resource type="Texture2D" uid="uid://beaqrjyvyadas" path="res://icon.svg" id="4_ec6ms"]
+[ext_resource type="Texture2D" uid="uid://beaqrjyvyadas" path="res://icon-old.svg" id="4_ec6ms"]
 [ext_resource type="FontFile" uid="uid://cign3b7rx7ndg" path="res://ui/new_evidence/court-records.otf/court-records.otf" id="5_v0xlt"]
 [ext_resource type="AudioStream" uid="uid://wnowwes00ott" path="res://audio/sound/sfx-selectjingle.wav" id="6_jqfre"]
 [ext_resource type="AudioStream" uid="uid://s477skafosio" path="res://audio/sound/sfx-selectblip2.wav" id="7_mfbun"]
@@ -18,7 +18,7 @@ base_font = ExtResource("5_v0xlt")
 spacing_bottom = -1
 baseline_offset = -0.035
 
-[node name="NewEvidence" type="Control"]
+[node name="NewEvidence" type="Control" unique_id=614099515]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -27,14 +27,14 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_tko8y")
 
-[node name="Reference" type="TextureRect" parent="."]
+[node name="Reference" type="TextureRect" parent="." unique_id=960255288]
 visible = false
 layout_mode = 0
 offset_right = 256.0
 offset_bottom = 192.0
 texture = ExtResource("1_hv4tr")
 
-[node name="Background" type="TextureRect" parent="."]
+[node name="Background" type="TextureRect" parent="." unique_id=1374955610]
 unique_name_in_owner = true
 editor_description = "Y = 16 px"
 layout_mode = 0
@@ -43,7 +43,7 @@ offset_right = 256.0
 offset_bottom = 96.0
 texture = ExtResource("2_buq41")
 
-[node name="Title" type="Label" parent="Background"]
+[node name="Title" type="Label" parent="Background" unique_id=1649115197]
 unique_name_in_owner = true
 layout_mode = 0
 offset_left = 91.0
@@ -56,7 +56,7 @@ theme_override_font_sizes/font_size = 13
 text = "Passport"
 horizontal_alignment = 1
 
-[node name="Description" type="Label" parent="Background"]
+[node name="Description" type="Label" parent="Background" unique_id=220855684]
 unique_name_in_owner = true
 layout_mode = 0
 offset_left = 105.0
@@ -75,7 +75,7 @@ Submitted as evidence
 by Prosecutor Payne."
 autowrap_mode = 3
 
-[node name="Thumbnail" type="TextureRect" parent="Background"]
+[node name="Thumbnail" type="TextureRect" parent="Background" unique_id=494267523]
 unique_name_in_owner = true
 layout_mode = 0
 offset_left = 8.0
@@ -85,10 +85,10 @@ offset_bottom = 72.0
 texture = ExtResource("4_ec6ms")
 expand_mode = 1
 
-[node name="InJingle" type="AudioStreamPlayer" parent="."]
+[node name="InJingle" type="AudioStreamPlayer" parent="." unique_id=345053995]
 unique_name_in_owner = true
 stream = ExtResource("6_jqfre")
 
-[node name="OutSound" type="AudioStreamPlayer" parent="."]
+[node name="OutSound" type="AudioStreamPlayer" parent="." unique_id=1105598450]
 unique_name_in_owner = true
 stream = ExtResource("7_mfbun")

@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://cwl2x01p7mvrk"]
+[gd_scene format=3 uid="uid://cwl2x01p7mvrk"]
 
 [ext_resource type="Script" uid="uid://ch42iumuh3o08" path="res://ui/mood_matrix/bootup/mm_bootup.gd" id="1_1cegr"]
 [ext_resource type="Shader" uid="uid://c0e7jgdkdhygh" path="res://ui/mood_matrix/bootup/mm_bootup.gdshader" id="1_idgji"]
@@ -531,7 +531,7 @@ _data = {
 &"intro": SubResource("Animation_oahpg")
 }
 
-[node name="MoodMatrixBootup" type="Control"]
+[node name="MoodMatrixBootup" type="Control" unique_id=697443782]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -540,7 +540,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_1cegr")
 
-[node name="BlueTintBackground" type="ColorRect" parent="."]
+[node name="BlueTintBackground" type="ColorRect" parent="." unique_id=1775296992]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -549,7 +549,7 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.114, 0.494, 0.718, 0)
 
-[node name="DarkBackground" type="ColorRect" parent="."]
+[node name="DarkBackground" type="ColorRect" parent="." unique_id=405374503]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -566,7 +566,7 @@ scale = Vector2(1, 1e-05)
 pivot_offset = Vector2(112, 83)
 color = Color(0, 0, 0, 0.6)
 
-[node name="MiniWindow" type="ColorRect" parent="DarkBackground"]
+[node name="MiniWindow" type="ColorRect" parent="DarkBackground" unique_id=953903377]
 layout_mode = 1
 offset_left = 175.0
 offset_top = 94.0
@@ -575,7 +575,7 @@ offset_bottom = 150.0
 scale = Vector2(1e-05, 1e-05)
 color = Color(0.113725, 0.494118, 0.717647, 0.6)
 
-[node name="MiniWindow2" type="ColorRect" parent="DarkBackground"]
+[node name="MiniWindow2" type="ColorRect" parent="DarkBackground" unique_id=1794573657]
 layout_mode = 1
 offset_left = 9.0
 offset_top = 10.0
@@ -584,7 +584,7 @@ offset_bottom = 45.0
 scale = Vector2(1e-05, 1e-05)
 color = Color(0.113725, 0.494118, 0.717647, 0.6)
 
-[node name="VerticalWipe" type="TextureRect" parent="DarkBackground"]
+[node name="VerticalWipe" type="TextureRect" parent="DarkBackground" unique_id=712776715]
 modulate = Color(0.384, 0.791, 0.913, 0.541)
 layout_mode = 0
 offset_right = 224.0
@@ -592,7 +592,7 @@ offset_bottom = 20.0
 texture = ExtResource("1_qmayk")
 expand_mode = 1
 
-[node name="AnimatedMoon" type="ColorRect" parent="."]
+[node name="AnimatedMoon" type="ColorRect" parent="." unique_id=729243761]
 material = SubResource("ShaderMaterial_ej6jd")
 layout_mode = 1
 anchors_preset = 8
@@ -609,7 +609,7 @@ grow_vertical = 2
 pivot_offset = Vector2(57, 57)
 color = Color(1, 1, 1, 0)
 
-[node name="BootupCompletionLabel" type="Label" parent="."]
+[node name="BootupCompletionLabel" type="Label" parent="." unique_id=364710915]
 visible = false
 layout_mode = 1
 anchors_preset = 8
@@ -632,7 +632,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 script = ExtResource("3_p8ku6")
 
-[node name="Spinner" type="TextureRect" parent="."]
+[node name="Spinner" type="TextureRect" parent="." unique_id=1151087115]
 modulate = Color(0.149, 0.805, 0.988, 0.4)
 self_modulate = Color(1, 1, 1, 0)
 layout_mode = 1
@@ -651,14 +651,12 @@ rotation = 1.5708
 pivot_offset = Vector2(67, 67)
 texture = ExtResource("5_qjshp")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-libraries = {
-&"": SubResource("AnimationLibrary_78ieq")
-}
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=358821952]
+libraries/ = SubResource("AnimationLibrary_78ieq")
 
-[node name="IntroSound" type="AudioStreamPlayer" parent="."]
+[node name="IntroSound" type="AudioStreamPlayer" parent="." unique_id=868727163]
 
-[node name="Logo" type="Control" parent="."]
+[node name="Logo" type="Control" parent="." unique_id=167623410]
 modulate = Color(1, 1, 1, 0)
 layout_mode = 1
 anchors_preset = 15
@@ -669,7 +667,7 @@ grow_vertical = 2
 scale = Vector2(0.78, 0.78)
 pivot_offset = Vector2(128, 96)
 
-[node name="MoodMatrixLogoCenter" type="TextureRect" parent="Logo"]
+[node name="MoodMatrixLogoCenter" type="TextureRect" parent="Logo" unique_id=354442403]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -685,7 +683,7 @@ grow_vertical = 2
 pivot_offset = Vector2(25, 25)
 texture = ExtResource("6_1650j")
 
-[node name="MoodMatrixLogoInnerCircle" type="TextureRect" parent="Logo"]
+[node name="MoodMatrixLogoInnerCircle" type="TextureRect" parent="Logo" unique_id=1100499541]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -702,7 +700,7 @@ pivot_offset = Vector2(52, 52)
 texture = ExtResource("7_kmpvu")
 expand_mode = 1
 
-[node name="MoodMatrixLogoOuterCircle" type="TextureRect" parent="Logo"]
+[node name="MoodMatrixLogoOuterCircle" type="TextureRect" parent="Logo" unique_id=308345032]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -719,15 +717,14 @@ pivot_offset = Vector2(75, 75)
 texture = ExtResource("8_oqcch")
 expand_mode = 1
 
-[node name="MoodMatrixLogoDots" type="Control" parent="Logo"]
-layout_mode = 3
+[node name="MoodMatrixLogoDots" type="Control" parent="Logo" unique_id=351230007]
 anchors_preset = 0
 offset_left = 128.0
 offset_top = 96.0
 offset_right = 128.0
 offset_bottom = 96.0
 
-[node name="MoodMatrixLogoTopDot" type="TextureRect" parent="Logo/MoodMatrixLogoDots"]
+[node name="MoodMatrixLogoTopDot" type="TextureRect" parent="Logo/MoodMatrixLogoDots" unique_id=457163846]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -744,7 +741,7 @@ pivot_offset = Vector2(13, 13)
 texture = ExtResource("9_4t5ov")
 expand_mode = 1
 
-[node name="MoodMatrixLogoLeftDot" type="TextureRect" parent="Logo/MoodMatrixLogoDots"]
+[node name="MoodMatrixLogoLeftDot" type="TextureRect" parent="Logo/MoodMatrixLogoDots" unique_id=630661550]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -761,7 +758,7 @@ pivot_offset = Vector2(13, 13)
 texture = ExtResource("9_4t5ov")
 expand_mode = 1
 
-[node name="MoodMatrixLogoRightDot" type="TextureRect" parent="Logo/MoodMatrixLogoDots"]
+[node name="MoodMatrixLogoRightDot" type="TextureRect" parent="Logo/MoodMatrixLogoDots" unique_id=1140507581]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -778,7 +775,7 @@ pivot_offset = Vector2(13, 13)
 texture = ExtResource("9_4t5ov")
 expand_mode = 1
 
-[node name="MoodMatrixLogoBottomDot" type="TextureRect" parent="Logo/MoodMatrixLogoDots"]
+[node name="MoodMatrixLogoBottomDot" type="TextureRect" parent="Logo/MoodMatrixLogoDots" unique_id=1817142498]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5

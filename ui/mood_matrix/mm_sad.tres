@@ -1,8 +1,8 @@
-[gd_resource type="Resource" script_class="MoodMatrixMarkerType" load_steps=4 format=3 uid="uid://bqx37qeyclk1"]
+[gd_resource type="Resource" script_class="MoodMatrixMarkerType" format=3 uid="uid://bqx37qeyclk1"]
 
 [ext_resource type="Texture2D" uid="uid://vs7miafnv1gd" path="res://ui/mood_matrix/sprites/Sad.png" id="1_7t1tf"]
 [ext_resource type="AudioStream" uid="uid://cecfnhtkw36ki" path="res://ui/mood_matrix/sounds/sad.wav" id="2_8oboq"]
-[ext_resource type="Script" path="res://ui/mood_matrix/mood_matrix_marker_type.gd" id="2_k8aoe"]
+[ext_resource type="Script" uid="uid://b6cdoarrf2irn" path="res://ui/mood_matrix/mood_matrix_marker_type.gd" id="2_k8aoe"]
 
 [resource]
 script = ExtResource("2_k8aoe")

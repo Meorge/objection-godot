@@ -45,5 +45,3 @@ func update_text(new_text: String, font_color: Color, font_outline_color: Color)
 	text = new_text
 	add_theme_color_override("font_color", font_color)
 	add_theme_color_override("font_outline_color", font_outline_color)
-
-

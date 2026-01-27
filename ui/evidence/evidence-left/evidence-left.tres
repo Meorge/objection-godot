@@ -1,13 +1,13 @@
-[gd_resource type="SpriteFrames" load_steps=8 format=3]
+[gd_resource type="SpriteFrames" format=3 uid="uid://pc8lpoysy1bw"]
 
-[ext_resource type="Texture2D" path="./evidence-in-left-0.png" id="evidence-in-left-0"]
-[ext_resource type="Texture2D" path="./evidence-in-left-1.png" id="evidence-in-left-1"]
-[ext_resource type="Texture2D" path="./evidence-in-left-2.png" id="evidence-in-left-2"]
-[ext_resource type="Texture2D" path="./evidence-in-left-3.png" id="evidence-in-left-3"]
-[ext_resource type="Texture2D" path="./evidence-out-left-0.png" id="evidence-out-left-0"]
-[ext_resource type="Texture2D" path="./evidence-out-left-1.png" id="evidence-out-left-1"]
-[ext_resource type="Texture2D" path="./evidence-out-left-2.png" id="evidence-out-left-2"]
-[ext_resource type="Texture2D" path="./evidence-out-left-3.png" id="evidence-out-left-3"]
+[ext_resource type="Texture2D" uid="uid://dlr0aiadhxabs" path="res://ui/evidence/evidence-left/evidence-in-left-0.png" id="evidence-in-left-0"]
+[ext_resource type="Texture2D" uid="uid://dojk58d0itpre" path="res://ui/evidence/evidence-left/evidence-in-left-1.png" id="evidence-in-left-1"]
+[ext_resource type="Texture2D" uid="uid://b7e4xh7yu7fw3" path="res://ui/evidence/evidence-left/evidence-in-left-2.png" id="evidence-in-left-2"]
+[ext_resource type="Texture2D" uid="uid://djvkqgt86rdg5" path="res://ui/evidence/evidence-left/evidence-in-left-3.png" id="evidence-in-left-3"]
+[ext_resource type="Texture2D" uid="uid://cdqe0elfe75ua" path="res://ui/evidence/evidence-left/evidence-out-left-0.png" id="evidence-out-left-0"]
+[ext_resource type="Texture2D" uid="uid://c230vf0cx4067" path="res://ui/evidence/evidence-left/evidence-out-left-1.png" id="evidence-out-left-1"]
+[ext_resource type="Texture2D" uid="uid://y1imm6irmb0e" path="res://ui/evidence/evidence-left/evidence-out-left-2.png" id="evidence-out-left-2"]
+[ext_resource type="Texture2D" uid="uid://coennvxyg8o4y" path="res://ui/evidence/evidence-left/evidence-out-left-3.png" id="evidence-out-left-3"]
 
 [resource]
 animations = [{

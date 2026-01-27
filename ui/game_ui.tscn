@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=3 uid="uid://cavxmwjgdsolv"]
+[gd_scene format=3 uid="uid://cavxmwjgdsolv"]
 
 [ext_resource type="Script" uid="uid://ca23jlw3brvj" path="res://ui/game_ui.gd" id="1_i61tc"]
 [ext_resource type="Texture2D" uid="uid://b3x4aoo200rhg" path="res://ui/text_box/nametag_left.png" id="1_uinmu"]
@@ -16,7 +16,7 @@
 [ext_resource type="Script" uid="uid://c16luqchb24gw" path="res://ui/evidence/evidence_handler.gd" id="13_atwk1"]
 [ext_resource type="PackedScene" uid="uid://brxypopoc7mg5" path="res://ui/text_box/dialogue_label.tscn" id="13_mq1hb"]
 [ext_resource type="SpriteFrames" path="res://ui/evidence/evidence-right/evidence-right.tres" id="15_eocud"]
-[ext_resource type="Texture2D" uid="uid://beaqrjyvyadas" path="res://icon.svg" id="16_2yr5j"]
+[ext_resource type="Texture2D" uid="uid://beaqrjyvyadas" path="res://icon-old.svg" id="16_2yr5j"]
 [ext_resource type="Script" uid="uid://cho5omt3ky2hs" path="res://ui/evidence/evidence_box.gd" id="16_v147p"]
 [ext_resource type="SpriteFrames" path="res://ui/evidence/evidence-left/evidence-left.tres" id="17_nsfoq"]
 [ext_resource type="AudioStream" uid="uid://d23tyxxvjexw5" path="res://audio/sound/sfx-evidenceshoop.wav" id="18_khjmp"]
@@ -67,14 +67,14 @@ _data = {
 &"arrow": SubResource("Animation_248la")
 }
 
-[node name="GameUI" type="CanvasLayer"]
+[node name="GameUI" type="CanvasLayer" unique_id=1873250689]
 script = ExtResource("1_i61tc")
 
-[node name="MoodMatrixNoise" parent="." instance=ExtResource("2_22ds2")]
+[node name="MoodMatrixNoise" parent="." unique_id=1219639585 instance=ExtResource("2_22ds2")]
 
-[node name="MoodMatrixShutdown" parent="." instance=ExtResource("3_4ax0h")]
+[node name="MoodMatrixShutdown" parent="." unique_id=1022156157 instance=ExtResource("3_4ax0h")]
 
-[node name="BoxShaker" type="Control" parent="."]
+[node name="BoxShaker" type="Control" parent="." unique_id=1757254942]
 unique_name_in_owner = true
 layout_mode = 3
 anchors_preset = 15
@@ -84,82 +84,82 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("3_op4cl")
 
-[node name="InnerContainer" type="Control" parent="BoxShaker"]
+[node name="InnerContainer" type="Control" parent="BoxShaker" unique_id=2146461840]
 anchors_preset = 0
 
-[node name="Control" type="Control" parent="BoxShaker/InnerContainer"]
+[node name="Control" type="Control" parent="BoxShaker/InnerContainer" unique_id=290583642]
 anchors_preset = 0
 script = ExtResource("5_6gk4r")
 
-[node name="NewBoxBackground" type="TextureRect" parent="BoxShaker/InnerContainer/Control"]
+[node name="NewBoxBackground" type="TextureRect" parent="BoxShaker/InnerContainer/Control" unique_id=427895711]
 layout_mode = 0
 offset_top = 128.0
 offset_right = 256.0
 offset_bottom = 192.0
 texture = ExtResource("5_r7fiw")
 
-[node name="Nametag" type="HBoxContainer" parent="BoxShaker/InnerContainer/Control"]
+[node name="Nametag" type="HBoxContainer" parent="BoxShaker/InnerContainer/Control" unique_id=521442116]
 layout_mode = 0
 offset_top = 115.0
 offset_right = 49.0
 offset_bottom = 129.0
 
-[node name="NametagContainer" type="MarginContainer" parent="BoxShaker/InnerContainer/Control/Nametag"]
+[node name="NametagContainer" type="MarginContainer" parent="BoxShaker/InnerContainer/Control/Nametag" unique_id=1827642575]
 custom_minimum_size = Vector2(0, 14)
 layout_mode = 2
 script = ExtResource("7_3rn5j")
 
-[node name="NametagBackground" type="HBoxContainer" parent="BoxShaker/InnerContainer/Control/Nametag/NametagContainer"]
+[node name="NametagBackground" type="HBoxContainer" parent="BoxShaker/InnerContainer/Control/Nametag/NametagContainer" unique_id=479184489]
 layout_mode = 2
 theme_override_constants/separation = 0
 
-[node name="NameTagLeft" type="TextureRect" parent="BoxShaker/InnerContainer/Control/Nametag/NametagContainer/NametagBackground"]
+[node name="NameTagLeft" type="TextureRect" parent="BoxShaker/InnerContainer/Control/Nametag/NametagContainer/NametagBackground" unique_id=1032795]
 layout_mode = 2
 texture = ExtResource("1_uinmu")
 
-[node name="NameTagCenter" type="TextureRect" parent="BoxShaker/InnerContainer/Control/Nametag/NametagContainer/NametagBackground"]
+[node name="NameTagCenter" type="TextureRect" parent="BoxShaker/InnerContainer/Control/Nametag/NametagContainer/NametagBackground" unique_id=63355275]
 layout_mode = 2
 size_flags_horizontal = 3
 texture = ExtResource("2_xtvfo")
 
-[node name="NameTagRight" type="TextureRect" parent="BoxShaker/InnerContainer/Control/Nametag/NametagContainer/NametagBackground"]
+[node name="NameTagRight" type="TextureRect" parent="BoxShaker/InnerContainer/Control/Nametag/NametagContainer/NametagBackground" unique_id=382856109]
 layout_mode = 2
 texture = ExtResource("3_vdgvt")
 
-[node name="NametagLabelContainer" type="MarginContainer" parent="BoxShaker/InnerContainer/Control/Nametag/NametagContainer"]
+[node name="NametagLabelContainer" type="MarginContainer" parent="BoxShaker/InnerContainer/Control/Nametag/NametagContainer" unique_id=1520174691]
 layout_mode = 2
 size_flags_vertical = 4
 theme_override_constants/margin_left = 3
 theme_override_constants/margin_right = 3
 
-[node name="NametagLabel" type="Label" parent="BoxShaker/InnerContainer/Control/Nametag/NametagContainer/NametagLabelContainer"]
+[node name="NametagLabel" type="Label" parent="BoxShaker/InnerContainer/Control/Nametag/NametagContainer/NametagLabelContainer" unique_id=2036470032]
 unique_name_in_owner = true
 layout_mode = 2
 theme_override_fonts/font = ExtResource("4_b14rb")
 theme_override_font_sizes/font_size = 8
 text = "Gumshoe"
 
-[node name="MoodMatrix" parent="." instance=ExtResource("20_w2rvm")]
+[node name="MoodMatrix" parent="." unique_id=523897583 instance=ExtResource("20_w2rvm")]
 
-[node name="DialogueLabel" parent="." instance=ExtResource("13_mq1hb")]
+[node name="DialogueLabel" parent="." unique_id=1592792013 instance=ExtResource("13_mq1hb")]
 unique_name_in_owner = true
 scroll_active = false
 
-[node name="FlashingSegmentLabel" parent="." instance=ExtResource("11_2501h")]
+[node name="FlashingSegmentLabel" parent="." unique_id=1443218369 instance=ExtResource("11_2501h")]
 
-[node name="WitnessTestimonyIntro" parent="." instance=ExtResource("12_0ob4r")]
+[node name="WitnessTestimonyIntro" parent="." unique_id=528341098 instance=ExtResource("12_0ob4r")]
 
-[node name="EvidenceHandler" type="Node2D" parent="."]
+[node name="EvidenceHandler" type="Node2D" parent="." unique_id=1237966044]
 script = ExtResource("13_atwk1")
 
-[node name="EvidenceLeft" type="AnimatedSprite2D" parent="EvidenceHandler"]
+[node name="EvidenceLeft" type="AnimatedSprite2D" parent="EvidenceHandler" unique_id=905061841]
 sprite_frames = ExtResource("17_nsfoq")
 animation = &"in"
 frame = 3
 centered = false
 script = ExtResource("16_v147p")
 
-[node name="EvidenceHolder" type="TextureRect" parent="EvidenceHandler/EvidenceLeft"]
+[node name="EvidenceHolder" type="TextureRect" parent="EvidenceHandler/EvidenceLeft" unique_id=1046118445]
 offset_left = 16.0
 offset_top = 16.0
 offset_right = 80.0
@@ -167,10 +167,10 @@ offset_bottom = 80.0
 texture = ExtResource("16_2yr5j")
 expand_mode = 2
 
-[node name="InSound" type="AudioStreamPlayer" parent="EvidenceHandler/EvidenceLeft"]
+[node name="InSound" type="AudioStreamPlayer" parent="EvidenceHandler/EvidenceLeft" unique_id=476472648]
 stream = ExtResource("18_khjmp")
 
-[node name="EvidenceRight" type="AnimatedSprite2D" parent="EvidenceHandler"]
+[node name="EvidenceRight" type="AnimatedSprite2D" parent="EvidenceHandler" unique_id=1941109554]
 sprite_frames = ExtResource("15_eocud")
 animation = &"in"
 frame = 3
@@ -178,7 +178,7 @@ frame_progress = 1.0
 centered = false
 script = ExtResource("16_v147p")
 
-[node name="EvidenceHolder" type="TextureRect" parent="EvidenceHandler/EvidenceRight"]
+[node name="EvidenceHolder" type="TextureRect" parent="EvidenceHandler/EvidenceRight" unique_id=2137545333]
 offset_left = 176.0
 offset_top = 16.0
 offset_right = 240.0
@@ -186,19 +186,19 @@ offset_bottom = 80.0
 texture = ExtResource("16_2yr5j")
 expand_mode = 2
 
-[node name="InSound" type="AudioStreamPlayer" parent="EvidenceHandler/EvidenceRight"]
+[node name="InSound" type="AudioStreamPlayer" parent="EvidenceHandler/EvidenceRight" unique_id=573189538]
 stream = ExtResource("18_khjmp")
 
-[node name="ExclamationBubbleContainer" type="Node2D" parent="."]
+[node name="ExclamationBubbleContainer" type="Node2D" parent="." unique_id=359767381]
 script = ExtResource("26_dif48")
 
-[node name="InnerContainer" type="Node2D" parent="ExclamationBubbleContainer"]
+[node name="InnerContainer" type="Node2D" parent="ExclamationBubbleContainer" unique_id=1281246051]
 
-[node name="BubbleDisplay" type="Sprite2D" parent="ExclamationBubbleContainer/InnerContainer"]
+[node name="BubbleDisplay" type="Sprite2D" parent="ExclamationBubbleContainer/InnerContainer" unique_id=1140540428]
 unique_name_in_owner = true
 centered = false
 
-[node name="OverlayFlash" type="ColorRect" parent="."]
+[node name="OverlayFlash" type="ColorRect" parent="." unique_id=1064962343]
 visible = false
 anchors_preset = 15
 anchor_right = 1.0
@@ -207,7 +207,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("25_j8y13")
 
-[node name="Arrow" type="Control" parent="."]
+[node name="Arrow" type="Control" parent="." unique_id=1313471569]
 layout_mode = 3
 anchors_preset = 0
 offset_left = 236.0
@@ -216,19 +216,17 @@ offset_right = 236.0
 offset_bottom = 172.0
 script = ExtResource("26_mjk5q")
 
-[node name="ArrowTexture" type="TextureRect" parent="Arrow"]
+[node name="ArrowTexture" type="TextureRect" parent="Arrow" unique_id=1986935395]
 layout_mode = 0
 offset_right = 10.0
 offset_bottom = 11.0
 texture = ExtResource("26_tejqb")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Arrow"]
-libraries = {
-&"": SubResource("AnimationLibrary_eecjn")
-}
-autoplay = "arrow"
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Arrow" unique_id=1465287389]
+libraries/ = SubResource("AnimationLibrary_eecjn")
+autoplay = &"arrow"
 
-[node name="Verdict" type="Control" parent="."]
+[node name="Verdict" type="Control" parent="." unique_id=1378455797]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -241,4 +239,4 @@ grow_vertical = 2
 script = ExtResource("28_32ipn")
 single_letter_label = ExtResource("29_xl8j8")
 
-[node name="NewEvidence" parent="." instance=ExtResource("25_y6iq0")]
+[node name="NewEvidence" parent="." unique_id=260725490 instance=ExtResource("25_y6iq0")]

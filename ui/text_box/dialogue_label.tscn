@@ -1,8 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://brxypopoc7mg5"]
+[gd_scene format=3 uid="uid://brxypopoc7mg5"]
 
 [ext_resource type="FontFile" uid="uid://c0v5yww5rglpk" path="res://ui/text_box/font/igiari-cyrillic/igiari-cyrillic.ttf" id="1_hl1a1"]
 
-[node name="DialogueLabel" type="RichTextLabel"]
+[node name="DialogueLabel" type="RichTextLabel" unique_id=104715385]
 offset_left = 10.0
 offset_top = 132.0
 offset_right = 251.0

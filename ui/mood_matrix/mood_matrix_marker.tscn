@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://ckkqqa1iuewni"]
+[gd_scene format=3 uid="uid://ckkqqa1iuewni"]
 
 [ext_resource type="Texture2D" uid="uid://bc1bp3g7kqqyk" path="res://ui/mood_matrix/sprites/Circle.png" id="1_6s1px"]
 [ext_resource type="Script" uid="uid://uplxmbn4m154" path="res://ui/mood_matrix/mood_matrix_marker.gd" id="1_etjop"]
@@ -28,7 +28,7 @@ animations = [{
 "speed": 8.0
 }]
 
-[node name="MoodMatrixMarker" type="Control"]
+[node name="MoodMatrixMarker" type="Control" unique_id=1251688470]
 layout_mode = 3
 anchors_preset = 0
 offset_left = -23.0
@@ -38,28 +38,28 @@ offset_bottom = 23.0
 pivot_offset = Vector2(23, 23)
 script = ExtResource("1_etjop")
 
-[node name="Pulse" parent="." instance=ExtResource("2_ol065")]
+[node name="Pulse" parent="." unique_id=406893891 instance=ExtResource("2_ol065")]
 unique_name_in_owner = true
 position = Vector2(23, 23)
 
-[node name="OverloadPulse" type="Node2D" parent="."]
+[node name="OverloadPulse" type="Node2D" parent="." unique_id=4494169]
 unique_name_in_owner = true
 modulate = Color(0.122567, 0.814849, 7.70092e-07, 1)
 position = Vector2(23, 23)
 scale = Vector2(0.54, 0.54)
 
-[node name="OverloadPulse1" type="Sprite2D" parent="OverloadPulse"]
+[node name="OverloadPulse1" type="Sprite2D" parent="OverloadPulse" unique_id=443475077]
 unique_name_in_owner = true
 self_modulate = Color(1, 1, 1, 0.75)
 rotation = 1.5708
 texture = ExtResource("3_rgx2h")
 
-[node name="OverloadPulse2" type="Sprite2D" parent="OverloadPulse"]
+[node name="OverloadPulse2" type="Sprite2D" parent="OverloadPulse" unique_id=970125757]
 unique_name_in_owner = true
 self_modulate = Color(1, 1, 1, 0.75)
 texture = ExtResource("3_rgx2h")
 
-[node name="PrimaryScaler" type="Control" parent="."]
+[node name="PrimaryScaler" type="Control" parent="." unique_id=530928753]
 unique_name_in_owner = true
 layout_mode = 1
 anchors_preset = 15
@@ -69,7 +69,7 @@ grow_horizontal = 2
 grow_vertical = 2
 pivot_offset = Vector2(23, 23)
 
-[node name="SecondaryScaler" type="Control" parent="PrimaryScaler"]
+[node name="SecondaryScaler" type="Control" parent="PrimaryScaler" unique_id=1418481592]
 unique_name_in_owner = true
 layout_mode = 1
 anchors_preset = 15
@@ -79,7 +79,7 @@ grow_horizontal = 2
 grow_vertical = 2
 pivot_offset = Vector2(23, 23)
 
-[node name="MarkerBorder" type="TextureRect" parent="PrimaryScaler/SecondaryScaler"]
+[node name="MarkerBorder" type="TextureRect" parent="PrimaryScaler/SecondaryScaler" unique_id=267517958]
 unique_name_in_owner = true
 layout_mode = 0
 offset_right = 46.0
@@ -87,7 +87,7 @@ offset_bottom = 46.0
 pivot_offset = Vector2(23, 23)
 texture = ExtResource("1_6s1px")
 
-[node name="MarkerBackground" type="TextureRect" parent="PrimaryScaler/SecondaryScaler"]
+[node name="MarkerBackground" type="TextureRect" parent="PrimaryScaler/SecondaryScaler" unique_id=291280849]
 unique_name_in_owner = true
 layout_mode = 0
 offset_left = 3.0
@@ -97,7 +97,7 @@ offset_bottom = 43.0
 pivot_offset = Vector2(20, 20)
 texture = ExtResource("1_6s1px")
 
-[node name="MarkerOverloadedGradient" type="TextureRect" parent="PrimaryScaler/SecondaryScaler"]
+[node name="MarkerOverloadedGradient" type="TextureRect" parent="PrimaryScaler/SecondaryScaler" unique_id=2041252843]
 unique_name_in_owner = true
 visible = false
 modulate = Color(0.468507, 0.917483, 0, 1)
@@ -109,7 +109,7 @@ offset_bottom = 43.0
 pivot_offset = Vector2(20, 20)
 texture = ExtResource("4_ufaae")
 
-[node name="Face" type="TextureRect" parent="PrimaryScaler/SecondaryScaler"]
+[node name="Face" type="TextureRect" parent="PrimaryScaler/SecondaryScaler" unique_id=856598748]
 unique_name_in_owner = true
 modulate = Color(0.211765, 0.639216, 0.168627, 1)
 layout_mode = 0
@@ -120,7 +120,7 @@ offset_bottom = 43.0
 pivot_offset = Vector2(20, 20)
 texture = ExtResource("2_dhci8")
 
-[node name="OverloadedFace" type="TextureRect" parent="PrimaryScaler/SecondaryScaler"]
+[node name="OverloadedFace" type="TextureRect" parent="PrimaryScaler/SecondaryScaler" unique_id=1980773953]
 unique_name_in_owner = true
 visible = false
 modulate = Color(0.211765, 0.639216, 0.168627, 1)
@@ -132,7 +132,7 @@ offset_bottom = 43.0
 pivot_offset = Vector2(20, 20)
 texture = ExtResource("6_6eijm")
 
-[node name="ThinkingAnimation" type="AnimatedSprite2D" parent="."]
+[node name="ThinkingAnimation" type="AnimatedSprite2D" parent="." unique_id=606724495]
 unique_name_in_owner = true
 position = Vector2(23, 23)
 sprite_frames = SubResource("SpriteFrames_kkcws")

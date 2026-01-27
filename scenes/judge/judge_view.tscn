@@ -1,21 +1,21 @@
-[gd_scene load_steps=4 format=3 uid="uid://dd2xc26iwfwel"]
+[gd_scene format=3 uid="uid://dd2xc26iwfwel"]
 
 [ext_resource type="Texture2D" uid="uid://bqej55i6wy0gc" path="res://scenes/judge/bg_judge.png" id="1_ikkhc"]
 [ext_resource type="Script" uid="uid://orssj05snx0v" path="res://characters/character_sprite.gd" id="3_evn7b"]
 [ext_resource type="Script" uid="uid://dfievmc3jlsp0" path="res://camera/camera_position.gd" id="3_umoqs"]
 
-[node name="JudgeView" type="Node2D"]
+[node name="JudgeView" type="Node2D" unique_id=1839445489]
 
-[node name="JudgeViewBackground" type="Sprite2D" parent="."]
+[node name="JudgeViewBackground" type="Sprite2D" parent="." unique_id=1921191113]
 z_index = -10
 texture = ExtResource("1_ikkhc")
 metadata/_edit_lock_ = true
 
-[node name="Judge" type="AnimatedSprite2D" parent="."]
+[node name="Judge" type="AnimatedSprite2D" parent="." unique_id=404491868]
 script = ExtResource("3_evn7b")
 container_id = "judge"
 metadata/_edit_lock_ = true
 
-[node name="CameraPoint" type="Node2D" parent="."]
+[node name="CameraPoint" type="Node2D" parent="." unique_id=1904451783]
 script = ExtResource("3_umoqs")
 camera_id = "judge"

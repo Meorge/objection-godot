@@ -1,516 +1,640 @@
-[gd_resource type="SpriteFrames" load_steps=382 format=3]
+[gd_resource type="SpriteFrames" format=3 uid="uid://cg4xca12ec38t"]
 
-[ext_resource type="Texture2D" path="sweating-idle/sweating-idle-0.png" id="sweating-idle-0"]
-[ext_resource type="Texture2D" path="sweating-idle/sweating-idle-1.png" id="sweating-idle-1"]
-[ext_resource type="Texture2D" path="sweating-idle/sweating-idle-2.png" id="sweating-idle-2"]
-[ext_resource type="Texture2D" path="sweating-idle/sweating-idle-3.png" id="sweating-idle-3"]
-[ext_resource type="Texture2D" path="sweating-idle/sweating-idle-4.png" id="sweating-idle-4"]
-[ext_resource type="Texture2D" path="sweating-idle/sweating-idle-5.png" id="sweating-idle-5"]
-[ext_resource type="Texture2D" path="sweating-idle/sweating-idle-6.png" id="sweating-idle-6"]
-[ext_resource type="Texture2D" path="sweating-idle/sweating-idle-7.png" id="sweating-idle-7"]
-[ext_resource type="Texture2D" path="sweating-idle/sweating-idle-8.png" id="sweating-idle-8"]
-[ext_resource type="Texture2D" path="sweating-idle/sweating-idle-9.png" id="sweating-idle-9"]
-[ext_resource type="Texture2D" path="sweating-idle/sweating-idle-10.png" id="sweating-idle-10"]
-[ext_resource type="Texture2D" path="sweating-idle/sweating-idle-11.png" id="sweating-idle-11"]
-[ext_resource type="Texture2D" path="sweating-idle/sweating-idle-12.png" id="sweating-idle-12"]
-[ext_resource type="Texture2D" path="sweating-idle/sweating-idle-13.png" id="sweating-idle-13"]
-[ext_resource type="Texture2D" path="sweating-idle/sweating-idle-14.png" id="sweating-idle-14"]
-[ext_resource type="Texture2D" path="sweating-idle/sweating-idle-15.png" id="sweating-idle-15"]
-[ext_resource type="Texture2D" path="sweating-idle/sweating-idle-16.png" id="sweating-idle-16"]
-[ext_resource type="Texture2D" path="sweating-idle/sweating-idle-17.png" id="sweating-idle-17"]
-[ext_resource type="Texture2D" path="sweating-idle/sweating-idle-18.png" id="sweating-idle-18"]
-[ext_resource type="Texture2D" path="sweating-idle/sweating-idle-19.png" id="sweating-idle-19"]
-[ext_resource type="Texture2D" path="sweating-idle/sweating-idle-20.png" id="sweating-idle-20"]
-[ext_resource type="Texture2D" path="sweating-idle/sweating-idle-21.png" id="sweating-idle-21"]
-[ext_resource type="Texture2D" path="sweating-idle/sweating-idle-22.png" id="sweating-idle-22"]
-[ext_resource type="Texture2D" path="sweating-idle/sweating-idle-23.png" id="sweating-idle-23"]
-[ext_resource type="Texture2D" path="sweating-idle/sweating-idle-24.png" id="sweating-idle-24"]
-[ext_resource type="Texture2D" path="sweating-idle/sweating-idle-25.png" id="sweating-idle-25"]
-[ext_resource type="Texture2D" path="sweating-idle/sweating-idle-26.png" id="sweating-idle-26"]
-[ext_resource type="Texture2D" path="sweating-idle/sweating-idle-27.png" id="sweating-idle-27"]
-[ext_resource type="Texture2D" path="sweating-idle/sweating-idle-28.png" id="sweating-idle-28"]
-[ext_resource type="Texture2D" path="sweating-idle/sweating-idle-29.png" id="sweating-idle-29"]
-[ext_resource type="Texture2D" path="sweating-idle/sweating-idle-30.png" id="sweating-idle-30"]
-[ext_resource type="Texture2D" path="sweating-idle/sweating-idle-31.png" id="sweating-idle-31"]
-[ext_resource type="Texture2D" path="sweating-idle/sweating-idle-32.png" id="sweating-idle-32"]
-[ext_resource type="Texture2D" path="sweating-idle/sweating-idle-33.png" id="sweating-idle-33"]
-[ext_resource type="Texture2D" path="sweating-idle/sweating-idle-34.png" id="sweating-idle-34"]
-[ext_resource type="Texture2D" path="sweating-idle/sweating-idle-35.png" id="sweating-idle-35"]
-[ext_resource type="Texture2D" path="sweating-idle/sweating-idle-36.png" id="sweating-idle-36"]
-[ext_resource type="Texture2D" path="sweating-idle/sweating-idle-37.png" id="sweating-idle-37"]
-[ext_resource type="Texture2D" path="sweating-idle/sweating-idle-38.png" id="sweating-idle-38"]
-[ext_resource type="Texture2D" path="sweating-idle/sweating-idle-39.png" id="sweating-idle-39"]
-[ext_resource type="Texture2D" path="normal-idle/normal-idle-0.png" id="normal-idle-0"]
-[ext_resource type="Texture2D" path="normal-idle/normal-idle-1.png" id="normal-idle-1"]
-[ext_resource type="Texture2D" path="normal-idle/normal-idle-2.png" id="normal-idle-2"]
-[ext_resource type="Texture2D" path="normal-idle/normal-idle-3.png" id="normal-idle-3"]
-[ext_resource type="Texture2D" path="normal-idle/normal-idle-4.png" id="normal-idle-4"]
-[ext_resource type="Texture2D" path="normal-idle/normal-idle-5.png" id="normal-idle-5"]
-[ext_resource type="Texture2D" path="normal-idle/normal-idle-6.png" id="normal-idle-6"]
-[ext_resource type="Texture2D" path="normal-idle/normal-idle-7.png" id="normal-idle-7"]
-[ext_resource type="Texture2D" path="normal-idle/normal-idle-8.png" id="normal-idle-8"]
-[ext_resource type="Texture2D" path="toss1-idle/toss1-idle-0.png" id="toss1-idle-0"]
-[ext_resource type="Texture2D" path="toss1-idle/toss1-idle-1.png" id="toss1-idle-1"]
-[ext_resource type="Texture2D" path="toss1-idle/toss1-idle-2.png" id="toss1-idle-2"]
-[ext_resource type="Texture2D" path="toss1-idle/toss1-idle-3.png" id="toss1-idle-3"]
-[ext_resource type="Texture2D" path="toss1-idle/toss1-idle-4.png" id="toss1-idle-4"]
-[ext_resource type="Texture2D" path="toss1-idle/toss1-idle-5.png" id="toss1-idle-5"]
-[ext_resource type="Texture2D" path="toss1-idle/toss1-idle-6.png" id="toss1-idle-6"]
-[ext_resource type="Texture2D" path="toss1-idle/toss1-idle-7.png" id="toss1-idle-7"]
-[ext_resource type="Texture2D" path="toss1-idle/toss1-idle-8.png" id="toss1-idle-8"]
-[ext_resource type="Texture2D" path="toss1-talk/toss1-talk-0.png" id="toss1-talk-0"]
-[ext_resource type="Texture2D" path="toss1-talk/toss1-talk-1.png" id="toss1-talk-1"]
-[ext_resource type="Texture2D" path="toss1-talk/toss1-talk-2.png" id="toss1-talk-2"]
-[ext_resource type="Texture2D" path="toss1-talk/toss1-talk-3.png" id="toss1-talk-3"]
-[ext_resource type="Texture2D" path="toss1-talk/toss1-talk-4.png" id="toss1-talk-4"]
-[ext_resource type="Texture2D" path="toss1-talk/toss1-talk-5.png" id="toss1-talk-5"]
-[ext_resource type="Texture2D" path="toss1-talk/toss1-talk-6.png" id="toss1-talk-6"]
-[ext_resource type="Texture2D" path="toss1-talk/toss1-talk-7.png" id="toss1-talk-7"]
-[ext_resource type="Texture2D" path="toss1-talk/toss1-talk-8.png" id="toss1-talk-8"]
-[ext_resource type="Texture2D" path="toss1-talk/toss1-talk-9.png" id="toss1-talk-9"]
-[ext_resource type="Texture2D" path="toss1-talk/toss1-talk-10.png" id="toss1-talk-10"]
-[ext_resource type="Texture2D" path="toss1-talk/toss1-talk-11.png" id="toss1-talk-11"]
-[ext_resource type="Texture2D" path="toss1-talk/toss1-talk-12.png" id="toss1-talk-12"]
-[ext_resource type="Texture2D" path="toss1-talk/toss1-talk-13.png" id="toss1-talk-13"]
-[ext_resource type="Texture2D" path="toss1-talk/toss1-talk-14.png" id="toss1-talk-14"]
-[ext_resource type="Texture2D" path="toss1-talk/toss1-talk-15.png" id="toss1-talk-15"]
-[ext_resource type="Texture2D" path="toss1-talk/toss1-talk-16.png" id="toss1-talk-16"]
-[ext_resource type="Texture2D" path="toss1-talk/toss1-talk-17.png" id="toss1-talk-17"]
-[ext_resource type="Texture2D" path="toss1-talk/toss1-talk-18.png" id="toss1-talk-18"]
-[ext_resource type="Texture2D" path="toss1-talk/toss1-talk-19.png" id="toss1-talk-19"]
-[ext_resource type="Texture2D" path="toss1-talk/toss1-talk-20.png" id="toss1-talk-20"]
-[ext_resource type="Texture2D" path="toss1-talk/toss1-talk-21.png" id="toss1-talk-21"]
-[ext_resource type="Texture2D" path="toss1-talk/toss1-talk-22.png" id="toss1-talk-22"]
-[ext_resource type="Texture2D" path="toss1-talk/toss1-talk-23.png" id="toss1-talk-23"]
-[ext_resource type="Texture2D" path="toss1-talk/toss1-talk-24.png" id="toss1-talk-24"]
-[ext_resource type="Texture2D" path="toss1-talk/toss1-talk-25.png" id="toss1-talk-25"]
-[ext_resource type="Texture2D" path="toss1-talk/toss1-talk-26.png" id="toss1-talk-26"]
-[ext_resource type="Texture2D" path="toss1-talk/toss1-talk-27.png" id="toss1-talk-27"]
-[ext_resource type="Texture2D" path="toss1-talk/toss1-talk-28.png" id="toss1-talk-28"]
-[ext_resource type="Texture2D" path="toss1-talk/toss1-talk-29.png" id="toss1-talk-29"]
-[ext_resource type="Texture2D" path="toss1-talk/toss1-talk-30.png" id="toss1-talk-30"]
-[ext_resource type="Texture2D" path="toss1-talk/toss1-talk-31.png" id="toss1-talk-31"]
-[ext_resource type="Texture2D" path="toss1-talk/toss1-talk-32.png" id="toss1-talk-32"]
-[ext_resource type="Texture2D" path="toss1-talk/toss1-talk-33.png" id="toss1-talk-33"]
-[ext_resource type="Texture2D" path="toss1-talk/toss1-talk-34.png" id="toss1-talk-34"]
-[ext_resource type="Texture2D" path="toss1-talk/toss1-talk-35.png" id="toss1-talk-35"]
-[ext_resource type="Texture2D" path="toss1-talk/toss1-talk-36.png" id="toss1-talk-36"]
-[ext_resource type="Texture2D" path="toss1-talk/toss1-talk-37.png" id="toss1-talk-37"]
-[ext_resource type="Texture2D" path="normal-talk/normal-talk-0.png" id="normal-talk-0"]
-[ext_resource type="Texture2D" path="normal-talk/normal-talk-1.png" id="normal-talk-1"]
-[ext_resource type="Texture2D" path="normal-talk/normal-talk-2.png" id="normal-talk-2"]
-[ext_resource type="Texture2D" path="normal-talk/normal-talk-3.png" id="normal-talk-3"]
-[ext_resource type="Texture2D" path="normal-talk/normal-talk-4.png" id="normal-talk-4"]
-[ext_resource type="Texture2D" path="normal-talk/normal-talk-5.png" id="normal-talk-5"]
-[ext_resource type="Texture2D" path="normal-talk/normal-talk-6.png" id="normal-talk-6"]
-[ext_resource type="Texture2D" path="normal-talk/normal-talk-7.png" id="normal-talk-7"]
-[ext_resource type="Texture2D" path="normal-talk/normal-talk-8.png" id="normal-talk-8"]
-[ext_resource type="Texture2D" path="normal-talk/normal-talk-9.png" id="normal-talk-9"]
-[ext_resource type="Texture2D" path="normal-talk/normal-talk-10.png" id="normal-talk-10"]
-[ext_resource type="Texture2D" path="normal-talk/normal-talk-11.png" id="normal-talk-11"]
-[ext_resource type="Texture2D" path="normal-talk/normal-talk-12.png" id="normal-talk-12"]
-[ext_resource type="Texture2D" path="normal-talk/normal-talk-13.png" id="normal-talk-13"]
-[ext_resource type="Texture2D" path="normal-talk/normal-talk-14.png" id="normal-talk-14"]
-[ext_resource type="Texture2D" path="normal-talk/normal-talk-15.png" id="normal-talk-15"]
-[ext_resource type="Texture2D" path="normal-talk/normal-talk-16.png" id="normal-talk-16"]
-[ext_resource type="Texture2D" path="normal-talk/normal-talk-17.png" id="normal-talk-17"]
-[ext_resource type="Texture2D" path="normal-talk/normal-talk-18.png" id="normal-talk-18"]
-[ext_resource type="Texture2D" path="normal-talk/normal-talk-19.png" id="normal-talk-19"]
-[ext_resource type="Texture2D" path="normal-talk/normal-talk-20.png" id="normal-talk-20"]
-[ext_resource type="Texture2D" path="normal-talk/normal-talk-21.png" id="normal-talk-21"]
-[ext_resource type="Texture2D" path="normal-talk/normal-talk-22.png" id="normal-talk-22"]
-[ext_resource type="Texture2D" path="normal-talk/normal-talk-23.png" id="normal-talk-23"]
-[ext_resource type="Texture2D" path="normal-talk/normal-talk-24.png" id="normal-talk-24"]
-[ext_resource type="Texture2D" path="normal-talk/normal-talk-25.png" id="normal-talk-25"]
-[ext_resource type="Texture2D" path="normal-talk/normal-talk-26.png" id="normal-talk-26"]
-[ext_resource type="Texture2D" path="normal-talk/normal-talk-27.png" id="normal-talk-27"]
-[ext_resource type="Texture2D" path="normal-talk/normal-talk-28.png" id="normal-talk-28"]
-[ext_resource type="Texture2D" path="normal-talk/normal-talk-29.png" id="normal-talk-29"]
-[ext_resource type="Texture2D" path="normal-talk/normal-talk-30.png" id="normal-talk-30"]
-[ext_resource type="Texture2D" path="normal-talk/normal-talk-31.png" id="normal-talk-31"]
-[ext_resource type="Texture2D" path="normal-talk/normal-talk-32.png" id="normal-talk-32"]
-[ext_resource type="Texture2D" path="normal-talk/normal-talk-33.png" id="normal-talk-33"]
-[ext_resource type="Texture2D" path="normal-talk/normal-talk-34.png" id="normal-talk-34"]
-[ext_resource type="Texture2D" path="normal-talk/normal-talk-35.png" id="normal-talk-35"]
-[ext_resource type="Texture2D" path="normal-talk/normal-talk-36.png" id="normal-talk-36"]
-[ext_resource type="Texture2D" path="normal-talk/normal-talk-37.png" id="normal-talk-37"]
-[ext_resource type="Texture2D" path="normal-talk/normal-talk-38.png" id="normal-talk-38"]
-[ext_resource type="Texture2D" path="normal-talk/normal-talk-39.png" id="normal-talk-39"]
-[ext_resource type="Texture2D" path="normal-talk/normal-talk-40.png" id="normal-talk-40"]
-[ext_resource type="Texture2D" path="normal-talk/normal-talk-41.png" id="normal-talk-41"]
-[ext_resource type="Texture2D" path="toss1-in/toss1-in-0.png" id="toss1-in-0"]
-[ext_resource type="Texture2D" path="toss1-in/toss1-in-1.png" id="toss1-in-1"]
-[ext_resource type="Texture2D" path="toss1-in/toss1-in-2.png" id="toss1-in-2"]
-[ext_resource type="Texture2D" path="toss1-in/toss1-in-3.png" id="toss1-in-3"]
-[ext_resource type="Texture2D" path="toss1-in/toss1-in-4.png" id="toss1-in-4"]
-[ext_resource type="Texture2D" path="toss1-in/toss1-in-5.png" id="toss1-in-5"]
-[ext_resource type="Texture2D" path="sweating-talk/sweating-talk-0.png" id="sweating-talk-0"]
-[ext_resource type="Texture2D" path="sweating-talk/sweating-talk-1.png" id="sweating-talk-1"]
-[ext_resource type="Texture2D" path="sweating-talk/sweating-talk-2.png" id="sweating-talk-2"]
-[ext_resource type="Texture2D" path="sweating-talk/sweating-talk-3.png" id="sweating-talk-3"]
-[ext_resource type="Texture2D" path="sweating-talk/sweating-talk-4.png" id="sweating-talk-4"]
-[ext_resource type="Texture2D" path="sweating-talk/sweating-talk-5.png" id="sweating-talk-5"]
-[ext_resource type="Texture2D" path="sweating-talk/sweating-talk-6.png" id="sweating-talk-6"]
-[ext_resource type="Texture2D" path="sweating-talk/sweating-talk-7.png" id="sweating-talk-7"]
-[ext_resource type="Texture2D" path="sweating-talk/sweating-talk-8.png" id="sweating-talk-8"]
-[ext_resource type="Texture2D" path="sweating-talk/sweating-talk-9.png" id="sweating-talk-9"]
-[ext_resource type="Texture2D" path="sweating-talk/sweating-talk-10.png" id="sweating-talk-10"]
-[ext_resource type="Texture2D" path="sweating-talk/sweating-talk-11.png" id="sweating-talk-11"]
-[ext_resource type="Texture2D" path="sweating-talk/sweating-talk-12.png" id="sweating-talk-12"]
-[ext_resource type="Texture2D" path="sweating-talk/sweating-talk-13.png" id="sweating-talk-13"]
-[ext_resource type="Texture2D" path="sweating-talk/sweating-talk-14.png" id="sweating-talk-14"]
-[ext_resource type="Texture2D" path="sweating-talk/sweating-talk-15.png" id="sweating-talk-15"]
-[ext_resource type="Texture2D" path="sweating-talk/sweating-talk-16.png" id="sweating-talk-16"]
-[ext_resource type="Texture2D" path="sweating-talk/sweating-talk-17.png" id="sweating-talk-17"]
-[ext_resource type="Texture2D" path="sweating-talk/sweating-talk-18.png" id="sweating-talk-18"]
-[ext_resource type="Texture2D" path="sweating-talk/sweating-talk-19.png" id="sweating-talk-19"]
-[ext_resource type="Texture2D" path="sweating-talk/sweating-talk-20.png" id="sweating-talk-20"]
-[ext_resource type="Texture2D" path="sweating-talk/sweating-talk-21.png" id="sweating-talk-21"]
-[ext_resource type="Texture2D" path="sweating-talk/sweating-talk-22.png" id="sweating-talk-22"]
-[ext_resource type="Texture2D" path="sweating-talk/sweating-talk-23.png" id="sweating-talk-23"]
-[ext_resource type="Texture2D" path="sweating-talk/sweating-talk-24.png" id="sweating-talk-24"]
-[ext_resource type="Texture2D" path="sweating-talk/sweating-talk-25.png" id="sweating-talk-25"]
-[ext_resource type="Texture2D" path="sweating-talk/sweating-talk-26.png" id="sweating-talk-26"]
-[ext_resource type="Texture2D" path="sweating-talk/sweating-talk-27.png" id="sweating-talk-27"]
-[ext_resource type="Texture2D" path="sweating-talk/sweating-talk-28.png" id="sweating-talk-28"]
-[ext_resource type="Texture2D" path="sweating-talk/sweating-talk-29.png" id="sweating-talk-29"]
-[ext_resource type="Texture2D" path="sweating-talk/sweating-talk-30.png" id="sweating-talk-30"]
-[ext_resource type="Texture2D" path="sweating-talk/sweating-talk-31.png" id="sweating-talk-31"]
-[ext_resource type="Texture2D" path="sweating-talk/sweating-talk-32.png" id="sweating-talk-32"]
-[ext_resource type="Texture2D" path="sweating-talk/sweating-talk-33.png" id="sweating-talk-33"]
-[ext_resource type="Texture2D" path="sweating-talk/sweating-talk-34.png" id="sweating-talk-34"]
-[ext_resource type="Texture2D" path="sweating-talk/sweating-talk-35.png" id="sweating-talk-35"]
-[ext_resource type="Texture2D" path="sweating-talk/sweating-talk-36.png" id="sweating-talk-36"]
-[ext_resource type="Texture2D" path="sweating-talk/sweating-talk-37.png" id="sweating-talk-37"]
-[ext_resource type="Texture2D" path="sweating-talk/sweating-talk-38.png" id="sweating-talk-38"]
-[ext_resource type="Texture2D" path="sweating-talk/sweating-talk-39.png" id="sweating-talk-39"]
-[ext_resource type="Texture2D" path="billy-idle/billy-idle-0.png" id="billy-idle-0"]
-[ext_resource type="Texture2D" path="billy-idle/billy-idle-1.png" id="billy-idle-1"]
-[ext_resource type="Texture2D" path="billy-idle/billy-idle-2.png" id="billy-idle-2"]
-[ext_resource type="Texture2D" path="billy-idle/billy-idle-3.png" id="billy-idle-3"]
-[ext_resource type="Texture2D" path="billy-idle/billy-idle-4.png" id="billy-idle-4"]
-[ext_resource type="Texture2D" path="billy-idle/billy-idle-5.png" id="billy-idle-5"]
-[ext_resource type="Texture2D" path="billy-idle/billy-idle-6.png" id="billy-idle-6"]
-[ext_resource type="Texture2D" path="billy-idle/billy-idle-7.png" id="billy-idle-7"]
-[ext_resource type="Texture2D" path="billy-idle/billy-idle-8.png" id="billy-idle-8"]
-[ext_resource type="Texture2D" path="billy-idle/billy-idle-9.png" id="billy-idle-9"]
-[ext_resource type="Texture2D" path="billy-idle/billy-idle-10.png" id="billy-idle-10"]
-[ext_resource type="Texture2D" path="billy-idle/billy-idle-11.png" id="billy-idle-11"]
-[ext_resource type="Texture2D" path="billy-idle/billy-idle-12.png" id="billy-idle-12"]
-[ext_resource type="Texture2D" path="billy-idle/billy-idle-13.png" id="billy-idle-13"]
-[ext_resource type="Texture2D" path="billy-idle/billy-idle-14.png" id="billy-idle-14"]
-[ext_resource type="Texture2D" path="billy-idle/billy-idle-15.png" id="billy-idle-15"]
-[ext_resource type="Texture2D" path="billy-idle/billy-idle-16.png" id="billy-idle-16"]
-[ext_resource type="Texture2D" path="billy-idle/billy-idle-17.png" id="billy-idle-17"]
-[ext_resource type="Texture2D" path="billy-idle/billy-idle-18.png" id="billy-idle-18"]
-[ext_resource type="Texture2D" path="billy-idle/billy-idle-19.png" id="billy-idle-19"]
-[ext_resource type="Texture2D" path="billy-idle/billy-idle-20.png" id="billy-idle-20"]
-[ext_resource type="Texture2D" path="billy-idle/billy-idle-21.png" id="billy-idle-21"]
-[ext_resource type="Texture2D" path="billy-idle/billy-idle-22.png" id="billy-idle-22"]
-[ext_resource type="Texture2D" path="billy-idle/billy-idle-23.png" id="billy-idle-23"]
-[ext_resource type="Texture2D" path="billy-idle/billy-idle-24.png" id="billy-idle-24"]
-[ext_resource type="Texture2D" path="billy-idle/billy-idle-25.png" id="billy-idle-25"]
-[ext_resource type="Texture2D" path="billy-idle/billy-idle-26.png" id="billy-idle-26"]
-[ext_resource type="Texture2D" path="billy-idle/billy-idle-27.png" id="billy-idle-27"]
-[ext_resource type="Texture2D" path="billy-idle/billy-idle-28.png" id="billy-idle-28"]
-[ext_resource type="Texture2D" path="billy-idle/billy-idle-29.png" id="billy-idle-29"]
-[ext_resource type="Texture2D" path="billy-idle/billy-idle-30.png" id="billy-idle-30"]
-[ext_resource type="Texture2D" path="billy-idle/billy-idle-31.png" id="billy-idle-31"]
-[ext_resource type="Texture2D" path="billy-idle/billy-idle-32.png" id="billy-idle-32"]
-[ext_resource type="Texture2D" path="billy-idle/billy-idle-33.png" id="billy-idle-33"]
-[ext_resource type="Texture2D" path="billy-idle/billy-idle-34.png" id="billy-idle-34"]
-[ext_resource type="Texture2D" path="billy-idle/billy-idle-35.png" id="billy-idle-35"]
-[ext_resource type="Texture2D" path="billy-idle/billy-idle-36.png" id="billy-idle-36"]
-[ext_resource type="Texture2D" path="billy-idle/billy-idle-37.png" id="billy-idle-37"]
-[ext_resource type="Texture2D" path="toss2-idle/toss2-idle-0.png" id="toss2-idle-0"]
-[ext_resource type="Texture2D" path="toss2-idle/toss2-idle-1.png" id="toss2-idle-1"]
-[ext_resource type="Texture2D" path="toss2-idle/toss2-idle-2.png" id="toss2-idle-2"]
-[ext_resource type="Texture2D" path="toss2-idle/toss2-idle-3.png" id="toss2-idle-3"]
-[ext_resource type="Texture2D" path="toss2-idle/toss2-idle-4.png" id="toss2-idle-4"]
-[ext_resource type="Texture2D" path="toss2-idle/toss2-idle-5.png" id="toss2-idle-5"]
-[ext_resource type="Texture2D" path="toss2-idle/toss2-idle-6.png" id="toss2-idle-6"]
-[ext_resource type="Texture2D" path="toss2-idle/toss2-idle-7.png" id="toss2-idle-7"]
-[ext_resource type="Texture2D" path="toss2-idle/toss2-idle-8.png" id="toss2-idle-8"]
-[ext_resource type="Texture2D" path="whatev-idle/whatev-idle-0.png" id="whatev-idle-0"]
-[ext_resource type="Texture2D" path="whatev-idle/whatev-idle-1.png" id="whatev-idle-1"]
-[ext_resource type="Texture2D" path="whatev-idle/whatev-idle-2.png" id="whatev-idle-2"]
-[ext_resource type="Texture2D" path="whatev-idle/whatev-idle-3.png" id="whatev-idle-3"]
-[ext_resource type="Texture2D" path="whatev-idle/whatev-idle-4.png" id="whatev-idle-4"]
-[ext_resource type="Texture2D" path="whatev-idle/whatev-idle-5.png" id="whatev-idle-5"]
-[ext_resource type="Texture2D" path="whatev-idle/whatev-idle-6.png" id="whatev-idle-6"]
-[ext_resource type="Texture2D" path="whatev-idle/whatev-idle-7.png" id="whatev-idle-7"]
-[ext_resource type="Texture2D" path="whatev-idle/whatev-idle-8.png" id="whatev-idle-8"]
-[ext_resource type="Texture2D" path="whatev-idle/whatev-idle-9.png" id="whatev-idle-9"]
-[ext_resource type="Texture2D" path="whatev-idle/whatev-idle-10.png" id="whatev-idle-10"]
-[ext_resource type="Texture2D" path="whatev-idle/whatev-idle-11.png" id="whatev-idle-11"]
-[ext_resource type="Texture2D" path="whatev-idle/whatev-idle-12.png" id="whatev-idle-12"]
-[ext_resource type="Texture2D" path="whatev-idle/whatev-idle-13.png" id="whatev-idle-13"]
-[ext_resource type="Texture2D" path="whatev-idle/whatev-idle-14.png" id="whatev-idle-14"]
-[ext_resource type="Texture2D" path="whatev-idle/whatev-idle-15.png" id="whatev-idle-15"]
-[ext_resource type="Texture2D" path="toss2-in/toss2-in-0.png" id="toss2-in-0"]
-[ext_resource type="Texture2D" path="toss2-in/toss2-in-1.png" id="toss2-in-1"]
-[ext_resource type="Texture2D" path="toss2-in/toss2-in-2.png" id="toss2-in-2"]
-[ext_resource type="Texture2D" path="toss2-in/toss2-in-3.png" id="toss2-in-3"]
-[ext_resource type="Texture2D" path="toss2-in/toss2-in-4.png" id="toss2-in-4"]
-[ext_resource type="Texture2D" path="toss2-in/toss2-in-5.png" id="toss2-in-5"]
-[ext_resource type="Texture2D" path="whatev-talk/whatev-talk-0.png" id="whatev-talk-0"]
-[ext_resource type="Texture2D" path="whatev-talk/whatev-talk-1.png" id="whatev-talk-1"]
-[ext_resource type="Texture2D" path="whatev-talk/whatev-talk-2.png" id="whatev-talk-2"]
-[ext_resource type="Texture2D" path="whatev-talk/whatev-talk-3.png" id="whatev-talk-3"]
-[ext_resource type="Texture2D" path="whatev-talk/whatev-talk-4.png" id="whatev-talk-4"]
-[ext_resource type="Texture2D" path="whatev-talk/whatev-talk-5.png" id="whatev-talk-5"]
-[ext_resource type="Texture2D" path="whatev-talk/whatev-talk-6.png" id="whatev-talk-6"]
-[ext_resource type="Texture2D" path="whatev-talk/whatev-talk-7.png" id="whatev-talk-7"]
-[ext_resource type="Texture2D" path="whatev-talk/whatev-talk-8.png" id="whatev-talk-8"]
-[ext_resource type="Texture2D" path="whatev-talk/whatev-talk-9.png" id="whatev-talk-9"]
-[ext_resource type="Texture2D" path="whatev-talk/whatev-talk-10.png" id="whatev-talk-10"]
-[ext_resource type="Texture2D" path="whatev-talk/whatev-talk-11.png" id="whatev-talk-11"]
-[ext_resource type="Texture2D" path="whatev-talk/whatev-talk-12.png" id="whatev-talk-12"]
-[ext_resource type="Texture2D" path="whatev-talk/whatev-talk-13.png" id="whatev-talk-13"]
-[ext_resource type="Texture2D" path="whatev-talk/whatev-talk-14.png" id="whatev-talk-14"]
-[ext_resource type="Texture2D" path="whatev-talk/whatev-talk-15.png" id="whatev-talk-15"]
-[ext_resource type="Texture2D" path="whatev-talk/whatev-talk-16.png" id="whatev-talk-16"]
-[ext_resource type="Texture2D" path="whatev-talk/whatev-talk-17.png" id="whatev-talk-17"]
-[ext_resource type="Texture2D" path="whatev-talk/whatev-talk-18.png" id="whatev-talk-18"]
-[ext_resource type="Texture2D" path="whatev-talk/whatev-talk-19.png" id="whatev-talk-19"]
-[ext_resource type="Texture2D" path="whatev-talk/whatev-talk-20.png" id="whatev-talk-20"]
-[ext_resource type="Texture2D" path="whatev-talk/whatev-talk-21.png" id="whatev-talk-21"]
-[ext_resource type="Texture2D" path="whatev-talk/whatev-talk-22.png" id="whatev-talk-22"]
-[ext_resource type="Texture2D" path="whatev-talk/whatev-talk-23.png" id="whatev-talk-23"]
-[ext_resource type="Texture2D" path="whatev-talk/whatev-talk-24.png" id="whatev-talk-24"]
-[ext_resource type="Texture2D" path="whatev-talk/whatev-talk-25.png" id="whatev-talk-25"]
-[ext_resource type="Texture2D" path="whatev-talk/whatev-talk-26.png" id="whatev-talk-26"]
-[ext_resource type="Texture2D" path="whatev-talk/whatev-talk-27.png" id="whatev-talk-27"]
-[ext_resource type="Texture2D" path="whatev-talk/whatev-talk-28.png" id="whatev-talk-28"]
-[ext_resource type="Texture2D" path="whatev-talk/whatev-talk-29.png" id="whatev-talk-29"]
-[ext_resource type="Texture2D" path="whatev-talk/whatev-talk-30.png" id="whatev-talk-30"]
-[ext_resource type="Texture2D" path="whatev-talk/whatev-talk-31.png" id="whatev-talk-31"]
-[ext_resource type="Texture2D" path="whatev-talk/whatev-talk-32.png" id="whatev-talk-32"]
-[ext_resource type="Texture2D" path="whatev-talk/whatev-talk-33.png" id="whatev-talk-33"]
-[ext_resource type="Texture2D" path="whatev-talk/whatev-talk-34.png" id="whatev-talk-34"]
-[ext_resource type="Texture2D" path="whatev-talk/whatev-talk-35.png" id="whatev-talk-35"]
-[ext_resource type="Texture2D" path="whatev-talk/whatev-talk-36.png" id="whatev-talk-36"]
-[ext_resource type="Texture2D" path="whatev-talk/whatev-talk-37.png" id="whatev-talk-37"]
-[ext_resource type="Texture2D" path="whatev-talk/whatev-talk-38.png" id="whatev-talk-38"]
-[ext_resource type="Texture2D" path="whatev-talk/whatev-talk-39.png" id="whatev-talk-39"]
-[ext_resource type="Texture2D" path="whatev-talk/whatev-talk-40.png" id="whatev-talk-40"]
-[ext_resource type="Texture2D" path="whatev-talk/whatev-talk-41.png" id="whatev-talk-41"]
-[ext_resource type="Texture2D" path="whatev-talk/whatev-talk-42.png" id="whatev-talk-42"]
-[ext_resource type="Texture2D" path="whatev-talk/whatev-talk-43.png" id="whatev-talk-43"]
-[ext_resource type="Texture2D" path="whatev-talk/whatev-talk-44.png" id="whatev-talk-44"]
-[ext_resource type="Texture2D" path="whatev-talk/whatev-talk-45.png" id="whatev-talk-45"]
-[ext_resource type="Texture2D" path="whatev-talk/whatev-talk-46.png" id="whatev-talk-46"]
-[ext_resource type="Texture2D" path="whatev-talk/whatev-talk-47.png" id="whatev-talk-47"]
-[ext_resource type="Texture2D" path="whatev-talk/whatev-talk-48.png" id="whatev-talk-48"]
-[ext_resource type="Texture2D" path="billy-talk/billy-talk-0.png" id="billy-talk-0"]
-[ext_resource type="Texture2D" path="billy-talk/billy-talk-1.png" id="billy-talk-1"]
-[ext_resource type="Texture2D" path="billy-talk/billy-talk-2.png" id="billy-talk-2"]
-[ext_resource type="Texture2D" path="billy-talk/billy-talk-3.png" id="billy-talk-3"]
-[ext_resource type="Texture2D" path="billy-talk/billy-talk-4.png" id="billy-talk-4"]
-[ext_resource type="Texture2D" path="billy-talk/billy-talk-5.png" id="billy-talk-5"]
-[ext_resource type="Texture2D" path="billy-talk/billy-talk-6.png" id="billy-talk-6"]
-[ext_resource type="Texture2D" path="billy-talk/billy-talk-7.png" id="billy-talk-7"]
-[ext_resource type="Texture2D" path="billy-talk/billy-talk-8.png" id="billy-talk-8"]
-[ext_resource type="Texture2D" path="billy-talk/billy-talk-9.png" id="billy-talk-9"]
-[ext_resource type="Texture2D" path="billy-talk/billy-talk-10.png" id="billy-talk-10"]
-[ext_resource type="Texture2D" path="billy-talk/billy-talk-11.png" id="billy-talk-11"]
-[ext_resource type="Texture2D" path="billy-talk/billy-talk-12.png" id="billy-talk-12"]
-[ext_resource type="Texture2D" path="billy-talk/billy-talk-13.png" id="billy-talk-13"]
-[ext_resource type="Texture2D" path="billy-talk/billy-talk-14.png" id="billy-talk-14"]
-[ext_resource type="Texture2D" path="billy-talk/billy-talk-15.png" id="billy-talk-15"]
-[ext_resource type="Texture2D" path="billy-talk/billy-talk-16.png" id="billy-talk-16"]
-[ext_resource type="Texture2D" path="billy-talk/billy-talk-17.png" id="billy-talk-17"]
-[ext_resource type="Texture2D" path="billy-talk/billy-talk-18.png" id="billy-talk-18"]
-[ext_resource type="Texture2D" path="billy-talk/billy-talk-19.png" id="billy-talk-19"]
-[ext_resource type="Texture2D" path="billy-talk/billy-talk-20.png" id="billy-talk-20"]
-[ext_resource type="Texture2D" path="billy-talk/billy-talk-21.png" id="billy-talk-21"]
-[ext_resource type="Texture2D" path="billy-talk/billy-talk-22.png" id="billy-talk-22"]
-[ext_resource type="Texture2D" path="billy-talk/billy-talk-23.png" id="billy-talk-23"]
-[ext_resource type="Texture2D" path="billy-talk/billy-talk-24.png" id="billy-talk-24"]
-[ext_resource type="Texture2D" path="billy-talk/billy-talk-25.png" id="billy-talk-25"]
-[ext_resource type="Texture2D" path="billy-talk/billy-talk-26.png" id="billy-talk-26"]
-[ext_resource type="Texture2D" path="billy-talk/billy-talk-27.png" id="billy-talk-27"]
-[ext_resource type="Texture2D" path="billy-talk/billy-talk-28.png" id="billy-talk-28"]
-[ext_resource type="Texture2D" path="billy-talk/billy-talk-29.png" id="billy-talk-29"]
-[ext_resource type="Texture2D" path="billy-talk/billy-talk-30.png" id="billy-talk-30"]
-[ext_resource type="Texture2D" path="billy-talk/billy-talk-31.png" id="billy-talk-31"]
-[ext_resource type="Texture2D" path="billy-talk/billy-talk-32.png" id="billy-talk-32"]
-[ext_resource type="Texture2D" path="billy-talk/billy-talk-33.png" id="billy-talk-33"]
-[ext_resource type="Texture2D" path="billy-talk/billy-talk-34.png" id="billy-talk-34"]
-[ext_resource type="Texture2D" path="billy-talk/billy-talk-35.png" id="billy-talk-35"]
-[ext_resource type="Texture2D" path="billy-talk/billy-talk-36.png" id="billy-talk-36"]
-[ext_resource type="Texture2D" path="billy-talk/billy-talk-37.png" id="billy-talk-37"]
-[ext_resource type="Texture2D" path="billy-talk/billy-talk-38.png" id="billy-talk-38"]
-[ext_resource type="Texture2D" path="billy-talk/billy-talk-39.png" id="billy-talk-39"]
-[ext_resource type="Texture2D" path="billy-talk/billy-talk-40.png" id="billy-talk-40"]
-[ext_resource type="Texture2D" path="billy-talk/billy-talk-41.png" id="billy-talk-41"]
-[ext_resource type="Texture2D" path="toss2-talk/toss2-talk-0.png" id="toss2-talk-0"]
-[ext_resource type="Texture2D" path="toss2-talk/toss2-talk-1.png" id="toss2-talk-1"]
-[ext_resource type="Texture2D" path="toss2-talk/toss2-talk-2.png" id="toss2-talk-2"]
-[ext_resource type="Texture2D" path="toss2-talk/toss2-talk-3.png" id="toss2-talk-3"]
-[ext_resource type="Texture2D" path="toss2-talk/toss2-talk-4.png" id="toss2-talk-4"]
-[ext_resource type="Texture2D" path="toss2-talk/toss2-talk-5.png" id="toss2-talk-5"]
-[ext_resource type="Texture2D" path="toss2-talk/toss2-talk-6.png" id="toss2-talk-6"]
-[ext_resource type="Texture2D" path="toss2-talk/toss2-talk-7.png" id="toss2-talk-7"]
-[ext_resource type="Texture2D" path="toss2-talk/toss2-talk-8.png" id="toss2-talk-8"]
-[ext_resource type="Texture2D" path="toss2-talk/toss2-talk-9.png" id="toss2-talk-9"]
-[ext_resource type="Texture2D" path="toss2-talk/toss2-talk-10.png" id="toss2-talk-10"]
-[ext_resource type="Texture2D" path="toss2-talk/toss2-talk-11.png" id="toss2-talk-11"]
-[ext_resource type="Texture2D" path="toss2-talk/toss2-talk-12.png" id="toss2-talk-12"]
-[ext_resource type="Texture2D" path="toss2-talk/toss2-talk-13.png" id="toss2-talk-13"]
-[ext_resource type="Texture2D" path="toss2-talk/toss2-talk-14.png" id="toss2-talk-14"]
-[ext_resource type="Texture2D" path="toss2-talk/toss2-talk-15.png" id="toss2-talk-15"]
-[ext_resource type="Texture2D" path="toss2-talk/toss2-talk-16.png" id="toss2-talk-16"]
-[ext_resource type="Texture2D" path="toss2-talk/toss2-talk-17.png" id="toss2-talk-17"]
-[ext_resource type="Texture2D" path="toss2-talk/toss2-talk-18.png" id="toss2-talk-18"]
-[ext_resource type="Texture2D" path="toss2-talk/toss2-talk-19.png" id="toss2-talk-19"]
-[ext_resource type="Texture2D" path="toss2-talk/toss2-talk-20.png" id="toss2-talk-20"]
-[ext_resource type="Texture2D" path="toss2-talk/toss2-talk-21.png" id="toss2-talk-21"]
-[ext_resource type="Texture2D" path="toss2-talk/toss2-talk-22.png" id="toss2-talk-22"]
-[ext_resource type="Texture2D" path="toss2-talk/toss2-talk-23.png" id="toss2-talk-23"]
-[ext_resource type="Texture2D" path="toss2-talk/toss2-talk-24.png" id="toss2-talk-24"]
-[ext_resource type="Texture2D" path="toss2-talk/toss2-talk-25.png" id="toss2-talk-25"]
-[ext_resource type="Texture2D" path="toss2-talk/toss2-talk-26.png" id="toss2-talk-26"]
-[ext_resource type="Texture2D" path="toss2-talk/toss2-talk-27.png" id="toss2-talk-27"]
-[ext_resource type="Texture2D" path="toss2-talk/toss2-talk-28.png" id="toss2-talk-28"]
-[ext_resource type="Texture2D" path="toss2-talk/toss2-talk-29.png" id="toss2-talk-29"]
-[ext_resource type="Texture2D" path="toss2-talk/toss2-talk-30.png" id="toss2-talk-30"]
-[ext_resource type="Texture2D" path="toss2-talk/toss2-talk-31.png" id="toss2-talk-31"]
-[ext_resource type="Texture2D" path="toss2-talk/toss2-talk-32.png" id="toss2-talk-32"]
-[ext_resource type="Texture2D" path="toss2-talk/toss2-talk-33.png" id="toss2-talk-33"]
-[ext_resource type="Texture2D" path="toss2-talk/toss2-talk-34.png" id="toss2-talk-34"]
-[ext_resource type="Texture2D" path="toss2-talk/toss2-talk-35.png" id="toss2-talk-35"]
-[ext_resource type="Texture2D" path="toss2-talk/toss2-talk-36.png" id="toss2-talk-36"]
-[ext_resource type="Texture2D" path="toss2-talk/toss2-talk-37.png" id="toss2-talk-37"]
+[ext_resource type="Texture2D" uid="uid://dffl4rfp6k2um" path="res://characters/max/billy-idle/billy-idle-0.png" id="billy-idle-0"]
+[ext_resource type="Texture2D" uid="uid://bavidi8g47mo6" path="res://characters/max/billy-idle/billy-idle-1.png" id="billy-idle-1"]
+[ext_resource type="Texture2D" uid="uid://bwdfx303mb1i2" path="res://characters/max/billy-idle/billy-idle-2.png" id="billy-idle-2"]
+[ext_resource type="Texture2D" uid="uid://puk8ym8bcoct" path="res://characters/max/billy-idle/billy-idle-3.png" id="billy-idle-3"]
+[ext_resource type="Texture2D" uid="uid://53oelhqeneek" path="res://characters/max/billy-idle/billy-idle-4.png" id="billy-idle-4"]
+[ext_resource type="Texture2D" uid="uid://bk14d12jaxhhu" path="res://characters/max/billy-idle/billy-idle-5.png" id="billy-idle-5"]
+[ext_resource type="Texture2D" uid="uid://blgdqe3l8ox3f" path="res://characters/max/billy-idle/billy-idle-6.png" id="billy-idle-6"]
+[ext_resource type="Texture2D" uid="uid://gmrnvbffrg0k" path="res://characters/max/billy-idle/billy-idle-7.png" id="billy-idle-7"]
+[ext_resource type="Texture2D" uid="uid://bjm8jsxfm4rc3" path="res://characters/max/billy-idle/billy-idle-8.png" id="billy-idle-8"]
+[ext_resource type="Texture2D" uid="uid://dqlg18yjnr7xm" path="res://characters/max/billy-idle/billy-idle-9.png" id="billy-idle-9"]
+[ext_resource type="Texture2D" uid="uid://c7c32d0kk43i4" path="res://characters/max/billy-idle/billy-idle-10.png" id="billy-idle-10"]
+[ext_resource type="Texture2D" uid="uid://7chgnyef0c87" path="res://characters/max/billy-idle/billy-idle-11.png" id="billy-idle-11"]
+[ext_resource type="Texture2D" uid="uid://bydf5t7r0enn6" path="res://characters/max/billy-idle/billy-idle-12.png" id="billy-idle-12"]
+[ext_resource type="Texture2D" uid="uid://cg3xlparigjt5" path="res://characters/max/billy-idle/billy-idle-13.png" id="billy-idle-13"]
+[ext_resource type="Texture2D" uid="uid://p6dthqsd54np" path="res://characters/max/billy-idle/billy-idle-14.png" id="billy-idle-14"]
+[ext_resource type="Texture2D" uid="uid://b2ji27eu1a5lm" path="res://characters/max/billy-idle/billy-idle-15.png" id="billy-idle-15"]
+[ext_resource type="Texture2D" uid="uid://bpyedcim4nxot" path="res://characters/max/billy-idle/billy-idle-16.png" id="billy-idle-16"]
+[ext_resource type="Texture2D" uid="uid://bjei58ubc6bei" path="res://characters/max/billy-idle/billy-idle-17.png" id="billy-idle-17"]
+[ext_resource type="Texture2D" uid="uid://dguakqpdbtwpt" path="res://characters/max/billy-idle/billy-idle-18.png" id="billy-idle-18"]
+[ext_resource type="Texture2D" uid="uid://7ae1rnjnpqbg" path="res://characters/max/billy-idle/billy-idle-19.png" id="billy-idle-19"]
+[ext_resource type="Texture2D" uid="uid://c6olm7ivqpv63" path="res://characters/max/billy-idle/billy-idle-20.png" id="billy-idle-20"]
+[ext_resource type="Texture2D" uid="uid://55rgrljigiqt" path="res://characters/max/billy-idle/billy-idle-21.png" id="billy-idle-21"]
+[ext_resource type="Texture2D" uid="uid://bh67ap1nv55nm" path="res://characters/max/billy-idle/billy-idle-22.png" id="billy-idle-22"]
+[ext_resource type="Texture2D" uid="uid://1eufv7fg4k0v" path="res://characters/max/billy-idle/billy-idle-23.png" id="billy-idle-23"]
+[ext_resource type="Texture2D" uid="uid://dbx58gi8nmj3v" path="res://characters/max/billy-idle/billy-idle-24.png" id="billy-idle-24"]
+[ext_resource type="Texture2D" uid="uid://3624imo00tgk" path="res://characters/max/billy-idle/billy-idle-25.png" id="billy-idle-25"]
+[ext_resource type="Texture2D" uid="uid://breuk4aue135v" path="res://characters/max/billy-idle/billy-idle-26.png" id="billy-idle-26"]
+[ext_resource type="Texture2D" uid="uid://ce7eabnkod5nw" path="res://characters/max/billy-idle/billy-idle-27.png" id="billy-idle-27"]
+[ext_resource type="Texture2D" uid="uid://djiuwvr363v2b" path="res://characters/max/billy-idle/billy-idle-28.png" id="billy-idle-28"]
+[ext_resource type="Texture2D" uid="uid://jl6j3iy8raa7" path="res://characters/max/billy-idle/billy-idle-29.png" id="billy-idle-29"]
+[ext_resource type="Texture2D" uid="uid://b7yq10it87cfu" path="res://characters/max/billy-idle/billy-idle-30.png" id="billy-idle-30"]
+[ext_resource type="Texture2D" uid="uid://drthnw4nqi1jg" path="res://characters/max/billy-idle/billy-idle-31.png" id="billy-idle-31"]
+[ext_resource type="Texture2D" uid="uid://bb8rwuf85migl" path="res://characters/max/billy-idle/billy-idle-32.png" id="billy-idle-32"]
+[ext_resource type="Texture2D" uid="uid://ciafj7l3dqp7p" path="res://characters/max/billy-idle/billy-idle-33.png" id="billy-idle-33"]
+[ext_resource type="Texture2D" uid="uid://b0kexj2arajr1" path="res://characters/max/billy-idle/billy-idle-34.png" id="billy-idle-34"]
+[ext_resource type="Texture2D" uid="uid://dxk5gg2c5smmv" path="res://characters/max/billy-idle/billy-idle-35.png" id="billy-idle-35"]
+[ext_resource type="Texture2D" uid="uid://bcoys0o2eelek" path="res://characters/max/billy-idle/billy-idle-36.png" id="billy-idle-36"]
+[ext_resource type="Texture2D" uid="uid://dmh62ru2l82vj" path="res://characters/max/billy-idle/billy-idle-37.png" id="billy-idle-37"]
+[ext_resource type="Texture2D" uid="uid://bdpiax86ogayr" path="res://characters/max/billy-talk/billy-talk-0.png" id="billy-talk-0"]
+[ext_resource type="Texture2D" uid="uid://b0p4honm7gkcl" path="res://characters/max/billy-talk/billy-talk-1.png" id="billy-talk-1"]
+[ext_resource type="Texture2D" uid="uid://dkueaiesfc66p" path="res://characters/max/billy-talk/billy-talk-2.png" id="billy-talk-2"]
+[ext_resource type="Texture2D" uid="uid://deqpyjys0xa1c" path="res://characters/max/billy-talk/billy-talk-3.png" id="billy-talk-3"]
+[ext_resource type="Texture2D" uid="uid://e6mect0wxd4b" path="res://characters/max/billy-talk/billy-talk-4.png" id="billy-talk-4"]
+[ext_resource type="Texture2D" uid="uid://b6x13bytrth4" path="res://characters/max/billy-talk/billy-talk-5.png" id="billy-talk-5"]
+[ext_resource type="Texture2D" uid="uid://cfbrurpa0dp3e" path="res://characters/max/billy-talk/billy-talk-6.png" id="billy-talk-6"]
+[ext_resource type="Texture2D" uid="uid://bf2hgeo4o36bs" path="res://characters/max/billy-talk/billy-talk-7.png" id="billy-talk-7"]
+[ext_resource type="Texture2D" uid="uid://dus7ux8bmse5p" path="res://characters/max/billy-talk/billy-talk-8.png" id="billy-talk-8"]
+[ext_resource type="Texture2D" uid="uid://bhermn6kcpn35" path="res://characters/max/billy-talk/billy-talk-9.png" id="billy-talk-9"]
+[ext_resource type="Texture2D" uid="uid://cvh4618fvtbvi" path="res://characters/max/billy-talk/billy-talk-10.png" id="billy-talk-10"]
+[ext_resource type="Texture2D" uid="uid://vqiwqrdhknnt" path="res://characters/max/billy-talk/billy-talk-11.png" id="billy-talk-11"]
+[ext_resource type="Texture2D" uid="uid://bxsc64i8suasl" path="res://characters/max/billy-talk/billy-talk-12.png" id="billy-talk-12"]
+[ext_resource type="Texture2D" uid="uid://b3kxptxydyyo" path="res://characters/max/billy-talk/billy-talk-13.png" id="billy-talk-13"]
+[ext_resource type="Texture2D" uid="uid://d2sb1okgsp5x" path="res://characters/max/billy-talk/billy-talk-14.png" id="billy-talk-14"]
+[ext_resource type="Texture2D" uid="uid://bcckiqo354hce" path="res://characters/max/billy-talk/billy-talk-15.png" id="billy-talk-15"]
+[ext_resource type="Texture2D" uid="uid://bybdjuhev6ysa" path="res://characters/max/billy-talk/billy-talk-16.png" id="billy-talk-16"]
+[ext_resource type="Texture2D" uid="uid://c30bngo7pllym" path="res://characters/max/billy-talk/billy-talk-17.png" id="billy-talk-17"]
+[ext_resource type="Texture2D" uid="uid://c152b55mmh4qv" path="res://characters/max/billy-talk/billy-talk-18.png" id="billy-talk-18"]
+[ext_resource type="Texture2D" uid="uid://5h8nh2eeta15" path="res://characters/max/billy-talk/billy-talk-19.png" id="billy-talk-19"]
+[ext_resource type="Texture2D" uid="uid://b0ecq0878k26y" path="res://characters/max/billy-talk/billy-talk-20.png" id="billy-talk-20"]
+[ext_resource type="Texture2D" uid="uid://dbwpy53gehxgb" path="res://characters/max/billy-talk/billy-talk-21.png" id="billy-talk-21"]
+[ext_resource type="Texture2D" uid="uid://d14y3hj73hlkg" path="res://characters/max/billy-talk/billy-talk-22.png" id="billy-talk-22"]
+[ext_resource type="Texture2D" uid="uid://begp7y17tw5wo" path="res://characters/max/billy-talk/billy-talk-23.png" id="billy-talk-23"]
+[ext_resource type="Texture2D" uid="uid://dg0wm5vtly47y" path="res://characters/max/billy-talk/billy-talk-24.png" id="billy-talk-24"]
+[ext_resource type="Texture2D" uid="uid://biawhf44g37nh" path="res://characters/max/billy-talk/billy-talk-25.png" id="billy-talk-25"]
+[ext_resource type="Texture2D" uid="uid://ctvonkjiafj2f" path="res://characters/max/billy-talk/billy-talk-26.png" id="billy-talk-26"]
+[ext_resource type="Texture2D" uid="uid://db4nkkjixpvps" path="res://characters/max/billy-talk/billy-talk-27.png" id="billy-talk-27"]
+[ext_resource type="Texture2D" uid="uid://cbf2mg1hiljpi" path="res://characters/max/billy-talk/billy-talk-28.png" id="billy-talk-28"]
+[ext_resource type="Texture2D" uid="uid://d1iuh4fpirab" path="res://characters/max/billy-talk/billy-talk-29.png" id="billy-talk-29"]
+[ext_resource type="Texture2D" uid="uid://ctfmnciqlo6t0" path="res://characters/max/billy-talk/billy-talk-30.png" id="billy-talk-30"]
+[ext_resource type="Texture2D" uid="uid://dg8o45wli7ke4" path="res://characters/max/billy-talk/billy-talk-31.png" id="billy-talk-31"]
+[ext_resource type="Texture2D" uid="uid://dhxbnq0a0be8h" path="res://characters/max/billy-talk/billy-talk-32.png" id="billy-talk-32"]
+[ext_resource type="Texture2D" uid="uid://b2bswgqp7qiu" path="res://characters/max/billy-talk/billy-talk-33.png" id="billy-talk-33"]
+[ext_resource type="Texture2D" uid="uid://ckk3cdfmn2bc8" path="res://characters/max/billy-talk/billy-talk-34.png" id="billy-talk-34"]
+[ext_resource type="Texture2D" uid="uid://cu7a1g7es138s" path="res://characters/max/billy-talk/billy-talk-35.png" id="billy-talk-35"]
+[ext_resource type="Texture2D" uid="uid://bfynx1qiumupe" path="res://characters/max/billy-talk/billy-talk-36.png" id="billy-talk-36"]
+[ext_resource type="Texture2D" uid="uid://3w3d5ovb3nan" path="res://characters/max/billy-talk/billy-talk-37.png" id="billy-talk-37"]
+[ext_resource type="Texture2D" uid="uid://60muou2c8ob6" path="res://characters/max/billy-talk/billy-talk-38.png" id="billy-talk-38"]
+[ext_resource type="Texture2D" uid="uid://cwjrtjalngike" path="res://characters/max/billy-talk/billy-talk-39.png" id="billy-talk-39"]
+[ext_resource type="Texture2D" uid="uid://be8kpcld6qyyd" path="res://characters/max/billy-talk/billy-talk-40.png" id="billy-talk-40"]
+[ext_resource type="Texture2D" uid="uid://dhikg4ebvwvw6" path="res://characters/max/billy-talk/billy-talk-41.png" id="billy-talk-41"]
+[ext_resource type="Texture2D" uid="uid://3dwvwfbwb0a0" path="res://characters/max/normal-idle/normal-idle-0.png" id="normal-idle-0"]
+[ext_resource type="Texture2D" uid="uid://cj556625plcyc" path="res://characters/max/normal-idle/normal-idle-1.png" id="normal-idle-1"]
+[ext_resource type="Texture2D" uid="uid://wytjvsba58qa" path="res://characters/max/normal-idle/normal-idle-2.png" id="normal-idle-2"]
+[ext_resource type="Texture2D" uid="uid://cvtxk3fmh4upx" path="res://characters/max/normal-idle/normal-idle-3.png" id="normal-idle-3"]
+[ext_resource type="Texture2D" uid="uid://nvhun5wg23x7" path="res://characters/max/normal-idle/normal-idle-4.png" id="normal-idle-4"]
+[ext_resource type="Texture2D" uid="uid://dmpibhl3qydqh" path="res://characters/max/normal-idle/normal-idle-5.png" id="normal-idle-5"]
+[ext_resource type="Texture2D" uid="uid://bl2ngrnoxu5lb" path="res://characters/max/normal-idle/normal-idle-6.png" id="normal-idle-6"]
+[ext_resource type="Texture2D" uid="uid://x1vj4ftj7thp" path="res://characters/max/normal-idle/normal-idle-7.png" id="normal-idle-7"]
+[ext_resource type="Texture2D" uid="uid://imwtn3qku2sd" path="res://characters/max/normal-idle/normal-idle-8.png" id="normal-idle-8"]
+[ext_resource type="Texture2D" uid="uid://d00nsgbbnlets" path="res://characters/max/normal-talk/normal-talk-0.png" id="normal-talk-0"]
+[ext_resource type="Texture2D" uid="uid://dviluv26tjomk" path="res://characters/max/normal-talk/normal-talk-1.png" id="normal-talk-1"]
+[ext_resource type="Texture2D" uid="uid://bltj2u5k2is1x" path="res://characters/max/normal-talk/normal-talk-2.png" id="normal-talk-2"]
+[ext_resource type="Texture2D" uid="uid://bfuy65ldogdbb" path="res://characters/max/normal-talk/normal-talk-3.png" id="normal-talk-3"]
+[ext_resource type="Texture2D" uid="uid://74ijwg00gn8a" path="res://characters/max/normal-talk/normal-talk-4.png" id="normal-talk-4"]
+[ext_resource type="Texture2D" uid="uid://jcejdr27r6wi" path="res://characters/max/normal-talk/normal-talk-5.png" id="normal-talk-5"]
+[ext_resource type="Texture2D" uid="uid://brqg3356ubpsy" path="res://characters/max/normal-talk/normal-talk-6.png" id="normal-talk-6"]
+[ext_resource type="Texture2D" uid="uid://cic77xdmqn05i" path="res://characters/max/normal-talk/normal-talk-7.png" id="normal-talk-7"]
+[ext_resource type="Texture2D" uid="uid://x77rrwb4xir6" path="res://characters/max/normal-talk/normal-talk-8.png" id="normal-talk-8"]
+[ext_resource type="Texture2D" uid="uid://b8ulsctjit7ql" path="res://characters/max/normal-talk/normal-talk-9.png" id="normal-talk-9"]
+[ext_resource type="Texture2D" uid="uid://by3qqetogkghl" path="res://characters/max/normal-talk/normal-talk-10.png" id="normal-talk-10"]
+[ext_resource type="Texture2D" uid="uid://ofqmws7x2hll" path="res://characters/max/normal-talk/normal-talk-11.png" id="normal-talk-11"]
+[ext_resource type="Texture2D" uid="uid://drhelojpdfnwx" path="res://characters/max/normal-talk/normal-talk-12.png" id="normal-talk-12"]
+[ext_resource type="Texture2D" uid="uid://yqmdbm7goqgg" path="res://characters/max/normal-talk/normal-talk-13.png" id="normal-talk-13"]
+[ext_resource type="Texture2D" uid="uid://bpernjeg34gct" path="res://characters/max/normal-talk/normal-talk-14.png" id="normal-talk-14"]
+[ext_resource type="Texture2D" uid="uid://ytlv5fvlamsm" path="res://characters/max/normal-talk/normal-talk-15.png" id="normal-talk-15"]
+[ext_resource type="Texture2D" uid="uid://br732v37seanh" path="res://characters/max/normal-talk/normal-talk-16.png" id="normal-talk-16"]
+[ext_resource type="Texture2D" uid="uid://bjvb5b1a3gpud" path="res://characters/max/normal-talk/normal-talk-17.png" id="normal-talk-17"]
+[ext_resource type="Texture2D" uid="uid://dabjsx7qg1bnd" path="res://characters/max/normal-talk/normal-talk-18.png" id="normal-talk-18"]
+[ext_resource type="Texture2D" uid="uid://dpxw64go1is5o" path="res://characters/max/normal-talk/normal-talk-19.png" id="normal-talk-19"]
+[ext_resource type="Texture2D" uid="uid://c01yppuncv7hm" path="res://characters/max/normal-talk/normal-talk-20.png" id="normal-talk-20"]
+[ext_resource type="Texture2D" uid="uid://bq4bvs6ss735a" path="res://characters/max/normal-talk/normal-talk-21.png" id="normal-talk-21"]
+[ext_resource type="Texture2D" uid="uid://c3uycbe2yxitu" path="res://characters/max/normal-talk/normal-talk-22.png" id="normal-talk-22"]
+[ext_resource type="Texture2D" uid="uid://b4ca7e40xru14" path="res://characters/max/normal-talk/normal-talk-23.png" id="normal-talk-23"]
+[ext_resource type="Texture2D" uid="uid://8dflfltiik5p" path="res://characters/max/normal-talk/normal-talk-24.png" id="normal-talk-24"]
+[ext_resource type="Texture2D" uid="uid://d5228s6u5jmx" path="res://characters/max/normal-talk/normal-talk-25.png" id="normal-talk-25"]
+[ext_resource type="Texture2D" uid="uid://csc1e5rhrj831" path="res://characters/max/normal-talk/normal-talk-26.png" id="normal-talk-26"]
+[ext_resource type="Texture2D" uid="uid://fnaty7160f06" path="res://characters/max/normal-talk/normal-talk-27.png" id="normal-talk-27"]
+[ext_resource type="Texture2D" uid="uid://b6tatwb2hmfsu" path="res://characters/max/normal-talk/normal-talk-28.png" id="normal-talk-28"]
+[ext_resource type="Texture2D" uid="uid://bbr4cuqu2lesi" path="res://characters/max/normal-talk/normal-talk-29.png" id="normal-talk-29"]
+[ext_resource type="Texture2D" uid="uid://buuefui2klhsw" path="res://characters/max/normal-talk/normal-talk-30.png" id="normal-talk-30"]
+[ext_resource type="Texture2D" uid="uid://povhlouy1ek0" path="res://characters/max/normal-talk/normal-talk-31.png" id="normal-talk-31"]
+[ext_resource type="Texture2D" uid="uid://imiijq7d5cvq" path="res://characters/max/normal-talk/normal-talk-32.png" id="normal-talk-32"]
+[ext_resource type="Texture2D" uid="uid://i78nd5eukd3o" path="res://characters/max/normal-talk/normal-talk-33.png" id="normal-talk-33"]
+[ext_resource type="Texture2D" uid="uid://b6opiq8xak078" path="res://characters/max/normal-talk/normal-talk-34.png" id="normal-talk-34"]
+[ext_resource type="Texture2D" uid="uid://dasjuvtwo7sws" path="res://characters/max/normal-talk/normal-talk-35.png" id="normal-talk-35"]
+[ext_resource type="Texture2D" uid="uid://dddx0qcjk7t3j" path="res://characters/max/normal-talk/normal-talk-36.png" id="normal-talk-36"]
+[ext_resource type="Texture2D" uid="uid://c4hm8yvwyc5tp" path="res://characters/max/normal-talk/normal-talk-37.png" id="normal-talk-37"]
+[ext_resource type="Texture2D" uid="uid://dpec1rrj6mrmy" path="res://characters/max/normal-talk/normal-talk-38.png" id="normal-talk-38"]
+[ext_resource type="Texture2D" uid="uid://cly0f5i6p0epx" path="res://characters/max/normal-talk/normal-talk-39.png" id="normal-talk-39"]
+[ext_resource type="Texture2D" uid="uid://dv06mvsmplt3s" path="res://characters/max/normal-talk/normal-talk-40.png" id="normal-talk-40"]
+[ext_resource type="Texture2D" uid="uid://uqpphjc5pe26" path="res://characters/max/normal-talk/normal-talk-41.png" id="normal-talk-41"]
+[ext_resource type="Texture2D" uid="uid://dq5q2e2leynt7" path="res://characters/max/sweating-idle/sweating-idle-0.png" id="sweating-idle-0"]
+[ext_resource type="Texture2D" uid="uid://b7p3vnypanrnn" path="res://characters/max/sweating-idle/sweating-idle-1.png" id="sweating-idle-1"]
+[ext_resource type="Texture2D" uid="uid://cqmirkpgnibe1" path="res://characters/max/sweating-idle/sweating-idle-2.png" id="sweating-idle-2"]
+[ext_resource type="Texture2D" uid="uid://cxws8cm54vn0b" path="res://characters/max/sweating-idle/sweating-idle-3.png" id="sweating-idle-3"]
+[ext_resource type="Texture2D" uid="uid://bct23r725vpkd" path="res://characters/max/sweating-idle/sweating-idle-4.png" id="sweating-idle-4"]
+[ext_resource type="Texture2D" uid="uid://fgrchoot5qp5" path="res://characters/max/sweating-idle/sweating-idle-5.png" id="sweating-idle-5"]
+[ext_resource type="Texture2D" uid="uid://d0omb0o56jytq" path="res://characters/max/sweating-idle/sweating-idle-6.png" id="sweating-idle-6"]
+[ext_resource type="Texture2D" uid="uid://boe4s5lyy8ul8" path="res://characters/max/sweating-idle/sweating-idle-7.png" id="sweating-idle-7"]
+[ext_resource type="Texture2D" uid="uid://c8olgt62vb3g7" path="res://characters/max/sweating-idle/sweating-idle-8.png" id="sweating-idle-8"]
+[ext_resource type="Texture2D" uid="uid://54qm5l6a8v80" path="res://characters/max/sweating-idle/sweating-idle-9.png" id="sweating-idle-9"]
+[ext_resource type="Texture2D" uid="uid://dmpedcnjg3x5l" path="res://characters/max/sweating-idle/sweating-idle-10.png" id="sweating-idle-10"]
+[ext_resource type="Texture2D" uid="uid://bfa2jukct8qpo" path="res://characters/max/sweating-idle/sweating-idle-11.png" id="sweating-idle-11"]
+[ext_resource type="Texture2D" uid="uid://bhdev537igtdq" path="res://characters/max/sweating-idle/sweating-idle-12.png" id="sweating-idle-12"]
+[ext_resource type="Texture2D" uid="uid://6whtxrafr04" path="res://characters/max/sweating-idle/sweating-idle-13.png" id="sweating-idle-13"]
+[ext_resource type="Texture2D" uid="uid://cgmbgv1bjeqox" path="res://characters/max/sweating-idle/sweating-idle-14.png" id="sweating-idle-14"]
+[ext_resource type="Texture2D" uid="uid://eb1d3bl0jd8p" path="res://characters/max/sweating-idle/sweating-idle-15.png" id="sweating-idle-15"]
+[ext_resource type="Texture2D" uid="uid://dm1a8h2fq46d2" path="res://characters/max/sweating-idle/sweating-idle-16.png" id="sweating-idle-16"]
+[ext_resource type="Texture2D" uid="uid://cffxvflqaeo53" path="res://characters/max/sweating-idle/sweating-idle-17.png" id="sweating-idle-17"]
+[ext_resource type="Texture2D" uid="uid://dwx8pls6hh6rb" path="res://characters/max/sweating-idle/sweating-idle-18.png" id="sweating-idle-18"]
+[ext_resource type="Texture2D" uid="uid://dacrk1evo3v27" path="res://characters/max/sweating-idle/sweating-idle-19.png" id="sweating-idle-19"]
+[ext_resource type="Texture2D" uid="uid://cbggfkf2k4no1" path="res://characters/max/sweating-idle/sweating-idle-20.png" id="sweating-idle-20"]
+[ext_resource type="Texture2D" uid="uid://bvmlpdrnaf853" path="res://characters/max/sweating-idle/sweating-idle-21.png" id="sweating-idle-21"]
+[ext_resource type="Texture2D" uid="uid://de8xsiyyw4tan" path="res://characters/max/sweating-idle/sweating-idle-22.png" id="sweating-idle-22"]
+[ext_resource type="Texture2D" uid="uid://cm4x4irrs8oa3" path="res://characters/max/sweating-idle/sweating-idle-23.png" id="sweating-idle-23"]
+[ext_resource type="Texture2D" uid="uid://blhj1svh87ri6" path="res://characters/max/sweating-idle/sweating-idle-24.png" id="sweating-idle-24"]
+[ext_resource type="Texture2D" uid="uid://2476tmbicptc" path="res://characters/max/sweating-idle/sweating-idle-25.png" id="sweating-idle-25"]
+[ext_resource type="Texture2D" uid="uid://dq2cfd7n7wg16" path="res://characters/max/sweating-idle/sweating-idle-26.png" id="sweating-idle-26"]
+[ext_resource type="Texture2D" uid="uid://bk1aqvlsw63mb" path="res://characters/max/sweating-idle/sweating-idle-27.png" id="sweating-idle-27"]
+[ext_resource type="Texture2D" uid="uid://g4qaknnwbea1" path="res://characters/max/sweating-idle/sweating-idle-28.png" id="sweating-idle-28"]
+[ext_resource type="Texture2D" uid="uid://dg71j6l1ueni7" path="res://characters/max/sweating-idle/sweating-idle-29.png" id="sweating-idle-29"]
+[ext_resource type="Texture2D" uid="uid://bnsoh3rv1bb4r" path="res://characters/max/sweating-idle/sweating-idle-30.png" id="sweating-idle-30"]
+[ext_resource type="Texture2D" uid="uid://ck10lwui33jhi" path="res://characters/max/sweating-idle/sweating-idle-31.png" id="sweating-idle-31"]
+[ext_resource type="Texture2D" uid="uid://bopcsdw6jb6ih" path="res://characters/max/sweating-idle/sweating-idle-32.png" id="sweating-idle-32"]
+[ext_resource type="Texture2D" uid="uid://cp815gs1s2yrh" path="res://characters/max/sweating-idle/sweating-idle-33.png" id="sweating-idle-33"]
+[ext_resource type="Texture2D" uid="uid://blvkdut4gi0a7" path="res://characters/max/sweating-idle/sweating-idle-34.png" id="sweating-idle-34"]
+[ext_resource type="Texture2D" uid="uid://den7uqy14odnk" path="res://characters/max/sweating-idle/sweating-idle-35.png" id="sweating-idle-35"]
+[ext_resource type="Texture2D" uid="uid://l0r7obyw3yvx" path="res://characters/max/sweating-idle/sweating-idle-36.png" id="sweating-idle-36"]
+[ext_resource type="Texture2D" uid="uid://b4n8lurodguvg" path="res://characters/max/sweating-idle/sweating-idle-37.png" id="sweating-idle-37"]
+[ext_resource type="Texture2D" uid="uid://bt04ncyrvrqcy" path="res://characters/max/sweating-idle/sweating-idle-38.png" id="sweating-idle-38"]
+[ext_resource type="Texture2D" uid="uid://v4sl52h62e81" path="res://characters/max/sweating-idle/sweating-idle-39.png" id="sweating-idle-39"]
+[ext_resource type="Texture2D" uid="uid://wieivhqn04xr" path="res://characters/max/sweating-talk/sweating-talk-0.png" id="sweating-talk-0"]
+[ext_resource type="Texture2D" uid="uid://cxfrq4rew07ak" path="res://characters/max/sweating-talk/sweating-talk-1.png" id="sweating-talk-1"]
+[ext_resource type="Texture2D" uid="uid://cc1yi300btsjb" path="res://characters/max/sweating-talk/sweating-talk-2.png" id="sweating-talk-2"]
+[ext_resource type="Texture2D" uid="uid://c26bklte8fohc" path="res://characters/max/sweating-talk/sweating-talk-3.png" id="sweating-talk-3"]
+[ext_resource type="Texture2D" uid="uid://cer7rmvq5l6wq" path="res://characters/max/sweating-talk/sweating-talk-4.png" id="sweating-talk-4"]
+[ext_resource type="Texture2D" uid="uid://ss7u8m7k2wft" path="res://characters/max/sweating-talk/sweating-talk-5.png" id="sweating-talk-5"]
+[ext_resource type="Texture2D" uid="uid://c4krn6bt3jcyj" path="res://characters/max/sweating-talk/sweating-talk-6.png" id="sweating-talk-6"]
+[ext_resource type="Texture2D" uid="uid://rdgb781ux7kg" path="res://characters/max/sweating-talk/sweating-talk-7.png" id="sweating-talk-7"]
+[ext_resource type="Texture2D" uid="uid://r7a6irnrt4vb" path="res://characters/max/sweating-talk/sweating-talk-8.png" id="sweating-talk-8"]
+[ext_resource type="Texture2D" uid="uid://htjvwcivso2k" path="res://characters/max/sweating-talk/sweating-talk-9.png" id="sweating-talk-9"]
+[ext_resource type="Texture2D" uid="uid://cmkppqxcbns0p" path="res://characters/max/sweating-talk/sweating-talk-10.png" id="sweating-talk-10"]
+[ext_resource type="Texture2D" uid="uid://bdcpe1s1bqkmo" path="res://characters/max/sweating-talk/sweating-talk-11.png" id="sweating-talk-11"]
+[ext_resource type="Texture2D" uid="uid://dgkacmuskxysk" path="res://characters/max/sweating-talk/sweating-talk-12.png" id="sweating-talk-12"]
+[ext_resource type="Texture2D" uid="uid://b7i7nlef8bf6q" path="res://characters/max/sweating-talk/sweating-talk-13.png" id="sweating-talk-13"]
+[ext_resource type="Texture2D" uid="uid://ckwl0hpfqlf2n" path="res://characters/max/sweating-talk/sweating-talk-14.png" id="sweating-talk-14"]
+[ext_resource type="Texture2D" uid="uid://b5rugx458luh5" path="res://characters/max/sweating-talk/sweating-talk-15.png" id="sweating-talk-15"]
+[ext_resource type="Texture2D" uid="uid://otjb544ub2ak" path="res://characters/max/sweating-talk/sweating-talk-16.png" id="sweating-talk-16"]
+[ext_resource type="Texture2D" uid="uid://b8worhp76rck0" path="res://characters/max/sweating-talk/sweating-talk-17.png" id="sweating-talk-17"]
+[ext_resource type="Texture2D" uid="uid://dpqd8ffxias74" path="res://characters/max/sweating-talk/sweating-talk-18.png" id="sweating-talk-18"]
+[ext_resource type="Texture2D" uid="uid://bm6tnnvqw8kpp" path="res://characters/max/sweating-talk/sweating-talk-19.png" id="sweating-talk-19"]
+[ext_resource type="Texture2D" uid="uid://cgkhjuyw83lij" path="res://characters/max/sweating-talk/sweating-talk-20.png" id="sweating-talk-20"]
+[ext_resource type="Texture2D" uid="uid://cwp8qmc782cvk" path="res://characters/max/sweating-talk/sweating-talk-21.png" id="sweating-talk-21"]
+[ext_resource type="Texture2D" uid="uid://c2qej5sflapvx" path="res://characters/max/sweating-talk/sweating-talk-22.png" id="sweating-talk-22"]
+[ext_resource type="Texture2D" uid="uid://dhuannrxyapse" path="res://characters/max/sweating-talk/sweating-talk-23.png" id="sweating-talk-23"]
+[ext_resource type="Texture2D" uid="uid://u42au2yoyib2" path="res://characters/max/sweating-talk/sweating-talk-24.png" id="sweating-talk-24"]
+[ext_resource type="Texture2D" uid="uid://dnestl0gs3xy0" path="res://characters/max/sweating-talk/sweating-talk-25.png" id="sweating-talk-25"]
+[ext_resource type="Texture2D" uid="uid://b4ss56u5ixnj7" path="res://characters/max/sweating-talk/sweating-talk-26.png" id="sweating-talk-26"]
+[ext_resource type="Texture2D" uid="uid://cb2dcmilrs4ut" path="res://characters/max/sweating-talk/sweating-talk-27.png" id="sweating-talk-27"]
+[ext_resource type="Texture2D" uid="uid://32isdghw0vd0" path="res://characters/max/sweating-talk/sweating-talk-28.png" id="sweating-talk-28"]
+[ext_resource type="Texture2D" uid="uid://bryd4ky0o700l" path="res://characters/max/sweating-talk/sweating-talk-29.png" id="sweating-talk-29"]
+[ext_resource type="Texture2D" uid="uid://dhnux6te7of0v" path="res://characters/max/sweating-talk/sweating-talk-30.png" id="sweating-talk-30"]
+[ext_resource type="Texture2D" uid="uid://pdkag0ty2ax6" path="res://characters/max/sweating-talk/sweating-talk-31.png" id="sweating-talk-31"]
+[ext_resource type="Texture2D" uid="uid://cmihvu5v3d31w" path="res://characters/max/sweating-talk/sweating-talk-32.png" id="sweating-talk-32"]
+[ext_resource type="Texture2D" uid="uid://bom40md3qym0v" path="res://characters/max/sweating-talk/sweating-talk-33.png" id="sweating-talk-33"]
+[ext_resource type="Texture2D" uid="uid://rg4ro8aqqo5r" path="res://characters/max/sweating-talk/sweating-talk-34.png" id="sweating-talk-34"]
+[ext_resource type="Texture2D" uid="uid://edmmdqf71ast" path="res://characters/max/sweating-talk/sweating-talk-35.png" id="sweating-talk-35"]
+[ext_resource type="Texture2D" uid="uid://cq1p8c1ylsuuv" path="res://characters/max/sweating-talk/sweating-talk-36.png" id="sweating-talk-36"]
+[ext_resource type="Texture2D" uid="uid://8l7gta1vvup8" path="res://characters/max/sweating-talk/sweating-talk-37.png" id="sweating-talk-37"]
+[ext_resource type="Texture2D" uid="uid://c1mdsn1fsu0c" path="res://characters/max/sweating-talk/sweating-talk-38.png" id="sweating-talk-38"]
+[ext_resource type="Texture2D" uid="uid://bi3xfd56w8ryk" path="res://characters/max/sweating-talk/sweating-talk-39.png" id="sweating-talk-39"]
+[ext_resource type="Texture2D" uid="uid://xvqdaturjopd" path="res://characters/max/toss1-idle/toss1-idle-0.png" id="toss1-idle-0"]
+[ext_resource type="Texture2D" uid="uid://dlhx014pi7w4p" path="res://characters/max/toss1-idle/toss1-idle-1.png" id="toss1-idle-1"]
+[ext_resource type="Texture2D" uid="uid://b5mro47fot1ss" path="res://characters/max/toss1-idle/toss1-idle-2.png" id="toss1-idle-2"]
+[ext_resource type="Texture2D" uid="uid://66tpflfg34ny" path="res://characters/max/toss1-idle/toss1-idle-3.png" id="toss1-idle-3"]
+[ext_resource type="Texture2D" uid="uid://bvewwfte70dvq" path="res://characters/max/toss1-idle/toss1-idle-4.png" id="toss1-idle-4"]
+[ext_resource type="Texture2D" uid="uid://cccowkgta6t0m" path="res://characters/max/toss1-idle/toss1-idle-5.png" id="toss1-idle-5"]
+[ext_resource type="Texture2D" uid="uid://d3nucq7dy0opt" path="res://characters/max/toss1-idle/toss1-idle-6.png" id="toss1-idle-6"]
+[ext_resource type="Texture2D" uid="uid://byt124cmhr8gp" path="res://characters/max/toss1-idle/toss1-idle-7.png" id="toss1-idle-7"]
+[ext_resource type="Texture2D" uid="uid://bbot75rnmsrfq" path="res://characters/max/toss1-idle/toss1-idle-8.png" id="toss1-idle-8"]
+[ext_resource type="Texture2D" uid="uid://dgr8nwkyd6q5l" path="res://characters/max/toss1-in/toss1-in-0.png" id="toss1-in-0"]
+[ext_resource type="Texture2D" uid="uid://dyxjxwnj533ag" path="res://characters/max/toss1-in/toss1-in-1.png" id="toss1-in-1"]
+[ext_resource type="Texture2D" uid="uid://gr8npsmi5k1n" path="res://characters/max/toss1-in/toss1-in-2.png" id="toss1-in-2"]
+[ext_resource type="Texture2D" uid="uid://be3trdbdtsnlp" path="res://characters/max/toss1-in/toss1-in-3.png" id="toss1-in-3"]
+[ext_resource type="Texture2D" uid="uid://c82ha2aj2u487" path="res://characters/max/toss1-in/toss1-in-4.png" id="toss1-in-4"]
+[ext_resource type="Texture2D" uid="uid://dpudp68g2fi4k" path="res://characters/max/toss1-in/toss1-in-5.png" id="toss1-in-5"]
+[ext_resource type="Texture2D" uid="uid://b4fa05i5xsjgl" path="res://characters/max/toss1-talk/toss1-talk-0.png" id="toss1-talk-0"]
+[ext_resource type="Texture2D" uid="uid://v1myeiu6j1nr" path="res://characters/max/toss1-talk/toss1-talk-1.png" id="toss1-talk-1"]
+[ext_resource type="Texture2D" uid="uid://dpj6v2co1khjj" path="res://characters/max/toss1-talk/toss1-talk-2.png" id="toss1-talk-2"]
+[ext_resource type="Texture2D" uid="uid://ufsgo44l5q04" path="res://characters/max/toss1-talk/toss1-talk-3.png" id="toss1-talk-3"]
+[ext_resource type="Texture2D" uid="uid://dvosagt7xdqor" path="res://characters/max/toss1-talk/toss1-talk-4.png" id="toss1-talk-4"]
+[ext_resource type="Texture2D" uid="uid://cycfm61eopors" path="res://characters/max/toss1-talk/toss1-talk-5.png" id="toss1-talk-5"]
+[ext_resource type="Texture2D" uid="uid://jbp15iiwf7p5" path="res://characters/max/toss1-talk/toss1-talk-6.png" id="toss1-talk-6"]
+[ext_resource type="Texture2D" uid="uid://bmqos850psqpw" path="res://characters/max/toss1-talk/toss1-talk-7.png" id="toss1-talk-7"]
+[ext_resource type="Texture2D" uid="uid://cvd220o05rl1a" path="res://characters/max/toss1-talk/toss1-talk-8.png" id="toss1-talk-8"]
+[ext_resource type="Texture2D" uid="uid://dl1kauayv1csm" path="res://characters/max/toss1-talk/toss1-talk-9.png" id="toss1-talk-9"]
+[ext_resource type="Texture2D" uid="uid://cc87vsm3ta5sn" path="res://characters/max/toss1-talk/toss1-talk-10.png" id="toss1-talk-10"]
+[ext_resource type="Texture2D" uid="uid://2ths3tgh5708" path="res://characters/max/toss1-talk/toss1-talk-11.png" id="toss1-talk-11"]
+[ext_resource type="Texture2D" uid="uid://cte13cjbvx0np" path="res://characters/max/toss1-talk/toss1-talk-12.png" id="toss1-talk-12"]
+[ext_resource type="Texture2D" uid="uid://chys0oyfcyu3v" path="res://characters/max/toss1-talk/toss1-talk-13.png" id="toss1-talk-13"]
+[ext_resource type="Texture2D" uid="uid://cqrctaesb4cfp" path="res://characters/max/toss1-talk/toss1-talk-14.png" id="toss1-talk-14"]
+[ext_resource type="Texture2D" uid="uid://wy4yl87xr7k6" path="res://characters/max/toss1-talk/toss1-talk-15.png" id="toss1-talk-15"]
+[ext_resource type="Texture2D" uid="uid://cur1dvawfihuj" path="res://characters/max/toss1-talk/toss1-talk-16.png" id="toss1-talk-16"]
+[ext_resource type="Texture2D" uid="uid://dp586om83hepa" path="res://characters/max/toss1-talk/toss1-talk-17.png" id="toss1-talk-17"]
+[ext_resource type="Texture2D" uid="uid://bxa8gqbbsv2ki" path="res://characters/max/toss1-talk/toss1-talk-18.png" id="toss1-talk-18"]
+[ext_resource type="Texture2D" uid="uid://dkkmgnixup6py" path="res://characters/max/toss1-talk/toss1-talk-19.png" id="toss1-talk-19"]
+[ext_resource type="Texture2D" uid="uid://bn11thrr6xry0" path="res://characters/max/toss1-talk/toss1-talk-20.png" id="toss1-talk-20"]
+[ext_resource type="Texture2D" uid="uid://u8npt6ew42p5" path="res://characters/max/toss1-talk/toss1-talk-21.png" id="toss1-talk-21"]
+[ext_resource type="Texture2D" uid="uid://bl5288gkjg673" path="res://characters/max/toss1-talk/toss1-talk-22.png" id="toss1-talk-22"]
+[ext_resource type="Texture2D" uid="uid://piohadobs2w2" path="res://characters/max/toss1-talk/toss1-talk-23.png" id="toss1-talk-23"]
+[ext_resource type="Texture2D" uid="uid://c55yba20jfnji" path="res://characters/max/toss1-talk/toss1-talk-24.png" id="toss1-talk-24"]
+[ext_resource type="Texture2D" uid="uid://ddgw5ltd7f7c5" path="res://characters/max/toss1-talk/toss1-talk-25.png" id="toss1-talk-25"]
+[ext_resource type="Texture2D" uid="uid://c3vqqjob6jq1h" path="res://characters/max/toss1-talk/toss1-talk-26.png" id="toss1-talk-26"]
+[ext_resource type="Texture2D" uid="uid://dr741hpfflr2l" path="res://characters/max/toss1-talk/toss1-talk-27.png" id="toss1-talk-27"]
+[ext_resource type="Texture2D" uid="uid://crupgbdboius6" path="res://characters/max/toss1-talk/toss1-talk-28.png" id="toss1-talk-28"]
+[ext_resource type="Texture2D" uid="uid://d4b88i1tydkin" path="res://characters/max/toss1-talk/toss1-talk-29.png" id="toss1-talk-29"]
+[ext_resource type="Texture2D" uid="uid://b2lk7x6n2nthp" path="res://characters/max/toss1-talk/toss1-talk-30.png" id="toss1-talk-30"]
+[ext_resource type="Texture2D" uid="uid://bhrc412kfqch7" path="res://characters/max/toss1-talk/toss1-talk-31.png" id="toss1-talk-31"]
+[ext_resource type="Texture2D" uid="uid://hfbpx1bley1h" path="res://characters/max/toss1-talk/toss1-talk-32.png" id="toss1-talk-32"]
+[ext_resource type="Texture2D" uid="uid://b4yvrbimstj7a" path="res://characters/max/toss1-talk/toss1-talk-33.png" id="toss1-talk-33"]
+[ext_resource type="Texture2D" uid="uid://2u8sifvesrwt" path="res://characters/max/toss1-talk/toss1-talk-34.png" id="toss1-talk-34"]
+[ext_resource type="Texture2D" uid="uid://taepcalnq58y" path="res://characters/max/toss1-talk/toss1-talk-35.png" id="toss1-talk-35"]
+[ext_resource type="Texture2D" uid="uid://b813405b2yc71" path="res://characters/max/toss1-talk/toss1-talk-36.png" id="toss1-talk-36"]
+[ext_resource type="Texture2D" uid="uid://cpxqbi2415yiu" path="res://characters/max/toss1-talk/toss1-talk-37.png" id="toss1-talk-37"]
+[ext_resource type="Texture2D" uid="uid://cw5x83gqma3gw" path="res://characters/max/toss2-idle/toss2-idle-0.png" id="toss2-idle-0"]
+[ext_resource type="Texture2D" uid="uid://bj28sco78wjc4" path="res://characters/max/toss2-idle/toss2-idle-1.png" id="toss2-idle-1"]
+[ext_resource type="Texture2D" uid="uid://qldfiu4cst3u" path="res://characters/max/toss2-idle/toss2-idle-2.png" id="toss2-idle-2"]
+[ext_resource type="Texture2D" uid="uid://dchsnwi3b8nes" path="res://characters/max/toss2-idle/toss2-idle-3.png" id="toss2-idle-3"]
+[ext_resource type="Texture2D" uid="uid://b7qp5yffqm8u2" path="res://characters/max/toss2-idle/toss2-idle-4.png" id="toss2-idle-4"]
+[ext_resource type="Texture2D" uid="uid://mnt5dqw370a3" path="res://characters/max/toss2-idle/toss2-idle-5.png" id="toss2-idle-5"]
+[ext_resource type="Texture2D" uid="uid://b5n08oajbj4pb" path="res://characters/max/toss2-idle/toss2-idle-6.png" id="toss2-idle-6"]
+[ext_resource type="Texture2D" uid="uid://7h1rl38rjxs4" path="res://characters/max/toss2-idle/toss2-idle-7.png" id="toss2-idle-7"]
+[ext_resource type="Texture2D" uid="uid://dhixarlojwc0s" path="res://characters/max/toss2-idle/toss2-idle-8.png" id="toss2-idle-8"]
+[ext_resource type="Texture2D" uid="uid://1jcolhd5ao7f" path="res://characters/max/toss2-in/toss2-in-0.png" id="toss2-in-0"]
+[ext_resource type="Texture2D" uid="uid://dri45b04em1pq" path="res://characters/max/toss2-in/toss2-in-1.png" id="toss2-in-1"]
+[ext_resource type="Texture2D" uid="uid://b8br32pj67a0u" path="res://characters/max/toss2-in/toss2-in-2.png" id="toss2-in-2"]
+[ext_resource type="Texture2D" uid="uid://cbmsu580nhmb7" path="res://characters/max/toss2-in/toss2-in-3.png" id="toss2-in-3"]
+[ext_resource type="Texture2D" uid="uid://pkecv2t03ss5" path="res://characters/max/toss2-in/toss2-in-4.png" id="toss2-in-4"]
+[ext_resource type="Texture2D" uid="uid://babfa1w4d4ak1" path="res://characters/max/toss2-in/toss2-in-5.png" id="toss2-in-5"]
+[ext_resource type="Texture2D" uid="uid://4n7ytuy0g02f" path="res://characters/max/toss2-talk/toss2-talk-0.png" id="toss2-talk-0"]
+[ext_resource type="Texture2D" uid="uid://lktreydva83s" path="res://characters/max/toss2-talk/toss2-talk-1.png" id="toss2-talk-1"]
+[ext_resource type="Texture2D" uid="uid://dnv2esi1vv0bx" path="res://characters/max/toss2-talk/toss2-talk-2.png" id="toss2-talk-2"]
+[ext_resource type="Texture2D" uid="uid://dedwkx3i0twpe" path="res://characters/max/toss2-talk/toss2-talk-3.png" id="toss2-talk-3"]
+[ext_resource type="Texture2D" uid="uid://b6c1i1l8urrmc" path="res://characters/max/toss2-talk/toss2-talk-4.png" id="toss2-talk-4"]
+[ext_resource type="Texture2D" uid="uid://bu1p5vkn15uf6" path="res://characters/max/toss2-talk/toss2-talk-5.png" id="toss2-talk-5"]
+[ext_resource type="Texture2D" uid="uid://c8diietft5rvi" path="res://characters/max/toss2-talk/toss2-talk-6.png" id="toss2-talk-6"]
+[ext_resource type="Texture2D" uid="uid://dua2i8cub0bau" path="res://characters/max/toss2-talk/toss2-talk-7.png" id="toss2-talk-7"]
+[ext_resource type="Texture2D" uid="uid://l2a5cn2eeooi" path="res://characters/max/toss2-talk/toss2-talk-8.png" id="toss2-talk-8"]
+[ext_resource type="Texture2D" uid="uid://cig5qj2g0im4a" path="res://characters/max/toss2-talk/toss2-talk-9.png" id="toss2-talk-9"]
+[ext_resource type="Texture2D" uid="uid://bdm7og1368oa8" path="res://characters/max/toss2-talk/toss2-talk-10.png" id="toss2-talk-10"]
+[ext_resource type="Texture2D" uid="uid://cyh6ltne3me84" path="res://characters/max/toss2-talk/toss2-talk-11.png" id="toss2-talk-11"]
+[ext_resource type="Texture2D" uid="uid://phfpq7xwe4dt" path="res://characters/max/toss2-talk/toss2-talk-12.png" id="toss2-talk-12"]
+[ext_resource type="Texture2D" uid="uid://dj1jvb3tofoxv" path="res://characters/max/toss2-talk/toss2-talk-13.png" id="toss2-talk-13"]
+[ext_resource type="Texture2D" uid="uid://dwxnr4l8jdclq" path="res://characters/max/toss2-talk/toss2-talk-14.png" id="toss2-talk-14"]
+[ext_resource type="Texture2D" uid="uid://5jm03hcgqhop" path="res://characters/max/toss2-talk/toss2-talk-15.png" id="toss2-talk-15"]
+[ext_resource type="Texture2D" uid="uid://po6ib2df8d2h" path="res://characters/max/toss2-talk/toss2-talk-16.png" id="toss2-talk-16"]
+[ext_resource type="Texture2D" uid="uid://citabiryalwqi" path="res://characters/max/toss2-talk/toss2-talk-17.png" id="toss2-talk-17"]
+[ext_resource type="Texture2D" uid="uid://bsa85crhcd51d" path="res://characters/max/toss2-talk/toss2-talk-18.png" id="toss2-talk-18"]
+[ext_resource type="Texture2D" uid="uid://d2t65a7covov0" path="res://characters/max/toss2-talk/toss2-talk-19.png" id="toss2-talk-19"]
+[ext_resource type="Texture2D" uid="uid://b7qlbk5w1wtwj" path="res://characters/max/toss2-talk/toss2-talk-20.png" id="toss2-talk-20"]
+[ext_resource type="Texture2D" uid="uid://db6voikymjj2m" path="res://characters/max/toss2-talk/toss2-talk-21.png" id="toss2-talk-21"]
+[ext_resource type="Texture2D" uid="uid://itb8grnmjppv" path="res://characters/max/toss2-talk/toss2-talk-22.png" id="toss2-talk-22"]
+[ext_resource type="Texture2D" uid="uid://dkj0hqfbv1i88" path="res://characters/max/toss2-talk/toss2-talk-23.png" id="toss2-talk-23"]
+[ext_resource type="Texture2D" uid="uid://i1nf5aohf5cw" path="res://characters/max/toss2-talk/toss2-talk-24.png" id="toss2-talk-24"]
+[ext_resource type="Texture2D" uid="uid://d3nbw5vqji0dj" path="res://characters/max/toss2-talk/toss2-talk-25.png" id="toss2-talk-25"]
+[ext_resource type="Texture2D" uid="uid://b8ugngg1ug40u" path="res://characters/max/toss2-talk/toss2-talk-26.png" id="toss2-talk-26"]
+[ext_resource type="Texture2D" uid="uid://bsi2ubyrhm1b3" path="res://characters/max/toss2-talk/toss2-talk-27.png" id="toss2-talk-27"]
+[ext_resource type="Texture2D" uid="uid://be8jou241pm3r" path="res://characters/max/toss2-talk/toss2-talk-28.png" id="toss2-talk-28"]
+[ext_resource type="Texture2D" uid="uid://bhix7iqer8kuj" path="res://characters/max/toss2-talk/toss2-talk-29.png" id="toss2-talk-29"]
+[ext_resource type="Texture2D" uid="uid://c0fpq3gw0qpx8" path="res://characters/max/toss2-talk/toss2-talk-30.png" id="toss2-talk-30"]
+[ext_resource type="Texture2D" uid="uid://dy0kw2vcja0mc" path="res://characters/max/toss2-talk/toss2-talk-31.png" id="toss2-talk-31"]
+[ext_resource type="Texture2D" uid="uid://c5ydyewk4jh7d" path="res://characters/max/toss2-talk/toss2-talk-32.png" id="toss2-talk-32"]
+[ext_resource type="Texture2D" uid="uid://dsp3o1jhn8kdd" path="res://characters/max/toss2-talk/toss2-talk-33.png" id="toss2-talk-33"]
+[ext_resource type="Texture2D" uid="uid://d0pl7ulnmvb1d" path="res://characters/max/toss2-talk/toss2-talk-34.png" id="toss2-talk-34"]
+[ext_resource type="Texture2D" uid="uid://s4ccnwrejigb" path="res://characters/max/toss2-talk/toss2-talk-35.png" id="toss2-talk-35"]
+[ext_resource type="Texture2D" uid="uid://bi7ga31wts35w" path="res://characters/max/toss2-talk/toss2-talk-36.png" id="toss2-talk-36"]
+[ext_resource type="Texture2D" uid="uid://cfcrqh1oebrhk" path="res://characters/max/toss2-talk/toss2-talk-37.png" id="toss2-talk-37"]
+[ext_resource type="Texture2D" uid="uid://bq60q06e143gs" path="res://characters/max/whatev-idle/whatev-idle-0.png" id="whatev-idle-0"]
+[ext_resource type="Texture2D" uid="uid://bcujsj64ej3fk" path="res://characters/max/whatev-idle/whatev-idle-1.png" id="whatev-idle-1"]
+[ext_resource type="Texture2D" uid="uid://cbomhh7h5p1aq" path="res://characters/max/whatev-idle/whatev-idle-2.png" id="whatev-idle-2"]
+[ext_resource type="Texture2D" uid="uid://bu66iuoe7we5w" path="res://characters/max/whatev-idle/whatev-idle-3.png" id="whatev-idle-3"]
+[ext_resource type="Texture2D" uid="uid://blum4uykccr4p" path="res://characters/max/whatev-idle/whatev-idle-4.png" id="whatev-idle-4"]
+[ext_resource type="Texture2D" uid="uid://wbuburwngg4x" path="res://characters/max/whatev-idle/whatev-idle-5.png" id="whatev-idle-5"]
+[ext_resource type="Texture2D" uid="uid://dpggcl3bhpy63" path="res://characters/max/whatev-idle/whatev-idle-6.png" id="whatev-idle-6"]
+[ext_resource type="Texture2D" uid="uid://dx4xtyvw7rjny" path="res://characters/max/whatev-idle/whatev-idle-7.png" id="whatev-idle-7"]
+[ext_resource type="Texture2D" uid="uid://sp1i5blbkute" path="res://characters/max/whatev-idle/whatev-idle-8.png" id="whatev-idle-8"]
+[ext_resource type="Texture2D" uid="uid://duh845k2h863p" path="res://characters/max/whatev-idle/whatev-idle-9.png" id="whatev-idle-9"]
+[ext_resource type="Texture2D" uid="uid://no1xpk6cj57g" path="res://characters/max/whatev-idle/whatev-idle-10.png" id="whatev-idle-10"]
+[ext_resource type="Texture2D" uid="uid://cpdke5u8gr7ss" path="res://characters/max/whatev-idle/whatev-idle-11.png" id="whatev-idle-11"]
+[ext_resource type="Texture2D" uid="uid://cb7b2gfo7tkbj" path="res://characters/max/whatev-idle/whatev-idle-12.png" id="whatev-idle-12"]
+[ext_resource type="Texture2D" uid="uid://cp6jn0c05qwam" path="res://characters/max/whatev-idle/whatev-idle-13.png" id="whatev-idle-13"]
+[ext_resource type="Texture2D" uid="uid://bmiyg2hpasghq" path="res://characters/max/whatev-idle/whatev-idle-14.png" id="whatev-idle-14"]
+[ext_resource type="Texture2D" uid="uid://c82l0xto4npuq" path="res://characters/max/whatev-idle/whatev-idle-15.png" id="whatev-idle-15"]
+[ext_resource type="Texture2D" uid="uid://d0vo5kpouhblf" path="res://characters/max/whatev-talk/whatev-talk-0.png" id="whatev-talk-0"]
+[ext_resource type="Texture2D" uid="uid://dd0avo7xjsvsf" path="res://characters/max/whatev-talk/whatev-talk-1.png" id="whatev-talk-1"]
+[ext_resource type="Texture2D" uid="uid://bfqe5a366uqg1" path="res://characters/max/whatev-talk/whatev-talk-2.png" id="whatev-talk-2"]
+[ext_resource type="Texture2D" uid="uid://c61pnsgi4n75l" path="res://characters/max/whatev-talk/whatev-talk-3.png" id="whatev-talk-3"]
+[ext_resource type="Texture2D" uid="uid://j0k7rwitvysf" path="res://characters/max/whatev-talk/whatev-talk-4.png" id="whatev-talk-4"]
+[ext_resource type="Texture2D" uid="uid://7n14fmtjsu0d" path="res://characters/max/whatev-talk/whatev-talk-5.png" id="whatev-talk-5"]
+[ext_resource type="Texture2D" uid="uid://dcf86h6jn7r8x" path="res://characters/max/whatev-talk/whatev-talk-6.png" id="whatev-talk-6"]
+[ext_resource type="Texture2D" uid="uid://cvoxyikd7gwvo" path="res://characters/max/whatev-talk/whatev-talk-7.png" id="whatev-talk-7"]
+[ext_resource type="Texture2D" uid="uid://8r7bn17d70o2" path="res://characters/max/whatev-talk/whatev-talk-8.png" id="whatev-talk-8"]
+[ext_resource type="Texture2D" uid="uid://bik2ymlovwlqr" path="res://characters/max/whatev-talk/whatev-talk-9.png" id="whatev-talk-9"]
+[ext_resource type="Texture2D" uid="uid://b03ha5qf2rs12" path="res://characters/max/whatev-talk/whatev-talk-10.png" id="whatev-talk-10"]
+[ext_resource type="Texture2D" uid="uid://i7m1wkwi5gtm" path="res://characters/max/whatev-talk/whatev-talk-11.png" id="whatev-talk-11"]
+[ext_resource type="Texture2D" uid="uid://lm6p1qh1ok8v" path="res://characters/max/whatev-talk/whatev-talk-12.png" id="whatev-talk-12"]
+[ext_resource type="Texture2D" uid="uid://dddwlusfnsf48" path="res://characters/max/whatev-talk/whatev-talk-13.png" id="whatev-talk-13"]
+[ext_resource type="Texture2D" uid="uid://cn0ftygu7d1rf" path="res://characters/max/whatev-talk/whatev-talk-14.png" id="whatev-talk-14"]
+[ext_resource type="Texture2D" uid="uid://cqasmvquo15fv" path="res://characters/max/whatev-talk/whatev-talk-15.png" id="whatev-talk-15"]
+[ext_resource type="Texture2D" uid="uid://4wjr4yvm6o6y" path="res://characters/max/whatev-talk/whatev-talk-16.png" id="whatev-talk-16"]
+[ext_resource type="Texture2D" uid="uid://b7a4lh323lvyx" path="res://characters/max/whatev-talk/whatev-talk-17.png" id="whatev-talk-17"]
+[ext_resource type="Texture2D" uid="uid://dvuuk33xhgap" path="res://characters/max/whatev-talk/whatev-talk-18.png" id="whatev-talk-18"]
+[ext_resource type="Texture2D" uid="uid://cwy46ixxm75ql" path="res://characters/max/whatev-talk/whatev-talk-19.png" id="whatev-talk-19"]
+[ext_resource type="Texture2D" uid="uid://c0gbrdh5ooiub" path="res://characters/max/whatev-talk/whatev-talk-20.png" id="whatev-talk-20"]
+[ext_resource type="Texture2D" uid="uid://btcn557xgdxlq" path="res://characters/max/whatev-talk/whatev-talk-21.png" id="whatev-talk-21"]
+[ext_resource type="Texture2D" uid="uid://dflcd1wu3flca" path="res://characters/max/whatev-talk/whatev-talk-22.png" id="whatev-talk-22"]
+[ext_resource type="Texture2D" uid="uid://bt2mvj2xf78l7" path="res://characters/max/whatev-talk/whatev-talk-23.png" id="whatev-talk-23"]
+[ext_resource type="Texture2D" uid="uid://lt3ky23dwp3f" path="res://characters/max/whatev-talk/whatev-talk-24.png" id="whatev-talk-24"]
+[ext_resource type="Texture2D" uid="uid://c4y60y7672o8o" path="res://characters/max/whatev-talk/whatev-talk-25.png" id="whatev-talk-25"]
+[ext_resource type="Texture2D" uid="uid://drnf8r0ixwwvj" path="res://characters/max/whatev-talk/whatev-talk-26.png" id="whatev-talk-26"]
+[ext_resource type="Texture2D" uid="uid://b8wi3amp4ltxc" path="res://characters/max/whatev-talk/whatev-talk-27.png" id="whatev-talk-27"]
+[ext_resource type="Texture2D" uid="uid://14wa1kqfgs08" path="res://characters/max/whatev-talk/whatev-talk-28.png" id="whatev-talk-28"]
+[ext_resource type="Texture2D" uid="uid://beb774xaxvvdk" path="res://characters/max/whatev-talk/whatev-talk-29.png" id="whatev-talk-29"]
+[ext_resource type="Texture2D" uid="uid://dbgjicvdvb8nl" path="res://characters/max/whatev-talk/whatev-talk-30.png" id="whatev-talk-30"]
+[ext_resource type="Texture2D" uid="uid://3xj08mw6yj02" path="res://characters/max/whatev-talk/whatev-talk-31.png" id="whatev-talk-31"]
+[ext_resource type="Texture2D" uid="uid://c6rcjap6tpvcn" path="res://characters/max/whatev-talk/whatev-talk-32.png" id="whatev-talk-32"]
+[ext_resource type="Texture2D" uid="uid://bi14805tmavjq" path="res://characters/max/whatev-talk/whatev-talk-33.png" id="whatev-talk-33"]
+[ext_resource type="Texture2D" uid="uid://c5firb5w4qdqm" path="res://characters/max/whatev-talk/whatev-talk-34.png" id="whatev-talk-34"]
+[ext_resource type="Texture2D" uid="uid://bnbp67ky4ahb3" path="res://characters/max/whatev-talk/whatev-talk-35.png" id="whatev-talk-35"]
+[ext_resource type="Texture2D" uid="uid://btystvq6thi16" path="res://characters/max/whatev-talk/whatev-talk-36.png" id="whatev-talk-36"]
+[ext_resource type="Texture2D" uid="uid://difbimdlce3x5" path="res://characters/max/whatev-talk/whatev-talk-37.png" id="whatev-talk-37"]
+[ext_resource type="Texture2D" uid="uid://cljfeb3q2pjyp" path="res://characters/max/whatev-talk/whatev-talk-38.png" id="whatev-talk-38"]
+[ext_resource type="Texture2D" uid="uid://cbwpbdvsmg0at" path="res://characters/max/whatev-talk/whatev-talk-39.png" id="whatev-talk-39"]
+[ext_resource type="Texture2D" uid="uid://dji6l12bwa8jx" path="res://characters/max/whatev-talk/whatev-talk-40.png" id="whatev-talk-40"]
+[ext_resource type="Texture2D" uid="uid://bqvic5ykgg81f" path="res://characters/max/whatev-talk/whatev-talk-41.png" id="whatev-talk-41"]
+[ext_resource type="Texture2D" uid="uid://chiqemnunb5k6" path="res://characters/max/whatev-talk/whatev-talk-42.png" id="whatev-talk-42"]
+[ext_resource type="Texture2D" uid="uid://cdbc6nloac8lc" path="res://characters/max/whatev-talk/whatev-talk-43.png" id="whatev-talk-43"]
+[ext_resource type="Texture2D" uid="uid://bxhx8rvh2g5rd" path="res://characters/max/whatev-talk/whatev-talk-44.png" id="whatev-talk-44"]
+[ext_resource type="Texture2D" uid="uid://c5m3wqxcr7xxk" path="res://characters/max/whatev-talk/whatev-talk-45.png" id="whatev-talk-45"]
+[ext_resource type="Texture2D" uid="uid://de5jx0au7yyqq" path="res://characters/max/whatev-talk/whatev-talk-46.png" id="whatev-talk-46"]
+[ext_resource type="Texture2D" uid="uid://dbytwobxfls37" path="res://characters/max/whatev-talk/whatev-talk-47.png" id="whatev-talk-47"]
+[ext_resource type="Texture2D" uid="uid://bmekxnnkekcau" path="res://characters/max/whatev-talk/whatev-talk-48.png" id="whatev-talk-48"]
 
 [resource]
 animations = [{
 "frames": [{
-"duration": 0.15,
-"texture": ExtResource("sweating-idle-0")
+"duration": 0.16,
+"texture": ExtResource("billy-idle-0")
+}, {
+"duration": 0.16,
+"texture": ExtResource("billy-idle-1")
+}, {
+"duration": 0.16,
+"texture": ExtResource("billy-idle-2")
+}, {
+"duration": 0.16,
+"texture": ExtResource("billy-idle-3")
+}, {
+"duration": 0.05,
+"texture": ExtResource("billy-idle-4")
+}, {
+"duration": 0.08,
+"texture": ExtResource("billy-idle-5")
+}, {
+"duration": 0.03,
+"texture": ExtResource("billy-idle-6")
+}, {
+"duration": 0.01,
+"texture": ExtResource("billy-idle-7")
 }, {
 "duration": 0.15,
-"texture": ExtResource("sweating-idle-1")
+"texture": ExtResource("billy-idle-8")
 }, {
-"duration": 0.15,
-"texture": ExtResource("sweating-idle-2")
+"duration": 0.16,
+"texture": ExtResource("billy-idle-9")
 }, {
-"duration": 0.15,
-"texture": ExtResource("sweating-idle-3")
+"duration": 0.16,
+"texture": ExtResource("billy-idle-10")
 }, {
-"duration": 0.15,
-"texture": ExtResource("sweating-idle-4")
+"duration": 0.16,
+"texture": ExtResource("billy-idle-11")
 }, {
-"duration": 0.15,
-"texture": ExtResource("sweating-idle-5")
+"duration": 0.16,
+"texture": ExtResource("billy-idle-12")
 }, {
-"duration": 0.15,
-"texture": ExtResource("sweating-idle-6")
+"duration": 0.16,
+"texture": ExtResource("billy-idle-13")
 }, {
-"duration": 0.15,
-"texture": ExtResource("sweating-idle-7")
+"duration": 0.16,
+"texture": ExtResource("billy-idle-14")
 }, {
-"duration": 0.15,
-"texture": ExtResource("sweating-idle-8")
+"duration": 0.16,
+"texture": ExtResource("billy-idle-15")
 }, {
-"duration": 0.15,
-"texture": ExtResource("sweating-idle-9")
+"duration": 0.16,
+"texture": ExtResource("billy-idle-16")
 }, {
-"duration": 0.15,
-"texture": ExtResource("sweating-idle-10")
+"duration": 0.16,
+"texture": ExtResource("billy-idle-17")
 }, {
-"duration": 0.15,
-"texture": ExtResource("sweating-idle-11")
+"duration": 0.05,
+"texture": ExtResource("billy-idle-18")
 }, {
-"duration": 0.15,
-"texture": ExtResource("sweating-idle-12")
+"duration": 0.08,
+"texture": ExtResource("billy-idle-19")
 }, {
-"duration": 0.15,
-"texture": ExtResource("sweating-idle-13")
+"duration": 0.03,
+"texture": ExtResource("billy-idle-20")
 }, {
-"duration": 0.15,
-"texture": ExtResource("sweating-idle-14")
+"duration": 0.01,
+"texture": ExtResource("billy-idle-21")
 }, {
-"duration": 0.15,
-"texture": ExtResource("sweating-idle-15")
+"duration": 0.08,
+"texture": ExtResource("billy-idle-22")
 }, {
-"duration": 0.15,
-"texture": ExtResource("sweating-idle-16")
+"duration": 0.05,
+"texture": ExtResource("billy-idle-23")
 }, {
-"duration": 0.15,
-"texture": ExtResource("sweating-idle-17")
+"duration": 0.01,
+"texture": ExtResource("billy-idle-24")
 }, {
-"duration": 0.15,
-"texture": ExtResource("sweating-idle-18")
+"duration": 0.06,
+"texture": ExtResource("billy-idle-25")
 }, {
-"duration": 0.15,
-"texture": ExtResource("sweating-idle-19")
+"duration": 0.05,
+"texture": ExtResource("billy-idle-26")
 }, {
-"duration": 0.15,
-"texture": ExtResource("sweating-idle-20")
+"duration": 0.01,
+"texture": ExtResource("billy-idle-27")
 }, {
-"duration": 0.15,
-"texture": ExtResource("sweating-idle-21")
+"duration": 0.16,
+"texture": ExtResource("billy-idle-28")
 }, {
-"duration": 0.15,
-"texture": ExtResource("sweating-idle-22")
+"duration": 0.16,
+"texture": ExtResource("billy-idle-29")
 }, {
-"duration": 0.15,
-"texture": ExtResource("sweating-idle-23")
+"duration": 0.16,
+"texture": ExtResource("billy-idle-30")
 }, {
-"duration": 0.15,
-"texture": ExtResource("sweating-idle-24")
+"duration": 0.16,
+"texture": ExtResource("billy-idle-31")
 }, {
-"duration": 0.15,
-"texture": ExtResource("sweating-idle-25")
+"duration": 0.16,
+"texture": ExtResource("billy-idle-32")
 }, {
-"duration": 0.15,
-"texture": ExtResource("sweating-idle-26")
+"duration": 0.16,
+"texture": ExtResource("billy-idle-33")
 }, {
-"duration": 0.15,
-"texture": ExtResource("sweating-idle-27")
+"duration": 0.16,
+"texture": ExtResource("billy-idle-34")
 }, {
-"duration": 0.15,
-"texture": ExtResource("sweating-idle-28")
+"duration": 0.16,
+"texture": ExtResource("billy-idle-35")
 }, {
-"duration": 0.15,
-"texture": ExtResource("sweating-idle-29")
+"duration": 0.16,
+"texture": ExtResource("billy-idle-36")
 }, {
-"duration": 0.15,
-"texture": ExtResource("sweating-idle-30")
-}, {
-"duration": 0.15,
-"texture": ExtResource("sweating-idle-31")
-}, {
-"duration": 0.15,
-"texture": ExtResource("sweating-idle-32")
-}, {
-"duration": 0.15,
-"texture": ExtResource("sweating-idle-33")
-}, {
-"duration": 0.15,
-"texture": ExtResource("sweating-idle-34")
-}, {
-"duration": 0.15,
-"texture": ExtResource("sweating-idle-35")
-}, {
-"duration": 0.15,
-"texture": ExtResource("sweating-idle-36")
-}, {
-"duration": 0.15,
-"texture": ExtResource("sweating-idle-37")
-}, {
-"duration": 0.15,
-"texture": ExtResource("sweating-idle-38")
-}, {
-"duration": 0.15,
-"texture": ExtResource("sweating-idle-39")
+"duration": 0.16,
+"texture": ExtResource("billy-idle-37")
 }],
 "loop": true,
-"name": &"sweating-idle",
+"name": &"billy-idle",
 "speed": 1.0
-}, 
-{
+}, {
+"frames": [{
+"duration": 0.16,
+"texture": ExtResource("billy-talk-0")
+}, {
+"duration": 0.16,
+"texture": ExtResource("billy-talk-1")
+}, {
+"duration": 0.16,
+"texture": ExtResource("billy-talk-2")
+}, {
+"duration": 0.16,
+"texture": ExtResource("billy-talk-3")
+}, {
+"duration": 0.16,
+"texture": ExtResource("billy-talk-4")
+}, {
+"duration": 0.05,
+"texture": ExtResource("billy-talk-5")
+}, {
+"duration": 0.08,
+"texture": ExtResource("billy-talk-6")
+}, {
+"duration": 0.03,
+"texture": ExtResource("billy-talk-7")
+}, {
+"duration": 0.01,
+"texture": ExtResource("billy-talk-8")
+}, {
+"duration": 0.15,
+"texture": ExtResource("billy-talk-9")
+}, {
+"duration": 0.16,
+"texture": ExtResource("billy-talk-10")
+}, {
+"duration": 0.16,
+"texture": ExtResource("billy-talk-11")
+}, {
+"duration": 0.16,
+"texture": ExtResource("billy-talk-12")
+}, {
+"duration": 0.16,
+"texture": ExtResource("billy-talk-13")
+}, {
+"duration": 0.16,
+"texture": ExtResource("billy-talk-14")
+}, {
+"duration": 0.16,
+"texture": ExtResource("billy-talk-15")
+}, {
+"duration": 0.16,
+"texture": ExtResource("billy-talk-16")
+}, {
+"duration": 0.16,
+"texture": ExtResource("billy-talk-17")
+}, {
+"duration": 0.16,
+"texture": ExtResource("billy-talk-18")
+}, {
+"duration": 0.05,
+"texture": ExtResource("billy-talk-19")
+}, {
+"duration": 0.08,
+"texture": ExtResource("billy-talk-20")
+}, {
+"duration": 0.03,
+"texture": ExtResource("billy-talk-21")
+}, {
+"duration": 0.01,
+"texture": ExtResource("billy-talk-22")
+}, {
+"duration": 0.08,
+"texture": ExtResource("billy-talk-23")
+}, {
+"duration": 0.05,
+"texture": ExtResource("billy-talk-24")
+}, {
+"duration": 0.01,
+"texture": ExtResource("billy-talk-25")
+}, {
+"duration": 0.06,
+"texture": ExtResource("billy-talk-26")
+}, {
+"duration": 0.05,
+"texture": ExtResource("billy-talk-27")
+}, {
+"duration": 0.05,
+"texture": ExtResource("billy-talk-28")
+}, {
+"duration": 0.16,
+"texture": ExtResource("billy-talk-29")
+}, {
+"duration": 0.16,
+"texture": ExtResource("billy-talk-30")
+}, {
+"duration": 0.16,
+"texture": ExtResource("billy-talk-31")
+}, {
+"duration": 0.16,
+"texture": ExtResource("billy-talk-32")
+}, {
+"duration": 0.16,
+"texture": ExtResource("billy-talk-33")
+}, {
+"duration": 0.16,
+"texture": ExtResource("billy-talk-34")
+}, {
+"duration": 0.16,
+"texture": ExtResource("billy-talk-35")
+}, {
+"duration": 0.16,
+"texture": ExtResource("billy-talk-36")
+}, {
+"duration": 0.16,
+"texture": ExtResource("billy-talk-37")
+}, {
+"duration": 0.16,
+"texture": ExtResource("billy-talk-38")
+}, {
+"duration": 0.16,
+"texture": ExtResource("billy-talk-39")
+}, {
+"duration": 0.16,
+"texture": ExtResource("billy-talk-40")
+}, {
+"duration": 0.16,
+"texture": ExtResource("billy-talk-41")
+}],
+"loop": true,
+"name": &"billy-talk",
+"speed": 1.0
+}, {
 "frames": [{
 "duration": 0.66,
 "texture": ExtResource("normal-idle-0")
@@ -542,161 +666,7 @@ animations = [{
 "loop": true,
 "name": &"normal-idle",
 "speed": 1.0
-}, 
-{
-"frames": [{
-"duration": 0.75,
-"texture": ExtResource("toss1-idle-0")
 }, {
-"duration": 0.11,
-"texture": ExtResource("toss1-idle-1")
-}, {
-"duration": 0.11,
-"texture": ExtResource("toss1-idle-2")
-}, {
-"duration": 0.11,
-"texture": ExtResource("toss1-idle-3")
-}, {
-"duration": 2.0,
-"texture": ExtResource("toss1-idle-4")
-}, {
-"duration": 0.11,
-"texture": ExtResource("toss1-idle-5")
-}, {
-"duration": 0.11,
-"texture": ExtResource("toss1-idle-6")
-}, {
-"duration": 0.11,
-"texture": ExtResource("toss1-idle-7")
-}, {
-"duration": 2.66,
-"texture": ExtResource("toss1-idle-8")
-}],
-"loop": true,
-"name": &"toss1-idle",
-"speed": 1.0
-}, 
-{
-"frames": [{
-"duration": 0.16,
-"texture": ExtResource("toss1-talk-0")
-}, {
-"duration": 0.16,
-"texture": ExtResource("toss1-talk-1")
-}, {
-"duration": 0.16,
-"texture": ExtResource("toss1-talk-2")
-}, {
-"duration": 0.16,
-"texture": ExtResource("toss1-talk-3")
-}, {
-"duration": 0.16,
-"texture": ExtResource("toss1-talk-4")
-}, {
-"duration": 0.11,
-"texture": ExtResource("toss1-talk-5")
-}, {
-"duration": 0.05,
-"texture": ExtResource("toss1-talk-6")
-}, {
-"duration": 0.06,
-"texture": ExtResource("toss1-talk-7")
-}, {
-"duration": 0.1,
-"texture": ExtResource("toss1-talk-8")
-}, {
-"duration": 0.01,
-"texture": ExtResource("toss1-talk-9")
-}, {
-"duration": 0.15,
-"texture": ExtResource("toss1-talk-10")
-}, {
-"duration": 0.16,
-"texture": ExtResource("toss1-talk-11")
-}, {
-"duration": 0.16,
-"texture": ExtResource("toss1-talk-12")
-}, {
-"duration": 0.16,
-"texture": ExtResource("toss1-talk-13")
-}, {
-"duration": 0.16,
-"texture": ExtResource("toss1-talk-14")
-}, {
-"duration": 0.16,
-"texture": ExtResource("toss1-talk-15")
-}, {
-"duration": 0.16,
-"texture": ExtResource("toss1-talk-16")
-}, {
-"duration": 0.16,
-"texture": ExtResource("toss1-talk-17")
-}, {
-"duration": 0.16,
-"texture": ExtResource("toss1-talk-18")
-}, {
-"duration": 0.16,
-"texture": ExtResource("toss1-talk-19")
-}, {
-"duration": 0.11,
-"texture": ExtResource("toss1-talk-20")
-}, {
-"duration": 0.05,
-"texture": ExtResource("toss1-talk-21")
-}, {
-"duration": 0.06,
-"texture": ExtResource("toss1-talk-22")
-}, {
-"duration": 0.1,
-"texture": ExtResource("toss1-talk-23")
-}, {
-"duration": 0.01,
-"texture": ExtResource("toss1-talk-24")
-}, {
-"duration": 0.15,
-"texture": ExtResource("toss1-talk-25")
-}, {
-"duration": 0.16,
-"texture": ExtResource("toss1-talk-26")
-}, {
-"duration": 0.16,
-"texture": ExtResource("toss1-talk-27")
-}, {
-"duration": 0.16,
-"texture": ExtResource("toss1-talk-28")
-}, {
-"duration": 0.16,
-"texture": ExtResource("toss1-talk-29")
-}, {
-"duration": 0.16,
-"texture": ExtResource("toss1-talk-30")
-}, {
-"duration": 0.16,
-"texture": ExtResource("toss1-talk-31")
-}, {
-"duration": 0.16,
-"texture": ExtResource("toss1-talk-32")
-}, {
-"duration": 0.16,
-"texture": ExtResource("toss1-talk-33")
-}, {
-"duration": 0.16,
-"texture": ExtResource("toss1-talk-34")
-}, {
-"duration": 0.16,
-"texture": ExtResource("toss1-talk-35")
-}, {
-"duration": 0.16,
-"texture": ExtResource("toss1-talk-36")
-}, {
-"duration": 0.16,
-"texture": ExtResource("toss1-talk-37")
-}],
-"loop": true,
-"name": &"toss1-talk",
-"speed": 1.0
-}, 
-{
 "frames": [{
 "duration": 0.2,
 "texture": ExtResource("normal-talk-0")
@@ -827,32 +797,132 @@ animations = [{
 "loop": true,
 "name": &"normal-talk",
 "speed": 1.0
-}, 
-{
+}, {
 "frames": [{
-"duration": 0.13,
-"texture": ExtResource("toss1-in-0")
+"duration": 0.15,
+"texture": ExtResource("sweating-idle-0")
 }, {
-"duration": 0.08,
-"texture": ExtResource("toss1-in-1")
+"duration": 0.15,
+"texture": ExtResource("sweating-idle-1")
 }, {
-"duration": 0.08,
-"texture": ExtResource("toss1-in-2")
+"duration": 0.15,
+"texture": ExtResource("sweating-idle-2")
 }, {
-"duration": 0.08,
-"texture": ExtResource("toss1-in-3")
+"duration": 0.15,
+"texture": ExtResource("sweating-idle-3")
 }, {
-"duration": 0.08,
-"texture": ExtResource("toss1-in-4")
+"duration": 0.15,
+"texture": ExtResource("sweating-idle-4")
 }, {
-"duration": 0.08,
-"texture": ExtResource("toss1-in-5")
+"duration": 0.15,
+"texture": ExtResource("sweating-idle-5")
+}, {
+"duration": 0.15,
+"texture": ExtResource("sweating-idle-6")
+}, {
+"duration": 0.15,
+"texture": ExtResource("sweating-idle-7")
+}, {
+"duration": 0.15,
+"texture": ExtResource("sweating-idle-8")
+}, {
+"duration": 0.15,
+"texture": ExtResource("sweating-idle-9")
+}, {
+"duration": 0.15,
+"texture": ExtResource("sweating-idle-10")
+}, {
+"duration": 0.15,
+"texture": ExtResource("sweating-idle-11")
+}, {
+"duration": 0.15,
+"texture": ExtResource("sweating-idle-12")
+}, {
+"duration": 0.15,
+"texture": ExtResource("sweating-idle-13")
+}, {
+"duration": 0.15,
+"texture": ExtResource("sweating-idle-14")
+}, {
+"duration": 0.15,
+"texture": ExtResource("sweating-idle-15")
+}, {
+"duration": 0.15,
+"texture": ExtResource("sweating-idle-16")
+}, {
+"duration": 0.15,
+"texture": ExtResource("sweating-idle-17")
+}, {
+"duration": 0.15,
+"texture": ExtResource("sweating-idle-18")
+}, {
+"duration": 0.15,
+"texture": ExtResource("sweating-idle-19")
+}, {
+"duration": 0.15,
+"texture": ExtResource("sweating-idle-20")
+}, {
+"duration": 0.15,
+"texture": ExtResource("sweating-idle-21")
+}, {
+"duration": 0.15,
+"texture": ExtResource("sweating-idle-22")
+}, {
+"duration": 0.15,
+"texture": ExtResource("sweating-idle-23")
+}, {
+"duration": 0.15,
+"texture": ExtResource("sweating-idle-24")
+}, {
+"duration": 0.15,
+"texture": ExtResource("sweating-idle-25")
+}, {
+"duration": 0.15,
+"texture": ExtResource("sweating-idle-26")
+}, {
+"duration": 0.15,
+"texture": ExtResource("sweating-idle-27")
+}, {
+"duration": 0.15,
+"texture": ExtResource("sweating-idle-28")
+}, {
+"duration": 0.15,
+"texture": ExtResource("sweating-idle-29")
+}, {
+"duration": 0.15,
+"texture": ExtResource("sweating-idle-30")
+}, {
+"duration": 0.15,
+"texture": ExtResource("sweating-idle-31")
+}, {
+"duration": 0.15,
+"texture": ExtResource("sweating-idle-32")
+}, {
+"duration": 0.15,
+"texture": ExtResource("sweating-idle-33")
+}, {
+"duration": 0.15,
+"texture": ExtResource("sweating-idle-34")
+}, {
+"duration": 0.15,
+"texture": ExtResource("sweating-idle-35")
+}, {
+"duration": 0.15,
+"texture": ExtResource("sweating-idle-36")
+}, {
+"duration": 0.15,
+"texture": ExtResource("sweating-idle-37")
+}, {
+"duration": 0.15,
+"texture": ExtResource("sweating-idle-38")
+}, {
+"duration": 0.15,
+"texture": ExtResource("sweating-idle-39")
 }],
 "loop": true,
-"name": &"toss1-in",
+"name": &"sweating-idle",
 "speed": 1.0
-}, 
-{
+}, {
 "frames": [{
 "duration": 0.15,
 "texture": ExtResource("sweating-talk-0")
@@ -977,128 +1047,181 @@ animations = [{
 "loop": true,
 "name": &"sweating-talk",
 "speed": 1.0
-}, 
-{
+}, {
 "frames": [{
-"duration": 0.16,
-"texture": ExtResource("billy-idle-0")
+"duration": 0.75,
+"texture": ExtResource("toss1-idle-0")
 }, {
-"duration": 0.16,
-"texture": ExtResource("billy-idle-1")
+"duration": 0.11,
+"texture": ExtResource("toss1-idle-1")
 }, {
-"duration": 0.16,
-"texture": ExtResource("billy-idle-2")
+"duration": 0.11,
+"texture": ExtResource("toss1-idle-2")
 }, {
-"duration": 0.16,
-"texture": ExtResource("billy-idle-3")
+"duration": 0.11,
+"texture": ExtResource("toss1-idle-3")
 }, {
-"duration": 0.05,
-"texture": ExtResource("billy-idle-4")
+"duration": 2.0,
+"texture": ExtResource("toss1-idle-4")
 }, {
-"duration": 0.08,
-"texture": ExtResource("billy-idle-5")
+"duration": 0.11,
+"texture": ExtResource("toss1-idle-5")
 }, {
-"duration": 0.03,
-"texture": ExtResource("billy-idle-6")
+"duration": 0.11,
+"texture": ExtResource("toss1-idle-6")
 }, {
-"duration": 0.01,
-"texture": ExtResource("billy-idle-7")
+"duration": 0.11,
+"texture": ExtResource("toss1-idle-7")
 }, {
-"duration": 0.15,
-"texture": ExtResource("billy-idle-8")
-}, {
-"duration": 0.16,
-"texture": ExtResource("billy-idle-9")
-}, {
-"duration": 0.16,
-"texture": ExtResource("billy-idle-10")
-}, {
-"duration": 0.16,
-"texture": ExtResource("billy-idle-11")
-}, {
-"duration": 0.16,
-"texture": ExtResource("billy-idle-12")
-}, {
-"duration": 0.16,
-"texture": ExtResource("billy-idle-13")
-}, {
-"duration": 0.16,
-"texture": ExtResource("billy-idle-14")
-}, {
-"duration": 0.16,
-"texture": ExtResource("billy-idle-15")
-}, {
-"duration": 0.16,
-"texture": ExtResource("billy-idle-16")
-}, {
-"duration": 0.16,
-"texture": ExtResource("billy-idle-17")
-}, {
-"duration": 0.05,
-"texture": ExtResource("billy-idle-18")
-}, {
-"duration": 0.08,
-"texture": ExtResource("billy-idle-19")
-}, {
-"duration": 0.03,
-"texture": ExtResource("billy-idle-20")
-}, {
-"duration": 0.01,
-"texture": ExtResource("billy-idle-21")
-}, {
-"duration": 0.08,
-"texture": ExtResource("billy-idle-22")
-}, {
-"duration": 0.05,
-"texture": ExtResource("billy-idle-23")
-}, {
-"duration": 0.01,
-"texture": ExtResource("billy-idle-24")
-}, {
-"duration": 0.06,
-"texture": ExtResource("billy-idle-25")
-}, {
-"duration": 0.05,
-"texture": ExtResource("billy-idle-26")
-}, {
-"duration": 0.01,
-"texture": ExtResource("billy-idle-27")
-}, {
-"duration": 0.16,
-"texture": ExtResource("billy-idle-28")
-}, {
-"duration": 0.16,
-"texture": ExtResource("billy-idle-29")
-}, {
-"duration": 0.16,
-"texture": ExtResource("billy-idle-30")
-}, {
-"duration": 0.16,
-"texture": ExtResource("billy-idle-31")
-}, {
-"duration": 0.16,
-"texture": ExtResource("billy-idle-32")
-}, {
-"duration": 0.16,
-"texture": ExtResource("billy-idle-33")
-}, {
-"duration": 0.16,
-"texture": ExtResource("billy-idle-34")
-}, {
-"duration": 0.16,
-"texture": ExtResource("billy-idle-35")
-}, {
-"duration": 0.16,
-"texture": ExtResource("billy-idle-36")
-}, {
-"duration": 0.16,
-"texture": ExtResource("billy-idle-37")
+"duration": 2.66,
+"texture": ExtResource("toss1-idle-8")
 }],
 "loop": true,
-"name": &"billy-idle",
+"name": &"toss1-idle",
 "speed": 1.0
-}, 
-{
+}, {
+"frames": [{
+"duration": 0.13,
+"texture": ExtResource("toss1-in-0")
+}, {
+"duration": 0.08,
+"texture": ExtResource("toss1-in-1")
+}, {
+"duration": 0.08,
+"texture": ExtResource("toss1-in-2")
+}, {
+"duration": 0.08,
+"texture": ExtResource("toss1-in-3")
+}, {
+"duration": 0.08,
+"texture": ExtResource("toss1-in-4")
+}, {
+"duration": 0.08,
+"texture": ExtResource("toss1-in-5")
+}],
+"loop": true,
+"name": &"toss1-in",
+"speed": 1.0
+}, {
+"frames": [{
+"duration": 0.16,
+"texture": ExtResource("toss1-talk-0")
+}, {
+"duration": 0.16,
+"texture": ExtResource("toss1-talk-1")
+}, {
+"duration": 0.16,
+"texture": ExtResource("toss1-talk-2")
+}, {
+"duration": 0.16,
+"texture": ExtResource("toss1-talk-3")
+}, {
+"duration": 0.16,
+"texture": ExtResource("toss1-talk-4")
+}, {
+"duration": 0.11,
+"texture": ExtResource("toss1-talk-5")
+}, {
+"duration": 0.05,
+"texture": ExtResource("toss1-talk-6")
+}, {
+"duration": 0.06,
+"texture": ExtResource("toss1-talk-7")
+}, {
+"duration": 0.1,
+"texture": ExtResource("toss1-talk-8")
+}, {
+"duration": 0.01,
+"texture": ExtResource("toss1-talk-9")
+}, {
+"duration": 0.15,
+"texture": ExtResource("toss1-talk-10")
+}, {
+"duration": 0.16,
+"texture": ExtResource("toss1-talk-11")
+}, {
+"duration": 0.16,
+"texture": ExtResource("toss1-talk-12")
+}, {
+"duration": 0.16,
+"texture": ExtResource("toss1-talk-13")
+}, {
+"duration": 0.16,
+"texture": ExtResource("toss1-talk-14")
+}, {
+"duration": 0.16,
+"texture": ExtResource("toss1-talk-15")
+}, {
+"duration": 0.16,
+"texture": ExtResource("toss1-talk-16")
+}, {
+"duration": 0.16,
+"texture": ExtResource("toss1-talk-17")
+}, {
+"duration": 0.16,
+"texture": ExtResource("toss1-talk-18")
+}, {
+"duration": 0.16,
+"texture": ExtResource("toss1-talk-19")
+}, {
+"duration": 0.11,
+"texture": ExtResource("toss1-talk-20")
+}, {
+"duration": 0.05,
+"texture": ExtResource("toss1-talk-21")
+}, {
+"duration": 0.06,
+"texture": ExtResource("toss1-talk-22")
+}, {
+"duration": 0.1,
+"texture": ExtResource("toss1-talk-23")
+}, {
+"duration": 0.01,
+"texture": ExtResource("toss1-talk-24")
+}, {
+"duration": 0.15,
+"texture": ExtResource("toss1-talk-25")
+}, {
+"duration": 0.16,
+"texture": ExtResource("toss1-talk-26")
+}, {
+"duration": 0.16,
+"texture": ExtResource("toss1-talk-27")
+}, {
+"duration": 0.16,
+"texture": ExtResource("toss1-talk-28")
+}, {
+"duration": 0.16,
+"texture": ExtResource("toss1-talk-29")
+}, {
+"duration": 0.16,
+"texture": ExtResource("toss1-talk-30")
+}, {
+"duration": 0.16,
+"texture": ExtResource("toss1-talk-31")
+}, {
+"duration": 0.16,
+"texture": ExtResource("toss1-talk-32")
+}, {
+"duration": 0.16,
+"texture": ExtResource("toss1-talk-33")
+}, {
+"duration": 0.16,
+"texture": ExtResource("toss1-talk-34")
+}, {
+"duration": 0.16,
+"texture": ExtResource("toss1-talk-35")
+}, {
+"duration": 0.16,
+"texture": ExtResource("toss1-talk-36")
+}, {
+"duration": 0.16,
+"texture": ExtResource("toss1-talk-37")
+}],
+"loop": true,
+"name": &"toss1-talk",
+"speed": 1.0
+}, {
 "frames": [{
 "duration": 0.75,
 "texture": ExtResource("toss2-idle-0")
@@ -1130,8 +1253,149 @@ animations = [{
 "loop": true,
 "name": &"toss2-idle",
 "speed": 1.0
-}, 
-{
+}, {
+"frames": [{
+"duration": 0.13,
+"texture": ExtResource("toss2-in-0")
+}, {
+"duration": 0.08,
+"texture": ExtResource("toss2-in-1")
+}, {
+"duration": 0.08,
+"texture": ExtResource("toss2-in-2")
+}, {
+"duration": 0.08,
+"texture": ExtResource("toss2-in-3")
+}, {
+"duration": 0.08,
+"texture": ExtResource("toss2-in-4")
+}, {
+"duration": 0.08,
+"texture": ExtResource("toss2-in-5")
+}],
+"loop": true,
+"name": &"toss2-in",
+"speed": 1.0
+}, {
+"frames": [{
+"duration": 0.16,
+"texture": ExtResource("toss2-talk-0")
+}, {
+"duration": 0.16,
+"texture": ExtResource("toss2-talk-1")
+}, {
+"duration": 0.16,
+"texture": ExtResource("toss2-talk-2")
+}, {
+"duration": 0.16,
+"texture": ExtResource("toss2-talk-3")
+}, {
+"duration": 0.16,
+"texture": ExtResource("toss2-talk-4")
+}, {
+"duration": 0.11,
+"texture": ExtResource("toss2-talk-5")
+}, {
+"duration": 0.05,
+"texture": ExtResource("toss2-talk-6")
+}, {
+"duration": 0.06,
+"texture": ExtResource("toss2-talk-7")
+}, {
+"duration": 0.1,
+"texture": ExtResource("toss2-talk-8")
+}, {
+"duration": 0.01,
+"texture": ExtResource("toss2-talk-9")
+}, {
+"duration": 0.15,
+"texture": ExtResource("toss2-talk-10")
+}, {
+"duration": 0.16,
+"texture": ExtResource("toss2-talk-11")
+}, {
+"duration": 0.16,
+"texture": ExtResource("toss2-talk-12")
+}, {
+"duration": 0.16,
+"texture": ExtResource("toss2-talk-13")
+}, {
+"duration": 0.16,
+"texture": ExtResource("toss2-talk-14")
+}, {
+"duration": 0.16,
+"texture": ExtResource("toss2-talk-15")
+}, {
+"duration": 0.16,
+"texture": ExtResource("toss2-talk-16")
+}, {
+"duration": 0.16,
+"texture": ExtResource("toss2-talk-17")
+}, {
+"duration": 0.16,
+"texture": ExtResource("toss2-talk-18")
+}, {
+"duration": 0.16,
+"texture": ExtResource("toss2-talk-19")
+}, {
+"duration": 0.11,
+"texture": ExtResource("toss2-talk-20")
+}, {
+"duration": 0.05,
+"texture": ExtResource("toss2-talk-21")
+}, {
+"duration": 0.06,
+"texture": ExtResource("toss2-talk-22")
+}, {
+"duration": 0.1,
+"texture": ExtResource("toss2-talk-23")
+}, {
+"duration": 0.01,
+"texture": ExtResource("toss2-talk-24")
+}, {
+"duration": 0.15,
+"texture": ExtResource("toss2-talk-25")
+}, {
+"duration": 0.16,
+"texture": ExtResource("toss2-talk-26")
+}, {
+"duration": 0.16,
+"texture": ExtResource("toss2-talk-27")
+}, {
+"duration": 0.16,
+"texture": ExtResource("toss2-talk-28")
+}, {
+"duration": 0.16,
+"texture": ExtResource("toss2-talk-29")
+}, {
+"duration": 0.16,
+"texture": ExtResource("toss2-talk-30")
+}, {
+"duration": 0.16,
+"texture": ExtResource("toss2-talk-31")
+}, {
+"duration": 0.16,
+"texture": ExtResource("toss2-talk-32")
+}, {
+"duration": 0.16,
+"texture": ExtResource("toss2-talk-33")
+}, {
+"duration": 0.16,
+"texture": ExtResource("toss2-talk-34")
+}, {
+"duration": 0.16,
+"texture": ExtResource("toss2-talk-35")
+}, {
+"duration": 0.16,
+"texture": ExtResource("toss2-talk-36")
+}, {
+"duration": 0.16,
+"texture": ExtResource("toss2-talk-37")
+}],
+"loop": true,
+"name": &"toss2-talk",
+"speed": 1.0
+}, {
 "frames": [{
 "duration": 0.13,
 "texture": ExtResource("whatev-idle-0")
@@ -1184,32 +1448,7 @@ animations = [{
 "loop": true,
 "name": &"whatev-idle",
 "speed": 1.0
-}, 
-{
-"frames": [{
-"duration": 0.13,
-"texture": ExtResource("toss2-in-0")
 }, {
-"duration": 0.08,
-"texture": ExtResource("toss2-in-1")
-}, {
-"duration": 0.08,
-"texture": ExtResource("toss2-in-2")
-}, {
-"duration": 0.08,
-"texture": ExtResource("toss2-in-3")
-}, {
-"duration": 0.08,
-"texture": ExtResource("toss2-in-4")
-}, {
-"duration": 0.08,
-"texture": ExtResource("toss2-in-5")
-}],
-"loop": true,
-"name": &"toss2-in",
-"speed": 1.0
-}, 
-{
 "frames": [{
 "duration": 0.13,
 "texture": ExtResource("whatev-talk-0")
@@ -1360,257 +1599,5 @@ animations = [{
 }],
 "loop": true,
 "name": &"whatev-talk",
-"speed": 1.0
-}, 
-{
-"frames": [{
-"duration": 0.16,
-"texture": ExtResource("billy-talk-0")
-}, {
-"duration": 0.16,
-"texture": ExtResource("billy-talk-1")
-}, {
-"duration": 0.16,
-"texture": ExtResource("billy-talk-2")
-}, {
-"duration": 0.16,
-"texture": ExtResource("billy-talk-3")
-}, {
-"duration": 0.16,
-"texture": ExtResource("billy-talk-4")
-}, {
-"duration": 0.05,
-"texture": ExtResource("billy-talk-5")
-}, {
-"duration": 0.08,
-"texture": ExtResource("billy-talk-6")
-}, {
-"duration": 0.03,
-"texture": ExtResource("billy-talk-7")
-}, {
-"duration": 0.01,
-"texture": ExtResource("billy-talk-8")
-}, {
-"duration": 0.15,
-"texture": ExtResource("billy-talk-9")
-}, {
-"duration": 0.16,
-"texture": ExtResource("billy-talk-10")
-}, {
-"duration": 0.16,
-"texture": ExtResource("billy-talk-11")
-}, {
-"duration": 0.16,
-"texture": ExtResource("billy-talk-12")
-}, {
-"duration": 0.16,
-"texture": ExtResource("billy-talk-13")
-}, {
-"duration": 0.16,
-"texture": ExtResource("billy-talk-14")
-}, {
-"duration": 0.16,
-"texture": ExtResource("billy-talk-15")
-}, {
-"duration": 0.16,
-"texture": ExtResource("billy-talk-16")
-}, {
-"duration": 0.16,
-"texture": ExtResource("billy-talk-17")
-}, {
-"duration": 0.16,
-"texture": ExtResource("billy-talk-18")
-}, {
-"duration": 0.05,
-"texture": ExtResource("billy-talk-19")
-}, {
-"duration": 0.08,
-"texture": ExtResource("billy-talk-20")
-}, {
-"duration": 0.03,
-"texture": ExtResource("billy-talk-21")
-}, {
-"duration": 0.01,
-"texture": ExtResource("billy-talk-22")
-}, {
-"duration": 0.08,
-"texture": ExtResource("billy-talk-23")
-}, {
-"duration": 0.05,
-"texture": ExtResource("billy-talk-24")
-}, {
-"duration": 0.01,
-"texture": ExtResource("billy-talk-25")
-}, {
-"duration": 0.06,
-"texture": ExtResource("billy-talk-26")
-}, {
-"duration": 0.05,
-"texture": ExtResource("billy-talk-27")
-}, {
-"duration": 0.05,
-"texture": ExtResource("billy-talk-28")
-}, {
-"duration": 0.16,
-"texture": ExtResource("billy-talk-29")
-}, {
-"duration": 0.16,
-"texture": ExtResource("billy-talk-30")
-}, {
-"duration": 0.16,
-"texture": ExtResource("billy-talk-31")
-}, {
-"duration": 0.16,
-"texture": ExtResource("billy-talk-32")
-}, {
-"duration": 0.16,
-"texture": ExtResource("billy-talk-33")
-}, {
-"duration": 0.16,
-"texture": ExtResource("billy-talk-34")
-}, {
-"duration": 0.16,
-"texture": ExtResource("billy-talk-35")
-}, {
-"duration": 0.16,
-"texture": ExtResource("billy-talk-36")
-}, {
-"duration": 0.16,
-"texture": ExtResource("billy-talk-37")
-}, {
-"duration": 0.16,
-"texture": ExtResource("billy-talk-38")
-}, {
-"duration": 0.16,
-"texture": ExtResource("billy-talk-39")
-}, {
-"duration": 0.16,
-"texture": ExtResource("billy-talk-40")
-}, {
-"duration": 0.16,
-"texture": ExtResource("billy-talk-41")
-}],
-"loop": true,
-"name": &"billy-talk",
-"speed": 1.0
-}, 
-{
-"frames": [{
-"duration": 0.16,
-"texture": ExtResource("toss2-talk-0")
-}, {
-"duration": 0.16,
-"texture": ExtResource("toss2-talk-1")
-}, {
-"duration": 0.16,
-"texture": ExtResource("toss2-talk-2")
-}, {
-"duration": 0.16,
-"texture": ExtResource("toss2-talk-3")
-}, {
-"duration": 0.16,
-"texture": ExtResource("toss2-talk-4")
-}, {
-"duration": 0.11,
-"texture": ExtResource("toss2-talk-5")
-}, {
-"duration": 0.05,
-"texture": ExtResource("toss2-talk-6")
-}, {
-"duration": 0.06,
-"texture": ExtResource("toss2-talk-7")
-}, {
-"duration": 0.1,
-"texture": ExtResource("toss2-talk-8")
-}, {
-"duration": 0.01,
-"texture": ExtResource("toss2-talk-9")
-}, {
-"duration": 0.15,
-"texture": ExtResource("toss2-talk-10")
-}, {
-"duration": 0.16,
-"texture": ExtResource("toss2-talk-11")
-}, {
-"duration": 0.16,
-"texture": ExtResource("toss2-talk-12")
-}, {
-"duration": 0.16,
-"texture": ExtResource("toss2-talk-13")
-}, {
-"duration": 0.16,
-"texture": ExtResource("toss2-talk-14")
-}, {
-"duration": 0.16,
-"texture": ExtResource("toss2-talk-15")
-}, {
-"duration": 0.16,
-"texture": ExtResource("toss2-talk-16")
-}, {
-"duration": 0.16,
-"texture": ExtResource("toss2-talk-17")
-}, {
-"duration": 0.16,
-"texture": ExtResource("toss2-talk-18")
-}, {
-"duration": 0.16,
-"texture": ExtResource("toss2-talk-19")
-}, {
-"duration": 0.11,
-"texture": ExtResource("toss2-talk-20")
-}, {
-"duration": 0.05,
-"texture": ExtResource("toss2-talk-21")
-}, {
-"duration": 0.06,
-"texture": ExtResource("toss2-talk-22")
-}, {
-"duration": 0.1,
-"texture": ExtResource("toss2-talk-23")
-}, {
-"duration": 0.01,
-"texture": ExtResource("toss2-talk-24")
-}, {
-"duration": 0.15,
-"texture": ExtResource("toss2-talk-25")
-}, {
-"duration": 0.16,
-"texture": ExtResource("toss2-talk-26")
-}, {
-"duration": 0.16,
-"texture": ExtResource("toss2-talk-27")
-}, {
-"duration": 0.16,
-"texture": ExtResource("toss2-talk-28")
-}, {
-"duration": 0.16,
-"texture": ExtResource("toss2-talk-29")
-}, {
-"duration": 0.16,
-"texture": ExtResource("toss2-talk-30")
-}, {
-"duration": 0.16,
-"texture": ExtResource("toss2-talk-31")
-}, {
-"duration": 0.16,
-"texture": ExtResource("toss2-talk-32")
-}, {
-"duration": 0.16,
-"texture": ExtResource("toss2-talk-33")
-}, {
-"duration": 0.16,
-"texture": ExtResource("toss2-talk-34")
-}, {
-"duration": 0.16,
-"texture": ExtResource("toss2-talk-35")
-}, {
-"duration": 0.16,
-"texture": ExtResource("toss2-talk-36")
-}, {
-"duration": 0.16,
-"texture": ExtResource("toss2-talk-37")
-}],
-"loop": true,
-"name": &"toss2-talk",
 "speed": 1.0
 }]

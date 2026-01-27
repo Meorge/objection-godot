@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://dcitg4aymosj"]
+[gd_scene format=3 uid="uid://dcitg4aymosj"]
 
 [ext_resource type="Script" uid="uid://dldpipkvge774" path="res://ui/witness_testimony/witness_testimony_intro.gd" id="1_33j3h"]
 [ext_resource type="Material" uid="uid://c582bcoxkfs27" path="res://ui/witness_testimony/witness_testimony_shine.tres" id="2_13b8k"]
@@ -20,7 +20,7 @@ shader_parameter/x_offset = -0.3
 shader = ExtResource("2_xlbkf")
 shader_parameter/x_offset = 0.5
 
-[node name="WitnessTestimonyIntro" type="Control"]
+[node name="WitnessTestimonyIntro" type="Control" unique_id=1533611239]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -29,7 +29,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_33j3h")
 
-[node name="TopLabel" type="Label" parent="."]
+[node name="TopLabel" type="Label" parent="." unique_id=1532936982]
 unique_name_in_owner = true
 material = ExtResource("2_13b8k")
 layout_mode = 1
@@ -53,7 +53,7 @@ text = "Plate"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="BottomLabel" type="Label" parent="."]
+[node name="BottomLabel" type="Label" parent="." unique_id=1055461171]
 unique_name_in_owner = true
 material = SubResource("ShaderMaterial_06tu7")
 layout_mode = 1
@@ -77,7 +77,7 @@ text = "Application"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="FlashOverlay" type="ColorRect" parent="."]
+[node name="FlashOverlay" type="ColorRect" parent="." unique_id=969931719]
 unique_name_in_owner = true
 layout_mode = 1
 anchors_preset = 15
@@ -88,11 +88,11 @@ grow_vertical = 2
 mouse_filter = 2
 color = Color(1, 1, 1, 0)
 
-[node name="WitnessTestimonyIntroSound" type="AudioStreamPlayer" parent="."]
+[node name="WitnessTestimonyIntroSound" type="AudioStreamPlayer" parent="." unique_id=771337909]
 unique_name_in_owner = true
 stream = ExtResource("3_s285r")
 
-[node name="ColorRect" type="ColorRect" parent="."]
+[node name="ColorRect" type="ColorRect" parent="." unique_id=837033466]
 visible = false
 material = SubResource("ShaderMaterial_if0v4")
 layout_mode = 1
