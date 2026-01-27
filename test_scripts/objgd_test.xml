@@ -1,0 +1,71 @@
+<nametag.set_text text="" />
+<sprite.set pos="center" res="res://characters/lisa/lisa.tres" anim="normal-idle" />
+<box.set_visible value="false" />
+<wait duration="1.0"/>
+<big_title.play top="Plate" bottom="Application" color="aa-witintro-red" dir="lr" />
+<wait duration="4.0"/>
+<box.animate_in />
+<wait duration="0.3"/>
+<music.play res="res://audio/music/pwr/cross-moderato.wav"/>
+<nametag.set_text text="Customer" />
+<blip.set type="male"/>
+<segment_title.set text="Application"/>
+<evidence.show res="/Users/malcolmanderson/Documents/Repositories/TurnaboutDMV/plates/1 OL BAG.png"/>
+<wait duration="0.3"/>
+<sprite.set pos="center" anim="normal-talk" />
+<!-- TODO: set blip to gender -->
+<color value="aa-text-green">HELLO HOW ARE YOU TODAY</color>
+<sprite.set pos="center" anim="normal-idle" />
+<arrow.set_visible/>
+<wait duration="5.0"/>
+<play/>
+
+<sprite.set pos="left" res="res://characters/phoenix/phoenix.tres" anim="normal-idle" />
+
+<flash />
+<evidence.hide_immediate />
+<bubble.animate type="objection" />
+<box.set_visible value="false"/>
+
+<arrow.set_visible value="false" />
+<sound.play res="res://ui/exclamations/exclamation_sounds/objection-phoenix.wav"/>
+<wait duration="1.5"/>
+<play />
+
+<camera.pan to="left"/><wait duration="1.0"/><nametag.set_text text="CA DMV" />
+<sprite.set pos="left" res="res://characters/phoenix/phoenix.tres" anim="normal-talk" />
+<box.set_visible value="true" />
+<!-- TODO: change blip -->
+HEY ITS ME THE DMV
+<sprite.set pos="left" res="res://characters/phoenix/phoenix.tres" anim="normal-idle" />
+<arrow.set_visible/>
+<wait duration="5.0"/>
+<play/>
+<box.set_visible value="false" />
+<arrow.set_visible value="false"/>
+<sound.play res="res://audio/sound/sfx-pichoop.wav"/>
+<segment_title.set text=""/>
+<wait duration="0.3" />
+<camera.cut to="gavel" />
+<gavel.animate num="1" />
+<camera.cut to="judge"/>
+<sprite.set pos="judge" res="res://characters/judge/judge.tres" anim="nodding" />
+<wait duration="1.18" />
+<sprite.set pos="judge" anim="normal-idle" />
+<verdict.animate text="Accepted" group_by="letter"/>
+<wait duration="3.0"/>
+<verdict.animate text=""/>
+
+<music.stop />
+<sound.play res="res://audio/sound/sfx-gallerycheer.wav" />
+<camera.cut to="wide"/>
+<confetti.start />
+
+<wide.gallery.set_visible value="true"/>
+<wide.set_sprite pos="judge" res="res://scenes/wide/judge/judge.png" />
+<wide.set_sprite pos="prosecution" res="res://scenes/wide/attorneys/edgeworth.png"/>
+<wide.set_sprite pos="defense" res="res://scenes/wide/attorneys/phoenix.png"/>
+<wide.set_sprite pos="witness" res="res://scenes/wide/witnesses/lisa.png"/>
+
+<wait duration="3.5"/>
+<play/>

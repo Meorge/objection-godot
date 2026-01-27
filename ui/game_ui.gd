@@ -8,4 +8,4 @@ static var instance: GameUI = self
 @onready var box_shaker: Shaker = %BoxShaker
 
 func _enter_tree():
-	instance = self
+    instance = self
